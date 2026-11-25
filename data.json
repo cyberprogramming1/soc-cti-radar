@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25 11:39 (+04)",
+  "updated_at": "2026-11-25 12:02 (+04)",
   "sources": [
     {
       "name": "BleepingComputer",
@@ -46,6 +46,14 @@
     {
       "source": "BleepingComputer",
       "feed_url": "https://www.bleepingcomputer.com/feed/",
+      "title": "Hackers reportedly breached CIA intelligence analysis system",
+      "summary": "Unknown attackers have reportedly breached an open-source intelligence analysis system at the US Central Intelligence Agency (CIA) [...]",
+      "date": "Wed, 25 Nov 2026 02:45:03 -0500",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/"
+    },
+    {
+      "source": "BleepingComputer",
+      "feed_url": "https://www.bleepingcomputer.com/feed/",
       "title": "Rackspace shuts down Spot cloud platform after security breach",
       "summary": "Rackspace is shutting down its Rackspace Spot cloud platform after a security breach allowed hackers to access customer Kubernetes clusters and secrets, giving customers until December 8 to migrate their services and ...",
       "date": "Tue, 24 Nov 2026 16:37:30 -0500",
@@ -58,14 +66,6 @@
       "summary": "A newly formed data extortion group named 'Inception' has been linked to a large-scale campaign that targets single sign-on (SSO) credentials of multiple global brands and firms. [...]",
       "date": "Tue, 24 Nov 2026 15:21:20 -0500",
       "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/"
-    },
-    {
-      "source": "BleepingComputer",
-      "feed_url": "https://www.bleepingcomputer.com/feed/",
-      "title": "Turnitin discloses cyberattack affecting customer-facing systems",
-      "summary": "Turnitin disclosed via a statement from its CEO, Chris Caren, that it recently detected unauthorized activity involving certain customer-facing systems. [...]",
-      "date": "Tue, 24 Nov 2026 13:59:52 -0500",
-      "url": "https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/"
     },
     {
       "source": "The Hacker News",
@@ -168,7 +168,7 @@
       "feed_url": "https://cert.az/az/rss",
       "title": "[CERT.az] mənbəsi əlçatan olmadı",
       "summary": "<urlopen error timed out>",
-      "date": "2026-11-25 11:39 (+04)",
+      "date": "2026-11-25 12:02 (+04)",
       "url": "https://cert.az/az/rss"
     },
     {
@@ -223,8 +223,8 @@
       "source": "AlienVault OTX Pulse",
       "feed_url": "https://otx.alienvault.com/otxapi/pulses/subscribed?format=xml",
       "title": "[AlienVault OTX Pulse] mənbəsi əlçatan olmadı",
-      "summary": "The read operation timed out",
-      "date": "2026-11-25 11:39 (+04)",
+      "summary": "not well-formed (invalid token): line 1, column 0",
+      "date": "2026-11-25 12:02 (+04)",
       "url": "https://otx.alienvault.com/otxapi/pulses/subscribed?format=xml"
     }
   ],
