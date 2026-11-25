@@ -271,25 +271,54 @@ def clean_html(text):
     return text
 
 
+def _fetch_json_url(url, timeout=10):
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.3)"},
+    )
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return json.loads(resp.read().decode("utf-8", errors="ignore"))
+
+
 def translate_to_az(text):
     src = (text or "").strip()
     if not src:
         return ""
     if src in _TRANSLATION_CACHE:
         return _TRANSLATION_CACHE[src]
+
+    chunk = src[:500]
+
+    # 1) Google Translate GTX endpoint
     try:
-        q = urllib.parse.urlencode({"client": "gtx", "sl": "auto", "tl": "az", "dt": "t", "q": src[:800]})
-        raw = http_get_text(f"https://translate.googleapis.com/translate_a/single?{q}", timeout=8)
-        parsed = json.loads(raw)
+        q = urllib.parse.urlencode({
+            "client": "gtx",
+            "sl": "auto",
+            "tl": "az",
+            "dt": "t",
+            "q": chunk,
+        })
+        parsed = _fetch_json_url(f"https://translate.googleapis.com/translate_a/single?{q}", timeout=8)
         translated = "".join(seg[0] for seg in (parsed[0] or []) if seg and seg[0]).strip()
-        if translated:
+        if translated and translated.lower() != chunk.lower():
             _TRANSLATION_CACHE[src] = translated
             return translated
     except Exception:
         pass
+
+    # 2) MyMemory fallback API
+    try:
+        q2 = urllib.parse.urlencode({"q": chunk[:450], "langpair": "en|az"})
+        mm = _fetch_json_url(f"https://api.mymemory.translated.net/get?{q2}", timeout=9)
+        mm_text = html.unescape(((mm.get("responseData") or {}).get("translatedText") or "")).strip()
+        if mm_text and "MYMEMORY WARNING" not in mm_text.upper() and mm_text.lower() != chunk.lower():
+            _TRANSLATION_CACHE[src] = mm_text
+            return mm_text
+    except Exception:
+        pass
+
     _TRANSLATION_CACHE[src] = src
     return src
-
 
 def classify_category(source_name, title, summary, url):
     blob = f"{source_name} {title} {summary} {url}".lower()
