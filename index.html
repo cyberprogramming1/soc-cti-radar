@@ -462,9 +462,9 @@
 
         view.innerHTML = `
           <div class="card">
-            <div class="card-title">⚡ Live Detected APT & Threat Groups (${list.length})</div>
-            <div class="muted" style="margin-bottom:8px;">Only groups matched in current collected news/KEV sources are shown.</div>
-            <input value="${state.aptSearch}" oninput="state.aptSearch=this.value;render()" placeholder="Filter detected APT groups..." />
+            <div class="card-title">⚡ Live Detected APT & Ransomware Groups (${list.length})</div>
+            <div class="muted" style="margin-bottom:8px;">Extracted from live ransomware.live feeds, news & KEV sources with MITRE ATT&CK mapping.</div>
+            <input value="${state.aptSearch}" oninput="state.aptSearch=this.value;render()" placeholder="Filter detected APT / ransomware groups..." />
           </div>
           ${list.length ? list.map(a => {
             const techs = a.techniques || [];
@@ -484,7 +484,7 @@
                 <button class="small" onclick="state.scenario='${a.scenario || "token_replay"}';state.targetScope='${scopeVal}';switchTab('hunting')">🎯 Hunt This Group</button>
               </div>
             `;
-          }).join("") : `<div class="card muted">No APT groups matched in the current collected data.</div>`}
+          }).join("") : `<div class="card muted">No APT or ransomware groups matched in the current collected data.</div>`}
         `;
       }
 
