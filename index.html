@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>DEEP CTI & SOC Operativ Konsolu</title>
+  <title>DEEP CTI & SOC Live Platform</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
     :root {
@@ -85,7 +85,18 @@
     }
     .card-title { font-weight: 700; font-size: 14px; margin-bottom: 6px; line-height: 1.35; color: var(--text); }
     .muted { color: var(--subtext); font-size: 12px; line-height: 1.45; }
-    .orig-box {
+    .impact-box {
+      margin-top: 6px;
+      margin-bottom: 8px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #081021;
+      border-left: 3px solid #f59e0b;
+      color: var(--text);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .detail-box {
       margin-top: 6px;
       padding: 8px;
       border-radius: 8px;
@@ -93,16 +104,6 @@
       border: 1px dashed #3b4f70;
       color: var(--subtext);
       font-size: 11px;
-      line-height: 1.4;
-    }
-    .status-box {
-      margin-top: 8px;
-      padding: 10px;
-      border-radius: 9px;
-      background: #081021;
-      border-left: 3px solid var(--accent);
-      color: var(--text);
-      font-size: 12px;
       line-height: 1.45;
     }
     .badge {
@@ -154,19 +155,20 @@
 <body>
   <div class="header">
     <div class="header-top">
-      <h1>🛡️ DEEP CTI & SOC Konsolu</h1>
-      <span class="pill">LIVE CTI • MITRE ATT&CK</span>
+      <h1>🛡️ DEEP CTI & SOC Live Platform</h1>
+      <span class="pill">TOR + 5 CTI APIS + LIVE RW</span>
     </div>
-    <div class="sub" id="updatedAt">Yenilənmə vaxtı yüklənir... • Avto-cədvəl: 12:00 + hər 3 saat (+04)</div>
+    <div class="sub" id="updatedAt">Loading live CTI data... • Auto schedule: 12:00 + every 3h (+04)</div>
   </div>
 
   <div class="tabs" id="mainTabs">
-    <button class="active" data-tab="news" onclick="switchTab('news')">📰 Xəbərlər</button>
-    <button data-tab="cve" onclick="switchTab('cve')">⚠️ CISA CVE</button>
+    <button class="active" data-tab="news" onclick="switchTab('news')">📰 News & Impact</button>
+    <button data-tab="darkweb" onclick="switchTab('darkweb')">🕵️ Darkweb & Tor</button>
+    <button data-tab="ransomware" onclick="switchTab('ransomware')">💀 Ransomware & CVE</button>
+    <button data-tab="ioc" onclick="switchTab('ioc')">🔍 IoC & Scores</button>
+    <button data-tab="apt" onclick="switchTab('apt')">⚡ APT & Groups</button>
     <button data-tab="hunting" onclick="switchTab('hunting')">🎯 Hunting</button>
-    <button data-tab="ioc" onclick="switchTab('ioc')">🔍 IoC & SOAR</button>
-    <button data-tab="apt" onclick="switchTab('apt')">🕵️ APT Groups</button>
-    <button data-tab="sources" onclick="switchTab('sources')">📡 Mənbələr</button>
+    <button data-tab="sources" onclick="switchTab('sources')">📡 Sources</button>
   </div>
 
   <div id="view"></div>
@@ -187,35 +189,39 @@
 
     const state = {
       tab: "news",
-      newsCategory: "all",
-      showOriginal: {},
-      severityFilter: "all",
       platform: "xql",
       scenario: "token_replay",
       targetScope: "*",
       windowHours: "24",
       levelFilter: "ALL",
-      iocValue: "",
-      aptCategory: "all",
+      selectedIoc: "",
       aptSearch: "",
       copied: "",
       soarPlaybook: "",
-      data: { updated_at: "Yüklənir...", sources: [], news: [], cves: [], iocs: [], active_apts: [] }
+      data: {
+        updated_at: "Loading...",
+        sources: [],
+        news: [],
+        cves: [],
+        iocs: [],
+        active_apts: [],
+        live_ransomware: []
+      }
     };
 
     const SCENARIO_META = {
-      token_replay: { title: "Token Replay & Session Hijacking (MFA Bypass)", mitre: "T1539 / T1550.004" },
-      infostealer: { title: "Endpoint Infostealer (Login Data, Cookies & Session Theft)", mitre: "T1555.003 / T1539" },
-      api_leak: { title: "API / Cloud Secret & Token Exfiltration", mitre: "T1552.001 / T1567" },
-      rce_web: { title: "Web / Edge Exploitation & Suspicious Child Process", mitre: "T1190 / T1059" },
-      c2_lateral: { title: "C2 Beaconing, Tunneling & Lateral Movement", mitre: "T1071 / T1570" }
+      token_replay: { title: "Token Replay & Session Hijacking", mitre: "T1539 / T1550.004" },
+      infostealer: { title: "Endpoint Infostealer & Cookie Theft", mitre: "T1555.003 / T1539" },
+      api_leak: { title: "API / Cloud Secret & Token Exposure", mitre: "T1552.001 / T1567" },
+      rce_web: { title: "Web / Edge Exploitation & Child Process", mitre: "T1190 / T1059" },
+      c2_lateral: { title: "C2 Beaconing & Lateral Movement", mitre: "T1071 / T1570" }
     };
 
     function detectScenarioFromText(text) {
       const t = (text || "").toLowerCase();
-      if (t.includes("rce") || t.includes("csrf") || t.includes("web") || t.includes("drupal") || t.includes("exploit")) return "rce_web";
-      if (t.includes("stealer") || t.includes("cookie") || t.includes("vishing") || t.includes("credential")) return "infostealer";
-      if (t.includes("token") || t.includes("session") || t.includes("auth") || t.includes("hijack") || t.includes("mfa")) return "token_replay";
+      if (t.includes("rce") || t.includes("web") || t.includes("exploit") || t.includes("cve-")) return "rce_web";
+      if (t.includes("stealer") || t.includes("cookie") || t.includes("credential")) return "infostealer";
+      if (t.includes("token") || t.includes("session") || t.includes("auth") || t.includes("mfa")) return "token_replay";
       if (t.includes("api") || t.includes("secret") || t.includes("cloud") || t.includes("key")) return "api_leak";
       return "c2_lateral";
     }
@@ -227,44 +233,14 @@
       return "ok";
     }
 
-    function evaluateManualIoc(rawVal) {
-      const v = (rawVal || "").trim();
-      if (!v) return null;
-      const matched = (state.data.iocs || []).find(x => String(x.value || "").toLowerCase() === v.toLowerCase());
-      if (matched) {
-        return {
-          value: matched.value,
-          level: matched.level || "LOW",
-          score: matched.score || 10,
-          verdict: matched.verdict || "Alət analizi tamamlandı.",
-          toolSummary: matched.tool_summary || (matched.reasons || []).join(", ")
-        };
-      }
-      if (/^CVE-\d{4}-\d{4,7}$/i.test(v)) {
-        return {
-          value: v.toUpperCase(),
-          level: "HIGH",
-          score: 65,
-          verdict: "CVE indikatoru — zəiflik və aktiv istismar statusu üzrə prioritet yoxlama tələb edir.",
-          toolSummary: "Avtomatik CVE status qaydası"
-        };
-      }
-      if (/^(?:\d{1,3}\.){3}\d{1,3}$/.test(v)) {
-        return {
-          value: v,
-          level: "MEDIUM",
-          score: 25,
-          verdict: "Xarici IP ünvanı — aktiv zərərli siqnal qeydə alınmayıb, loqlarda bağlantı izini yoxlayın.",
-          toolSummary: "Avtomatik IP status analizi"
-        };
-      }
-      return {
-        value: v,
-        level: "LOW",
-        score: 15,
-        verdict: "İlkin status — əlavə təhlükə əlaməti aşkarlanmadı.",
-        toolSummary: "Avtomatik status analizi"
-      };
+    function dedupArrayByKey(arr, keyFn) {
+      const seen = new Set();
+      return (arr || []).filter(item => {
+        const k = keyFn(item);
+        if (!k || seen.has(k)) return false;
+        seen.add(k);
+        return true;
+      });
     }
 
     function buildHuntingQuery(scenario, plat, scope, hours) {
@@ -314,12 +290,12 @@
     function buildSoarCommand(actionType, target) {
       const v = (target || "target").trim();
       if (actionType === "block") {
-        return `# Bloklama Əmri (${v})\niptables -I INPUT -s ${v} -j DROP && iptables -I OUTPUT -d ${v} -j DROP`;
+        return `# Block Rule (${v})\niptables -I INPUT -s ${v} -j DROP && iptables -I OUTPUT -d ${v} -j DROP`;
       }
-      return `# Sessiya Ləğvi Əmri (${v})\nRevoke-MgUserSignInSession -UserId "${v}"`;
+      return `# Revoke Session (${v})\nRevoke-MgUserSignInSession -UserId "${v}"`;
     }
 
-    function copyVal(text, label = "Kopyalandı") {
+    function copyVal(text, label = "Copied") {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).catch(() => {});
       }
@@ -341,73 +317,174 @@
       ).join("")}</div>`;
     }
 
+    function renderNewsCards(items, isDarkwebView) {
+      if (!items.length) {
+        return `<div class="card muted">No unique entries available for this section yet. Run the workflow to collect fresh data.</div>`;
+      }
+      return items.map(n => {
+        const sc = detectScenarioFromText(`${n.title} ${n.summary}`);
+        const ctryBadges = (n.countries || []).map(c => `<span class="badge high">${c}</span>`).join("");
+        return `
+          <div class="card">
+            <span class="badge ${isDarkwebView ? "dw" : ""}">${isDarkwebView ? "DARKWEB / TOR / LEAK" : "CYBER NEWS"}</span>
+            <span class="badge">${n.source}</span>
+            <span class="badge ok">${n.date || ""}</span>
+            ${ctryBadges}
+            <div class="card-title">${n.title}</div>
+            <div class="muted">${n.summary || ""}</div>
+            <div class="impact-box"><b>Impact:</b> ${n.impact || "Review against active environment controls."}</div>
+            <div class="row-scroll" style="margin-bottom:0;">
+              <a href="${n.url}" target="_blank" rel="noopener"><button type="button" class="small">Open Source →</button></a>
+              <button type="button" class="small" onclick="state.scenario='${sc}';switchTab('hunting')">🎯 Hunt (${sc})</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
     function render() {
       const view = document.getElementById("view");
       const toast = state.copied ? `<span class="toast">${state.copied}</span>` : "";
+      const uniqueNews = dedupArrayByKey(state.data.news, n => `${(n.url || "").toLowerCase()}|${(n.title || "").toLowerCase().slice(0, 80)}`);
 
       if (state.tab === "news") {
-        const allNews = state.data.news || [];
-        const filtered = allNews.filter(n => state.newsCategory === "all" || (n.category || "global_cyber") === state.newsCategory);
-
+        const globalList = uniqueNews.filter(n => (n.category || "global_cyber") !== "darkweb_cti");
         view.innerHTML = `
-          <div class="row-scroll">
-            <button class="${state.newsCategory === "all" ? "active" : ""}" onclick="state.newsCategory='all';render()">Hamısı (${allNews.length})</button>
-            <button class="${state.newsCategory === "darkweb_cti" ? "active" : ""}" onclick="state.newsCategory='darkweb_cti';render()">🕵️ Darkweb & Leak</button>
-            <button class="${state.newsCategory === "global_cyber" ? "active" : ""}" onclick="state.newsCategory='global_cyber';render()">🌍 Dünya Kiber</button>
+          <div class="card">
+            <div class="card-title">🌍 Global Cyber News & Operational Impact (${globalList.length})</div>
+            <div class="muted">Every item includes impact assessment and direct threat hunting handoff.</div>
           </div>
-          ${filtered.length ? filtered.map((n, idx) => {
-            const key = `${state.newsCategory}_${idx}`;
-            const showOrig = !!state.showOriginal[key];
-            const titleAz = n.title_az || n.title;
-            const summaryAz = n.summary_az || n.summary || "";
-            const isDw = (n.category === "darkweb_cti");
-            const sc = detectScenarioFromText(`${n.title} ${n.summary}`);
-            return `
-              <div class="card">
-                <span class="badge ${isDw ? "dw" : ""}">${isDw ? "DARKWEB / CTI" : "GLOBAL CYBER"}</span>
-                <span class="badge">${n.source}</span>
-                <span class="badge ok">${n.date || ""}</span>
-                <div class="card-title">${titleAz}</div>
-                <div class="muted" style="margin-bottom:8px;">${summaryAz}</div>
-                <div class="row-scroll" style="margin-bottom:4px;">
-                  <a href="${n.url}" target="_blank" rel="noopener"><button type="button" class="small">Mənbəni aç →</button></a>
-                  <button type="button" class="small" onclick="state.showOriginal['${key}']=!state.showOriginal['${key}'];render()">
-                    ${showOrig ? "Orijinalı gizlə" : "🌐 Orijinal mətn"}
-                  </button>
-                  <button type="button" class="small" onclick="state.scenario='${sc}';switchTab('hunting')">🎯 Hunting (${sc})</button>
-                </div>
-                ${showOrig ? `<div class="orig-box"><b>Orijinal:</b> ${n.title}<br/>${n.summary || ""}</div>` : ""}
-              </div>
-            `;
-          }).join("") : `<div class="card muted">Bu kateqoriyada xəbər tapılmadı. GitHub Actions-ı işə salın.</div>`}
+          ${renderNewsCards(globalList, false)}
         `;
       }
 
-      else if (state.tab === "cve") {
-        const cves = state.data.cves || [];
-        const filtered = cves.filter(c => state.severityFilter !== "ransomware" || String(c.ransomware || "").toLowerCase().includes("known"));
+      else if (state.tab === "darkweb") {
+        const dwList = uniqueNews.filter(n => n.category === "darkweb_cti");
         view.innerHTML = `
-          <div class="row-scroll">
-            <button class="${state.severityFilter === "all" ? "active" : ""}" onclick="state.severityFilter='all';render()">Hamısı (${cves.length})</button>
-            <button class="${state.severityFilter === "ransomware" ? "active" : ""}" onclick="state.severityFilter='ransomware';render()">Ransomware KEV</button>
+          <div class="card">
+            <div class="card-title">🕵️ Darkweb, Leaks & Tor (.onion) Feed (${dwList.length})</div>
+            <div class="muted">.onion sources are queried over Tor SOCKS5 when Tor is running in the runner, alongside leak/ransomware feeds.</div>
           </div>
-          ${filtered.length ? filtered.map(c => {
-            const sc = detectScenarioFromText(`${c.vendor} ${c.product} ${c.name} ${c.action}`);
-            return `
-              <div class="card">
-                <span class="badge crit">${c.cveID}</span>
-                <span class="badge high">${c.dateAdded || ""}</span>
-                ${String(c.ransomware || "").toLowerCase().includes("known") ? `<span class="badge crit">Ransomware</span>` : ""}
-                <div class="card-title">${c.vendor || ""} — ${c.product || ""}</div>
-                <div style="font-size:13px;margin-bottom:4px;">${c.name_az || c.name || ""}</div>
-                <div class="muted" style="margin-bottom:6px;"><b>Tədbir (AZ):</b> ${c.action_az || c.action || "Yama tətbiq edin"}</div>
-                <div class="row-scroll" style="margin-bottom:0;">
-                  <button class="small" onclick="state.iocValue='${c.cveID}';switchTab('ioc')">🔍 IoC Status</button>
-                  <button class="small" onclick="state.scenario='${sc}';state.targetScope='${c.cveID}';switchTab('hunting')">🎯 Hunting</button>
+          ${renderNewsCards(dwList, true)}
+        `;
+      }
+
+      else if (state.tab === "ransomware") {
+        const rw = dedupArrayByKey(state.data.live_ransomware, r => `${(r.group || "").toLowerCase()}|${(r.victim || "").toLowerCase()}|${(r.country || "").toLowerCase()}`);
+        const cves = dedupArrayByKey(state.data.cves, c => c.cveID);
+
+        view.innerHTML = `
+          <div class="card">
+            <div class="card-title">💀 Live Ransomware Activity & Latest Countries (${rw.length})</div>
+            <div class="muted">Latest victims, groups and target countries from live ransomware feeds & intel.</div>
+          </div>
+          ${rw.length ? rw.map(r => `
+            <div class="card">
+              <span class="badge crit">${r.country || "Global"}</span>
+              <span class="badge high">${r.group || "Group"}</span>
+              <span class="badge ok">${r.date || ""}</span>
+              <div class="card-title">${r.victim || ""}</div>
+              <div class="muted">Source: ${r.source || "Ransomware Intel"}</div>
+            </div>
+          `).join("") : `<div class="card muted">No live ransomware items collected in this run.</div>`}
+
+          <div class="card">
+            <div class="card-title">⚠️ CISA Known Exploited Vulnerabilities (${cves.length})</div>
+          </div>
+          ${cves.map(c => `
+            <div class="card">
+              <span class="badge crit">${c.cveID}</span>
+              <span class="badge high">${c.dateAdded || ""}</span>
+              <div class="card-title">${c.vendor || ""} — ${c.product || ""}</div>
+              <div style="font-size:13px;margin-bottom:4px;">${c.name || ""}</div>
+              <div class="impact-box"><b>Action & Impact:</b> ${c.action || "Apply vendor patch immediately."}</div>
+              <button class="small" onclick="state.selectedIoc='${c.cveID}';switchTab('ioc')">🔍 View IoC Score</button>
+            </div>
+          `).join("")}
+        `;
+      }
+
+      else if (state.tab === "ioc") {
+        const allIocs = dedupArrayByKey(state.data.iocs, x => `${x.type}:${x.value}`);
+        const filtered = allIocs.filter(x => state.levelFilter === "ALL" || x.level === state.levelFilter);
+        const activeIoc = allIocs.find(x => x.value === state.selectedIoc) || filtered[0] || allIocs[0];
+
+        view.innerHTML = `
+          <div class="card">
+            <div class="card-title">🔍 Automated IoC Analysis, Tool Results & Total Score</div>
+            <div class="muted">All IoCs are automatically extracted, deduplicated, checked across CTI tools, and scored.</div>
+            <div class="row-scroll" style="margin-top:8px;">
+              ${["ALL", "CRITICAL", "HIGH", "MEDIUM", "LOW"].map(lvl =>
+                `<button class="small ${state.levelFilter === lvl ? "active" : ""}" onclick="state.levelFilter='${lvl}';render()">${lvl}</button>`
+              ).join("")}
+            </div>
+            ${activeIoc ? `
+              <div class="detail-box">
+                <span class="badge ${levelBadgeClass(activeIoc.level)}">${activeIoc.level} • TOTAL SCORE: ${activeIoc.score}</span>
+                <span class="badge">${(activeIoc.type || "ioc").toUpperCase()}</span>
+                <div style="font-weight:700;font-size:13px;color:#f8fafc;margin:4px 0;word-break:break-all;">${activeIoc.value}</div>
+                <div><b>Origin Source:</b> ${activeIoc.origin || "CTI Feed"}</div>
+                <div><b>Verdict:</b> ${activeIoc.verdict || ""}</div>
+                <div style="margin-top:6px;"><b>Tool-by-Tool Results:</b><br/>${(activeIoc.source_results || []).map(r => `• ${r}`).join("<br/>")}</div>
+              </div>
+              <div class="row-scroll" style="margin-top:8px;margin-bottom:0;">
+                <button class="small" onclick="state.soarPlaybook=buildSoarCommand('block', '${String(activeIoc.value).replace(/'/g, "\\'")}');render()">🛡️ Block Command</button>
+                <button class="small" onclick="state.soarPlaybook=buildSoarCommand('revoke', '${String(activeIoc.value).replace(/'/g, "\\'")}');render()">🔑 Revoke Session</button>
+                ${state.soarPlaybook ? `<button class="small" onclick="copyVal(state.soarPlaybook, 'Command copied')">📋 Copy</button>` : ""}
+              </div>
+              ${toast}
+              ${state.soarPlaybook ? `<pre>${state.soarPlaybook}</pre>` : ""}
+            ` : `<div class="muted" style="margin-top:8px;">No IoCs found in current collection.</div>`}
+          </div>
+
+          <div class="card">
+            <div class="card-title">Unique IoCs (${filtered.length}/${allIocs.length})</div>
+            ${filtered.map(item => `
+              <div style="border-top:1px solid var(--border);padding:8px 0;">
+                <span class="badge ${levelBadgeClass(item.level)}">${item.level} • Score ${item.score}</span>
+                <span class="badge">${(item.type || "ioc").toUpperCase()}</span>
+                <div style="font-weight:700;font-size:13px;word-break:break-all;">${item.value}</div>
+                <div class="muted">Source: ${item.origin || ""}</div>
+                <div class="muted">Tools: ${(item.source_results || []).join(" | ")}</div>
+                <div style="margin-top:6px;">
+                  <button class="small" onclick="state.selectedIoc='${String(item.value).replace(/'/g, "\\'")}';render()">📊 Inspect Score & Tools</button>
                 </div>
               </div>
+            `).join("")}
+          </div>
+        `;
+      }
+
+      else if (state.tab === "apt") {
+        const apts = dedupArrayByKey(state.data.active_apts, a => a.id || a.name);
+        const q = (state.aptSearch || "").trim().toLowerCase();
+        const list = apts.filter(a => !q || `${a.name} ${a.focus} ${a.mitigation}`.toLowerCase().includes(q));
+
+        view.innerHTML = `
+          <div class="card">
+            <div class="card-title">⚡ Live Detected APT & Threat Groups (${list.length})</div>
+            <div class="muted" style="margin-bottom:8px;">Only groups matched in current collected news/KEV sources are shown.</div>
+            <input value="${state.aptSearch}" oninput="state.aptSearch=this.value;render()" placeholder="Filter detected APT groups..." />
+          </div>
+          ${list.length ? list.map(a => {
+            const techs = a.techniques || [];
+            const mentions = a.mentions || [];
+            const scopeVal = (a.name || "APT").split(" ")[0];
+            return `
+              <div class="card">
+                <span class="badge ${levelBadgeClass(a.level)}">${a.level} • Score ${a.activity_score}</span>
+                <span class="badge ok">${a.status_label}</span>
+                <div class="card-title">${a.name}</div>
+                <div class="muted"><b>Focus:</b> ${a.focus}</div>
+                <div class="muted" style="margin-bottom:6px;"><b>Mitigation:</b> ${a.mitigation}</div>
+                <div style="margin-bottom:8px;">
+                  ${techs.map(t => `<a href="${t.url}" target="_blank" rel="noopener"><span class="badge">${t.id} — ${t.name}</span></a>`).join("")}
+                </div>
+                ${mentions.length ? `<div class="detail-box" style="margin-bottom:8px;"><b>Source Matches:</b><br/>${mentions.map(m => `• [${m.source}] ${m.title}`).join("<br/>")}</div>` : ""}
+                <button class="small" onclick="state.scenario='${a.scenario || "token_replay"}';state.targetScope='${scopeVal}';switchTab('hunting')">🎯 Hunt This Group</button>
+              </div>
             `;
-          }).join("") : `<div class="card muted">CVE siyahısı boşdur.</div>`}
+          }).join("") : `<div class="card muted">No APT groups matched in the current collected data.</div>`}
         `;
       }
 
@@ -423,152 +500,43 @@
           ${platformBar(state.platform, "state.platform='__P__';render()")}
           <div class="card">
             <div class="grid-2">
-              <input value="${state.targetScope}" oninput="state.targetScope=this.value;render()" placeholder="Hədəf (*, host, user, IP, CVE, APT)..." />
+              <input value="${state.targetScope}" oninput="state.targetScope=this.value;render()" placeholder="Scope (*, host, user, IP, APT)..." />
               <select onchange="state.windowHours=this.value;render()">
-                <option value="6" ${state.windowHours === "6" ? "selected" : ""}>Son 6 saat</option>
-                <option value="24" ${state.windowHours === "24" ? "selected" : ""}>Son 24 saat</option>
-                <option value="72" ${state.windowHours === "72" ? "selected" : ""}>Son 72 saat</option>
-                <option value="168" ${state.windowHours === "168" ? "selected" : ""}>Son 7 gün</option>
+                <option value="6" ${state.windowHours === "6" ? "selected" : ""}>Last 6h</option>
+                <option value="24" ${state.windowHours === "24" ? "selected" : ""}>Last 24h</option>
+                <option value="72" ${state.windowHours === "72" ? "selected" : ""}>Last 72h</option>
+                <option value="168" ${state.windowHours === "168" ? "selected" : ""}>Last 7d</option>
               </select>
             </div>
             <span class="badge ok">${meta.mitre}</span>
             <div class="card-title">${meta.title}</div>
             <pre id="huntBox">${queryText}</pre>
-            <button onclick="copyVal(document.getElementById('huntBox').innerText, 'Hunting sorğusu kopyalandı')">📋 Sorğunu kopyala</button>${toast}
+            <button onclick="copyVal(document.getElementById('huntBox').innerText, 'Query copied')">📋 Copy Query</button>${toast}
           </div>
-        `;
-      }
-
-      else if (state.tab === "ioc") {
-        const allIocs = state.data.iocs || [];
-        const filteredIocs = allIocs.filter(x => state.levelFilter === "ALL" || x.level === state.levelFilter);
-        const manualRes = evaluateManualIoc(state.iocValue);
-
-        view.innerHTML = `
-          <div class="card">
-            <div class="card-title">Avtomatik IoC Status & Nəticə</div>
-            <div class="muted" style="margin-bottom:8px;">İndikator daxil edin və ya aşağıdakı siyahıdan seçin — yalnız yekun status və nəticə göstərilir.</div>
-            <input value="${state.iocValue}" oninput="state.iocValue=this.value;render()" placeholder="IP, domen, URL, hash və ya CVE daxil edin..." />
-            ${manualRes ? `
-              <div class="status-box">
-                <span class="badge ${levelBadgeClass(manualRes.level)}">STATUS: ${manualRes.level} (${manualRes.score})</span>
-                <div style="font-weight:700;margin-bottom:4px;">${manualRes.value}</div>
-                <div><b>Nəticə:</b> ${manualRes.verdict}</div>
-                <div class="muted" style="margin-top:4px;">${manualRes.toolSummary}</div>
-              </div>
-            ` : ""}
-            <div class="row-scroll" style="margin-top:8px;">
-              <button class="small" onclick="state.soarPlaybook=buildSoarCommand('block', state.iocValue);render()">🛡️ Blokla Əmri</button>
-              <button class="small" onclick="state.soarPlaybook=buildSoarCommand('revoke', state.iocValue);render()">🔑 Sessiya Ləğvi</button>
-              ${state.soarPlaybook ? `<button class="small" onclick="copyVal(state.soarPlaybook, 'Əmr kopyalandı')">📋 Əmri kopyala</button>` : ""}
-            </div>
-            ${toast}
-            ${state.soarPlaybook ? `<pre>${state.soarPlaybook}</pre>` : ""}
-          </div>
-
-          <div class="card">
-            <div class="card-title">Aşkarlanan IoC-lər (${filteredIocs.length}/${allIocs.length})</div>
-            <div class="row-scroll">
-              ${["ALL", "CRITICAL", "HIGH", "MEDIUM", "LOW"].map(lvl =>
-                `<button class="small ${state.levelFilter === lvl ? "active" : ""}" onclick="state.levelFilter='${lvl}';render()">${lvl}</button>`
-              ).join("")}
-            </div>
-            ${filteredIocs.length ? filteredIocs.map(item => `
-              <div style="border-top:1px solid var(--border);padding:8px 0;">
-                <span class="badge ${levelBadgeClass(item.level)}">${item.level} (${item.score})</span>
-                <span class="badge">${(item.type || "ioc").toUpperCase()}</span>
-                <div style="font-weight:700;font-size:13px;word-break:break-all;margin-bottom:3px;">${item.value}</div>
-                <div style="font-size:12px;"><b>Nəticə:</b> ${item.verdict || (item.reasons || []).join(", ")}</div>
-                <div class="muted" style="margin-top:3px;">${item.tool_summary || ""}</div>
-                <div style="margin-top:6px;">
-                  <button class="small" onclick="state.iocValue='${String(item.value).replace(/'/g, "\\'")}';render()">📌 Statusu göstər</button>
-                </div>
-              </div>
-            `).join("") : `<div class="muted">Seçilmiş səviyyədə IoC yoxdur.</div>`}
-          </div>
-        `;
-      }
-
-      else if (state.tab === "apt") {
-        const apts = state.data.active_apts || [];
-        const q = (state.aptSearch || "").trim().toLowerCase();
-        const list = apts.filter(a => {
-          const catOk = state.aptCategory === "all" || a.category === state.aptCategory;
-          const techStr = (a.techniques || []).map(t => `${t.id} ${t.name} ${t.tactic || ""}`).join(" ");
-          const textOk = !q || `${a.name} ${a.focus} ${a.mitigation} ${techStr}`.toLowerCase().includes(q);
-          return catOk && textOk;
-        });
-
-        view.innerHTML = `
-          <div class="card">
-            <div class="card-title">🕵️ Mənbələrdə Aşkarlanan Real APT Qrupları & MITRE ATT&CK</div>
-            <div class="muted" style="margin-bottom:8px;">
-              Yalnız o an toplanan xəbərlərdə və CISA KEV məlumatlarında birbaşa qeyd olunan APT qrupları göstərilir.
-            </div>
-            <input value="${state.aptSearch}" oninput="state.aptSearch=this.value;render()" placeholder="APT, MITRE texnikası (T1190, T1539...), hədəf axtar..." />
-            <div class="row-scroll">
-              <button class="small ${state.aptCategory === "all" ? "active" : ""}" onclick="state.aptCategory='all';render()">Hamısı (${apts.length})</button>
-              <button class="small ${state.aptCategory === "espionage" ? "active" : ""}" onclick="state.aptCategory='espionage';render()">Casusluq / Cloud</button>
-              <button class="small ${state.aptCategory === "infra" ? "active" : ""}" onclick="state.aptCategory='infra';render()">İnfrastruktur / OT</button>
-              <button class="small ${state.aptCategory === "finance" ? "active" : ""}" onclick="state.aptCategory='finance';render()">Maliyyə / Kripto</button>
-              <button class="small ${state.aptCategory === "identity" ? "active" : ""}" onclick="state.aptCategory='identity';render()">Kimlik / Vishing</button>
-            </div>
-          </div>
-          ${list.length ? list.map(a => {
-            const techs = a.techniques || [];
-            const mentions = a.mentions || [];
-            const scopeVal = (a.name || "APT").split(" ")[0];
-            return `
-              <div class="card">
-                <span class="badge ${levelBadgeClass(a.level)}">${a.level} • Score ${a.activity_score}</span>
-                <span class="badge ok">${a.status_label}</span>
-                <div class="card-title">${a.name}</div>
-                <div class="muted" style="margin-bottom:4px;"><b>Hədəflər:</b> ${a.focus}</div>
-                <div class="muted" style="margin-bottom:6px;"><b>Mitiqasiya:</b> ${a.mitigation}</div>
-                <div style="margin-bottom:8px;">
-                  <div class="muted" style="margin-bottom:4px;"><b>MITRE ATT&CK Texnikaları:</b></div>
-                  ${techs.map(t => `<a href="${t.url || `https://attack.mitre.org/techniques/${String(t.id).replace('.', '/')}/`}" target="_blank" rel="noopener"><span class="badge">${t.id} — ${t.name}</span></a>`).join("")}
-                </div>
-                ${mentions.length ? `
-                  <div class="orig-box" style="margin-bottom:8px;">
-                    <b>Mənbədə tapılan qeydlər:</b><br/>
-                    ${mentions.map(m => `• [${m.source}] ${m.title}`).join("<br/>")}
-                  </div>
-                ` : ""}
-                <button class="small" onclick="state.scenario='${a.scenario || "token_replay"}';state.targetScope='${scopeVal}';switchTab('hunting')">🎯 Bu APT üzrə Hunting</button>
-              </div>
-            `;
-          }).join("") : `<div class="card muted">Bu toplama dövründə mənbələrdə birbaşa adı çəkilən APT qrupu aşkarlanmadı.</div>`}
         `;
       }
 
       else {
-        const srcs = state.data.sources || [];
-        view.innerHTML = srcs.length ? srcs.map(s => `
+        const srcs = dedupArrayByKey(state.data.sources, s => (s.url || s.name || "").toLowerCase());
+        view.innerHTML = srcs.map(s => `
           <div class="card">
-            <span class="badge ok">${s.type || "Mənbə"}</span>
+            <span class="badge ok">${s.type || "Source"}</span>
             <div class="card-title">${s.name}</div>
             <a href="${s.url}" target="_blank" rel="noopener">${s.url}</a>
           </div>
-        `).join("") : `<div class="card muted">Mənbələr yüklənməyib.</div>`;
+        `).join("");
       }
     }
 
     fetch("./data.json?t=" + Date.now())
       .then(r => r.json())
       .then(d => {
-        const iocList = d.iocs || [];
-        const aptList = d.active_apts || [];
-        state.data = {
-          ...state.data,
-          ...d,
-          active_apts: aptList
-        };
-        if (!state.iocValue && iocList.length) {
-          state.iocValue = iocList[0].value;
+        state.data = { ...state.data, ...d };
+        if (!state.selectedIoc && (d.iocs || []).length) {
+          state.selectedIoc = d.iocs[0].value;
         }
         document.getElementById("updatedAt").innerText =
-          `Son yenilənmə: ${d.updated_at} • Mənbə: ${(d.sources || []).length} • Tapılan APT: ${aptList.length} • IoC: ${iocList.length}`;
+          `Updated: ${d.updated_at} • Sources: ${(d.sources || []).length} • News: ${(d.news || []).length} • IoCs: ${(d.iocs || []).length} • APTs: ${(d.active_apts || []).length}`;
         render();
       })
       .catch(() => render());
