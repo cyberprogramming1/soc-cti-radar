@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOC & CTI Operativ Konsolu</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #111827;
+      --border: #1f2937;
+      --accent: #3b82f6;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --danger: #ef4444;
+      --ok: #10b981;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 14px;
+    }
+    .header {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      margin: 0 0 4px;
+      font-size: 18px;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .tabs, .platforms {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    button {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #1e3a8a;
+      color: #93c5fd;
+      margin-bottom: 6px;
+    }
+    .badge.crit {
+      background: #7f1d1d;
+      color: #fca5a5;
+    }
+    .badge.src {
+      background: #064e3b;
+      color: #6ee7b7;
+      margin-right: 6px;
+    }
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    pre {
+      background: #030712;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px;
+      overflow-x: auto;
+      font-size: 12px;
+      color: #a7f3d0;
+      line-height: 1.45;
+    }
+    input, select {
+      background: #030712;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 13px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 8px;
+    }
+    .copy-msg {
+      color: var(--ok);
+      font-size: 12px;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🛡️ SOC & CTI Operativ Konsolu</h1>
+    <div class="sub" id="updatedAt">Yenilənmə vaxtı yüklənir... • Cədvəl: 12:00 + hər 3 saat (+04)</div>
+  </div>
+
+  <div class="tabs">
+    <button class="active" onclick="setTab('news', this)">📰 Xəbərlər</button>
+    <button onclick="setTab('cve', this)">⚠️ CISA CVE</button>
+    <button onclick="setTab('hunting', this)">🎯 Threat Hunting</button>
+    <button onclick="setTab('ioc', this)">🔍 IoC & SOAR</button>
+    <button onclick="setTab('sources', this)">📡 Mənbələr</button>
+  </div>
+
+  <div id="content"></div>
+
+  <script>
+    if (window.Telegram && window.Telegram.WebApp) {
+      window.Telegram.WebApp.ready();
+      window.Telegram.WebApp.expand();
+    }
+
+    let state = {
+      tab: 'news',
+      platform: 'xql',
+      scenario: 'token_replay',
+      iocType: 'ip',
+      iocVal: '185.220.101.47',
+      copied: false,
+      data: {
+        updated_at: 'Gözlənilir...',
+        sources: [],
+        news: [],
+        cves: []
+      }
+    };
+
+    const QUERIES = {
+      token_replay: {
+        title: "Token Replay & Session Hijacking (MFA Bypass)",
+        xql: `dataset = identity_data\n| filter event_type = ENUM.AUTHENTICATION and auth_status = ENUM.SUCCESS\n| comp count_distinct(asn_org) as asns, count_distinct(user_agent) as uas by user_name, session_id\n| filter asns > 1 and uas > 1`,
+        kql: `SigninLogs\n| where TimeGenerated > ago(24h) and ResultType == 0\n| summarize ASNs=dcount(AutonomousSystemNumber), UAs=dcount(UserAgent) by UserPrincipalName, OriginalRequestId\n| where ASNs > 1 or UAs > 1`,
+        spl: `index=identity status=success\n| stats dc(src_ip) as ips dc(http_user_agent) as uas by user, session_id\n| where ips > 1 AND uas > 1`,
+        wazuh: `data.win.eventdata.targetUserName:* AND rule.groups:authentication_success`,
+        aql: `SELECT username, UNIQUECOUNT(sourceip) AS ips, UNIQUECOUNT("User Agent") AS uas FROM events GROUP BY username HAVING ips > 1 AND uas > 1 LAST 24 HOURS`
+      },
+      infostealer: {
+        title: "Endpoint Infostealer (Browser Login Data & Cookies)",
+        xql: `dataset = xdr_data\n| filter event_type = ENUM.FILE and action_file_path ~= ".*(Chrome|Edge)\\\\User Data\\\\.*(Login Data|Cookies)$"\n| filter actor_process_image_name not in ("chrome.exe", "msedge.exe")`,
+        kql: `DeviceFileEvents\n| where FolderPath has_any ("Chrome\\\\User Data", "Edge\\\\User Data") and FileName in~ ("Login Data", "Cookies")\n| where InitiatingProcessFileName !in~ ("chrome.exe", "msedge.exe")`,
+        spl: `index=endpoint (file_path="*Chrome*Login Data*" OR file_path="*Cookies*") NOT process_name IN ("chrome.exe","msedge.exe")`,
+        wazuh: `data.win.eventdata.targetFilename:*User Data* AND NOT data.win.eventdata.image:*chrome.exe`,
+        aql: `SELECT hostname, "Process Name", "Target Filename" FROM events WHERE "Target Filename" ILIKE '%Login Data%' AND "Process Name" NOT ILIKE '%chrome.exe' LAST 24 HOURS`
+      },
+      api_leak: {
+        title: "API / Cloud Secret & Token Exfiltration",
+        xql: `dataset = xdr_data\n| filter event_type = ENUM.FILE and action_file_path ~= ".*(\\.env|credentials|id_rsa|token|secret).*"\n| fields _time, agent_hostname, actor_primary_username, actor_process_image_name, action_file_path`,
+        kql: `DeviceFileEvents\n| where FileName has_any (".env", "credentials", "id_rsa", "secret", "token")\n| summarize Hits=count(), Files=make_set(FileName) by DeviceName, InitiatingProcessFileName`,
+        spl: `index=* (".env" OR "id_rsa" OR "AWS_SECRET" OR "API_KEY") | stats count values(host) as hosts values(user) as users`,
+        wazuh: `syscheck.path:*.env* OR data.win.eventdata.targetFilename:*.env*`,
+        aql: `SELECT hostname, username, "Target Filename", COUNT(*) AS Hits FROM events WHERE "Target Filename" ILIKE '%.env%' OR "Target Filename" ILIKE '%credentials%' GROUP BY hostname, username, "Target Filename" LAST 24 HOURS`
+      }
+    };
+
+    function buildIocQuery(type, val, plat) {
+      const v = (val || "185.220.101.47").trim();
+      if (plat === 'xql') {
+        return `dataset = xdr_data\n| filter action_remote_ip = "${v}" or dns_query_name contains "${v}" or actor_process_image_sha256 = "${v}"\n| fields _time, agent_hostname, actor_primary_username, actor_process_image_name, action_remote_ip`;
+      }
+      if (plat === 'kql') {
+        return `union DeviceNetworkEvents, DeviceProcessEvents, DeviceFileEvents\n| where RemoteIP == "${v}" or RemoteUrl has "${v}" or SHA256 == "${v}"`;
+      }
+      if (plat === 'spl') {
+        return `index=* ("${v}")\n| stats count earliest(_time) as first_seen latest(_time) as last_seen values(host) as hosts values(user) as users`;
+      }
+      if (plat === 'wazuh') {
+        return `data.srcip:${v} OR data.dstip:${v} OR data.dns.question.name:*${v}* OR syscheck.sha256:${v}`;
+      }
+      return `SELECT hostname, username, "Source IP", "Destination IP", "URL" FROM events WHERE "Source IP" = '${v}' OR "Destination IP" = '${v}' OR "URL" ILIKE '%${v}%' LAST 7 DAYS`;
+    }
+
+    function copyText(txt) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).catch(() => {});
+      }
+      state.copied = true;
+      render();
+      setTimeout(() => { state.copied = false; render(); }, 1500);
+    }
+
+    function setTab(tab, btn) {
+      state.tab = tab;
+      state.copied = false;
+      document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+    }
+
+    function render() {
+      const el = document.getElementById('content');
+      const copyNotice = state.copied ? '<span class="copy-msg">✓ Kopyalandı</span>' : '';
+
+      if (state.tab === 'news') {
+        const list = state.data.news || [];
+        el.innerHTML = list.length ? list.map(n => `
+          <div class="card">
+            <span class="badge">${n.source} • ${n.date}</span>
+            <div style="font-weight:600;margin-bottom:6px;">${n.title}</div>
+            <div style="font-size:13px;color:var(--muted);margin-bottom:8px;">${n.summary || ''}</div>
+            <a href="${n.url}" target="_blank" rel="noopener">Mənbəyə keçid →</a>
+          </div>
+        `).join('') : '<div class="card">Hələ <code>data.json</code> yaradılmayıb. 3-cü faylı əlavə edib Workflow-u işə saldıqda məlumatlar buraya düşəcək.</div>';
+      } else if (state.tab === 'cve') {
+        const cves = state.data.cves || [];
+        el.innerHTML = cves.length ? cves.map(c => `
+          <div class="card">
+            <span class="badge crit">${c.cveID} • CISA KEV (${c.dateAdded || ''})</span>
+            <div style="font-weight:600;margin-bottom:4px;">${c.vendor || ''} — ${c.product || ''}</div>
+            <div style="font-size:13px;margin-bottom:6px;">${c.name || ''}</div>
+            <div style="font-size:12px;color:var(--muted);">Tədbir: ${c.action || 'Yama / mitiqasiya tətbiq edin'}</div>
+          </div>
+        `).join('') : '<div class="card">CVE siyahısı hələ yüklənməyib.</div>';
+      } else if (state.tab === 'hunting') {
+        const q = QUERIES[state.scenario][state.platform];
+        el.innerHTML = `
+          <div class="platforms">
+            <button class="${state.scenario==='token_replay'?'active':''}" onclick="state.scenario='token_replay';render()">Token Replay</button>
+            <button class="${state.scenario==='infostealer'?'active':''}" onclick="state.scenario='infostealer';render()">Infostealer</button>
+            <button class="${state.scenario==='api_leak'?'active':''}" onclick="state.scenario='api_leak';render()">API / Secret Leak</button>
+          </div>
+          <div class="platforms">
+            ${['xql','kql','spl','wazuh','aql'].map(p => `<button class="${state.platform===p?'active':''}" onclick="state.platform='${p}';render()">${p.toUpperCase()}</button>`).join('')}
+          </div>
+          <div class="card">
+            <div style="font-weight:600;margin-bottom:8px;">${QUERIES[state.scenario].title}</div>
+            <pre id="qbox">${q}</pre>
+            <button onclick="copyText(document.getElementById('qbox').innerText)">📋 Sorğunu kopyala</button>${copyNotice}
+          </div>
+        `;
+      } else if (state.tab === 'ioc') {
+        const iq = buildIocQuery(state.iocType, state.iocVal, state.platform);
+        el.innerHTML = `
+          <div class="card">
+            <select onchange="state.iocType=this.value;render()">
+              <option value="ip" ${state.iocType==='ip'?'selected':''}>IP ünvanı</option>
+              <option value="domain" ${state.iocType==='domain'?'selected':''}>Domen</option>
+              <option value="hash" ${state.iocType==='hash'?'selected':''}>File Hash (SHA256/MD5)</option>
+            </select>
+            <input value="${state.iocVal}" oninput="state.iocVal=this.value;render()" placeholder="IP, Domen və ya Hash daxil et..." />
+            <div class="platforms">
+              ${['xql','kql','spl','wazuh','aql'].map(p => `<button class="${state.platform===p?'active':''}" onclick="state.platform='${p}';render()">${p.toUpperCase()}</button>`).join('')}
+            </div>
+            <pre id="iocbox">${iq}</pre>
+            <button onclick="copyText(document.getElementById('iocbox').innerText)">📋 IoC Sorğusunu kopyala</button>${copyNotice}
+          </div>
+        `;
+      } else {
+        const srcs = state.data.sources || [];
+        el.innerHTML = srcs.length ? srcs.map(s => `
+          <div class="card">
+            <span class="badge src">Mənbə</span>
+            <div style="font-weight:600;margin-bottom:4px;">${s.name}</div>
+            <a href="${s.url}" target="_blank" rel="noopener">${s.url}</a>
+          </div>
+        `).join('') : '<div class="card">Mənbə siyahısı <code>data.json</code> yaradıldıqdan sonra görünəcək.</div>';
+      }
+    }
+
+    fetch('./data.json?t=' + Date.now())
+      .then(r => r.json())
+      .then(d => {
+        state.data = d;
+        document.getElementById('updatedAt').innerText = `Son yenilənmə: ${d.updated_at} • Cədvəl: 12:00 + hər 3 saat (+04)`;
+        render();
+      })
+      .catch(() => render());
+  </script>
+</body>
+</html>
