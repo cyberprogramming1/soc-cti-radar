@@ -4,6 +4,7 @@ import json
 import os
 import re
 import socket
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -35,7 +36,11 @@ RAW_WEB_SOURCES = [
     ("The Hacker News", "https://thehackernews.com/"),
     ("LeakFA Leaks", "https://leakfa.com/leaks"),
     ("BF.st DB Index", "https://bf.st/Announcement-Database-Index"),
-    ("Kalir Pulse AZAL Brief", "https://pulse.kalir.io/en/brief/base-de-datos-de-azerbaijan-airlines-eca8fae5"),
+    ("Kalir Pulse Brief", "https://pulse.kalir.io/en/brief"),
+    ("Kalir Pulse Actor", "https://pulse.kalir.io/en/actors"),
+    ("Kalir Pulse CVE", "https://pulse.kalir.io/en/cves"),
+    ("Kalir Pulse Ransomware", "https://pulse.kalir.io/en/ransomware"),
+    ("Kalir Pulse Wire", "https://pulse.kalir.io/en/wire"),
     ("Kalir Pulse", "https://pulse.kalir.io/en/"),
     ("X LeakFarsi", "https://x.com/leakfarsi"),
     ("SecretLine", "https://secretline.top/"),
@@ -49,27 +54,7 @@ RAW_WEB_SOURCES = [
     ("CERT.pl MWDB", "https://mwdb.cert.pl/file/dd7fca91c67710c4872e1c8fa62acbaedd94cd8bc673c4e3c9d5aa60e9902518"),
     ("DailyDarkWeb", "https://dailydarkweb.net/"),
     ("Securelist", "https://securelist.com/"),
-    ("Life.ru", "https://life.ru/p/1849559"),
-    ("VM.ru Infra", "https://vm.ru/news/1308971-prorossijskie-hakery-vzlomali-sistemy-kriticheskoj-infrastruktury-izrailya"),
-    ("Telegram CyberGuerre", "https://t.me/cyberguerre/3953"),
-    ("Ridus", "https://www.ridus.ru/z-pentest-alliance-vzlomali-sistemy-nasosov-na-obektah-izrailya-804595.html"),
-    ("News Mail.ru", "https://news.mail.ru/society/70075193/"),
-    ("MK.ru", "https://www.mk.ru/politics/2026/03/07/gruppa-khakerov-s-prorossiyskimi-vzglyadami-vzlomala-chast-kriticheskikh-obektov-izrailya.html"),
-    ("News.ru", "https://news.ru/society/prorossijskie-hakery-vzlomali-sistemy-upravleniya-nasosami-v-izraile"),
-    ("Gazeta.ru Tech", "https://www.gazeta.ru/tech/news/2026/03/07/28009429.shtml"),
-    ("SMI2 #1", "https://smi2.ru/article/181077136/story"),
-    ("SMI2 #2", "https://smi2.ru/article/181088846/story"),
-    ("Rambler News", "https://news.rambler.ua/army/56147635-prorossiyskie-hakery-vzlomali-sistemy-kriticheskoy-infrastruktury-izrailya/"),
-    ("Tsargrad", "https://tsargrad.tv/novost/entest-vzlomany-sistemy-nasosov-kriticheskoj-infrastruktury-izrailja_1587505"),
-    ("VZ.ru", "https://vz.ru/news/2026/3/7/1400342.html"),
-    ("SAK-Info", "https://sak-info.com/vlast/item/188817-z-pentest-alliance-vzlomali-sistemy-nasosov-na-obektah-izrailya"),
-    ("Rodina.news", "https://rodina.news/hakery-zpentest-alliance-vzlomali-sistemy-kriticheskoi-26030718235844.htm"),
-    ("MySeldon", "https://myseldon.com/en/news/index/342789446"),
-    ("AlarmyK24", "https://alarmyk24.ru/news/3882425/prorossijskie-hakery-vzlomali-sistemy-kriticheskoj-infrastruktury-izrailya.html"),
     ("Cyber Intelligence House", "http://www.cyberintelligencehouse.com"),
-    ("Sector035 (LinkedIn)", "https://lnkd.in/dVZ8iVA3"),
-    ("Authentic8 Blog (LinkedIn)", "https://lnkd.in/dGc6wiVb"),
-    ("Rae Baker Blog (LinkedIn)", "https://lnkd.in/d57YnaAj"),
     ("VEEXH Medium", "https://medium.com/@VEEXH"),
     ("OH SHINT Blog (LinkedIn)", "https://lnkd.in/d9UvBrT5"),
     ("OSINT Combine (LinkedIn)", "https://lnkd.in/ducHTp2X"),
@@ -208,23 +193,24 @@ FALLBACK_MITRE_TECHNIQUES = {
 }
 
 COUNTRY_PATTERNS = {
-    "United States": r"\b(?:united states|usa|u\.s\.|america|american)\b",
+    "United States": r"\b(?:united states|usa|u\.s\.|america|american|us)\b",
     "Israel": r"\b(?:israel|israeli)\b",
     "Ukraine": r"\b(?:ukraine|ukrainian)\b",
     "Russia": r"\b(?:russia|russian)\b",
     "United Kingdom": r"\b(?:united kingdom|uk|britain|british)\b",
     "Germany": r"\b(?:germany|german)\b",
     "France": r"\b(?:france|french)\b",
-    "Poland": r"\b(?:poland|polish)\b",
+    "Poland": r"\b(?:poland|polish|pl)\b",
     "Canada": r"\b(?:canada|canadian)\b",
     "India": r"\b(?:india|indian)\b",
     "Japan": r"\b(?:japan|japanese)\b",
     "South Korea": r"\b(?:south korea|korean)\b",
     "Brazil": r"\b(?:brazil|brazilian)\b",
-    "Australia": r"\b(?:australia|australian)\b",
+    "Australia": r"\b(?:australia|australian|au)\b",
     "Azerbaijan": r"\b(?:azerbaijan|baku|azal)\b",
     "Turkey": r"\b(?:turkey|turkish|türkiye)\b",
     "Iran": r"\b(?:iran|iranian)\b",
+    "Mexico": r"\b(?:mexico|mexican|mx)\b",
 }
 
 IP_RE = re.compile(r"\b(?:(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\b")
@@ -275,13 +261,11 @@ def fetch_via_tor_socks5(url, host="127.0.0.1", port=9050, timeout=18):
 
     with socket.create_connection((host, port), timeout=timeout) as sock:
         sock.settimeout(timeout)
-        # SOCKS5 handshake (no auth)
         sock.sendall(b"\x05\x01\x00")
         resp = sock.recv(2)
         if len(resp) < 2 or resp[0] != 0x05 or resp[1] != 0x00:
             raise RuntimeError("SOCKS5 auth handshake failed")
 
-        # SOCKS5 connect with domain name (0x03)
         host_bytes = target_host.encode("utf-8")
         req = b"\x05\x01\x00\x03" + bytes([len(host_bytes)]) + host_bytes + target_port.to_bytes(2, "big")
         sock.sendall(req)
@@ -318,7 +302,7 @@ def http_get_text(url, headers=None, timeout=10):
     req = urllib.request.Request(
         url,
         headers=headers or {
-            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/4.0; +https://github.com)"
+            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/4.2; +https://github.com)"
         },
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -329,12 +313,24 @@ def http_get_json(url, headers=None, timeout=12):
     return json.loads(http_get_text(url, headers=headers, timeout=timeout))
 
 
+def http_get_json_retry(url, headers=None, timeout=12, retries=2):
+    last_err = None
+    for attempt in range(retries + 1):
+        try:
+            return http_get_json(url, headers=headers, timeout=timeout)
+        except Exception as e:
+            last_err = e
+            if attempt < retries:
+                time.sleep(1.2 * (attempt + 1))
+    raise last_err
+
+
 def http_post_form(url, data_dict, headers=None, timeout=10):
     encoded = urllib.parse.urlencode(data_dict).encode("utf-8")
     req = urllib.request.Request(
         url,
         data=encoded,
-        headers=headers or {"User-Agent": "SOC-CTI-Radar/4.0"},
+        headers=headers or {"User-Agent": "SOC-CTI-Radar/4.2"},
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8", errors="ignore"))
@@ -386,7 +382,7 @@ def classify_category(source_name, title, summary, url):
 def load_mitre_techniques():
     techniques = dict(FALLBACK_MITRE_TECHNIQUES)
     try:
-        stix = http_get_json(MITRE_ENTERPRISE_STIX_URL, timeout=14)
+        stix = http_get_json_retry(MITRE_ENTERPRISE_STIX_URL, timeout=14, retries=1)
         for obj in stix.get("objects") or []:
             if obj.get("type") != "attack-pattern" or obj.get("revoked") or obj.get("x_mitre_deprecated"):
                 continue
@@ -523,7 +519,7 @@ def deduplicate_news(items):
 
 def fetch_cisa_kev():
     try:
-        data = http_get_json(CISA_KEV_URL, timeout=12)
+        data = http_get_json_retry(CISA_KEV_URL, timeout=12, retries=2)
         vulns = data.get("vulnerabilities") or []
         vulns_sorted = sorted(vulns, key=lambda x: x.get("dateAdded", ""), reverse=True)
         out = []
@@ -546,14 +542,13 @@ def fetch_cisa_kev():
 
 
 def extract_live_ransomware(news_items, cves):
-    # Canlı ransomware.live API və xəbərlərdən ən son aktiv qrup və ölkələri çıxarır
     entries = []
     seen = set()
 
     try:
-        recent_victims = http_get_json("https://api.ransomware.live/v2/recentvictims", timeout=10)
+        recent_victims = http_get_json_retry("https://api.ransomware.live/v2/recentvictims", timeout=12, retries=2)
         if isinstance(recent_victims, list):
-            for v in recent_victims[:20]:
+            for v in recent_victims[:25]:
                 group = (v.get("group_name") or v.get("group") or "Unknown Group").strip()
                 victim = (v.get("post_title") or v.get("victim") or "Victim").strip()
                 country = (v.get("country") or "Global").strip() or "Global"
@@ -602,27 +597,84 @@ def extract_live_ransomware(news_items, cves):
                     "source": "CISA KEV",
                 })
 
-    return entries[:25]
+    return entries[:30]
 
 
-def detect_active_apts(news, cves, mitre_techniques):
+def infer_mitre_from_context(text, mitre_techniques):
+    t = (text or "").lower()
+    inferred = set()
+
+    for tid in TECH_RE.findall((text or "").upper()):
+        if tid in mitre_techniques:
+            inferred.add(tid)
+
+    if any(k in t for k in ("ransomware", "encrypt", "wiper", "extortion", "lockbit", "spacebears", "silentransom")):
+        inferred.update(["T1486", "T1021", "T1041", "T1059.001"])
+    if any(k in t for k in ("phish", "spearphish", "vishing", "malicious file", "attachment")):
+        inferred.update(["T1566", "T1204.002"])
+    if any(k in t for k in ("token", "cookie", "session", "credential", "stealer", "mfa", "sso")):
+        inferred.update(["T1539", "T1550.004", "T1555.003"])
+    if any(k in t for k in ("exploit", "rce", "cve-", "vpn", "edge", "web", "public-facing")):
+        inferred.update(["T1190", "T1059"])
+    if any(k in t for k in ("exfil", "leak", "dump", "cloud", "api")):
+        inferred.update(["T1567", "T1078.004"])
+
+    if not inferred:
+        inferred.update(["T1486", "T1021", "T1071.001"])
+
+    return inferred
+
+
+def infer_scenario_from_techs(tech_set):
+    if "T1190" in tech_set:
+        return "rce_web"
+    if "T1539" in tech_set or "T1550.004" in tech_set:
+        return "token_replay"
+    if "T1555.003" in tech_set:
+        return "infostealer"
+    if "T1567" in tech_set:
+        return "api_leak"
+    return "c2_lateral"
+
+
+def detect_active_apts(news, cves, mitre_techniques, live_ransomware=None):
+    live_ransomware = live_ransomware or []
+
     corpus_entries = []
     for n in news:
         corpus_entries.append({
             "text": f"{n.get('source', '')} {n.get('title', '')} {n.get('summary', '')}".lower(),
+            "raw_text": f"{n.get('source', '')} {n.get('title', '')} {n.get('summary', '')}",
             "title": n.get("title") or "",
             "source": n.get("source") or "",
             "url": n.get("url") or "",
         })
+
     for c in cves:
+        raw_c = f"{c.get('cveID', '')} {c.get('vendor', '')} {c.get('product', '')} {c.get('name', '')} {c.get('action', '')}"
         corpus_entries.append({
-            "text": f"{c.get('cveID', '')} {c.get('vendor', '')} {c.get('product', '')} {c.get('name', '')} {c.get('action', '')}".lower(),
+            "text": raw_c.lower(),
+            "raw_text": raw_c,
             "title": f"{c.get('cveID', '')}: {c.get('name') or ''}",
             "source": "CISA KEV",
             "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
         })
 
-    active_list = []
+    for r in live_ransomware:
+        grp_name = r.get("group") or "Ransomware Group"
+        victim = r.get("victim") or ""
+        country = r.get("country") or "Global"
+        raw_r = f"{grp_name} {victim} {country} ransomware extortion {r.get('source', '')}"
+        corpus_entries.append({
+            "text": raw_r.lower(),
+            "raw_text": raw_r,
+            "title": f"[{country}] {grp_name} — {victim}"[:130],
+            "source": r.get("source") or "Ransomware Intel",
+            "url": "https://www.ransomware.live/",
+        })
+
+    active_by_id = {}
+
     for grp in APT_CATALOG:
         matched_mentions = []
         found_techs = set(grp["default_techniques"])
@@ -635,19 +687,78 @@ def detect_active_apts(news, cves, mitre_techniques):
                     "title": entry["title"][:130],
                     "url": entry["url"],
                 })
-                for tid in TECH_RE.findall(txt.upper()):
-                    if tid in mitre_techniques:
-                        found_techs.add(tid)
+                found_techs.update(infer_mitre_from_context(entry["raw_text"], mitre_techniques))
 
-        if not matched_mentions:
+        if matched_mentions:
+            mention_count = len(matched_mentions)
+            activity_score = min(99, 75 + mention_count * 8)
+            level = "CRITICAL" if mention_count >= 2 else "HIGH"
+            active_by_id[grp["id"]] = {
+                "id": grp["id"],
+                "name": grp["name"],
+                "category": grp["category"],
+                "level": level,
+                "activity_score": activity_score,
+                "status_label": f"Matched in feeds ({mention_count})",
+                "focus": grp["focus"],
+                "mitigation": grp["mitigation"],
+                "scenario": grp["scenario"],
+                "raw_tech_ids": sorted(found_techs),
+                "mentions": matched_mentions[:6],
+            }
+
+    # ransomware.live-dan görünən HƏR bir qrup / APT adını birbaşa çək və APT/Group profili yarat
+    for r in live_ransomware:
+        if r.get("source") != "Ransomware.live API":
+            continue
+        grp_raw = re.sub(r"\s+", " ", (r.get("group") or "").strip())
+        if not grp_raw or grp_raw.lower() in ("unknown group", "unknown"):
             continue
 
-        mention_count = len(matched_mentions)
-        activity_score = min(99, 75 + mention_count * 8)
-        level = "CRITICAL" if mention_count >= 2 else "HIGH"
+        norm_id = "rw_" + re.sub(r"[^a-z0-9]+", "_", grp_raw.lower()).strip("_")
+        already_in_catalog = any(
+            grp_raw.lower() in " ".join(g["keywords"]).lower()
+            for g in APT_CATALOG
+        )
+        if already_in_catalog:
+            continue
 
+        context_str = f"{grp_raw} {r.get('victim', '')} {r.get('country', '')} ransomware extortion"
+        tech_set = infer_mitre_from_context(context_str, mitre_techniques)
+        mention_item = {
+            "source": "Ransomware.live API",
+            "title": f"[{r.get('country', 'Global')}] {r.get('victim', '')} ({r.get('date', '')})"[:130],
+            "url": "https://www.ransomware.live/",
+        }
+
+        if norm_id in active_by_id:
+            active_by_id[norm_id]["mentions"].append(mention_item)
+            cnt = len(active_by_id[norm_id]["mentions"])
+            active_by_id[norm_id]["activity_score"] = min(98, 72 + cnt * 6)
+            active_by_id[norm_id]["level"] = "CRITICAL" if cnt >= 2 else "HIGH"
+            active_by_id[norm_id]["status_label"] = f"Ransomware.live ({cnt})"
+            merged_techs = set(active_by_id[norm_id]["raw_tech_ids"]) | tech_set
+            active_by_id[norm_id]["raw_tech_ids"] = sorted(merged_techs)
+            active_by_id[norm_id]["mentions"] = active_by_id[norm_id]["mentions"][:6]
+        else:
+            active_by_id[norm_id] = {
+                "id": norm_id,
+                "name": f"{grp_raw} (APT / Ransomware Group)",
+                "category": "finance",
+                "level": "HIGH",
+                "activity_score": 76,
+                "status_label": "Ransomware.live (1)",
+                "focus": f"Live ransomware & extortion activity (latest: {r.get('country', 'Global')})",
+                "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+                "scenario": infer_scenario_from_techs(tech_set),
+                "raw_tech_ids": sorted(tech_set),
+                "mentions": [mention_item],
+            }
+
+    active_list = []
+    for item in active_by_id.values():
         tech_details = []
-        for tid in sorted(found_techs):
+        for tid in item.pop("raw_tech_ids", []):
             tinfo = mitre_techniques.get(tid) or {
                 "id": tid,
                 "name": tid,
@@ -660,20 +771,8 @@ def detect_active_apts(news, cves, mitre_techniques):
                 "tactic": tinfo.get("tactic", "Enterprise ATT&CK"),
                 "url": tinfo.get("url", f"https://attack.mitre.org/techniques/{tid.replace('.', '/')}/"),
             })
-
-        active_list.append({
-            "id": grp["id"],
-            "name": grp["name"],
-            "category": grp["category"],
-            "level": level,
-            "activity_score": activity_score,
-            "status_label": f"Matched in sources ({mention_count})",
-            "focus": grp["focus"],
-            "mitigation": grp["mitigation"],
-            "scenario": grp["scenario"],
-            "techniques": tech_details,
-            "mentions": matched_mentions[:5],
-        })
+        item["techniques"] = tech_details
+        active_list.append(item)
 
     active_list.sort(key=lambda x: (-x["activity_score"], x["name"]))
     return active_list
@@ -755,7 +854,7 @@ def extract_and_dedup_iocs(news_items, cves):
 
 def check_urlhaus(ioc):
     auth = os.environ.get("URLHAUS_AUTH_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/4.0"}
+    headers = {"User-Agent": "SOC-CTI-Radar/4.2"}
     if auth:
         headers["Auth-Key"] = auth
     try:
@@ -783,7 +882,7 @@ def check_virustotal(ioc):
     key = os.environ.get("VT_API_KEY", "").strip()
     if not key:
         return {"score_add": 0, "result": "VirusTotal: API key not configured"}
-    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/4.0"}
+    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/4.2"}
     try:
         if ioc["type"] == "ip":
             ep = f"https://www.virustotal.com/api/v3/ip_addresses/{urllib.parse.quote(ioc['value'])}"
@@ -794,7 +893,7 @@ def check_virustotal(ioc):
         else:
             return {"score_add": 0, "result": "VirusTotal: N/A for CVE"}
 
-        data = http_get_json(ep, headers=headers)
+        data = http_get_json_retry(ep, headers=headers, timeout=12, retries=1)
         stats = (((data.get("data") or {}).get("attributes") or {}).get("last_analysis_stats")) or {}
         mal = int(stats.get("malicious", 0))
         susp = int(stats.get("suspicious", 0))
@@ -812,9 +911,11 @@ def check_abuseipdb(ioc):
         return {"score_add": 0, "result": "AbuseIPDB: API key not configured"}
     try:
         q = urllib.parse.urlencode({"ipAddress": ioc["value"], "maxAgeInDays": "30"})
-        data = http_get_json(
+        data = http_get_json_retry(
             f"https://api.abuseipdb.com/api/v2/check?{q}",
-            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/4.0"},
+            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/4.2"},
+            timeout=12,
+            retries=1,
         )
         d = data.get("data") or {}
         conf = int(d.get("abuseConfidenceScore", 0))
@@ -827,7 +928,7 @@ def check_abuseipdb(ioc):
 
 def check_otx(ioc):
     key = os.environ.get("OTX_API_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/4.0"}
+    headers = {"User-Agent": "SOC-CTI-Radar/4.2"}
     if key:
         headers["X-OTX-API-KEY"] = key
     try:
@@ -840,12 +941,12 @@ def check_otx(ioc):
         else:
             return {"score_add": 0, "result": "OTX: N/A for CVE"}
 
-        data = http_get_json(ep, headers=headers)
+        data = http_get_json_retry(ep, headers=headers, timeout=12, retries=2)
         pulses = int(((data.get("pulse_info") or {}).get("count")) or 0)
         add = min(35, pulses * 5)
         return {"pulses": pulses, "score_add": add, "result": f"OTX: {pulses} threat pulses (+{add})"}
     except Exception:
-        return {"score_add": 0, "result": "OTX: query failed"}
+        return {"score_add": 0, "result": "OTX: query failed after retry"}
 
 
 def check_shodan(ioc):
@@ -855,7 +956,11 @@ def check_shodan(ioc):
     if not key:
         return {"score_add": 0, "result": "Shodan: API key not configured"}
     try:
-        data = http_get_json(f"https://api.shodan.io/shodan/host/{urllib.parse.quote(ioc['value'])}?key={urllib.parse.quote(key)}")
+        data = http_get_json_retry(
+            f"https://api.shodan.io/shodan/host/{urllib.parse.quote(ioc['value'])}?key={urllib.parse.quote(key)}",
+            timeout=12,
+            retries=1,
+        )
         vulns = list((data.get("vulns") or {}).keys())
         ports = data.get("ports") or []
         add = min(30, len(vulns) * 8 + (5 if len(ports) > 5 else 0))
@@ -956,7 +1061,7 @@ def send_deep_cti_report(updated_at, source_count, news, cves, iocs, active_apts
 
     if active_apts:
         lines.append("")
-        lines.append("🕵️ <b>Detected APT Groups:</b>")
+        lines.append("🕵️ <b>Detected APT & Ransomware Groups:</b>")
         for a in active_apts[:4]:
             t_codes = ", ".join(t["id"] for t in (a.get("techniques") or [])[:4])
             lines.append(f"• <b>{a['name']}</b> [{t_codes}] — Score {a['activity_score']}")
@@ -1007,8 +1112,8 @@ def main():
     web_items = fetch_web_sources_items(unique_web)
     news = deduplicate_news(rss_items + web_items)
     cves = fetch_cisa_kev()
-    active_apts = detect_active_apts(news, cves, mitre_techniques)
     live_ransomware = extract_live_ransomware(news, cves)
+    active_apts = detect_active_apts(news, cves, mitre_techniques, live_ransomware)
     raw_iocs = extract_and_dedup_iocs(news, cves)
     iocs = enrich_iocs(raw_iocs)
 
