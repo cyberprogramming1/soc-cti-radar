@@ -9,10 +9,11 @@ import xml.etree.ElementTree as ET
 
 TZ_AZ = datetime.timezone(datetime.timedelta(hours=4))
 
-# RSS / Atom mənbələri
+# RSS / Atom mənbələri (The Hacker News daxil)
 RSS_SOURCES = [
+    ("The Hacker News RSS", "https://feeds.feedburner.com/TheHackersNews"),
+    ("The Hacker News Atom", "https://thehackernews.com/feeds/posts/default"),
     ("BleepingComputer", "https://www.bleepingcomputer.com/feed/"),
-    ("The Hacker News", "https://feeds.feedburner.com/TheHackersNews"),
     ("SecurityWeek", "https://feeds.feedburner.com/securityweek"),
     ("Dark Reading", "https://www.darkreading.com/rss.xml"),
     ("CISA Advisories", "https://www.cisa.gov/cybersecurity-advisories/all.xml"),
@@ -31,6 +32,7 @@ RSS_SOURCES = [
 
 # CTI, Leak, Darkweb, Malware Analysis & News səhifələri (dedup olunmuş)
 RAW_WEB_SOURCES = [
+    ("The Hacker News", "https://thehackernews.com/"),
     ("LeakFA Leaks", "https://leakfa.com/leaks"),
     ("BF.st DB Index", "https://bf.st/Announcement-Database-Index"),
     ("Kalir Pulse AZAL Brief", "https://pulse.kalir.io/en/brief/base-de-datos-de-azerbaijan-airlines-eca8fae5"),
@@ -103,6 +105,8 @@ DARKWEB_KEYWORDS = (
     "extortion", "vishing", "database", "dump", "forum", "onion", "payload", "malware"
 )
 
+_TRANSLATION_CACHE = {}
+
 
 def now_az_str():
     return datetime.datetime.now(TZ_AZ).strftime("%Y-%m-%d %H:%M (+04)")
@@ -124,7 +128,7 @@ def http_get_text(url, headers=None, timeout=12):
     req = urllib.request.Request(
         url,
         headers=headers or {
-            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.0; +https://github.com)"
+            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.1; +https://github.com)"
         },
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -140,7 +144,7 @@ def http_post_form(url, data_dict, headers=None, timeout=12):
     req = urllib.request.Request(
         url,
         data=encoded,
-        headers=headers or {"User-Agent": "SOC-CTI-Radar/3.0"},
+        headers=headers or {"User-Agent": "SOC-CTI-Radar/3.1"},
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8", errors="ignore"))
@@ -152,6 +156,26 @@ def clean_html(text):
     text = re.sub(r"<[^>]+>", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
+
+
+def translate_to_az(text):
+    src = (text or "").strip()
+    if not src:
+        return ""
+    if src in _TRANSLATION_CACHE:
+        return _TRANSLATION_CACHE[src]
+    try:
+        q = urllib.parse.urlencode({"client": "gtx", "sl": "auto", "tl": "az", "dt": "t", "q": src[:800]})
+        raw = http_get_text(f"https://translate.googleapis.com/translate_a/single?{q}", timeout=8)
+        parsed = json.loads(raw)
+        translated = "".join(seg[0] for seg in (parsed[0] or []) if seg and seg[0]).strip()
+        if translated:
+            _TRANSLATION_CACHE[src] = translated
+            return translated
+    except Exception:
+        pass
+    _TRANSLATION_CACHE[src] = src
+    return src
 
 
 def classify_category(source_name, title, summary, url):
@@ -169,17 +193,40 @@ def fetch_rss_news():
         try:
             xml_data = http_get_text(url)
             root = ET.fromstring(xml_data)
-            for elem in root.findall(".//item")[:5]:
-                title = clean_html(elem.findtext("title") or "")
-                link = (elem.findtext("link") or "").strip() or url
-                desc = clean_html(elem.findtext("description") or "")[:260]
-                pub_date = (elem.findtext("pubDate") or "")[:16]
+            entries = root.findall(".//item")
+            if not entries:
+                entries = root.findall(".//{http://www.w3.org/2005/Atom}entry")
+            for elem in entries[:5]:
+                title_el = elem.find("title")
+                if title_el is None:
+                    title_el = elem.find("{http://www.w3.org/2005/Atom}title")
+                title = clean_html(title_el.text if title_el is not None else "")
+
+                link = (elem.findtext("link") or "").strip()
+                if not link:
+                    link_el = elem.find("{http://www.w3.org/2005/Atom}link")
+                    if link_el is not None:
+                        link = (link_el.attrib.get("href") or "").strip()
+                link = link or url
+
+                desc = clean_html(
+                    elem.findtext("description")
+                    or elem.findtext("{http://www.w3.org/2005/Atom}summary")
+                    or ""
+                )[:260]
+                pub_date = (
+                    elem.findtext("pubDate")
+                    or elem.findtext("{http://www.w3.org/2005/Atom}updated")
+                    or ""
+                )[:16]
                 if title:
                     items.append({
                         "source": name,
                         "category": classify_category(name, title, desc, link),
                         "title": title,
+                        "title_az": translate_to_az(title),
                         "summary": desc,
+                        "summary_az": translate_to_az(desc),
                         "url": link,
                         "date": pub_date,
                     })
@@ -192,11 +239,15 @@ def fetch_web_sources_items(web_sources):
     items = []
     for name, url in web_sources:
         if ".onion" in url.lower():
+            t = f"{name} — Tor/Onion mənbə qeydi"
+            s = "Onion ünvanı Tor şəbəkəsi tələb edir; birbaşa HTTP runner-də qeydə alınıb."
             items.append({
                 "source": name,
                 "category": "darkweb_cti",
-                "title": f"{name} — Tor/Onion mənbə qeydi",
-                "summary": "Onion ünvanı Tor şəbəkəsi tələb edir; birbaşa HTTP runner-də qeydə alınıb.",
+                "title": t,
+                "title_az": t,
+                "summary": s,
+                "summary_az": s,
                 "url": url,
                 "date": now_az_str()[:10],
             })
@@ -205,23 +256,29 @@ def fetch_web_sources_items(web_sources):
         try:
             raw = http_get_text(url, timeout=10)
             title_m = re.search(r"<title[^>]*>(.*?)</title>", raw, flags=re.S | re.I)
-            page_title = clean_html(title_m.group(1)) if title_m else name
+            page_title = (clean_html(title_m.group(1)) if title_m else name)[:140] or name
             text_body = clean_html(raw)
             snippet = text_body[:240] if text_body else f"{name} mənbəsindən məlumat toplandı."
             items.append({
                 "source": name,
                 "category": classify_category(name, page_title, snippet, url),
-                "title": page_title[:140] or name,
+                "title": page_title,
+                "title_az": translate_to_az(page_title),
                 "summary": snippet,
+                "summary_az": translate_to_az(snippet),
                 "url": url,
                 "date": now_az_str()[:10],
             })
         except Exception as e:
+            t = f"{name} (canlı sorğu məhdud/bloklu)"
+            s = f"Mənbə qeydə alındı ({str(e)[:80]})."
             items.append({
                 "source": name,
                 "category": classify_category(name, name, "", url),
-                "title": f"{name} (canlı sorğu məhdud/bloklu)",
-                "summary": f"Mənbə qeydə alındı ({str(e)[:80]}).",
+                "title": t,
+                "title_az": t,
+                "summary": s,
+                "summary_az": s,
                 "url": url,
                 "date": now_az_str()[:10],
             })
@@ -247,14 +304,18 @@ def fetch_cisa_kev():
         vulns_sorted = sorted(vulns, key=lambda x: x.get("dateAdded", ""), reverse=True)
         out = []
         for v in vulns_sorted[:15]:
+            name = v.get("vulnerabilityName", "")
+            action = v.get("requiredAction", "")
             out.append({
                 "cveID": v.get("cveID", ""),
                 "vendor": v.get("vendorProject", ""),
                 "product": v.get("product", ""),
-                "name": v.get("vulnerabilityName", ""),
+                "name": name,
+                "name_az": translate_to_az(name),
                 "dateAdded": v.get("dateAdded", ""),
                 "ransomware": v.get("knownRansomwareCampaignUse", ""),
-                "action": v.get("requiredAction", ""),
+                "action": action,
+                "action_az": translate_to_az(action),
             })
         return out
     except Exception:
@@ -322,7 +383,7 @@ def extract_and_dedup_iocs(news_items, cves):
 
 def check_urlhaus(ioc):
     auth = os.environ.get("URLHAUS_AUTH_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/3.0"}
+    headers = {"User-Agent": "SOC-CTI-Radar/3.1"}
     if auth:
         headers["Auth-Key"] = auth
     try:
@@ -349,7 +410,7 @@ def check_virustotal(ioc):
     key = os.environ.get("VT_API_KEY", "").strip()
     if not key:
         return {"skipped": True, "score_add": 0}
-    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/3.0"}
+    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/3.1"}
     try:
         if ioc["type"] == "ip":
             ep = f"https://www.virustotal.com/api/v3/ip_addresses/{urllib.parse.quote(ioc['value'])}"
@@ -379,7 +440,7 @@ def check_abuseipdb(ioc):
         q = urllib.parse.urlencode({"ipAddress": ioc["value"], "maxAgeInDays": "30"})
         data = http_get_json(
             f"https://api.abuseipdb.com/api/v2/check?{q}",
-            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/3.0"},
+            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/3.1"},
         )
         d = data.get("data") or {}
         conf = int(d.get("abuseConfidenceScore", 0))
@@ -390,7 +451,7 @@ def check_abuseipdb(ioc):
 
 def check_otx(ioc):
     key = os.environ.get("OTX_API_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/3.0"}
+    headers = {"User-Agent": "SOC-CTI-Radar/3.1"}
     if key:
         headers["X-OTX-API-KEY"] = key
     try:
@@ -484,7 +545,7 @@ def send_deep_cti_report(updated_at, source_count, news, cves, iocs):
     high_iocs = [x for x in iocs if x["level"] in ("CRITICAL", "HIGH")][:6]
 
     lines = [
-        "🛰️ <b>DEEP CTI REPORT BOT — OPERATİV HESABAT</b>",
+        "🛰️ <b>DEEP CTI REPORT BOT — OPERATİV HESABAT (AZ)</b>",
         f"🕒 Vaxt: <code>{updated_at}</code>",
         f"📡 Mənbələr: <b>{source_count}</b> | 📰 Xəbər: <b>{len(news)}</b> | 🔍 Dedup IoC: <b>{len(iocs)}</b>",
         "",
@@ -496,12 +557,14 @@ def send_deep_cti_report(updated_at, source_count, news, cves, iocs):
     lines.append("")
     lines.append("🕵️ <b>Darkweb, Leak & Ransomware Radar:</b>")
     for n in darkweb_news:
-        lines.append(f"• [{n['source']}] {n['title']}")
+        title_az = n.get("title_az") or n.get("title")
+        lines.append(f"• [{n['source']}] {title_az}")
 
     lines.append("")
-    lines.append("🌍 <b>Dünya Kiber Təhlükəsizlik Xəbərləri:</b>")
+    lines.append("🌍 <b>Dünya Kiber Təhlükəsizlik Xəbərləri (AZ):</b>")
     for n in global_news:
-        lines.append(f"• [{n['source']}] {n['title']}")
+        title_az = n.get("title_az") or n.get("title")
+        lines.append(f"• [{n['source']}] {title_az}")
 
     if high_iocs:
         lines.append("")
