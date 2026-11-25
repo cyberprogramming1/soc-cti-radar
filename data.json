@@ -1,321 +1,3706 @@
 {
-  "updated_at": "2026-11-25 12:02 (+04)",
+  "updated_at": "2026-11-25 13:59 (+04)",
   "sources": [
     {
-      "name": "BleepingComputer",
-      "url": "https://www.bleepingcomputer.com/feed/"
+      "name": "The Hacker News RSS",
+      "url": "https://feeds.feedburner.com/TheHackersNews",
+      "type": "RSS"
     },
     {
-      "name": "The Hacker News",
-      "url": "https://feeds.feedburner.com/TheHackersNews"
+      "name": "The Hacker News Atom",
+      "url": "https://thehackernews.com/feeds/posts/default",
+      "type": "RSS"
+    },
+    {
+      "name": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/feed/",
+      "type": "RSS"
     },
     {
       "name": "SecurityWeek",
-      "url": "https://feeds.feedburner.com/securityweek"
+      "url": "https://feeds.feedburner.com/securityweek",
+      "type": "RSS"
     },
     {
       "name": "Dark Reading",
-      "url": "https://www.darkreading.com/rss.xml"
-    },
-    {
-      "name": "Threatpost",
-      "url": "https://threatpost.com/feed/"
-    },
-    {
-      "name": "CERT.az",
-      "url": "https://cert.az/az/rss"
+      "url": "https://www.darkreading.com/rss.xml",
+      "type": "RSS"
     },
     {
       "name": "CISA Advisories",
-      "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+      "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+      "type": "RSS"
     },
     {
       "name": "Krebs on Security",
-      "url": "https://krebsonsecurity.com/feed/"
+      "url": "https://krebsonsecurity.com/feed/",
+      "type": "RSS"
     },
     {
-      "name": "AlienVault OTX Pulse",
-      "url": "https://otx.alienvault.com/otxapi/pulses/subscribed?format=xml"
+      "name": "Securelist (Kaspersky)",
+      "url": "https://securelist.com/feed/",
+      "type": "RSS"
     },
     {
-      "name": "CISA KEV Catalog",
-      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+      "name": "Secjuice",
+      "url": "https://www.secjuice.com/feed/",
+      "type": "RSS"
+    },
+    {
+      "name": "Cyber Detective",
+      "url": "https://cybdetective.com/feed/",
+      "type": "RSS"
+    },
+    {
+      "name": "Hatless1der",
+      "url": "https://hatless1der.com/feed/",
+      "type": "RSS"
+    },
+    {
+      "name": "OSINT Me",
+      "url": "https://www.osintme.com/feed/",
+      "type": "RSS"
+    },
+    {
+      "name": "Nixintel",
+      "url": "https://nixintel.info/feed/",
+      "type": "RSS"
+    },
+    {
+      "name": "ESPY OSINT Blog",
+      "url": "https://espysys.com/blog/feed/",
+      "type": "RSS"
+    },
+    {
+      "name": "OSINT Team",
+      "url": "https://www.osintteam.com/feed/",
+      "type": "RSS"
+    },
+    {
+      "name": "Intel471 Blog",
+      "url": "https://www.intel471.com/blog/feed",
+      "type": "RSS"
+    },
+    {
+      "name": "DailyDarkWeb",
+      "url": "https://dailydarkweb.net/feed/",
+      "type": "RSS"
+    },
+    {
+      "name": "MITRE ATT&CK",
+      "url": "https://attack.mitre.org/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "The Hacker News",
+      "url": "https://thehackernews.com/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "LeakFA Leaks",
+      "url": "https://leakfa.com/leaks",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "BF.st DB Index",
+      "url": "https://bf.st/Announcement-Database-Index",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Kalir Pulse AZAL Brief",
+      "url": "https://pulse.kalir.io/en/brief/base-de-datos-de-azerbaijan-airlines-eca8fae5",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Kalir Pulse",
+      "url": "https://pulse.kalir.io/en/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "X LeakFarsi",
+      "url": "https://x.com/leakfarsi",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "SecretLine",
+      "url": "https://secretline.top/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Onion - OP7YIEK (Tor)",
+      "url": "http://op7yiekgumt7po6mjgii4uewrwjydx5vhpa6y5gv7glftmw5srbwnaid.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "DarkForums",
+      "url": "https://darkforums.as/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Patched.to Leaks",
+      "url": "https://patched.to/Forum-other-leaks",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "TweetFeed",
+      "url": "https://tweetfeed.live/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Ransomware.live",
+      "url": "https://www.ransomware.live/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Triage Sandbox",
+      "url": "https://tria.ge/260305-d6x8rsc15x",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "JaffaCakes Analysis",
+      "url": "https://jaffacakes118.dev/analysis/b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "CERT.pl MWDB",
+      "url": "https://mwdb.cert.pl/file/dd7fca91c67710c4872e1c8fa62acbaedd94cd8bc673c4e3c9d5aa60e9902518",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "DailyDarkWeb",
+      "url": "https://dailydarkweb.net/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Securelist",
+      "url": "https://securelist.com/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Life.ru",
+      "url": "https://life.ru/p/1849559",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "VM.ru Infra",
+      "url": "https://vm.ru/news/1308971-prorossijskie-hakery-vzlomali-sistemy-kriticheskoj-infrastruktury-izrailya",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Telegram CyberGuerre",
+      "url": "https://t.me/cyberguerre/3953",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Ridus",
+      "url": "https://www.ridus.ru/z-pentest-alliance-vzlomali-sistemy-nasosov-na-obektah-izrailya-804595.html",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "News Mail.ru",
+      "url": "https://news.mail.ru/society/70075193/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "MK.ru",
+      "url": "https://www.mk.ru/politics/2026/03/07/gruppa-khakerov-s-prorossiyskimi-vzglyadami-vzlomala-chast-kriticheskikh-obektov-izrailya.html",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "News.ru",
+      "url": "https://news.ru/society/prorossijskie-hakery-vzlomali-sistemy-upravleniya-nasosami-v-izraile",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Gazeta.ru Tech",
+      "url": "https://www.gazeta.ru/tech/news/2026/03/07/28009429.shtml",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "SMI2 #1",
+      "url": "https://smi2.ru/article/181077136/story",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "SMI2 #2",
+      "url": "https://smi2.ru/article/181088846/story",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Rambler News",
+      "url": "https://news.rambler.ua/army/56147635-prorossiyskie-hakery-vzlomali-sistemy-kriticheskoy-infrastruktury-izrailya/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Tsargrad",
+      "url": "https://tsargrad.tv/novost/entest-vzlomany-sistemy-nasosov-kriticheskoj-infrastruktury-izrailja_1587505",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "VZ.ru",
+      "url": "https://vz.ru/news/2026/3/7/1400342.html",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "SAK-Info",
+      "url": "https://sak-info.com/vlast/item/188817-z-pentest-alliance-vzlomali-sistemy-nasosov-na-obektah-izrailya",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Rodina.news",
+      "url": "https://rodina.news/hakery-zpentest-alliance-vzlomali-sistemy-kriticheskoi-26030718235844.htm",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "MySeldon",
+      "url": "https://myseldon.com/en/news/index/342789446",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "AlarmyK24",
+      "url": "https://alarmyk24.ru/news/3882425/prorossijskie-hakery-vzlomali-sistemy-kriticheskoj-infrastruktury-izrailya.html",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Cyber Intelligence House",
+      "url": "http://www.cyberintelligencehouse.com",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Sector035 (LinkedIn)",
+      "url": "https://lnkd.in/dVZ8iVA3",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Authentic8 Blog (LinkedIn)",
+      "url": "https://lnkd.in/dGc6wiVb",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Rae Baker Blog (LinkedIn)",
+      "url": "https://lnkd.in/d57YnaAj",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "VEEXH Medium",
+      "url": "https://medium.com/@VEEXH",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "OH SHINT Blog (LinkedIn)",
+      "url": "https://lnkd.in/d9UvBrT5",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "OSINT Combine (LinkedIn)",
+      "url": "https://lnkd.in/ducHTp2X",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Bellingcat (LinkedIn)",
+      "url": "https://lnkd.in/dMTN2dNh",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Skopenow Blog (LinkedIn)",
+      "url": "https://lnkd.in/dfE3dc3q",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "ShadowDragon Blog (LinkedIn)",
+      "url": "https://lnkd.in/dajF3QcN",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Maltego Blog (LinkedIn)",
+      "url": "https://lnkd.in/dzV4bmn8",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Social Links Blog (LinkedIn)",
+      "url": "https://lnkd.in/dkhvmhRX",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Blackdot Solutions (LinkedIn)",
+      "url": "https://lnkd.in/d8MYqXZB",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Offensive OSINT (LinkedIn)",
+      "url": "https://lnkd.in/dF3Fkbyc",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "OSINT Industries (LinkedIn)",
+      "url": "https://lnkd.in/eCrSKUmK",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Reza Abasi LinkedIn",
+      "url": "https://www.linkedin.com/in/reza-abasi/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Blackbones.net",
+      "url": "https://blackbones.net/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "DarknetList",
+      "url": "https://darknetlist.info/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Dead-Frog",
+      "url": "https://www.dead-frog.com/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Onion - Tenebris (Tor)",
+      "url": "http://tenebrispoyfrcup4k24lciwrh4gc5735hmld4dweq7his7zh423opqd.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Dread #1 (Tor)",
+      "url": "https://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Dread #2 (Tor)",
+      "url": "https://dreadytognbh7m5nlmqsogzzlxjy75iuxkulewbhxcorupbqahact2yd.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "FlakkaOnline",
+      "url": "https://flakkaonline.com/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Blackbones.cc",
+      "url": "https://blackbones.cc/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "CISA KEV",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "type": "KEV"
+    },
+    {
+      "name": "Ransomware.live API",
+      "url": "https://api.ransomware.live/v2/recentvictims",
+      "type": "Ransomware"
+    },
+    {
+      "name": "MITRE ATT&CK STIX",
+      "url": "https://attack.mitre.org/",
+      "type": "ATT&CK"
+    },
+    {
+      "name": "Shodan API",
+      "url": "https://www.shodan.io",
+      "type": "CTI Check"
+    },
+    {
+      "name": "URLhaus API",
+      "url": "https://urlhaus.abuse.ch",
+      "type": "CTI Check"
+    },
+    {
+      "name": "VirusTotal API",
+      "url": "https://www.virustotal.com",
+      "type": "CTI Check"
+    },
+    {
+      "name": "AbuseIPDB API",
+      "url": "https://www.abuseipdb.com",
+      "type": "CTI Check"
+    },
+    {
+      "name": "AlienVault OTX",
+      "url": "https://otx.alienvault.com",
+      "type": "CTI Check"
     }
   ],
   "news": [
     {
+      "source": "The Hacker News RSS",
+      "category": "global_cyber",
+      "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
+      "summary": "An attacker ran operating system commands on Monday on six production servers of Hex.pm, the package registry that Elixir and Erlang developers fetch their dependencies from. The flaw used in the attack had been in the registry's code since",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "The Hacker News RSS",
+      "category": "darkweb_cti",
+      "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
+      "summary": "An unknown threat actor has been using artificial intelligence (AI)-driven offensive tooling in a campaign targeting Check Point Security Management servers, impacting 22 distinct organizations across the world. The intrusion activity, trac",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "The Hacker News RSS",
+      "category": "darkweb_cti",
+      "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+      "summary": "Palo Alto Networks Unit 42 has disclosed that it's tracking and has responded to \"numerous waves of vishing attacks\" orchestrated by Com-affiliated threat actors since August 2026 that have led to data theft and extortion attempts. The atta",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "The Hacker News RSS",
+      "category": "global_cyber",
+      "title": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
+      "summary": "WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code execution on sites that have them installed, following a suspected compromise of the developer's a",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
       "source": "BleepingComputer",
-      "feed_url": "https://www.bleepingcomputer.com/feed/",
+      "category": "global_cyber",
+      "title": "Microsoft confirms authentication issues after November updates",
+      "summary": "Microsoft has confirmed that customers may experience authentication issues after installing November security updates that address a high-severity remote code execution vulnerability. [...]",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "BleepingComputer",
+      "category": "darkweb_cti",
       "title": "Hackers reportedly breached CIA intelligence analysis system",
       "summary": "Unknown attackers have reportedly breached an open-source intelligence analysis system at the US Central Intelligence Agency (CIA) [...]",
-      "date": "Wed, 25 Nov 2026 02:45:03 -0500",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/"
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
+      "date": "Wed, 25 Nov 2026"
     },
     {
       "source": "BleepingComputer",
-      "feed_url": "https://www.bleepingcomputer.com/feed/",
+      "category": "darkweb_cti",
       "title": "Rackspace shuts down Spot cloud platform after security breach",
-      "summary": "Rackspace is shutting down its Rackspace Spot cloud platform after a security breach allowed hackers to access customer Kubernetes clusters and secrets, giving customers until December 8 to migrate their services and ...",
-      "date": "Tue, 24 Nov 2026 16:37:30 -0500",
-      "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/"
+      "summary": "Rackspace is shutting down its Rackspace Spot cloud platform after a security breach allowed hackers to access customer Kubernetes clusters and secrets, giving customers until December 8 to migrate their services and download their data. [.",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+      "date": "Tue, 24 Nov 2026"
     },
     {
       "source": "BleepingComputer",
-      "feed_url": "https://www.bleepingcomputer.com/feed/",
+      "category": "darkweb_cti",
       "title": "New Inception extortion gang launches large-scale vishing campaign",
       "summary": "A newly formed data extortion group named 'Inception' has been linked to a large-scale campaign that targets single sign-on (SSO) credentials of multiple global brands and firms. [...]",
-      "date": "Tue, 24 Nov 2026 15:21:20 -0500",
-      "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/"
-    },
-    {
-      "source": "The Hacker News",
-      "feed_url": "https://feeds.feedburner.com/TheHackersNews",
-      "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
-      "summary": "An unknown threat actor has been using artificial intelligence (AI)-driven offensive tooling in a campaign targeting Check Point Security Management servers, impacting 22 distinct organizations across the world. The i...",
-      "date": "Wed, 25 Nov 2026 12:20:19 +0530",
-      "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html"
-    },
-    {
-      "source": "The Hacker News",
-      "feed_url": "https://feeds.feedburner.com/TheHackersNews",
-      "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
-      "summary": "Palo Alto Networks Unit 42 has disclosed that it's tracking and has responded to \"numerous waves of vishing attacks\" orchestrated by Com-affiliated threat actors since August 2026 that have led to data theft and extor...",
-      "date": "Wed, 25 Nov 2026 12:07:06 +0530",
-      "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html"
-    },
-    {
-      "source": "The Hacker News",
-      "feed_url": "https://feeds.feedburner.com/TheHackersNews",
-      "title": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
-      "summary": "WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code execution on sites that have them installed, following a suspected compromi...",
-      "date": "Wed, 25 Nov 2026 11:51:12 +0530",
-      "url": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html"
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
+      "date": "Tue, 24 Nov 2026"
     },
     {
       "source": "SecurityWeek",
-      "feed_url": "https://feeds.feedburner.com/securityweek",
+      "category": "global_cyber",
+      "title": "Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library",
+      "summary": "Attackers can exploit CVE-2026-131914 to achieve remote code execution via a single web request containing specially crafted data. The post Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library appeared first on SecurityWeek .",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "SecurityWeek",
+      "category": "global_cyber",
+      "title": "Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls",
+      "summary": "A China-linked hacking group chained PHP2Shell with Fragnesia in AI-assisted attacks that hit 25 servers. The post Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls appeared first on SecurityWeek .",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "SecurityWeek",
+      "category": "global_cyber",
+      "title": "Drupal Flaw Found by Anthropic Scanner Exploited in Attacks",
+      "summary": "CISA has added the vulnerability to its KEV catalog and instructed federal agencies to patch it within three days. The post Drupal Flaw Found by Anthropic Scanner Exploited in Attacks appeared first on SecurityWeek .",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.securityweek.com/drupal-flaw-found-by-anthropic-scanner-exploited-in-attacks/",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "SecurityWeek",
+      "category": "darkweb_cti",
       "title": "An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says",
       "summary": "It was not clear what specific information was compromised or who was responsible. The post An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says appeared first on SecurityWeek .",
-      "date": "Tue, 24 Nov 2026 22:41:58 +0000",
-      "url": "https://www.securityweek.com/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says/"
-    },
-    {
-      "source": "SecurityWeek",
-      "feed_url": "https://feeds.feedburner.com/securityweek",
-      "title": "VMware Updates Patch Critical ESX, vCenter Vulnerabilities",
-      "summary": "The critical bugs include an authentication bypass in vCenter and flaws that could allow code execution on ESX hosts. The post VMware Updates Patch Critical ESX, vCenter Vulnerabilities appeared first on SecurityWeek .",
-      "date": "Tue, 24 Nov 2026 16:32:56 +0000",
-      "url": "https://www.securityweek.com/vmware-updates-patch-critical-esx-vcenter-vulnerabilities/"
-    },
-    {
-      "source": "SecurityWeek",
-      "feed_url": "https://feeds.feedburner.com/securityweek",
-      "title": "European Commission Uncovers Data Breach in Cyberattack Investigation",
-      "summary": "Names and email addresses of EU Academy users were exposed in the AI-assisted cyberattack the European Commission detected in October. The post European Commission Uncovers Data Breach in Cyberattack Investigation app...",
-      "date": "Tue, 24 Nov 2026 14:49:59 +0000",
-      "url": "https://www.securityweek.com/european-commission-uncovers-data-breach-in-cyberattack-investigation/"
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.securityweek.com/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says/",
+      "date": "Tue, 24 Nov 2026"
     },
     {
       "source": "Dark Reading",
-      "feed_url": "https://www.darkreading.com/rss.xml",
-      "title": "Cyber Insurers See New Divide: AI Defense 'Haves' &amp; 'Have Nots'",
-      "summary": "Dark Reading Confidential Episode 23: Cyber insurers share their view of the AI-driven threat landscape and how mounting challenges are putting pressure on both sides of the policy, leaving the current model unsustain...",
-      "date": "Wed, 25 Nov 2026 15:00:00 GMT",
-      "url": "https://www.darkreading.com/cybersecurity-operations/cyber-insurers-see-new-ai-divide"
+      "category": "global_cyber",
+      "title": "Cyber Insurers See New Divide: AI Defense 'Haves' & 'Have Nots'",
+      "summary": "Dark Reading Confidential Episode 23: Cyber insurers share their view of the AI-driven threat landscape and how mounting challenges are putting pressure on both sides of the policy, leaving the current model unsustainable.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.darkreading.com/cybersecurity-operations/cyber-insurers-see-new-ai-divide",
+      "date": "Wed, 25 Nov 2026"
     },
     {
       "source": "Dark Reading",
-      "feed_url": "https://www.darkreading.com/rss.xml",
+      "category": "global_cyber",
       "title": "Satellites Have a Ground-Level Cybersecurity Problem",
       "summary": "Weaknesses in the ground-based infrastructure supporting satellite services are becoming more consequential as a new space race gathers pace.",
-      "date": "Tue, 24 Nov 2026 22:05:34 GMT",
-      "url": "https://www.darkreading.com/cyber-risk/satellites-ground-level-cybersecurity-problem"
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.darkreading.com/cyber-risk/satellites-ground-level-cybersecurity-problem",
+      "date": "Tue, 24 Nov 2026"
     },
     {
       "source": "Dark Reading",
-      "feed_url": "https://www.darkreading.com/rss.xml",
+      "category": "global_cyber",
       "title": "Webworm APT Slithers Into Networks With Customized SoftEther VPN",
       "summary": "The China-aligned espionage group rebuilt the open source VPN software from source, stripping out the artifacts that would normally expose it to defenders.",
-      "date": "Tue, 24 Nov 2026 21:48:06 GMT",
-      "url": "https://www.darkreading.com/perimeter/webworm-slithers-customized-softether-vpn"
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.darkreading.com/perimeter/webworm-slithers-customized-softether-vpn",
+      "date": "Tue, 24 Nov 2026"
     },
     {
-      "source": "Threatpost",
-      "feed_url": "https://threatpost.com/feed/",
-      "title": "Student Loan Breach Exposes 2.5M Records",
-      "summary": "2.5 million people were affected, in a breach that could spell more trouble down the line.",
-      "date": "Wed, 31 Aug 2022 12:57:48 +0000",
-      "url": "https://threatpost.com/student-loan-breach-exposes-2-5m-records/180492/"
-    },
-    {
-      "source": "Threatpost",
-      "feed_url": "https://threatpost.com/feed/",
-      "title": "Watering Hole Attacks Push ScanBox Keylogger",
-      "summary": "Researchers uncover a watering hole attack likely carried out by APT TA423, which attempts to plant the ScanBox JavaScript-based reconnaissance tool.",
-      "date": "Tue, 30 Aug 2022 16:00:43 +0000",
-      "url": "https://threatpost.com/watering-hole-attacks-push-scanbox-keylogger/180490/"
-    },
-    {
-      "source": "Threatpost",
-      "feed_url": "https://threatpost.com/feed/",
-      "title": "Tentacles of ‘0ktapus’ Threat Group Victimize 130 Firms",
-      "summary": "Over 130 companies tangled in sprawling phishing campaign that spoofed a multi-factor authentication system.",
-      "date": "Mon, 29 Aug 2022 14:56:19 +0000",
-      "url": "https://threatpost.com/0ktapus-victimize-130-firms/180487/"
-    },
-    {
-      "source": "CERT.az",
-      "feed_url": "https://cert.az/az/rss",
-      "title": "[CERT.az] mənbəsi əlçatan olmadı",
-      "summary": "<urlopen error timed out>",
-      "date": "2026-11-25 12:02 (+04)",
-      "url": "https://cert.az/az/rss"
+      "source": "Dark Reading",
+      "category": "global_cyber",
+      "title": "'God Mode' Flaws Could Wreak Border-Control Havoc",
+      "summary": "Attackers could have disrupted traveler entry into Nigeria, Ethiopia, Zambia, Sri Lanka, Fiji, and Ghana via several vulnerabilities in their online visa and immigration systems.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.darkreading.com/vulnerabilities-threats/god-mode-flaws-wreak-border-control-havoc",
+      "date": "Tue, 24 Nov 2026"
     },
     {
       "source": "CISA Advisories",
-      "feed_url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+      "category": "global_cyber",
       "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-      "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-131914 Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability...",
-      "date": "Tue, 24 Nov 26 12:00:00 +0000",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-131914 Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability CVE-2026-132165 Drupal",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+      "date": "Tue, 24 Nov 26 1"
     },
     {
       "source": "CISA Advisories",
-      "feed_url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+      "category": "global_cyber",
       "title": "Danfoss AK-SM 8xxA Series",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to execute arbitrary code with webserver privileges. The following versions of Danfoss AK-SM 8xxA Series are affected: AK-SM8xxA ...",
-      "date": "Tue, 24 Nov 26 12:00:00 +0000",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-03"
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to execute arbitrary code with webserver privileges. The following versions of Danfoss AK-SM 8xxA Series are affected: AK-SM8xxA CVSS Vendor Equipment v",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-03",
+      "date": "Tue, 24 Nov 26 1"
     },
     {
       "source": "CISA Advisories",
-      "feed_url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+      "category": "global_cyber",
       "title": "Schneider Electric EcoStruxure Power Build Rapsody software",
-      "summary": "View CSAF Summary Schneider Electric is aware of a vulnerability in its EcoStruxure™ Power Build Rapsody product. The EcoStruxure™ Power Build Rapsody is used to enter or import the single line diagram, to get the ext...",
-      "date": "Tue, 24 Nov 26 12:00:00 +0000",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02"
+      "summary": "View CSAF Summary Schneider Electric is aware of a vulnerability in its EcoStruxure™ Power Build Rapsody product. The EcoStruxure™ Power Build Rapsody is used to enter or import the single line diagram, to get the extensive bill of material",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02",
+      "date": "Tue, 24 Nov 26 1"
+    },
+    {
+      "source": "CISA Advisories",
+      "category": "global_cyber",
+      "title": "AutomationDirect C-More EA9 Programming Software",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow attackers to corrupt application memory and cause instability or a crash, potentially leading to arbitrary code execution, if a user is convinced to open a maliciou",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01",
+      "date": "Tue, 24 Nov 26 1"
     },
     {
       "source": "Krebs on Security",
-      "feed_url": "https://krebsonsecurity.com/feed/",
+      "category": "darkweb_cti",
       "title": "CTO of ‘RansomwareHelp’ Indicted for Wire Fraud",
-      "summary": "The chief technology officer and co-founder of ransomwarehelp.com, a six year old Florida business that claimed to use \"advanced cryptographic tools\" to restore data locked by ransomware, has been charged with wire fr...",
-      "date": "Sat, 21 Nov 2026 00:36:39 +0000",
-      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/"
+      "summary": "The chief technology officer and co-founder of ransomwarehelp.com, a six year old Florida business that claimed to use \"advanced cryptographic tools\" to restore data locked by ransomware, has been charged with wire fraud after an FBI sting ",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+      "date": "Sat, 21 Nov 2026"
     },
     {
       "source": "Krebs on Security",
-      "feed_url": "https://krebsonsecurity.com/feed/",
+      "category": "darkweb_cti",
       "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
-      "summary": "At least 178 top web destinations unwittingly served a variety of malware exploits against visitors over the past 24 hours thanks to a security vulnerability involving Optimizely, a company that helps websites customi...",
-      "date": "Wed, 18 Nov 2026 02:52:04 +0000",
-      "url": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/"
+      "summary": "At least 178 top web destinations unwittingly served a variety of malware exploits against visitors over the past 24 hours thanks to a security vulnerability involving Optimizely, a company that helps websites customize user experiences and",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/",
+      "date": "Wed, 18 Nov 2026"
     },
     {
       "source": "Krebs on Security",
-      "feed_url": "https://krebsonsecurity.com/feed/",
+      "category": "darkweb_cti",
       "title": "Who Runs the Ransomware Group Qilin?",
-      "summary": "The cybercrime group Qilin has emerged as the world's most active ransomware affiliate program, claiming at least 365 victim organizations in the past three months alone. But even top Russian hackers make operational ...",
-      "date": "Wed, 11 Nov 2026 18:06:01 +0000",
-      "url": "https://krebsonsecurity.com/2026/11/who-runs-the-ransomware-group-qilin/"
+      "summary": "The cybercrime group Qilin has emerged as the world's most active ransomware affiliate program, claiming at least 365 victim organizations in the past three months alone. But even top Russian hackers make operational security mistakes, and ",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [
+        "Russia"
+      ],
+      "url": "https://krebsonsecurity.com/2026/11/who-runs-the-ransomware-group-qilin/",
+      "date": "Wed, 11 Nov 2026"
     },
     {
-      "source": "AlienVault OTX Pulse",
-      "feed_url": "https://otx.alienvault.com/otxapi/pulses/subscribed?format=xml",
-      "title": "[AlienVault OTX Pulse] mənbəsi əlçatan olmadı",
-      "summary": "not well-formed (invalid token): line 1, column 0",
-      "date": "2026-11-25 12:02 (+04)",
-      "url": "https://otx.alienvault.com/otxapi/pulses/subscribed?format=xml"
+      "source": "Krebs on Security",
+      "category": "global_cyber",
+      "title": "Microsoft Fixes Nearly 1,100 Security Vulnerabilities",
+      "summary": "Microsoft did another four-digit patch drop today, releasing updates to fix almost 1,100 security vulnerabilities in its Windows operating systems and supported software. This month's Patch Tuesday addresses 63 critical flaws -- including a",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/",
+      "date": "Tue, 10 Nov 2026"
+    },
+    {
+      "source": "Securelist (Kaspersky)",
+      "category": "darkweb_cti",
+      "title": "How to protect against preinstalled Android malware",
+      "summary": "We look at Trojans in the firmware of Android devices, share some statistics, and discuss the risks to corporate users and ways to counter the threat with Kaspersky Next.",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://securelist.com/tr/how-to-protect-against-preinstalled-android-malware/122093/",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "Securelist (Kaspersky)",
+      "category": "darkweb_cti",
+      "title": "Black Friday, red flags: too-good-to-be-true deals hiding real threats",
+      "summary": "How cybercriminals prepare for Black Friday: phishing, scams and malware targeting online shoppers and gamers, GTA VI- and wellness-related schemes, and fake sales spam.",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://securelist.com/black-friday-threat-report-2026/122061/",
+      "date": "Mon, 23 Nov 2026"
+    },
+    {
+      "source": "Securelist (Kaspersky)",
+      "category": "darkweb_cti",
+      "title": "The forced audit: how AuditTeam’s OpsAgent framework masks ransomware as consulting",
+      "summary": "How does a ransomware gang sell a “forced audit”? We break down AuditTeam’s OpsAgent implant, its Rust rewrite, and the extortion model demanding a consulting fee to delete stolen data.",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://securelist.com/auditteam-opsagent-forced-audit/122031/",
+      "date": "Wed, 18 Nov 2026"
+    },
+    {
+      "source": "Securelist (Kaspersky)",
+      "category": "global_cyber",
+      "title": "Operation ShadowCloud: cloud service–based backdoors targeting government networks in Asia and Africa. Part 2",
+      "summary": "In part 2 of our analysis of the recently uncovered Operation ShadowCloud, we discuss the GraphDoor backdoor, additional plug-ins, and technical attribution.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://securelist.com/operation-shadowcloud-graphdoor/122005/",
+      "date": "Tue, 17 Nov 2026"
+    },
+    {
+      "source": "Hatless1der",
+      "category": "global_cyber",
+      "title": "A Tremendously Valuable OSINT Tip For Pinterest. (Yes Seriously, Pinterest)",
+      "summary": "If you follow this blog, (hi mom!) you might think I’m somehow picking the most obscure platforms and coming up with some even more obscure…",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://hatless1der.com/a-tremendously-valuable-osint-tip-for-pinterest-yes-seriously-pinterest/?utm_source=rss&utm_medium=rss&utm_campaign=a-tremendously-valuable-osint-tip-for-pinterest-yes-seriously-pinterest",
+      "date": "Fri, 28 Mar 2025"
+    },
+    {
+      "source": "Hatless1der",
+      "category": "global_cyber",
+      "title": "Threads.net Is Hiding Some OSINT Secrets You Definitely Need To Know",
+      "summary": "Threads, you say? The Dane Cook of social media??? (Shout out to the Archer fans out there who got that obscure joke) If you’ve been…",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://hatless1der.com/threads-net-is-hiding-some-osint-secrets-you-definitely-need-to-know/?utm_source=rss&utm_medium=rss&utm_campaign=threads-net-is-hiding-some-osint-secrets-you-definitely-need-to-know",
+      "date": "Fri, 11 Oct 2024"
+    },
+    {
+      "source": "Hatless1der",
+      "category": "global_cyber",
+      "title": "OSINT Quick Tips: That CashApp QR Code on The Web Might Actually Be Hiding a Profile Photo!",
+      "summary": "If you do a lot of web-based OSINT research like I do, you’ve most likely conducted username searches using a powerful tool like https://whatsmyname.app that…",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://hatless1der.com/osint-quick-tips-that-cashapp-qr-code-on-the-web-might-actually-be-hiding-a-profile-photo/?utm_source=rss&utm_medium=rss&utm_campaign=osint-quick-tips-that-cashapp-qr-code-on-the-web-might-actually-be-hiding-a-profile-photo",
+      "date": "Wed, 27 Mar 2024"
+    },
+    {
+      "source": "Hatless1der",
+      "category": "global_cyber",
+      "title": "OSINT Quick Tips: 2 Simple Methods of Getting Around Twitter’s Annoying Login Wall",
+      "summary": "Based on how often Twitter, oh sorry… I mean X, is changing these days, there’s a pretty good chance this blog will be obsolete by…",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://hatless1der.com/osint-quick-tips-2-simple-methods-of-getting-around-twitters-annoying-login-wall/?utm_source=rss&utm_medium=rss&utm_campaign=osint-quick-tips-2-simple-methods-of-getting-around-twitters-annoying-login-wall",
+      "date": "Tue, 03 Oct 2023"
+    },
+    {
+      "source": "Nixintel",
+      "category": "global_cyber",
+      "title": "Calculating Website Age & Tracking Changes With URL Dater",
+      "summary": "How can you determine the age of a webpage in a reliable way? URL Dater uses a range of different sources to present an accurate picture.",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://nixintel.info/osint-tools/calculating-website-age-tracking-changes-with-url-dater/",
+      "date": "Sun, 11 Jan 2026"
+    },
+    {
+      "source": "Nixintel",
+      "category": "darkweb_cti",
+      "title": "Using SSL Certificates To Find Threat Actor Infrastructure",
+      "summary": "At last month’s SANS OSINT Summit I gave a talk the usefulness of SSL certificates for open source intelligence researchers. The talk looks at three recent examples of how information from certificate transparency logs can be used to discov",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://nixintel.info/osint/using-ssl-certificates-to-find-threat-actor-infrastructure/",
+      "date": "Sat, 22 Mar 2025"
+    },
+    {
+      "source": "Nixintel",
+      "category": "global_cyber",
+      "title": "Telegram For Cyber Investigators",
+      "summary": "Telegram is one of the most important platforms for OSINT investigators. I joined the Needlestack podcast to discuss how Telegram works and shared some practical OSINT advice along the way.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://nixintel.info/osint/telegram-for-cyber-investigators/",
+      "date": "Sun, 17 Nov 2024"
+    },
+    {
+      "source": "Nixintel",
+      "category": "global_cyber",
+      "title": "Digging Into Russian Disinfo Infrastructure",
+      "summary": "Disinformation and propaganda has been one of the key features of the war between Russia and Ukraine. One of the many groups that have sprung up to push pro-Russian propaganda narratives is a small hacktivist organisation called Beregini. T",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [
+        "Ukraine",
+        "Russia"
+      ],
+      "url": "https://nixintel.info/osint/digging-into-russian-disinfo-infrastructure/",
+      "date": "Mon, 31 Jul 2023"
+    },
+    {
+      "source": "OSINT Team",
+      "category": "darkweb_cti",
+      "title": "The Practical OSINT Newsletter. Issue #4.",
+      "summary": "Streamline your investigations with breached data. Learn how to use stealer logs ethically for OSINT.",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://www.osintteam.com/issue-4/",
+      "date": "Wed, 01 Oct 2025"
+    },
+    {
+      "source": "OSINT Team",
+      "category": "global_cyber",
+      "title": "The Practical OSINT Newsletter. Issue #3.",
+      "summary": "Learn pivoting in OSINT and cybersecurity. Explore OSINT workflows to streamline your investigations and uncover more leads.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.osintteam.com/issue-3/",
+      "date": "Sun, 06 Apr 2025"
+    },
+    {
+      "source": "OSINT Team",
+      "category": "global_cyber",
+      "title": "Passive Subdomain Enumeration: Uncovering More Subdomains than Subfinder & Amass",
+      "summary": "Subdomain Center notes over 200 competitors, yet Amass integrates 87 and Subfinder 45; this article explores better subdomain enumeration tools.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.osintteam.com/passive-subdomain-enumeration-uncovering-more-subdomains-than-subfinder-amass/",
+      "date": "Sun, 23 Mar 2025"
+    },
+    {
+      "source": "OSINT Team",
+      "category": "global_cyber",
+      "title": "Unmask the Scam: OSINT Secrets to Catch Phishing Emails Like a Pro",
+      "summary": "Scammers use phishing attacks to steal data and money, leaving victims with little recourse. This guide will teach you how to investigate phishing scams, analyze malicious files, and track down fraudsters using open-source tools.",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.osintteam.com/unmask-the-scam-osint-secrets-to-catch-phishing-emails-like-a-pro/",
+      "date": "Mon, 03 Feb 2025"
+    },
+    {
+      "source": "Intel471 Blog",
+      "category": "darkweb_cti",
+      "title": "Aerospace To Chemicals: Why Manufacturers Are Easy Targets for Access Brokers",
+      "summary": "Manufacturing was the most targeted sector for ransomware and data extortion from January to October 2026, with 1,379 claims, or 16.8% of all victims Intel 471 tracked.",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://www.intel471.com/blog/aerospace-to-chemicals-why-manufacturers-are-easy-targets-for-access-brokers",
+      "date": "Wed, 18 Nov 2026"
+    },
+    {
+      "source": "Intel471 Blog",
+      "category": "global_cyber",
+      "title": "Meet Agent471: AI That Gives Your Security Team Time Back",
+      "summary": "Agent471, the AI agent built into the Verity471 cyber intelligence platform, is now available. It tackles the research behind every request, with analyst tradecraft built in, so your Security team gets time back for the analysis and judgmen",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.intel471.com/blog/meet-agent471-ai-that-gives-your-security-team-time-back",
+      "date": "Tue, 17 Nov 2026"
+    },
+    {
+      "source": "Intel471 Blog",
+      "category": "global_cyber",
+      "title": "What to ask before you buy an AI agent for threat intelligence",
+      "summary": "Before investing in an AI-enabled intelligence solution, know what powers it. Explore three critical layers to evaluate, from the quality and reliability of the underlying intelligence to how AI agents process information and translate insi",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.intel471.com/blog/what-to-ask-before-you-buy-an-ai-agent-for-threat-intelligence",
+      "date": "Thu, 12 Nov 2026"
+    },
+    {
+      "source": "Intel471 Blog",
+      "category": "global_cyber",
+      "title": "Hand AI the Legwork, You Keep the Judgment",
+      "summary": "CTI teams can use AI agents to streamline intelligence workflows, reduce manual research and deliver faster insights. With the right guardrails, agents can provide source-backed assessments, flag intelligence gaps and show their reasoning, ",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.intel471.com/blog/hand-ai-the-legwork-you-keep-the-judgment",
+      "date": "Wed, 04 Nov 2026"
+    },
+    {
+      "source": "DailyDarkWeb",
+      "category": "darkweb_cti",
+      "title": "Uganda Ministry of Agriculture MAAIF Suffers Data Breach",
+      "summary": "The Ministry of Agriculture, Animal Industry and Fisheries (MAAIF) of Uganda, which operates an E-Extension digital platform providing agricultural services and information to farmers and extension officers, has allegedly experienced a data",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://dailydarkweb.net/uganda-ministry-of-agriculture-maaif-suffers-data-breach/",
+      "date": "Mon, 27 Apr 2026"
+    },
+    {
+      "source": "DailyDarkWeb",
+      "category": "darkweb_cti",
+      "title": "Abu Dhabi Department of Finance Super Admin Access Sale",
+      "summary": "The Abu Dhabi Department of Finance (ADDOF), the central financial authority for the Emirate of Abu Dhabi, is reportedly the subject of an alleged network access sale. An unauthorized party is claiming to offer “Super Administrator Access” ",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://dailydarkweb.net/abu-dhabi-department-of-finance-super-admin-access-sale/",
+      "date": "Mon, 27 Apr 2026"
+    },
+    {
+      "source": "DailyDarkWeb",
+      "category": "darkweb_cti",
+      "title": "Ellipal Cryptocurrency Wallet Suffers Alleged Data Breach",
+      "summary": "Ellipal, a Hong Kong-based cryptocurrency hardware wallet provider, has allegedly been compromised. An unauthorized party on a cybercrime forum is offering what they claim to be a new database belonging to the company. The seller notes that",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://dailydarkweb.net/ellipal-cryptocurrency-wallet-suffers-alleged-data-breach/",
+      "date": "Mon, 27 Apr 2026"
+    },
+    {
+      "source": "DailyDarkWeb",
+      "category": "darkweb_cti",
+      "title": "BlackSexFinder Adult Platform Suffers Massive Data Breach",
+      "summary": "BlackSexFinder, an adult entertainment and dating platform that features a forum, galleries, adult movies, and an online store, has allegedly been compromised in a recent data leak. The allegedly compromised data includes: Account IDs Usern",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://dailydarkweb.net/blacksexfinder-adult-platform-suffers-massive-data-breach/",
+      "date": "Mon, 27 Apr 2026"
+    },
+    {
+      "source": "MITRE ATT&CK",
+      "category": "global_cyber",
+      "title": "MITRE ATT&CK®",
+      "summary": "MITRE ATT&CK® Matrices Enterprise Mobile ICS Tactics Enterprise Mobile ICS Techniques Enterprise Mobile ICS Defenses Mitigations Enterprise Mobile ICS Assets Detections Detection Strategies Analytics Data Components CTI ",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://attack.mitre.org/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "The Hacker News",
+      "category": "global_cyber",
+      "title": "The Hacker News | #1 Trusted Source for Cybersecurity News",
+      "summary": "The Hacker News | #1 Trusted Source for Cybersecurity News --> #1 Trusted Cybersecurity News Platform Followed by 5.80+ million      Get Updates Home Newsletter Webinars Home Threat Intelligence Vulnerabilities Cybe",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://thehackernews.com/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "LeakFA Leaks",
+      "category": "darkweb_cti",
+      "title": "LeakFA Leaks — Source reachability note (HTTP Error 403: Forbidden).",
+      "summary": "Source reachability note (HTTP Error 403: Forbidden).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://leakfa.com/leaks",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "BF.st DB Index",
+      "category": "darkweb_cti",
+      "title": "BF.st DB Index — Source reachability note (HTTP Error 403: Forbidden).",
+      "summary": "Source reachability note (HTTP Error 403: Forbidden).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://bf.st/Announcement-Database-Index",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Kalir Pulse AZAL Brief",
+      "category": "darkweb_cti",
+      "title": "Azerbaijan Airlines (azal.az) database offered for sale · Kalir Brief · Pulse | Pulse",
+      "summary": "Azerbaijan Airlines (azal.az) database offered for sale · Kalir Brief · Pulse | Pulse PULSE Underground Intel LIVE 43 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 116.0 + 55 LEAK VOL 1.7 B 0 KEV PULSE 6 -25 Home ",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [
+        "Azerbaijan"
+      ],
+      "url": "https://pulse.kalir.io/en/brief/base-de-datos-de-azerbaijan-airlines-eca8fae5",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Kalir Pulse",
+      "category": "darkweb_cti",
+      "title": "Pulse — Underground Intel",
+      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 43 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 116.0 + 55 LEAK VOL 1.7 B 0 KEV PULSE 6 -25 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom spacebea",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://pulse.kalir.io/en/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "X LeakFarsi",
+      "category": "darkweb_cti",
+      "title": "X LeakFarsi — Source reachability note (HTTP Error 403: Forbidden).",
+      "summary": "Source reachability note (HTTP Error 403: Forbidden).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://x.com/leakfarsi",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "SecretLine",
+      "category": "darkweb_cti",
+      "title": "Login - secretline.top",
+      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 2 + 9 = Login Don't have an account? Create account secretline.top | © 2026",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://secretline.top/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - OP7YIEK (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - OP7YIEK (Tor)",
+      "summary": "4b5 Error! This whistleblowing site is built with GlobaLeaks that is a modern secure application that requires JavaScript. While it is a common belief that JavaScript and security don't always work well together, we reco",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "http://op7yiekgumt7po6mjgii4uewrwjydx5vhpa6y5gv7glftmw5srbwnaid.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "DarkForums",
+      "category": "darkweb_cti",
+      "title": "DarkForums",
+      "summary": "DarkForums Member List --> Databases Upgrades Search Hidden Service Escrow Escrow --> Features Gambling Games Roulette Rock Paper Scissors Features Buy Awards Usertitle Color Credits Stealing Style your thread Extras Cre",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://darkforums.as/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Patched.to Leaks",
+      "category": "darkweb_cti",
+      "title": "Other Leaks - Patched.to",
+      "summary": "Other Leaks - Patched.to ALERT! Click here to register with a few steps and explore all our cool stuff we have to offer! Home Upgrade Credits Auth Search Vouches Awards Telegram Extras Features Changelogs Help Login Crea",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://patched.to/Forum-other-leaks",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "TweetFeed",
+      "category": "global_cyber",
+      "title": "Free Live IOC Feeds from Twitter/X - Real-time Threat Intelligence",
+      "summary": "Free Live IOC Feeds from Twitter/X - Real-time Threat Intelligence Skip to content TweetFeed Agents Campaigns Dashboard Hunt Feeds API More Graphs Trends Researchers Tags IOC types Malicious domains Malicious IPs Blockli",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://tweetfeed.live/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Ransomware.live",
+      "category": "darkweb_cti",
+      "title": "Ransomware.live 👀 Live ransomware activity",
+      "summary": "Ransomware.live 👀 Live ransomware activity ransomware .live leak-site monitoring Victims Groups Press Statistics Infostealer World Map Quadrants About Legend Search Negotiations Ransom Notes Arsenal YARA Rules TTPs Matri",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://www.ransomware.live/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Triage Sandbox",
+      "category": "darkweb_cti",
+      "title": "acreed | b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776 | Triage™",
+      "summary": "acreed | b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776 | Triage™ Login Reports Overview overview 10 Static static 10 2026-03-05...at.exe windows10-2004-x64 7 2026-03-05...at.exe windows11-21h2-x64 7 Do",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://tria.ge/260305-d6x8rsc15x",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "JaffaCakes Analysis",
+      "category": "global_cyber",
+      "title": "JaffaCakes Analysis — Source reachability note (HTTP Error 404: Not Found).",
+      "summary": "Source reachability note (HTTP Error 404: Not Found).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://jaffacakes118.dev/analysis/b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "CERT.pl MWDB",
+      "category": "darkweb_cti",
+      "title": "CERT.PL>_ Malware Database",
+      "summary": "CERT.PL>_ Malware Database You need to enable JavaScript to run this app.",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://mwdb.cert.pl/file/dd7fca91c67710c4872e1c8fa62acbaedd94cd8bc673c4e3c9d5aa60e9902518",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "DailyDarkWeb",
+      "category": "darkweb_cti",
+      "title": "Daily Dark Web",
+      "summary": "Daily Dark Web Daily Dark Web Home Data Breaches Inside the Adversary Dark Web Informants DDW Top Lists Ransomware News DarkWeb News Vulnerability Cyber Attacks Unauthorized Accesses About Us No Result View All Result Ho",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://dailydarkweb.net/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Securelist",
+      "category": "global_cyber",
+      "title": "Securelist | Kaspersky’s threat research and reports",
+      "summary": "Securelist | Kaspersky’s threat research and reports Solutions for: Home Products Small Business 1-50 employees Medium Business 51-999 employees Enterprise 1000+ employees Securelist by Kaspersky by Kaspersky CompanyAcco",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://securelist.com/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Life.ru",
+      "category": "global_cyber",
+      "title": "Хакеры Z-Pentest Alliance взломали системы критической инфраструктуры Израиля",
+      "summary": "Хакеры Z-Pentest Alliance взломали системы критической инфраструктуры Израиля Переговоры по Украине Бюджет и налоги — 2027 Атаки БПЛА Функционирует при финансовой поддержке Министерства цифрового развития, связи и массов",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://life.ru/p/1849559",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "VM.ru Infra",
+      "category": "global_cyber",
+      "title": "Пророссийские хакеры взломали системы критической инфраструктуры Израиля",
+      "summary": "Пророссийские хакеры взломали системы критической инфраструктуры Израиля Вечерка ТВ Газета Московский журнал Пресса в образовании Новости Фото Видео Спецпроекты Эксклюзивы ВМ Афиша Москвы Эксклюзивы Новости Вечерка ТВ Пе",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://vm.ru/news/1308971-prorossijskie-hakery-vzlomali-sistemy-kriticheskoj-infrastruktury-izrailya",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Telegram CyberGuerre",
+      "category": "global_cyber",
+      "title": "Telegram: View @cyberguerre",
+      "summary": "Telegram: View @cyberguerre Download Context Embed View In Channel Copy",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://t.me/cyberguerre/3953",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Ridus",
+      "category": "global_cyber",
+      "title": "Ridus — Source reachability note (HTTP Error 403: Forbidden).",
+      "summary": "Source reachability note (HTTP Error 403: Forbidden).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.ridus.ru/z-pentest-alliance-vzlomali-sistemy-nasosov-na-obektah-izrailya-804595.html",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "News Mail.ru",
+      "category": "global_cyber",
+      "title": "Пророссийские хакеры взломали системы критической инфраструктуры Израиля - Новости Mail",
+      "summary": "Пророссийские хакеры взломали системы критической инфраструктуры Израиля - Новости Mail Политика Экономика Общество Происшествия Видео Все сервисы СВО Спорт Объясняем Финансы Погода Вфокусе Курсы Путеводитель по России П",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://news.mail.ru/society/70075193/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "MK.ru",
+      "category": "global_cyber",
+      "title": "Группа хакеров с пророссийскими взглядами взломала часть критических объектов Израиля - МК",
+      "summary": "Группа хакеров с пророссийскими взглядами взломала часть критических объектов Израиля - МК Установи МК! --> МК СпортМК АвтоВзгляд Охотники.ру WomanHit.ru Промокоды Установи себе МК! --> От завода к музею --> --> Предназн",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.mk.ru/politics/2026/03/07/gruppa-khakerov-s-prorossiyskimi-vzglyadami-vzlomala-chast-kriticheskikh-obektov-izrailya.html",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "News.ru",
+      "category": "global_cyber",
+      "title": "Пророссийские хакеры взломали системы управления насосами в Израиле",
+      "summary": "Пророссийские хакеры взломали системы управления насосами в Израиле Проблемы с бензином в России Специальная военная операция на Украине: мирные переговоры Кризис на Ближнем Востоке Россия Общество Мир Экономика Спорт Ку",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://news.ru/society/prorossijskie-hakery-vzlomali-sistemy-upravleniya-nasosami-v-izraile",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Gazeta.ru Tech",
+      "category": "global_cyber",
+      "title": "Document",
+      "summary": "Document",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.gazeta.ru/tech/news/2026/03/07/28009429.shtml",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "SMI2 #1",
+      "category": "global_cyber",
+      "title": "Пророссийские хакеры перехватили часть управления критическими объектами Израиля - СМИ2",
+      "summary": "Пророссийские хакеры перехватили часть управления критическими объектами Израиля - СМИ2 ПОПУЛЯРНОЕ СМИ2 LADY РЕКЛАМА В СМИ Войти Главное Культура Авто Лайф-стайл Eщё Стоп негатив Тёмная тема Светлая тема Главное 13:15, 7",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://smi2.ru/article/181077136/story",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "SMI2 #2",
+      "category": "global_cyber",
+      "title": "Хакеры Z-Pentest получили доступ к части критических объектов Израиля - СМИ2",
+      "summary": "Хакеры Z-Pentest получили доступ к части критических объектов Израиля - СМИ2 ПОПУЛЯРНОЕ СМИ2 LADY РЕКЛАМА В СМИ Войти Главное Культура Авто Лайф-стайл Eщё Стоп негатив Тёмная тема Светлая тема Главное 20:54, 7 марта 20:5",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://smi2.ru/article/181088846/story",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Rambler News",
+      "category": "global_cyber",
+      "title": "Rambler News — Source reachability note (<urlopen error _ssl.c:1001: The handshake operation timed out>).",
+      "summary": "Source reachability note (<urlopen error _ssl.c:1001: The handshake operation timed out>).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://news.rambler.ua/army/56147635-prorossiyskie-hakery-vzlomali-sistemy-kriticheskoy-infrastruktury-izrailya/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Tsargrad",
+      "category": "global_cyber",
+      "title": "Z-Pentest: Взломаны системы насосов критической инфраструктуры Израиля",
+      "summary": "Z-Pentest: Взломаны системы насосов критической инфраструктуры Израиля --> Авторизация Москва 18+ Первый русский Царьград Отключить рекламу Царьград. Царьград. Санкт-Петербург Царьград. Архангельск Царьград. Забайкалье Ц",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://tsargrad.tv/novost/entest-vzlomany-sistemy-nasosov-kriticheskoj-infrastruktury-izrailja_1587505",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "VZ.ru",
+      "category": "global_cyber",
+      "title": "Пророссийские хакеры заявили о получении контроля над объектами Израиля :: Новости дня / ВЗГЛЯД",
+      "summary": "Пророссийские хакеры заявили о получении контроля над объектами Израиля :: Новости дня / ВЗГЛЯД 25 ноября, среда Новость часа Эксперт: Китай подхватил миссию СССР по выводу новых стран в космос Лента новостей Эксклюзив Н",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://vz.ru/news/2026/3/7/1400342.html",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "SAK-Info",
+      "category": "global_cyber",
+      "title": "SAK-Info — Source reachability note (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostn).",
+      "summary": "Source reachability note (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostn).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://sak-info.com/vlast/item/188817-z-pentest-alliance-vzlomali-sistemy-nasosov-na-obektah-izrailya",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Rodina.news",
+      "category": "global_cyber",
+      "title": "Rodina.news — Source reachability note (HTTP Error 404: Not Found).",
+      "summary": "Source reachability note (HTTP Error 404: Not Found).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://rodina.news/hakery-zpentest-alliance-vzlomali-sistemy-kriticheskoi-26030718235844.htm",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "MySeldon",
+      "category": "global_cyber",
+      "title": "MySeldon — Source reachability note (Remote end closed connection without response).",
+      "summary": "Source reachability note (Remote end closed connection without response).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://myseldon.com/en/news/index/342789446",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "AlarmyK24",
+      "category": "global_cyber",
+      "title": "AlarmyK24 — Source reachability note (<urlopen error timed out>).",
+      "summary": "Source reachability note (<urlopen error timed out>).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://alarmyk24.ru/news/3882425/prorossijskie-hakery-vzlomali-sistemy-kriticheskoj-infrastruktury-izrailya.html",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Cyber Intelligence House",
+      "category": "global_cyber",
+      "title": "Cyber intelligence in your AI assistant | Cyber Intelligence House",
+      "summary": "Cyber intelligence in your AI assistant | Cyber Intelligence House Skip to content Use cases Products Why CIH Cyber intelligence, in the AI assistant you already use. For cybersecurity providers, defence and law enforcem",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "http://www.cyberintelligencehouse.com",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Sector035 (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://sector035.nl/articles/category:week-in-osint This experience is o",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/dVZ8iVA3",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Authentic8 Blog (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://www.authentic8.com/blog This experience is optimized for Chrome, ",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/dGc6wiVb",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Rae Baker Blog (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://www.raebaker.net/blog This experience is optimized for Chrome, Ed",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/d57YnaAj",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "VEEXH Medium",
+      "category": "global_cyber",
+      "title": "VEEXH Medium — Source reachability note (HTTP Error 403: Forbidden).",
+      "summary": "Source reachability note (HTTP Error 403: Forbidden).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://medium.com/@VEEXH",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "OH SHINT Blog (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://ohshint.gitbook.io/oh-shint-its-a-blog This experience is optimiz",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/d9UvBrT5",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "OSINT Combine (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://www.osintcombine.com/blog This experience is optimized for Chrome",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/ducHTp2X",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Bellingcat (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://www.bellingcat.com/ This experience is optimized for Chrome, Edge",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/dMTN2dNh",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Skopenow Blog (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://www.skopenow.com/news This experience is optimized for Chrome, Ed",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/dfE3dc3q",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "ShadowDragon Blog (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://shadowdragon.io/blog/ This experience is optimized for Chrome, Ed",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/dajF3QcN",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Maltego Blog (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://www.maltego.com/blog/ This experience is optimized for Chrome, Ed",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/dzV4bmn8",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Social Links Blog (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://blog.sociallinks.io/?utm_source=blog&utm_medium=blog This experie",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://lnkd.in/dkhvmhRX",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Blackdot Solutions (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://blackdotsolutions.com/resources/#blogs This experience is optimiz",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://lnkd.in/d8MYqXZB",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Offensive OSINT (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://www.offensiveosint.io/ This experience is optimized for Chrome, E",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/dF3Fkbyc",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "OSINT Industries (LinkedIn)",
+      "category": "global_cyber",
+      "title": "LinkedIn",
+      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://www.osint.industries/blog/the-intel-hub This experience is optimi",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://lnkd.in/eCrSKUmK",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Reza Abasi LinkedIn",
+      "category": "global_cyber",
+      "title": "Reza Abasi LinkedIn — Source reachability note (HTTP Error 429: Too Many Requests).",
+      "summary": "Source reachability note (HTTP Error 429: Too Many Requests).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.linkedin.com/in/reza-abasi/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Blackbones.net",
+      "category": "darkweb_cti",
+      "title": "BlackBones Carding Forum",
+      "summary": "BlackBones Carding Forum Forums New posts What's new New posts Latest activity Forum rules Upgrades Commercials SNN 24/7 LOOKUP SSN/DL 4$ Log in Register What's new New posts What's new New posts Latest activity Menu Log",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://blackbones.net/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "DarknetList",
+      "category": "darkweb_cti",
+      "title": "Darknet Markets List - DarkWeb Directory",
+      "summary": "Darknet Markets List - DarkWeb Directory Skip to content November 25, 2026 Darknet Markets List – DarkWeb Directory Best Darknet Markets List: The best drugs from the top rated vendors in the dark web! Only trusted Marke",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://darknetlist.info/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Dead-Frog",
+      "category": "global_cyber",
+      "title": "Dead-Frog: Live Comedy Near You",
+      "summary": "Dead-Frog: Live Comedy Near You blog comedians Funniest Favorite Greatest Living Best Comedians Ever Best Joke Writers Best Joke Tellers All Comedians Timeline live comedy comedy clubs who’s funnier Sign Up Log-In Find C",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.dead-frog.com/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Tenebris (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Tenebris (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://tenebrispoyfrcup4k24lciwrh4gc5735hmld4dweq7his7zh423opqd.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Dread #1 (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Dread #1 (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Dread #2 (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Dread #2 (Tor)",
+      "summary": "Fetched data from Onion - Dread #2 (Tor).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://dreadytognbh7m5nlmqsogzzlxjy75iuxkulewbhxcorupbqahact2yd.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "FlakkaOnline",
+      "category": "global_cyber",
+      "title": "FlakkaOnline — Source reachability note (<urlopen error [Errno -3] Temporary failure in name resolution>).",
+      "summary": "Source reachability note (<urlopen error [Errno -3] Temporary failure in name resolution>).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://flakkaonline.com/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Blackbones.cc",
+      "category": "darkweb_cti",
+      "title": "BlackBones Carding Forum",
+      "summary": "BlackBones Carding Forum Forums New posts What's new New posts Latest activity Forum rules Upgrades Commercials SNN 24/7 LOOKUP SSN/DL 4$ Log in Register What's new New posts What's new New posts Latest activity Menu Log",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://blackbones.cc/",
+      "date": "2026-11-25"
     }
   ],
   "cves": [
     {
-      "source": "CISA KEV",
       "cveID": "CVE-2026-132224",
       "vendor": "Optimizely",
       "product": "Web Experimentation",
       "name": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
       "dateAdded": "2026-11-24",
-      "dueDate": "2026-11-27",
+      "ransomware": "Unknown",
       "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "ransomware": "Unknown"
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes."
     },
     {
-      "source": "CISA KEV",
       "cveID": "CVE-2026-131914",
       "vendor": "Idunno",
       "product": "AntiCsrf",
       "name": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
       "dateAdded": "2026-11-24",
-      "dueDate": "2026-11-27",
+      "ransomware": "Unknown",
       "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "ransomware": "Unknown"
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
     },
     {
-      "source": "CISA KEV",
       "cveID": "CVE-2026-132165",
       "vendor": "Drupal",
       "product": "Core",
       "name": "Drupal Core Remote Code Execution Vulnerability",
       "dateAdded": "2026-11-24",
-      "dueDate": "2026-11-27",
+      "ransomware": "Unknown",
       "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "ransomware": "Unknown"
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
     },
     {
-      "source": "CISA KEV",
       "cveID": "CVE-2026-133968",
       "vendor": "Project MONAI",
       "product": "MONAI Label",
       "name": "Project MONAI MONAI Label Path Traversal Vulnerability",
       "dateAdded": "2026-11-23",
-      "dueDate": "2026-11-26",
+      "ransomware": "Unknown",
       "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "ransomware": "Unknown"
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
     },
     {
-      "source": "CISA KEV",
       "cveID": "CVE-2026-134624",
       "vendor": "N-able",
       "product": "MailAssure",
       "name": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
       "dateAdded": "2026-11-23",
-      "dueDate": "2026-11-26",
+      "ransomware": "Unknown",
       "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "ransomware": "Unknown"
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
     },
     {
-      "source": "CISA KEV",
       "cveID": "CVE-2026-129448",
       "vendor": "Apache",
       "product": "Roller",
       "name": "Apache Roller Deserialization of Untrusted Data Vulnerability",
       "dateAdded": "2026-11-20",
-      "dueDate": "2026-11-23",
+      "ransomware": "Unknown",
       "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "ransomware": "Unknown"
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
     },
     {
-      "source": "CISA KEV",
       "cveID": "CVE-2026-123890",
       "vendor": "Broadcom",
       "product": "VMware vCenter",
       "name": "VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability",
       "dateAdded": "2026-11-20",
-      "dueDate": "2026-11-23",
+      "ransomware": "Unknown",
       "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines",
-      "ransomware": "Unknown"
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
     },
     {
-      "source": "CISA KEV",
       "cveID": "CVE-2025-42884",
       "vendor": "SAP",
       "product": "NetWeaver",
       "name": "SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability",
       "dateAdded": "2026-11-20",
-      "dueDate": "2026-11-23",
+      "ransomware": "Unknown",
       "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "ransomware": "Unknown"
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
+    },
+    {
+      "cveID": "CVE-2026-76466",
+      "vendor": "Cisco",
+      "product": "Expressway Series",
+      "name": "Cisco Expressway Series Use of Hard-coded Credentials Vulnerability",
+      "dateAdded": "2026-11-20",
+      "ransomware": "Unknown",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions."
+    },
+    {
+      "cveID": "CVE-2024-10441",
+      "vendor": "Synology",
+      "product": "DiskStation Manager (DSM)",
+      "name": "Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
+      "dateAdded": "2026-11-18",
+      "ransomware": "Known",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
+    },
+    {
+      "cveID": "CVE-2026-40217",
+      "vendor": "BerriAI",
+      "product": "LiteLLM",
+      "name": "BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
+      "dateAdded": "2026-11-18",
+      "ransomware": "Unknown",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
+    },
+    {
+      "cveID": "CVE-2026-90817",
+      "vendor": "Vanderbilt University",
+      "product": "Research Electronic Data Capture (REDCap)",
+      "name": "Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
+      "dateAdded": "2026-11-18",
+      "ransomware": "Unknown",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
+    },
+    {
+      "cveID": "CVE-2026-90436",
+      "vendor": "Apache",
+      "product": "Axis",
+      "name": "Apache Axis Unsafe Reflection Vulnerability",
+      "dateAdded": "2026-11-18",
+      "ransomware": "Unknown",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
+    },
+    {
+      "cveID": "CVE-2026-115731",
+      "vendor": "Perforce",
+      "product": "Puppet Enterprise",
+      "name": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
+      "dateAdded": "2026-11-17",
+      "ransomware": "Unknown",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes."
+    },
+    {
+      "cveID": "CVE-2026-114713",
+      "vendor": "UnrealIRCd",
+      "product": "UnrealIRCd",
+      "name": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
+      "dateAdded": "2026-11-13",
+      "ransomware": "Unknown",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
+    }
+  ],
+  "iocs": [
+    {
+      "type": "ip",
+      "value": "185.220.101.47",
+      "origin": "Manual Workflow Input",
+      "level": "CRITICAL",
+      "score": 120,
+      "reasons": [
+        "VirusTotal (+60)",
+        "AbuseIPDB (+50)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 17 malicious, 2 suspicious (+60)",
+        "AbuseIPDB: 100% confidence, 88 reports (+50)",
+        "OTX: query failed",
+        "Shodan: 1 open ports, 0 vulns (+0)"
+      ],
+      "verdict": "CRITICAL — Confirmed malicious/high-risk activity across CTI sources. Block & investigate immediately.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 17,
+          "suspicious": 2,
+          "score_add": 60,
+          "result": "VirusTotal: 17 malicious, 2 suspicious (+60)"
+        },
+        "abuseipdb": {
+          "confidence": 100,
+          "reports": 88,
+          "score_add": 50,
+          "result": "AbuseIPDB: 100% confidence, 88 reports (+50)"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: query failed"
+        },
+        "shodan": {
+          "ports": [
+            80
+          ],
+          "vulns": [],
+          "org": "ForPrivacyNET",
+          "score_add": 0,
+          "result": "Shodan: 1 open ports, 0 vulns (+0)"
+        }
+      }
+    },
+    {
+      "type": "hash",
+      "value": "b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776",
+      "origin": "[Triage Sandbox] acreed | b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61",
+      "level": "CRITICAL",
+      "score": 90,
+      "reasons": [
+        "VirusTotal (+60)",
+        "OTX (+20)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 52 malicious, 0 suspicious (+60)",
+        "AbuseIPDB: IP only",
+        "OTX: 4 threat pulses (+20)",
+        "Shodan: IP only"
+      ],
+      "verdict": "CRITICAL — Confirmed malicious/high-risk activity across CTI sources. Block & investigate immediately.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 52,
+          "suspicious": 0,
+          "score_add": 60,
+          "result": "VirusTotal: 52 malicious, 0 suspicious (+60)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 4,
+          "score_add": 20,
+          "result": "OTX: 4 threat pulses (+20)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-131914",
+      "origin": "[SecurityWeek] Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-132165",
+      "origin": "[CISA Advisories] CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-132224",
+      "origin": "[CISA KEV] Optimizely Web Experimentation",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-133968",
+      "origin": "[CISA KEV] Project MONAI MONAI Label",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-134624",
+      "origin": "[CISA KEV] N-able MailAssure",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-129448",
+      "origin": "[CISA KEV] Apache Roller",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-123890",
+      "origin": "[CISA KEV] Broadcom VMware vCenter",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2025-42884",
+      "origin": "[CISA KEV] SAP NetWeaver",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-76466",
+      "origin": "[CISA KEV] Cisco Expressway Series",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2024-10441",
+      "origin": "[CISA KEV] Synology DiskStation Manager (DSM)",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-40217",
+      "origin": "[CISA KEV] BerriAI LiteLLM",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-90817",
+      "origin": "[CISA KEV] Vanderbilt University Research Electronic Data Capture (REDCap)",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-90436",
+      "origin": "[CISA KEV] Apache Axis",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-115731",
+      "origin": "[CISA KEV] Perforce Puppet Enterprise",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-114713",
+      "origin": "[CISA KEV] UnrealIRCd UnrealIRCd",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "threads.net",
+      "origin": "[Hatless1der] Threads.net Is Hiding Some OSINT Secrets You Definitely Need To Know",
+      "level": "HIGH",
+      "score": 45,
+      "reasons": [
+        "OTX (+35)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 41 threat pulses (+35)",
+        "Shodan: IP only"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 41,
+          "score_add": 35,
+          "result": "OTX: 41 threat pulses (+35)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "shadowdragon.io",
+      "origin": "[ShadowDragon Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 15,
+      "reasons": [
+        "OTX (+5)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 1 threat pulses (+5)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 1,
+          "score_add": 5,
+          "result": "OTX: 1 threat pulses (+5)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "blackdotsolutions.com",
+      "origin": "[Blackdot Solutions (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 15,
+      "reasons": [
+        "OTX (+5)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 1 threat pulses (+5)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 1,
+          "score_add": 5,
+          "result": "OTX: 1 threat pulses (+5)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "ransomwarehelp.com",
+      "origin": "[Krebs on Security] CTO of ‘RansomwareHelp’ Indicted for Wire Fraud",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 0 threat pulses (+0)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 0,
+          "score_add": 0,
+          "result": "OTX: 0 threat pulses (+0)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://whatsmyname.app",
+      "origin": "[Hatless1der] OSINT Quick Tips: That CashApp QR Code on The Web Might Actually Be Hi",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "womanhit.ru",
+      "origin": "[MK.ru] Группа хакеров с пророссийскими взглядами взломала часть критических о",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 0 threat pulses (+0)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 0,
+          "score_add": 0,
+          "result": "OTX: 0 threat pulses (+0)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://sector035.nl/articles/category:week-in-osint",
+      "origin": "[Sector035 (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://www.authentic8.com/blog",
+      "origin": "[Authentic8 Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "www.authentic8.com",
+      "origin": "[Authentic8 Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 0 threat pulses (+0)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 0,
+          "score_add": 0,
+          "result": "OTX: 0 threat pulses (+0)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://www.raebaker.net/blog",
+      "origin": "[Rae Baker Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "www.raebaker.net",
+      "origin": "[Rae Baker Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 0 threat pulses (+0)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 0,
+          "score_add": 0,
+          "result": "OTX: 0 threat pulses (+0)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://ohshint.gitbook.io/oh-shint-its-a-blog",
+      "origin": "[OH SHINT Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "ohshint.gitbook.io",
+      "origin": "[OH SHINT Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 0 threat pulses (+0)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 0,
+          "score_add": 0,
+          "result": "OTX: 0 threat pulses (+0)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://www.osintcombine.com/blog",
+      "origin": "[OSINT Combine (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "www.osintcombine.com",
+      "origin": "[OSINT Combine (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 0 threat pulses (+0)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 0,
+          "score_add": 0,
+          "result": "OTX: 0 threat pulses (+0)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://www.bellingcat.com/",
+      "origin": "[Bellingcat (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "www.bellingcat.com",
+      "origin": "[Bellingcat (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: query failed",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: query failed"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://www.skopenow.com/news",
+      "origin": "[Skopenow Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "www.skopenow.com",
+      "origin": "[Skopenow Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 0 threat pulses (+0)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 0,
+          "score_add": 0,
+          "result": "OTX: 0 threat pulses (+0)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://shadowdragon.io/blog/",
+      "origin": "[ShadowDragon Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://www.maltego.com/blog/",
+      "origin": "[Maltego Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "www.maltego.com",
+      "origin": "[Maltego Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 0 threat pulses (+0)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 0,
+          "score_add": 0,
+          "result": "OTX: 0 threat pulses (+0)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://blog.sociallinks.io/?utm_source=blog&utm_medium=blog",
+      "origin": "[Social Links Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "blog.sociallinks.io",
+      "origin": "[Social Links Blog (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 0 threat pulses (+0)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 0,
+          "score_add": 0,
+          "result": "OTX: 0 threat pulses (+0)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://blackdotsolutions.com/resources/#blogs",
+      "origin": "[Blackdot Solutions (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://www.offensiveosint.io/",
+      "origin": "[Offensive OSINT (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "www.offensiveosint.io",
+      "origin": "[Offensive OSINT (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 0 threat pulses (+0)",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 0,
+          "score_add": 0,
+          "result": "OTX: 0 threat pulses (+0)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "url",
+      "value": "https://www.osint.industries/blog/the-intel-hub",
+      "origin": "[OSINT Industries (LinkedIn)] LinkedIn",
+      "level": "LOW",
+      "score": 10,
+      "reasons": [
+        "Base score only"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only"
+      ],
+      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    }
+  ],
+  "active_apts": [],
+  "live_ransomware": [
+    {
+      "group": "spacebears",
+      "victim": "Alsanet",
+      "country": "MK",
+      "date": "2026-11-25T04:44",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "spacebears",
+      "victim": "BIURO RACHUNKOWE RACHEXPERT SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+      "country": "PL",
+      "date": "2026-11-25T02:44",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "spacebears",
+      "victim": "Camsons Pty Ltd",
+      "country": "AU",
+      "date": "2026-11-25T02:44",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "spacebears",
+      "victim": "ADN Energía S. de R.L. de C.V. (also referred to as ADN Energía or ADN Energia)",
+      "country": "MX",
+      "date": "2026-11-25T02:43",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SilentRansomGroup",
+      "victim": "Kegler, Brown, Hill & Ritter",
+      "country": "US",
+      "date": "2026-11-24T23:57",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SilentRansomGroup",
+      "victim": "Nonigman LLP",
+      "country": "Global",
+      "date": "2026-11-24T23:26",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "medusalocker",
+      "victim": "O",
+      "country": "Global",
+      "date": "2026-11-24T22:53",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "medusalocker",
+      "victim": "Islasnatura",
+      "country": "ES",
+      "date": "2026-11-24T22:52",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "PixelLeaks",
+      "victim": "Copperstone Clothing Company (Indian garment manufacturer/exporter, SQL Server ERP estate)",
+      "country": "IN",
+      "date": "2026-11-24T22:34",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "rhysida",
+      "victim": "Smile Designs LLC",
+      "country": "Global",
+      "date": "2026-11-24T21:52",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "Falcon",
+      "victim": "CSG Systems International",
+      "country": "US",
+      "date": "2026-11-24T21:22",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "Falcon",
+      "victim": "Aimbridge Hospitality",
+      "country": "US",
+      "date": "2026-11-24T21:21",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SilentRansomGroup",
+      "victim": "Greenbaum, Rowe, Smith, & Davis",
+      "country": "Global",
+      "date": "2026-11-24T20:43",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SilentRansomGroup",
+      "victim": "H... R...",
+      "country": "Global",
+      "date": "2026-11-24T20:42",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SilentRansomGroup",
+      "victim": "H...",
+      "country": "Global",
+      "date": "2026-11-24T20:41",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SilentRansomGroup",
+      "victim": "K... B...",
+      "country": "Global",
+      "date": "2026-11-24T20:40",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SilentRansomGroup",
+      "victim": "Archer & Greiner",
+      "country": "DE",
+      "date": "2026-11-24T20:39",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "play",
+      "victim": "UltraBac Software",
+      "country": "US",
+      "date": "2026-11-24T19:48",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "play",
+      "victim": "IRL Group",
+      "country": "CA",
+      "date": "2026-11-24T19:47",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "play",
+      "victim": "Valvo Electrical Supply Ltd",
+      "country": "CA",
+      "date": "2026-11-24T19:47",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "The Hacker News RSS",
+      "victim": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+      "country": "Global",
+      "date": "Wed, 25 Nov 2026",
+      "source": "The Hacker News RSS"
+    },
+    {
+      "group": "BleepingComputer",
+      "victim": "New Inception extortion gang launches large-scale vishing campaign",
+      "country": "Global",
+      "date": "Tue, 24 Nov 2026",
+      "source": "BleepingComputer"
+    },
+    {
+      "group": "Krebs on Security",
+      "victim": "CTO of ‘RansomwareHelp’ Indicted for Wire Fraud",
+      "country": "Global",
+      "date": "Sat, 21 Nov 2026",
+      "source": "Krebs on Security"
+    },
+    {
+      "group": "Krebs on Security",
+      "victim": "Who Runs the Ransomware Group Qilin?",
+      "country": "Russia",
+      "date": "Wed, 11 Nov 2026",
+      "source": "Krebs on Security"
+    },
+    {
+      "group": "Securelist (Kaspersky)",
+      "victim": "The forced audit: how AuditTeam’s OpsAgent framework masks ransomware as consulting",
+      "country": "Global",
+      "date": "Wed, 18 Nov 2026",
+      "source": "Securelist (Kaspersky)"
     }
   ]
 }
