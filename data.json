@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25 13:59 (+04)",
+  "updated_at": "2026-11-25 15:22 (+04)",
   "sources": [
     {
       "name": "The Hacker News RSS",
@@ -87,6 +87,11 @@
       "type": "RSS"
     },
     {
+      "name": "Kalir Pulse Feed",
+      "url": "https://pulse.kalir.io/en/feed.xml",
+      "type": "RSS"
+    },
+    {
       "name": "MITRE ATT&CK",
       "url": "https://attack.mitre.org/",
       "type": "CTI/Web"
@@ -107,8 +112,28 @@
       "type": "CTI/Web"
     },
     {
-      "name": "Kalir Pulse AZAL Brief",
-      "url": "https://pulse.kalir.io/en/brief/base-de-datos-de-azerbaijan-airlines-eca8fae5",
+      "name": "Kalir Pulse Brief",
+      "url": "https://pulse.kalir.io/en/brief",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Kalir Pulse Actor",
+      "url": "https://pulse.kalir.io/en/actors",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Kalir Pulse CVE",
+      "url": "https://pulse.kalir.io/en/cves",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Kalir Pulse Ransomware",
+      "url": "https://pulse.kalir.io/en/ransomware",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Kalir Pulse Wire",
+      "url": "https://pulse.kalir.io/en/wire",
       "type": "CTI/Web"
     },
     {
@@ -177,108 +202,8 @@
       "type": "CTI/Web"
     },
     {
-      "name": "Life.ru",
-      "url": "https://life.ru/p/1849559",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "VM.ru Infra",
-      "url": "https://vm.ru/news/1308971-prorossijskie-hakery-vzlomali-sistemy-kriticheskoj-infrastruktury-izrailya",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "Telegram CyberGuerre",
-      "url": "https://t.me/cyberguerre/3953",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "Ridus",
-      "url": "https://www.ridus.ru/z-pentest-alliance-vzlomali-sistemy-nasosov-na-obektah-izrailya-804595.html",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "News Mail.ru",
-      "url": "https://news.mail.ru/society/70075193/",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "MK.ru",
-      "url": "https://www.mk.ru/politics/2026/03/07/gruppa-khakerov-s-prorossiyskimi-vzglyadami-vzlomala-chast-kriticheskikh-obektov-izrailya.html",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "News.ru",
-      "url": "https://news.ru/society/prorossijskie-hakery-vzlomali-sistemy-upravleniya-nasosami-v-izraile",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "Gazeta.ru Tech",
-      "url": "https://www.gazeta.ru/tech/news/2026/03/07/28009429.shtml",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "SMI2 #1",
-      "url": "https://smi2.ru/article/181077136/story",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "SMI2 #2",
-      "url": "https://smi2.ru/article/181088846/story",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "Rambler News",
-      "url": "https://news.rambler.ua/army/56147635-prorossiyskie-hakery-vzlomali-sistemy-kriticheskoy-infrastruktury-izrailya/",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "Tsargrad",
-      "url": "https://tsargrad.tv/novost/entest-vzlomany-sistemy-nasosov-kriticheskoj-infrastruktury-izrailja_1587505",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "VZ.ru",
-      "url": "https://vz.ru/news/2026/3/7/1400342.html",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "SAK-Info",
-      "url": "https://sak-info.com/vlast/item/188817-z-pentest-alliance-vzlomali-sistemy-nasosov-na-obektah-izrailya",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "Rodina.news",
-      "url": "https://rodina.news/hakery-zpentest-alliance-vzlomali-sistemy-kriticheskoi-26030718235844.htm",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "MySeldon",
-      "url": "https://myseldon.com/en/news/index/342789446",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "AlarmyK24",
-      "url": "https://alarmyk24.ru/news/3882425/prorossijskie-hakery-vzlomali-sistemy-kriticheskoj-infrastruktury-izrailya.html",
-      "type": "CTI/Web"
-    },
-    {
       "name": "Cyber Intelligence House",
       "url": "http://www.cyberintelligencehouse.com",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "Sector035 (LinkedIn)",
-      "url": "https://lnkd.in/dVZ8iVA3",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "Authentic8 Blog (LinkedIn)",
-      "url": "https://lnkd.in/dGc6wiVb",
-      "type": "CTI/Web"
-    },
-    {
-      "name": "Rae Baker Blog (LinkedIn)",
-      "url": "https://lnkd.in/d57YnaAj",
       "type": "CTI/Web"
     },
     {
@@ -382,6 +307,386 @@
       "type": "CTI/Web"
     },
     {
+      "name": "Onion - Darknet Forums (Tor)",
+      "url": "https://darknet77vonbqeatfsnawm5jtnoci5z22mxay6cizmoucgmz52mwyad.onion/forums/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Hunters Ransomware (Tor)",
+      "url": "https://hunters55rdxciehoqzwv7vgyv6nt37tbwax2reroyzxhou7my5ejyid.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - LockBit (Tor)",
+      "url": "http://lockbit3753ekiocyo5epmpy6klmejchjtzddoekjlnt6mu3qh4de2id.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - DWL Tor (Tor)",
+      "url": "http://dwltorbltw3tdjskxn23j2mwz2f4q25j4ninl5bdvttiy4xb6cqzikid.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - OmegaLock (Tor)",
+      "url": "http://omegalock5zxwbhswbisc42o2q2i54vdulyvtqqbudqousisjgc7j7yd.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Hackread - Anonymous",
+      "url": "https://hackread.com/category/data-breaches/hacking-news/anonymous/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Hackread - Leaks Affairs",
+      "url": "https://hackread.com/category/data-breaches/hacking-news/leaks-affairs/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Onion - Reuters (Tor)",
+      "url": "http://smb7p276iht3i2fj.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Forbes (Tor)",
+      "url": "http://t5pv5o4t6jyjilp6.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Financial Times (Tor)",
+      "url": "http://xdm7flvwt3uvsrrd.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - The Guardian (Tor)",
+      "url": "https://www.guardian2zotagl6tmjucg3lrhxdk4dw3lhbqnkvvkywawy3oqfoprid.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Tor News (Tor)",
+      "url": "http://a4ygisnerpgtc5ayerl22pll6cls3oyj54qgpm7qrmb66xrxts6y3lyd.onion/index.html",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - BBC News (Tor)",
+      "url": "https://www.bbcnewsv2vjtpsuy.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - New York Times (Tor)",
+      "url": "https://www.nytimes3xbfgragh.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - ProPublica (Tor)",
+      "url": "http://p53lf57qovyuvwsc6xnrppyply3vtqm7l6pcobkmyqsiofyeznfu5uqd.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Deutsche Welle (Tor)",
+      "url": "http://dwnewsvdyyiamwnp.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Radio Free Asia (Tor)",
+      "url": "https://rfa62zl6z6owmtlf.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Bellingcat (Tor)",
+      "url": "http://bellcatmbguthn3age23lrbseln2lryzv3mt7whis7ktjw4qrestbzad.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - RFE/RL (Tor)",
+      "url": "https://www.rferlo2zxgv23tct66v45s5mecftol5vod3hf4rqbipfp46fqu2q56ad.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Yahoo News (Tor)",
+      "url": "https://yahoonewsnqkxo423g7vuwr2mvkwmc5t4df5x44dfdfvmyzqgcyt3had.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Al Jazeera (Tor)",
+      "url": "http://jkta32w5gvk6pmqdfwj67psojot3l2iwoqbdvrvywi5bkudfeandq7id.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Bloomberg News (Tor)",
+      "url": "http://ogdwaroarq4p6rnfn2hl4crvldyruyc2g24435qtxmd3twhevg7dsqid.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - CBC (Tor)",
+      "url": "http://gppg43zz5d2yfuom3yfmxnnokn3zj4mekt55onlng3zs653ty4fio6qd.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - CNN (Tor)",
+      "url": "http://qmifwf762qftydprw2adbg7hs2mkunac5xrz3cb5busaflji3rja5lid.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Forbidden Stories (Tor)",
+      "url": "http://fg25fqpu2dnxp24xs3jlcley4hp2inshpzek44q3czkhq3zffoqk26id.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - HuffPost (Tor)",
+      "url": "http://ppw2pmtagxykinex6uubypsommtrcg6ytdh6bcr6agq2wxnrweao4cad.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Globe and Mail (Tor)",
+      "url": "http://a4zum5ydurvljrohxqp2rjjal5kro4ge2q2qizuonf2jubkhcr627gad.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Washington Post (Tor)",
+      "url": "http://vfnmxpa6fo4jdpyq3yneqhglluweax2uclvxkytfpmpkp5rsl75ir5qd.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Whistleblower Aid (Tor)",
+      "url": "http://kogbxf4ysay2qzozmg7ar45ijqmj2vxrwqa4upzqq2i7sqj7wv7wcdqd.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Ransomwiki",
+      "url": "https://darkfeed.io/ransomwiki/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Onion - Corporate Leaks (Tor)",
+      "url": "http://hxt254aygrsziejn.onion.ws/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Conti News Clearnet",
+      "url": "https://conti.news",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Onion - Conti (Tor)",
+      "url": "http://htcltkjqoitnez5slo7fvhiou5lbno5bwczu7il2hmfpkowwdpj3q2yd.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Conti News (Tor)",
+      "url": "http://continewsnv5otx5kaoje7krkto2qbu3gtqef22mnr7eaxw3y6ncz3ad.onion.ly/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Hive Leaks (Tor)",
+      "url": "http://hiveleakdbtnp76ulyhi52eag6c6tyc3xw7ez7iqy6wc34gd2nekazyd.onion.ly/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - LockBit 2.0 (Tor)",
+      "url": "http://lockbitapt6vx57t3eeqjofwgcglmutr3a35nygvokja5uuccip4ykyd.onion.ly/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Cuba Ransomware (Tor)",
+      "url": "http://cuba4ikm4jakjgmkezytyawtdgr2xymvy6nvzgw5cglswg3si76icnqd.onion.ly/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - REvil (Tor)",
+      "url": "http://dnpscnbaix6nkwvystl3yxglz7nteicqrou3t75tpcc5532cztc46qyd.onion.ly/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Vice Society (Tor)",
+      "url": "http://vsociethok6sbprvevl4dlwbqrzyhxcxaqpvcqt5belwvsuxaxsutyad.onion.ly/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - AvosLocker (Tor)",
+      "url": "http://avosqxh72b5ia23dl5fgwcpndkctuzqvh2iefk5imp3pi5gfhel5klad.onion.ly/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - BlackMatter (Tor)",
+      "url": "http://blackmax7su6mbwtcyo3xwtpfxpm356jjqrs34y4crcytpw7mifuedyd.onion.ly/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - BABUK (Tor)",
+      "url": "http://nq4zyac4ukl4tykmidbzgdlvaboqeqsemkp4t35bzvjeve6zm2lqcjid.onion.ly/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - DoppelPaymer (Tor)",
+      "url": "http://hpoo4dosa3x4ognfxpqcrjwnsigvslm7kv6hvmhh2yqczaxy3j6qnwad.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Maze News",
+      "url": "https://mazenews.top",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Onion - AKO Ransomware (Tor)",
+      "url": "http://37rckgo66iydpvgpwve7b2el5q2zhjw4tv4lmyewufnpx4lhkekxkoqd.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Nefilim (Tor)",
+      "url": "http://hxt254aygrsziejn.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - RagnarLocker (Tor)",
+      "url": "http://p6o7m73ujalhgkiv.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Clop (Tor)",
+      "url": "http://ekbgzchl6x2ias37.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Netwalker (Tor)",
+      "url": "http://rnfdsgm6wb6j6su5txkekw4u4y47kp2eatvu7d6xhyn5cs4lt4pdrqqd.onion/blog",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Sekhmet Leaks",
+      "url": "https://sekhmetleaks.top/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Onion - Pysa (Tor)",
+      "url": "http://wqmfzni2nvbbpk25.onion/partners.html",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Suncrypt (Tor)",
+      "url": "http://nbzzb6sa6xuura2z.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "DarkSide Clearnet",
+      "url": "https://darksidedxcftmqa.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - not Evil (Tor)",
+      "url": "http://hss3uro2hsxfogfq.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Visitor (Tor)",
+      "url": "http://visitorfi5kl7q7i.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Dark Search Engine (Tor)",
+      "url": "http://7pwy57iklvt6lyhe.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Dark Web Links (Tor)",
+      "url": "http://bznjtqphs2lp4xdd.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - SearX (Tor)",
+      "url": "http://searchb5a7tmimez.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Candle (Tor)",
+      "url": "http://gjobqjj7wyczbqie.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - TorSearch (Tor)",
+      "url": "http://kbhpodhnfxl3clb4.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Caronte (Tor)",
+      "url": "http://carontevaha5x626.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - House Of Lions Forums (Tor)",
+      "url": "http://lionhouse6yaacev.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Acropolis Forum (Tor)",
+      "url": "http://acropolhwczbgbkh.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - The Stock Insiders (Tor)",
+      "url": "http://b34xhb2kjf3nbuyk.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Hidden Answers (Tor)",
+      "url": "http://answerstedhctbek.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - The Intel Exchange (Tor)",
+      "url": "http://rrcc5uuudhh4oz3c.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Flashlight Forum (Tor)",
+      "url": "http://kxojy6ygju4h6lwn.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Anonymous BBS (Tor)",
+      "url": "http://qm3monarchzifkwa.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - InserTor Pastebin (Tor)",
+      "url": "http://54ogum7gwxhtgiya.onion/insertor/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Simple Pastebin (Tor)",
+      "url": "http://stu32b4sndw3cptm.onion",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "DeepWebLinks",
+      "url": "https://deepweblinks.net/",
+      "type": "CTI/Web"
+    },
+    {
+      "name": "Onion - BBC News Global (Tor)",
+      "url": "https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - BBC Azeri (Tor)",
+      "url": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/azeri",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - VOA News (Tor)",
+      "url": "https://www.voanews5aitmne6gs2btokcacixclgfl43cv27sirgbauyyjylwpdtqd.onion/",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Riseup Security (Tor)",
+      "url": "http://vww6ybal4bd7szmgncyruucpgfkqahzddi37ktceo3ah7ngmcopnpyyd.onion/en/security/network-security/tor#riseups-tor-onion-services",
+      "type": "Tor/Onion"
+    },
+    {
+      "name": "Onion - Alec Muffett Blog (Tor)",
+      "url": "https://amuffettdexn6r5s4lt45b6mlrgmsmo56szaaighyjurp4ccuj63zkad.onion/blog",
+      "type": "Tor/Onion"
+    },
+    {
       "name": "CISA KEV",
       "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
       "type": "KEV"
@@ -426,6 +731,16 @@
     {
       "source": "The Hacker News RSS",
       "category": "global_cyber",
+      "title": "Ex-OpenAI Employee Accused of Bugging Company Offices Granted $1 Million Bail",
+      "summary": "A former OpenAI employee accused of concealing a covert recording device at the company's San Francisco offices will be allowed to be released from jail on a $1 million bond, a San Francisco federal court judge ruled Tuesday. Abdulrahman Al",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://thehackernews.com/2026/11/ex-openai-employee-accused-of-bugging.html",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "The Hacker News RSS",
+      "category": "global_cyber",
       "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
       "summary": "An attacker ran operating system commands on Monday on six production servers of Hex.pm, the package registry that Elixir and Erlang developers fetch their dependencies from. The flaw used in the attack had been in the registry's code since",
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
@@ -454,13 +769,13 @@
       "date": "Wed, 25 Nov 2026"
     },
     {
-      "source": "The Hacker News RSS",
+      "source": "BleepingComputer",
       "category": "global_cyber",
-      "title": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
-      "summary": "WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code execution on sites that have them installed, following a suspected compromise of the developer's a",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "title": "Hackers now exploit critical Drupal RCE flaw to hijack sites",
+      "summary": "The Drupal security team has confirmed that a critical vulnerability that lets attackers hijack unpatched sites has been actively exploited since at least Thursday. [...]",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
-      "url": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/",
       "date": "Wed, 25 Nov 2026"
     },
     {
@@ -479,7 +794,9 @@
       "title": "Hackers reportedly breached CIA intelligence analysis system",
       "summary": "Unknown attackers have reportedly breached an open-source intelligence analysis system at the US Central Intelligence Agency (CIA) [...]",
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
+      "countries": [
+        "United States"
+      ],
       "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
       "date": "Wed, 25 Nov 2026"
     },
@@ -494,14 +811,14 @@
       "date": "Tue, 24 Nov 2026"
     },
     {
-      "source": "BleepingComputer",
-      "category": "darkweb_cti",
-      "title": "New Inception extortion gang launches large-scale vishing campaign",
-      "summary": "A newly formed data extortion group named 'Inception' has been linked to a large-scale campaign that targets single sign-on (SSO) credentials of multiple global brands and firms. [...]",
-      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "source": "SecurityWeek",
+      "category": "global_cyber",
+      "title": "Plagiarism Checker Turnitin Investigating Cyberattack",
+      "summary": "The edtech company says the systems are fully operational and safe to use while it investigates the incident. The post Plagiarism Checker Turnitin Investigating Cyberattack appeared first on SecurityWeek .",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
-      "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
-      "date": "Tue, 24 Nov 2026"
+      "url": "https://www.securityweek.com/plagiarism-checker-turnitin-investigating-cyberattack/",
+      "date": "Wed, 25 Nov 2026"
     },
     {
       "source": "SecurityWeek",
@@ -532,16 +849,6 @@
       "countries": [],
       "url": "https://www.securityweek.com/drupal-flaw-found-by-anthropic-scanner-exploited-in-attacks/",
       "date": "Wed, 25 Nov 2026"
-    },
-    {
-      "source": "SecurityWeek",
-      "category": "darkweb_cti",
-      "title": "An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says",
-      "summary": "It was not clear what specific information was compromised or who was responsible. The post An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says appeared first on SecurityWeek .",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://www.securityweek.com/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says/",
-      "date": "Tue, 24 Nov 2026"
     },
     {
       "source": "Dark Reading",
@@ -949,22 +1256,60 @@
       "date": "2026-11-25"
     },
     {
-      "source": "Kalir Pulse AZAL Brief",
+      "source": "Kalir Pulse Brief",
       "category": "darkweb_cti",
-      "title": "Azerbaijan Airlines (azal.az) database offered for sale · Kalir Brief · Pulse | Pulse",
-      "summary": "Azerbaijan Airlines (azal.az) database offered for sale · Kalir Brief · Pulse | Pulse PULSE Underground Intel LIVE 43 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 116.0 + 55 LEAK VOL 1.7 B 0 KEV PULSE 6 -25 Home ",
-      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
-      "countries": [
-        "Azerbaijan"
-      ],
-      "url": "https://pulse.kalir.io/en/brief/base-de-datos-de-azerbaijan-airlines-eca8fae5",
+      "title": "Kalir Brief — underground intelligence feed · Pulse | Pulse",
+      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 43 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 116.0 + 132 LEAK VOL 1.7 B 0 KEV PULSE 6 -25 Home Wire Ransomware CVEs Acto",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://pulse.kalir.io/en/brief",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Kalir Pulse Actor",
+      "category": "darkweb_cti",
+      "title": "Actor Files — underground actors · Pulse | Pulse",
+      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 43 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 116.0 + 132 LEAK VOL 1.7 B 0 KEV PULSE 6 -25 Home Wire Ransomware CVEs Actors Brief ES",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://pulse.kalir.io/en/actors",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Kalir Pulse CVE",
+      "category": "darkweb_cti",
+      "title": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
+      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 43 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 116.0 + 132 LEAK VOL 1.7 B 0 KEV PULSE 6 -25 Home Wire Ransomware CVEs ",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://pulse.kalir.io/en/cves",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Kalir Pulse Ransomware",
+      "category": "darkweb_cti",
+      "title": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse",
+      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 43 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 116.0 + 132 LEAK VOL 1.7 B 0 KEV PULSE 6 -25 Home Wire Ransomware CVEs A",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://pulse.kalir.io/en/ransomware",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Kalir Pulse Wire",
+      "category": "darkweb_cti",
+      "title": "The Wire — live underground feed · Pulse | Pulse",
+      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 43 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 116.0 + 132 LEAK VOL 1.7 B 0 KEV PULSE 6 -25 Home Wire Ransomware CVEs Actors Brief ES",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://pulse.kalir.io/en/wire",
       "date": "2026-11-25"
     },
     {
       "source": "Kalir Pulse",
       "category": "darkweb_cti",
       "title": "Pulse — Underground Intel",
-      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 43 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 116.0 + 55 LEAK VOL 1.7 B 0 KEV PULSE 6 -25 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom spacebea",
+      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 43 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 116.0 + 132 LEAK VOL 1.7 B 0 KEV PULSE 6 -25 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom spacebe",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/",
@@ -984,7 +1329,7 @@
       "source": "SecretLine",
       "category": "darkweb_cti",
       "title": "Login - secretline.top",
-      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 2 + 9 = Login Don't have an account? Create account secretline.top | © 2026",
+      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 9 + 9 = Login Don't have an account? Create account secretline.top | © 2026",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://secretline.top/",
@@ -1066,7 +1411,9 @@
       "title": "CERT.PL>_ Malware Database",
       "summary": "CERT.PL>_ Malware Database You need to enable JavaScript to run this app.",
       "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
-      "countries": [],
+      "countries": [
+        "Poland"
+      ],
       "url": "https://mwdb.cert.pl/file/dd7fca91c67710c4872e1c8fa62acbaedd94cd8bc673c4e3c9d5aa60e9902518",
       "date": "2026-11-25"
     },
@@ -1076,7 +1423,9 @@
       "title": "Daily Dark Web",
       "summary": "Daily Dark Web Daily Dark Web Home Data Breaches Inside the Adversary Dark Web Informants DDW Top Lists Ransomware News DarkWeb News Vulnerability Cyber Attacks Unauthorized Accesses About Us No Result View All Result Ho",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
-      "countries": [],
+      "countries": [
+        "United States"
+      ],
       "url": "https://dailydarkweb.net/",
       "date": "2026-11-25"
     },
@@ -1091,176 +1440,6 @@
       "date": "2026-11-25"
     },
     {
-      "source": "Life.ru",
-      "category": "global_cyber",
-      "title": "Хакеры Z-Pentest Alliance взломали системы критической инфраструктуры Израиля",
-      "summary": "Хакеры Z-Pentest Alliance взломали системы критической инфраструктуры Израиля Переговоры по Украине Бюджет и налоги — 2027 Атаки БПЛА Функционирует при финансовой поддержке Министерства цифрового развития, связи и массов",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://life.ru/p/1849559",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "VM.ru Infra",
-      "category": "global_cyber",
-      "title": "Пророссийские хакеры взломали системы критической инфраструктуры Израиля",
-      "summary": "Пророссийские хакеры взломали системы критической инфраструктуры Израиля Вечерка ТВ Газета Московский журнал Пресса в образовании Новости Фото Видео Спецпроекты Эксклюзивы ВМ Афиша Москвы Эксклюзивы Новости Вечерка ТВ Пе",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://vm.ru/news/1308971-prorossijskie-hakery-vzlomali-sistemy-kriticheskoj-infrastruktury-izrailya",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "Telegram CyberGuerre",
-      "category": "global_cyber",
-      "title": "Telegram: View @cyberguerre",
-      "summary": "Telegram: View @cyberguerre Download Context Embed View In Channel Copy",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://t.me/cyberguerre/3953",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "Ridus",
-      "category": "global_cyber",
-      "title": "Ridus — Source reachability note (HTTP Error 403: Forbidden).",
-      "summary": "Source reachability note (HTTP Error 403: Forbidden).",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://www.ridus.ru/z-pentest-alliance-vzlomali-sistemy-nasosov-na-obektah-izrailya-804595.html",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "News Mail.ru",
-      "category": "global_cyber",
-      "title": "Пророссийские хакеры взломали системы критической инфраструктуры Израиля - Новости Mail",
-      "summary": "Пророссийские хакеры взломали системы критической инфраструктуры Израиля - Новости Mail Политика Экономика Общество Происшествия Видео Все сервисы СВО Спорт Объясняем Финансы Погода Вфокусе Курсы Путеводитель по России П",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://news.mail.ru/society/70075193/",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "MK.ru",
-      "category": "global_cyber",
-      "title": "Группа хакеров с пророссийскими взглядами взломала часть критических объектов Израиля - МК",
-      "summary": "Группа хакеров с пророссийскими взглядами взломала часть критических объектов Израиля - МК Установи МК! --> МК СпортМК АвтоВзгляд Охотники.ру WomanHit.ru Промокоды Установи себе МК! --> От завода к музею --> --> Предназн",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://www.mk.ru/politics/2026/03/07/gruppa-khakerov-s-prorossiyskimi-vzglyadami-vzlomala-chast-kriticheskikh-obektov-izrailya.html",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "News.ru",
-      "category": "global_cyber",
-      "title": "Пророссийские хакеры взломали системы управления насосами в Израиле",
-      "summary": "Пророссийские хакеры взломали системы управления насосами в Израиле Проблемы с бензином в России Специальная военная операция на Украине: мирные переговоры Кризис на Ближнем Востоке Россия Общество Мир Экономика Спорт Ку",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://news.ru/society/prorossijskie-hakery-vzlomali-sistemy-upravleniya-nasosami-v-izraile",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "Gazeta.ru Tech",
-      "category": "global_cyber",
-      "title": "Document",
-      "summary": "Document",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://www.gazeta.ru/tech/news/2026/03/07/28009429.shtml",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "SMI2 #1",
-      "category": "global_cyber",
-      "title": "Пророссийские хакеры перехватили часть управления критическими объектами Израиля - СМИ2",
-      "summary": "Пророссийские хакеры перехватили часть управления критическими объектами Израиля - СМИ2 ПОПУЛЯРНОЕ СМИ2 LADY РЕКЛАМА В СМИ Войти Главное Культура Авто Лайф-стайл Eщё Стоп негатив Тёмная тема Светлая тема Главное 13:15, 7",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://smi2.ru/article/181077136/story",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "SMI2 #2",
-      "category": "global_cyber",
-      "title": "Хакеры Z-Pentest получили доступ к части критических объектов Израиля - СМИ2",
-      "summary": "Хакеры Z-Pentest получили доступ к части критических объектов Израиля - СМИ2 ПОПУЛЯРНОЕ СМИ2 LADY РЕКЛАМА В СМИ Войти Главное Культура Авто Лайф-стайл Eщё Стоп негатив Тёмная тема Светлая тема Главное 20:54, 7 марта 20:5",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://smi2.ru/article/181088846/story",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "Rambler News",
-      "category": "global_cyber",
-      "title": "Rambler News — Source reachability note (<urlopen error _ssl.c:1001: The handshake operation timed out>).",
-      "summary": "Source reachability note (<urlopen error _ssl.c:1001: The handshake operation timed out>).",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://news.rambler.ua/army/56147635-prorossiyskie-hakery-vzlomali-sistemy-kriticheskoy-infrastruktury-izrailya/",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "Tsargrad",
-      "category": "global_cyber",
-      "title": "Z-Pentest: Взломаны системы насосов критической инфраструктуры Израиля",
-      "summary": "Z-Pentest: Взломаны системы насосов критической инфраструктуры Израиля --> Авторизация Москва 18+ Первый русский Царьград Отключить рекламу Царьград. Царьград. Санкт-Петербург Царьград. Архангельск Царьград. Забайкалье Ц",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://tsargrad.tv/novost/entest-vzlomany-sistemy-nasosov-kriticheskoj-infrastruktury-izrailja_1587505",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "VZ.ru",
-      "category": "global_cyber",
-      "title": "Пророссийские хакеры заявили о получении контроля над объектами Израиля :: Новости дня / ВЗГЛЯД",
-      "summary": "Пророссийские хакеры заявили о получении контроля над объектами Израиля :: Новости дня / ВЗГЛЯД 25 ноября, среда Новость часа Эксперт: Китай подхватил миссию СССР по выводу новых стран в космос Лента новостей Эксклюзив Н",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://vz.ru/news/2026/3/7/1400342.html",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "SAK-Info",
-      "category": "global_cyber",
-      "title": "SAK-Info — Source reachability note (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostn).",
-      "summary": "Source reachability note (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostn).",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://sak-info.com/vlast/item/188817-z-pentest-alliance-vzlomali-sistemy-nasosov-na-obektah-izrailya",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "Rodina.news",
-      "category": "global_cyber",
-      "title": "Rodina.news — Source reachability note (HTTP Error 404: Not Found).",
-      "summary": "Source reachability note (HTTP Error 404: Not Found).",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://rodina.news/hakery-zpentest-alliance-vzlomali-sistemy-kriticheskoi-26030718235844.htm",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "MySeldon",
-      "category": "global_cyber",
-      "title": "MySeldon — Source reachability note (Remote end closed connection without response).",
-      "summary": "Source reachability note (Remote end closed connection without response).",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://myseldon.com/en/news/index/342789446",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "AlarmyK24",
-      "category": "global_cyber",
-      "title": "AlarmyK24 — Source reachability note (<urlopen error timed out>).",
-      "summary": "Source reachability note (<urlopen error timed out>).",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://alarmyk24.ru/news/3882425/prorossijskie-hakery-vzlomali-sistemy-kriticheskoj-infrastruktury-izrailya.html",
-      "date": "2026-11-25"
-    },
-    {
       "source": "Cyber Intelligence House",
       "category": "global_cyber",
       "title": "Cyber intelligence in your AI assistant | Cyber Intelligence House",
@@ -1268,36 +1447,6 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "http://www.cyberintelligencehouse.com",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "Sector035 (LinkedIn)",
-      "category": "global_cyber",
-      "title": "LinkedIn",
-      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://sector035.nl/articles/category:week-in-osint This experience is o",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://lnkd.in/dVZ8iVA3",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "Authentic8 Blog (LinkedIn)",
-      "category": "global_cyber",
-      "title": "LinkedIn",
-      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://www.authentic8.com/blog This experience is optimized for Chrome, ",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://lnkd.in/dGc6wiVb",
-      "date": "2026-11-25"
-    },
-    {
-      "source": "Rae Baker Blog (LinkedIn)",
-      "category": "global_cyber",
-      "title": "LinkedIn",
-      "summary": "LinkedIn LinkedIn This link will take you to a page that’s not on LinkedIn Because this is an external link, we’re unable to verify it for safety. https://www.raebaker.net/blog This experience is optimized for Chrome, Ed",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://lnkd.in/d57YnaAj",
       "date": "2026-11-25"
     },
     {
@@ -1453,8 +1602,8 @@
     {
       "source": "Onion - Tenebris (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Tenebris (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Frontpage - Tenebris",
+      "summary": "1e30 Frontpage - Tenebris | frontpage all tenebris | points Search Login Register Login or Register Translate Machine-generated translations may contain errors. ? × New here? Here's the short version. Pick a language bel",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://tenebrispoyfrcup4k24lciwrh4gc5735hmld4dweq7his7zh423opqd.onion/",
@@ -1498,6 +1647,774 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://blackbones.cc/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Darknet Forums (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Darknet Forums (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://darknet77vonbqeatfsnawm5jtnoci5z22mxay6cizmoucgmz52mwyad.onion/forums/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Hunters Ransomware (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Hunters Ransomware (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "https://hunters55rdxciehoqzwv7vgyv6nt37tbwax2reroyzxhou7my5ejyid.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - LockBit (Tor)",
+      "category": "darkweb_cti",
+      "title": "LockBit BLOG",
+      "summary": "1e38 LockBit BLOG 2000 Twitter How To Buy Bitcoin Contact us Press about us Affiliate Rules Mirrors new blog domain lockbit 5.0 0 D 0 H 0 M 0 S published New secure blog domain, with a multi-layered protection system aga",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [
+        "United States"
+      ],
+      "url": "http://lockbit3753ekiocyo5epmpy6klmejchjtzddoekjlnt6mu3qh4de2id.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - DWL Tor (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - DWL Tor (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://dwltorbltw3tdjskxn23j2mwz2f4q25j4ninl5bdvttiy4xb6cqzikid.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - OmegaLock (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - OmegaLock (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://omegalock5zxwbhswbisc42o2q2i54vdulyvtqqbudqousisjgc7j7yd.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Hackread - Anonymous",
+      "category": "darkweb_cti",
+      "title": "Anonymous - Hackread - Cybersecurity News, Data Breaches, AI and More",
+      "summary": "Anonymous - Hackread - Cybersecurity News, Data Breaches, AI and More Hacking News Leaks WikiLeaks Anonymous Technology Android Apple Google Microsoft Samsung 3D How To Artificial Intelligence Machine Learning Cyber Crim",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://hackread.com/category/data-breaches/hacking-news/anonymous/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Hackread - Leaks Affairs",
+      "category": "darkweb_cti",
+      "title": "Leaks - Hackread - Cybersecurity News, Data Breaches, AI and More",
+      "summary": "Leaks - Hackread - Cybersecurity News, Data Breaches, AI and More Hacking News Leaks WikiLeaks Anonymous Technology Android Apple Google Microsoft Samsung 3D How To Artificial Intelligence Machine Learning Cyber Crime Ph",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://hackread.com/category/data-breaches/hacking-news/leaks-affairs/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Reuters (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Reuters (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://smb7p276iht3i2fj.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Forbes (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Forbes (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://t5pv5o4t6jyjilp6.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Financial Times (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Financial Times (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://xdm7flvwt3uvsrrd.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - The Guardian (Tor)",
+      "category": "darkweb_cti",
+      "title": "400 The plain HTTP request was sent to HTTPS port",
+      "summary": "fc 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://www.guardian2zotagl6tmjucg3lrhxdk4dw3lhbqnkvvkywawy3oqfoprid.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Tor News (Tor)",
+      "category": "darkweb_cti",
+      "title": "Tor Newsletter Archive | The Tor Project",
+      "summary": "Tor Newsletter Archive | The Tor Project Tor Logo Donate Now About Support Community Blog Donate Download Tor Browser Get updates and opportunities from across the organization and community. 👉 Click here to sign up for ",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://a4ygisnerpgtc5ayerl22pll6cls3oyj54qgpm7qrmb66xrxts6y3lyd.onion/index.html",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - BBC News (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - BBC News (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://www.bbcnewsv2vjtpsuy.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - New York Times (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - New York Times (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://www.nytimes3xbfgragh.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - ProPublica (Tor)",
+      "category": "darkweb_cti",
+      "title": "ProPublica — Investigative Journalism and News in the Public Interest",
+      "summary": "8427 ProPublica — Investigative Journalism and News in the Public Interest Arrow Right Caret Close Skip to content efd4 Investigative Journalism in the Public Interest Donate ProPublica Menu Search ProPublica Menu Menu S",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://p53lf57qovyuvwsc6xnrppyply3vtqm7l6pcobkmyqsiofyeznfu5uqd.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Deutsche Welle (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Deutsche Welle (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://dwnewsvdyyiamwnp.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Radio Free Asia (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Radio Free Asia (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://rfa62zl6z6owmtlf.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Bellingcat (Tor)",
+      "category": "darkweb_cti",
+      "title": "bellingcat - the home of online investigations",
+      "summary": "bellingcat - the home of online investigations bellingcat - the home of online investigations Investigations Resources Ukraine Workshops EN Русский Français Español Deutsch Українська Donate Search for: Investigations Re",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [
+        "Ukraine"
+      ],
+      "url": "http://bellcatmbguthn3age23lrbseln2lryzv3mt7whis7ktjw4qrestbzad.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - RFE/RL (Tor)",
+      "category": "darkweb_cti",
+      "title": "400 The plain HTTP request was sent to HTTPS port",
+      "summary": "1cb 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://www.rferlo2zxgv23tct66v45s5mecftol5vod3hf4rqbipfp46fqu2q56ad.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Yahoo News (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Yahoo News (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://yahoonewsnqkxo423g7vuwr2mvkwmc5t4df5x44dfdfvmyzqgcyt3had.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Al Jazeera (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Al Jazeera (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://jkta32w5gvk6pmqdfwj67psojot3l2iwoqbdvrvywi5bkudfeandq7id.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Bloomberg News (Tor)",
+      "category": "darkweb_cti",
+      "title": "Welcome | Bloomberg | SecureDrop",
+      "summary": "Welcome | Bloomberg | SecureDrop Your Tor Browser's Security Level is too low. Use the button in your browser’s toolbar to change it. How to change your security level Click the in the toolbar above Click Settings to ope",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://ogdwaroarq4p6rnfn2hl4crvldyruyc2g24435qtxmd3twhevg7dsqid.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - CBC (Tor)",
+      "category": "darkweb_cti",
+      "title": "Welcome | CBC / Radio Canada | SecureDrop",
+      "summary": "Welcome | CBC / Radio Canada | SecureDrop Your Tor Browser's Security Level is too low. Use the button in your browser’s toolbar to change it. How to change your security level Click the in the toolbar above Click Settin",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [
+        "Canada"
+      ],
+      "url": "http://gppg43zz5d2yfuom3yfmxnnokn3zj4mekt55onlng3zs653ty4fio6qd.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - CNN (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - CNN (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://qmifwf762qftydprw2adbg7hs2mkunac5xrz3cb5busaflji3rja5lid.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Forbidden Stories (Tor)",
+      "category": "darkweb_cti",
+      "title": "Welcome | Forbidden Stories | SecureDrop",
+      "summary": "Welcome | Forbidden Stories | SecureDrop Your Tor Browser's Security Level is too low. Use the button in your browser’s toolbar to change it. How to change your security level Click the in the toolbar above Click Setting",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://fg25fqpu2dnxp24xs3jlcley4hp2inshpzek44q3czkhq3zffoqk26id.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - HuffPost (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - HuffPost (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://ppw2pmtagxykinex6uubypsommtrcg6ytdh6bcr6agq2wxnrweao4cad.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Globe and Mail (Tor)",
+      "category": "darkweb_cti",
+      "title": "Welcome | SecureDrop | Protecting Journalists and Sources",
+      "summary": "Welcome | SecureDrop | Protecting Journalists and Sources Your Tor Browser's Security Level is too low. Use the button in your browser’s toolbar to change it. How to change your security level Click the in the toolbar ab",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "http://a4zum5ydurvljrohxqp2rjjal5kro4ge2q2qizuonf2jubkhcr627gad.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Washington Post (Tor)",
+      "category": "darkweb_cti",
+      "title": "302 Found",
+      "summary": "302 Found Found The document has moved here .",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://vfnmxpa6fo4jdpyq3yneqhglluweax2uclvxkytfpmpkp5rsl75ir5qd.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Whistleblower Aid (Tor)",
+      "category": "darkweb_cti",
+      "title": "Welcome | Whistleblower Aid | SecureDrop",
+      "summary": "Welcome | Whistleblower Aid | SecureDrop Your Tor Browser's Security Level is too low. Use the button in your browser’s toolbar to change it. How to change your security level Click the in the toolbar above Click Setting",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://kogbxf4ysay2qzozmg7ar45ijqmj2vxrwqa4upzqq2i7sqj7wv7wcdqd.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Ransomwiki",
+      "category": "darkweb_cti",
+      "title": "Ransomwiki — Source reachability note (HTTP Error 404: Not Found).",
+      "summary": "Source reachability note (HTTP Error 404: Not Found).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://darkfeed.io/ransomwiki/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Corporate Leaks (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Corporate Leaks (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "http://hxt254aygrsziejn.onion.ws/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Conti News Clearnet",
+      "category": "darkweb_cti",
+      "title": "Conti News Clearnet",
+      "summary": "Fetched data from Conti News Clearnet.",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://conti.news",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Conti (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://htcltkjqoitnez5slo7fvhiou5lbno5bwczu7il2hmfpkowwdpj3q2yd.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Conti News (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Conti News (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://continewsnv5otx5kaoje7krkto2qbu3gtqef22mnr7eaxw3y6ncz3ad.onion.ly/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Hive Leaks (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Hive Leaks (Tor)",
+      "summary": "Fetched data from Onion - Hive Leaks (Tor).",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "http://hiveleakdbtnp76ulyhi52eag6c6tyc3xw7ez7iqy6wc34gd2nekazyd.onion.ly/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - LockBit 2.0 (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - LockBit 2.0 (Tor)",
+      "summary": "Fetched data from Onion - LockBit 2.0 (Tor).",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "http://lockbitapt6vx57t3eeqjofwgcglmutr3a35nygvokja5uuccip4ykyd.onion.ly/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Cuba Ransomware (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Cuba Ransomware (Tor)",
+      "summary": "Fetched data from Onion - Cuba Ransomware (Tor).",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "http://cuba4ikm4jakjgmkezytyawtdgr2xymvy6nvzgw5cglswg3si76icnqd.onion.ly/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - REvil (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - REvil (Tor)",
+      "summary": "Fetched data from Onion - REvil (Tor).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://dnpscnbaix6nkwvystl3yxglz7nteicqrou3t75tpcc5532cztc46qyd.onion.ly/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Vice Society (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Vice Society (Tor)",
+      "summary": "Fetched data from Onion - Vice Society (Tor).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://vsociethok6sbprvevl4dlwbqrzyhxcxaqpvcqt5belwvsuxaxsutyad.onion.ly/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - AvosLocker (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - AvosLocker (Tor)",
+      "summary": "Fetched data from Onion - AvosLocker (Tor).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://avosqxh72b5ia23dl5fgwcpndkctuzqvh2iefk5imp3pi5gfhel5klad.onion.ly/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - BlackMatter (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - BlackMatter (Tor)",
+      "summary": "Fetched data from Onion - BlackMatter (Tor).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://blackmax7su6mbwtcyo3xwtpfxpm356jjqrs34y4crcytpw7mifuedyd.onion.ly/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - BABUK (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - BABUK (Tor)",
+      "summary": "Fetched data from Onion - BABUK (Tor).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://nq4zyac4ukl4tykmidbzgdlvaboqeqsemkp4t35bzvjeve6zm2lqcjid.onion.ly/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - DoppelPaymer (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - DoppelPaymer (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://hpoo4dosa3x4ognfxpqcrjwnsigvslm7kv6hvmhh2yqczaxy3j6qnwad.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Maze News",
+      "category": "darkweb_cti",
+      "title": "Maze News — Source reachability note (<urlopen error [Errno -2] Name or service not known>).",
+      "summary": "Source reachability note (<urlopen error [Errno -2] Name or service not known>).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://mazenews.top",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - AKO Ransomware (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - AKO Ransomware (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
+      "countries": [],
+      "url": "http://37rckgo66iydpvgpwve7b2el5q2zhjw4tv4lmyewufnpx4lhkekxkoqd.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Nefilim (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Nefilim (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://hxt254aygrsziejn.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - RagnarLocker (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - RagnarLocker (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://p6o7m73ujalhgkiv.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Clop (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Clop (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://ekbgzchl6x2ias37.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Netwalker (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Netwalker (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://rnfdsgm6wb6j6su5txkekw4u4y47kp2eatvu7d6xhyn5cs4lt4pdrqqd.onion/blog",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Sekhmet Leaks",
+      "category": "darkweb_cti",
+      "title": "Sekhmet Leaks — Source reachability note (<urlopen error [Errno -2] Name or service not known>).",
+      "summary": "Source reachability note (<urlopen error [Errno -2] Name or service not known>).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://sekhmetleaks.top/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Pysa (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Pysa (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://wqmfzni2nvbbpk25.onion/partners.html",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Suncrypt (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Suncrypt (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://nbzzb6sa6xuura2z.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "DarkSide Clearnet",
+      "category": "darkweb_cti",
+      "title": "DarkSide Clearnet — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://darksidedxcftmqa.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - not Evil (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - not Evil (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://hss3uro2hsxfogfq.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Visitor (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Visitor (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://visitorfi5kl7q7i.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Dark Search Engine (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Dark Search Engine (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://7pwy57iklvt6lyhe.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Dark Web Links (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Dark Web Links (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://bznjtqphs2lp4xdd.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - SearX (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - SearX (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://searchb5a7tmimez.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Candle (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Candle (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://gjobqjj7wyczbqie.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - TorSearch (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - TorSearch (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://kbhpodhnfxl3clb4.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Caronte (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Caronte (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://carontevaha5x626.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - House Of Lions Forums (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - House Of Lions Forums (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://lionhouse6yaacev.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Acropolis Forum (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Acropolis Forum (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://acropolhwczbgbkh.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - The Stock Insiders (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - The Stock Insiders (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://b34xhb2kjf3nbuyk.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Hidden Answers (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Hidden Answers (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://answerstedhctbek.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - The Intel Exchange (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - The Intel Exchange (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://rrcc5uuudhh4oz3c.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Flashlight Forum (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Flashlight Forum (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://kxojy6ygju4h6lwn.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Anonymous BBS (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Anonymous BBS (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://qm3monarchzifkwa.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - InserTor Pastebin (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - InserTor Pastebin (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://54ogum7gwxhtgiya.onion/insertor/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Simple Pastebin (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Simple Pastebin (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "http://stu32b4sndw3cptm.onion",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "DeepWebLinks",
+      "category": "darkweb_cti",
+      "title": "Onion Links - Deep Web Links - Tor Links (2026)",
+      "summary": "Onion Links - Deep Web Links - Tor Links (2026) --> Tor recently took all old v2 addresses offline. We are updating all links right now today May 6, 2026 to v3 versions --> --> --> Menu Home Links 1 Financial services Co",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://deepweblinks.net/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - BBC News Global (Tor)",
+      "category": "darkweb_cti",
+      "title": "400 The plain HTTP request was sent to HTTPS port",
+      "summary": "fc 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - BBC Azeri (Tor)",
+      "category": "darkweb_cti",
+      "title": "400 The plain HTTP request was sent to HTTPS port",
+      "summary": "fc 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/azeri",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - VOA News (Tor)",
+      "category": "darkweb_cti",
+      "title": "400 The plain HTTP request was sent to HTTPS port",
+      "summary": "1cb 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://www.voanews5aitmne6gs2btokcacixclgfl43cv27sirgbauyyjylwpdtqd.onion/",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Riseup Security (Tor)",
+      "category": "darkweb_cti",
+      "title": "Tor - riseup.net",
+      "summary": "Tor - riseup.net Skip to Main Content Riseup Home Home Donate! Red Accounts Account Support Email Black Accounts VPN Other Services Lists Pad Share Groups Home Email Lists VPN Security About Us Human Security Device Secu",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [
+        "United States"
+      ],
+      "url": "http://vww6ybal4bd7szmgncyruucpgfkqahzddi37ktceo3ah7ngmcopnpyyd.onion/en/security/network-security/tor#riseups-tor-onion-services",
+      "date": "2026-11-25"
+    },
+    {
+      "source": "Onion - Alec Muffett Blog (Tor)",
+      "category": "darkweb_cti",
+      "title": "Onion - Alec Muffett Blog (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://amuffettdexn6r5s4lt45b6mlrgmsmo56szaaighyjurp4ccuj63zkad.onion/blog",
       "date": "2026-11-25"
     }
   ],
@@ -1654,56 +2571,6 @@
     }
   ],
   "iocs": [
-    {
-      "type": "ip",
-      "value": "185.220.101.47",
-      "origin": "Manual Workflow Input",
-      "level": "CRITICAL",
-      "score": 120,
-      "reasons": [
-        "VirusTotal (+60)",
-        "AbuseIPDB (+50)"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: 17 malicious, 2 suspicious (+60)",
-        "AbuseIPDB: 100% confidence, 88 reports (+50)",
-        "OTX: query failed",
-        "Shodan: 1 open ports, 0 vulns (+0)"
-      ],
-      "verdict": "CRITICAL — Confirmed malicious/high-risk activity across CTI sources. Block & investigate immediately.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "malicious": 17,
-          "suspicious": 2,
-          "score_add": 60,
-          "result": "VirusTotal: 17 malicious, 2 suspicious (+60)"
-        },
-        "abuseipdb": {
-          "confidence": 100,
-          "reports": 88,
-          "score_add": 50,
-          "result": "AbuseIPDB: 100% confidence, 88 reports (+50)"
-        },
-        "otx": {
-          "score_add": 0,
-          "result": "OTX: query failed"
-        },
-        "shodan": {
-          "ports": [
-            80
-          ],
-          "vulns": [],
-          "org": "ForPrivacyNET",
-          "score_add": 0,
-          "result": "Shodan: 1 open ports, 0 vulns (+0)"
-        }
-      }
-    },
     {
       "type": "hash",
       "value": "b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776",
@@ -2408,6 +3275,49 @@
     },
     {
       "type": "domain",
+      "value": "riseup.net",
+      "origin": "[Onion - Riseup Security (Tor)] Tor - riseup.net",
+      "level": "MEDIUM",
+      "score": 30,
+      "reasons": [
+        "OTX (+20)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 4 threat pulses (+20)",
+        "Shodan: IP only"
+      ],
+      "verdict": "MEDIUM — Moderate/suspicious exposure. Correlate with perimeter, DNS & auth telemetry.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 4,
+          "score_add": 20,
+          "result": "OTX: 4 threat pulses (+20)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
       "value": "shadowdragon.io",
       "origin": "[ShadowDragon Blog (LinkedIn)] LinkedIn",
       "level": "LOW",
@@ -2568,255 +3478,6 @@
         "otx": {
           "score_add": 0,
           "result": "OTX: N/A for CVE"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "domain",
-      "value": "womanhit.ru",
-      "origin": "[MK.ru] Группа хакеров с пророссийскими взглядами взломала часть критических о",
-      "level": "LOW",
-      "score": 10,
-      "reasons": [
-        "Base score only"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: 0 malicious, 0 suspicious (+0)",
-        "AbuseIPDB: IP only",
-        "OTX: 0 threat pulses (+0)",
-        "Shodan: IP only"
-      ],
-      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "malicious": 0,
-          "suspicious": 0,
-          "score_add": 0,
-          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "pulses": 0,
-          "score_add": 0,
-          "result": "OTX: 0 threat pulses (+0)"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "url",
-      "value": "https://sector035.nl/articles/category:week-in-osint",
-      "origin": "[Sector035 (LinkedIn)] LinkedIn",
-      "level": "LOW",
-      "score": 10,
-      "reasons": [
-        "Base score only"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: N/A for CVE",
-        "AbuseIPDB: IP only",
-        "OTX: N/A for CVE",
-        "Shodan: IP only"
-      ],
-      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "score_add": 0,
-          "result": "VirusTotal: N/A for CVE"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "score_add": 0,
-          "result": "OTX: N/A for CVE"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "url",
-      "value": "https://www.authentic8.com/blog",
-      "origin": "[Authentic8 Blog (LinkedIn)] LinkedIn",
-      "level": "LOW",
-      "score": 10,
-      "reasons": [
-        "Base score only"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: N/A for CVE",
-        "AbuseIPDB: IP only",
-        "OTX: N/A for CVE",
-        "Shodan: IP only"
-      ],
-      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "score_add": 0,
-          "result": "VirusTotal: N/A for CVE"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "score_add": 0,
-          "result": "OTX: N/A for CVE"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "domain",
-      "value": "www.authentic8.com",
-      "origin": "[Authentic8 Blog (LinkedIn)] LinkedIn",
-      "level": "LOW",
-      "score": 10,
-      "reasons": [
-        "Base score only"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: 0 malicious, 0 suspicious (+0)",
-        "AbuseIPDB: IP only",
-        "OTX: 0 threat pulses (+0)",
-        "Shodan: IP only"
-      ],
-      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "malicious": 0,
-          "suspicious": 0,
-          "score_add": 0,
-          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "pulses": 0,
-          "score_add": 0,
-          "result": "OTX: 0 threat pulses (+0)"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "url",
-      "value": "https://www.raebaker.net/blog",
-      "origin": "[Rae Baker Blog (LinkedIn)] LinkedIn",
-      "level": "LOW",
-      "score": 10,
-      "reasons": [
-        "Base score only"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: N/A for CVE",
-        "AbuseIPDB: IP only",
-        "OTX: N/A for CVE",
-        "Shodan: IP only"
-      ],
-      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "score_add": 0,
-          "result": "VirusTotal: N/A for CVE"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "score_add": 0,
-          "result": "OTX: N/A for CVE"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "domain",
-      "value": "www.raebaker.net",
-      "origin": "[Rae Baker Blog (LinkedIn)] LinkedIn",
-      "level": "LOW",
-      "score": 10,
-      "reasons": [
-        "Base score only"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: 0 malicious, 0 suspicious (+0)",
-        "AbuseIPDB: IP only",
-        "OTX: 0 threat pulses (+0)",
-        "Shodan: IP only"
-      ],
-      "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "malicious": 0,
-          "suspicious": 0,
-          "score_add": 0,
-          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "pulses": 0,
-          "score_add": 0,
-          "result": "OTX: 0 threat pulses (+0)"
         },
         "shodan": {
           "score_add": 0,
@@ -3043,7 +3704,7 @@
         "URLhaus: clean / not listed",
         "VirusTotal: 0 malicious, 0 suspicious (+0)",
         "AbuseIPDB: IP only",
-        "OTX: query failed",
+        "OTX: 0 threat pulses (+0)",
         "Shodan: IP only"
       ],
       "verdict": "LOW — No malicious hits in queried CTI tools. Keep under observation.",
@@ -3063,8 +3724,9 @@
           "result": "AbuseIPDB: IP only"
         },
         "otx": {
+          "pulses": 0,
           "score_add": 0,
-          "result": "OTX: query failed"
+          "result": "OTX: 0 threat pulses (+0)"
         },
         "shodan": {
           "score_add": 0,
@@ -3525,7 +4187,486 @@
       }
     }
   ],
-  "active_apts": [],
+  "active_apts": [
+    {
+      "id": "rw_silentransomgroup",
+      "name": "SilentRansomGroup (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "CRITICAL",
+      "activity_score": 98,
+      "status_label": "Ransomware.live (7)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] Kegler, Brown, Hill & Ritter (2026-11-24T23:57)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] Nonigman LLP (2026-11-24T23:26)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] Greenbaum, Rowe, Smith, & Davis (2026-11-24T20:43)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] H... R... (2026-11-24T20:42)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] H... (2026-11-24T20:41)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] K... B... (2026-11-24T20:40)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_play",
+      "name": "play (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "CRITICAL",
+      "activity_score": 98,
+      "status_label": "Ransomware.live (5)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] UltraBac Software (2026-11-24T19:48)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[CA] IRL Group (2026-11-24T19:47)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[CA] Valvo Electrical Supply Ltd (2026-11-24T19:47)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[CH] Rolf Maier & Co AG (2026-11-24T19:46)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] Stanley Parts and Equipment (2026-11-24T19:45)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_spacebears",
+      "name": "spacebears (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "CRITICAL",
+      "activity_score": 96,
+      "status_label": "Ransomware.live (4)",
+      "focus": "Live ransomware & extortion activity (latest: MK)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[MK] Alsanet (2026-11-25T04:44)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[PL] BIURO RACHUNKOWE RACHEXPERT SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2026-11-25T02:44)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[AU] Camsons Pty Ltd (2026-11-25T02:44)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[MX] ADN Energía S. de R.L. de C.V. (also referred to as ADN Energía or ADN Energia) (2026-11-25T02:43)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_falcon",
+      "name": "Falcon (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "CRITICAL",
+      "activity_score": 84,
+      "status_label": "Ransomware.live (2)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] CSG Systems International (2026-11-24T21:22)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] Aimbridge Hospitality (2026-11-24T21:21)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_medusalocker",
+      "name": "medusalocker (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "CRITICAL",
+      "activity_score": 84,
+      "status_label": "Ransomware.live (2)",
+      "focus": "Live ransomware & extortion activity (latest: Global)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] O (2026-11-24T22:53)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[ES] Islasnatura (2026-11-24T22:52)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_pixelleaks",
+      "name": "PixelLeaks (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: IN)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "api_leak",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[IN] Copperstone Clothing Company (Indian garment manufacturer/exporter, SQL Server ERP estate) (2026-11-24T22:34)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1078.004",
+          "name": "Cloud Accounts",
+          "tactic": "Stealth, Persistence, Privilege Escalation, Initial Access",
+          "url": "https://attack.mitre.org/techniques/T1078/004/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        },
+        {
+          "id": "T1567",
+          "name": "Exfiltration Over Web Service",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1567/"
+        }
+      ]
+    },
+    {
+      "id": "rw_everest",
+      "name": "everest (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: Global)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] ABL Bio (2026-11-20T22:02)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_incransom",
+      "name": "incransom (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] WHI Holdings / Works Human Intelligence (2026-11-24T17:10)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_rhysida",
+      "name": "rhysida (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: Global)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] Smile Designs LLC (2026-11-24T21:52)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    }
+  ],
   "live_ransomware": [
     {
       "group": "spacebears",
@@ -3553,6 +4694,13 @@
       "victim": "ADN Energía S. de R.L. de C.V. (also referred to as ADN Energía or ADN Energia)",
       "country": "MX",
       "date": "2026-11-25T02:43",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "everest",
+      "victim": "ABL Bio",
+      "country": "Global",
+      "date": "2026-11-20T22:02",
       "source": "Ransomware.live API"
     },
     {
@@ -3668,18 +4816,39 @@
       "source": "Ransomware.live API"
     },
     {
+      "group": "play",
+      "victim": "Rolf Maier & Co AG",
+      "country": "CH",
+      "date": "2026-11-24T19:46",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "play",
+      "victim": "Stanley Parts and Equipment",
+      "country": "US",
+      "date": "2026-11-24T19:45",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SilentRansomGroup",
+      "victim": "A... G...",
+      "country": "Global",
+      "date": "2026-11-24T17:00",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "incransom",
+      "victim": "WHI Holdings / Works Human Intelligence",
+      "country": "US",
+      "date": "2026-11-24T17:10",
+      "source": "Ransomware.live API"
+    },
+    {
       "group": "The Hacker News RSS",
       "victim": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
       "country": "Global",
       "date": "Wed, 25 Nov 2026",
       "source": "The Hacker News RSS"
-    },
-    {
-      "group": "BleepingComputer",
-      "victim": "New Inception extortion gang launches large-scale vishing campaign",
-      "country": "Global",
-      "date": "Tue, 24 Nov 2026",
-      "source": "BleepingComputer"
     },
     {
       "group": "Krebs on Security",
@@ -3701,6 +4870,118 @@
       "country": "Global",
       "date": "Wed, 18 Nov 2026",
       "source": "Securelist (Kaspersky)"
+    },
+    {
+      "group": "Intel471 Blog",
+      "victim": "Aerospace To Chemicals: Why Manufacturers Are Easy Targets for Access Brokers",
+      "country": "Global",
+      "date": "Wed, 18 Nov 2026",
+      "source": "Intel471 Blog"
+    },
+    {
+      "group": "Kalir Pulse Brief",
+      "victim": "Kalir Brief — underground intelligence feed · Pulse | Pulse",
+      "country": "Global",
+      "date": "2026-11-25",
+      "source": "Kalir Pulse Brief"
+    },
+    {
+      "group": "Kalir Pulse Actor",
+      "victim": "Actor Files — underground actors · Pulse | Pulse",
+      "country": "Global",
+      "date": "2026-11-25",
+      "source": "Kalir Pulse Actor"
+    },
+    {
+      "group": "Kalir Pulse CVE",
+      "victim": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
+      "country": "Global",
+      "date": "2026-11-25",
+      "source": "Kalir Pulse CVE"
+    },
+    {
+      "group": "Kalir Pulse Ransomware",
+      "victim": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse",
+      "country": "Global",
+      "date": "2026-11-25",
+      "source": "Kalir Pulse Ransomware"
+    },
+    {
+      "group": "Kalir Pulse Wire",
+      "victim": "The Wire — live underground feed · Pulse | Pulse",
+      "country": "Global",
+      "date": "2026-11-25",
+      "source": "Kalir Pulse Wire"
+    },
+    {
+      "group": "Kalir Pulse",
+      "victim": "Pulse — Underground Intel",
+      "country": "Global",
+      "date": "2026-11-25",
+      "source": "Kalir Pulse"
+    },
+    {
+      "group": "Ransomware.live",
+      "victim": "Ransomware.live 👀 Live ransomware activity",
+      "country": "Global",
+      "date": "2026-11-25",
+      "source": "Ransomware.live"
+    },
+    {
+      "group": "DailyDarkWeb",
+      "victim": "Daily Dark Web",
+      "country": "United States",
+      "date": "2026-11-25",
+      "source": "DailyDarkWeb"
+    },
+    {
+      "group": "Onion - Hunters Ransomware (Tor)",
+      "victim": "Onion - Hunters Ransomware (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "country": "Global",
+      "date": "2026-11-25",
+      "source": "Onion - Hunters Ransomware (Tor)"
+    },
+    {
+      "group": "Onion - Cuba Ransomware (Tor)",
+      "victim": "Onion - Cuba Ransomware (Tor)",
+      "country": "Global",
+      "date": "2026-11-25",
+      "source": "Onion - Cuba Ransomware (Tor)"
+    },
+    {
+      "group": "Onion - AKO Ransomware (Tor)",
+      "victim": "Onion - AKO Ransomware (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "country": "Global",
+      "date": "2026-11-25",
+      "source": "Onion - AKO Ransomware (Tor)"
+    },
+    {
+      "group": "Optimizely (CVE-2026-132224)",
+      "victim": "Web Experimentation",
+      "country": "Global",
+      "date": "2026-11-24",
+      "source": "CISA KEV"
+    },
+    {
+      "group": "Idunno (CVE-2026-131914)",
+      "victim": "AntiCsrf",
+      "country": "Global",
+      "date": "2026-11-24",
+      "source": "CISA KEV"
+    },
+    {
+      "group": "Drupal (CVE-2026-132165)",
+      "victim": "Core",
+      "country": "Global",
+      "date": "2026-11-24",
+      "source": "CISA KEV"
+    },
+    {
+      "group": "Project MONAI (CVE-2026-133968)",
+      "victim": "MONAI Label",
+      "country": "Global",
+      "date": "2026-11-23",
+      "source": "CISA KEV"
     }
   ]
 }
