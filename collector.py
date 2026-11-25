@@ -3,6 +3,7 @@ import html
 import json
 import os
 import re
+import socket
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -38,7 +39,7 @@ RAW_WEB_SOURCES = [
     ("Kalir Pulse", "https://pulse.kalir.io/en/"),
     ("X LeakFarsi", "https://x.com/leakfarsi"),
     ("SecretLine", "https://secretline.top/"),
-    ("Onion - OP7YIEK (Tor only)", "http://op7yiekgumt7po6mjgii4uewrwjydx5vhpa6y5gv7glftmw5srbwnaid.onion/"),
+    ("Onion - OP7YIEK (Tor)", "http://op7yiekgumt7po6mjgii4uewrwjydx5vhpa6y5gv7glftmw5srbwnaid.onion/"),
     ("DarkForums", "https://darkforums.as/"),
     ("Patched.to Leaks", "https://patched.to/Forum-other-leaks"),
     ("TweetFeed", "https://tweetfeed.live/"),
@@ -84,9 +85,9 @@ RAW_WEB_SOURCES = [
     ("Blackbones.net", "https://blackbones.net/"),
     ("DarknetList", "https://darknetlist.info/"),
     ("Dead-Frog", "https://www.dead-frog.com/"),
-    ("Onion - Tenebris (Tor only)", "http://tenebrispoyfrcup4k24lciwrh4gc5735hmld4dweq7his7zh423opqd.onion/"),
-    ("Onion - Dread #1 (Tor only)", "https://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/"),
-    ("Onion - Dread #2 (Tor only)", "https://dreadytognbh7m5nlmqsogzzlxjy75iuxkulewbhxcorupbqahact2yd.onion/"),
+    ("Onion - Tenebris (Tor)", "http://tenebrispoyfrcup4k24lciwrh4gc5735hmld4dweq7his7zh423opqd.onion/"),
+    ("Onion - Dread #1 (Tor)", "https://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/"),
+    ("Onion - Dread #2 (Tor)", "https://dreadytognbh7m5nlmqsogzzlxjy75iuxkulewbhxcorupbqahact2yd.onion/"),
     ("FlakkaOnline", "https://flakkaonline.com/"),
     ("Blackbones.cc", "https://blackbones.cc/"),
 ]
@@ -100,9 +101,9 @@ APT_CATALOG = [
         "name": "APT28 (Fancy Bear / Forest Blizzard)",
         "category": "espionage",
         "keywords": ["apt28", "fancy bear", "forest blizzard", "strontium"],
-        "focus": "Dövlət, müdafiə, enerji, mail və sərhəd/VPN sistemləri",
+        "focus": "Government, defense, energy, mail & edge/VPN infrastructure",
         "default_techniques": ["T1566.001", "T1190", "T1071.001", "T1110"],
-        "mitigation": "Edge/mail/VPN yamaları, phishing-resistant MFA, anomal auth/ASN monitorinqi.",
+        "mitigation": "Patch edge/mail/VPN appliances, enforce phishing-resistant MFA, monitor anomalous auth/ASN.",
         "scenario": "token_replay",
     },
     {
@@ -110,9 +111,9 @@ APT_CATALOG = [
         "name": "APT29 (Midnight Blizzard / Nobelium)",
         "category": "espionage",
         "keywords": ["apt29", "midnight blizzard", "nobelium", "cozy bear"],
-        "focus": "Cloud/SaaS tenant-lar, diplomatik/dövlət qurumları, OAuth və token sistemləri",
+        "focus": "Cloud/SaaS tenants, diplomatic/government orgs, OAuth & token systems",
         "default_techniques": ["T1528", "T1550.001", "T1098", "T1567"],
-        "mitigation": "Conditional Access, OAuth app consent nəzarəti, refresh token və sessiya reviziyası.",
+        "mitigation": "Conditional Access, OAuth consent governance, refresh token & session revocation.",
         "scenario": "api_leak",
     },
     {
@@ -120,9 +121,9 @@ APT_CATALOG = [
         "name": "Volt Typhoon",
         "category": "infra",
         "keywords": ["volt typhoon", "vanguard panda", "bronze silhouette"],
-        "focus": "Kritik infrastruktur, telekommunikasiya, enerji və sərhəd şəbəkə cihazları",
+        "focus": "Critical infrastructure, telecom, energy & perimeter network gear",
         "default_techniques": ["T1190", "T1078", "T1021", "T1071"],
-        "mitigation": "Edge/VPN/Firewall cihazlarında LOTL və daxili lateral hərəkət ovlanması.",
+        "mitigation": "Hunt LOTL activity on edge/VPN/firewall devices and lateral movement.",
         "scenario": "c2_lateral",
     },
     {
@@ -130,9 +131,9 @@ APT_CATALOG = [
         "name": "Sandworm Team (APT44)",
         "category": "infra",
         "keywords": ["sandworm", "apt44", "seadoggie", "telebots"],
-        "focus": "Enerji, ICS/SCADA, kritik infrastruktur və destruktiv/wiper hücumları",
+        "focus": "Energy, ICS/SCADA, critical infrastructure & destructive/wiper ops",
         "default_techniques": ["T1566", "T1486", "T1561", "T1021.002"],
-        "mitigation": "OT/IT seqmentasiyası, offline backup, admin share və kütləvi dəyişiklik alertləri.",
+        "mitigation": "IT/OT segmentation, immutable offline backups, admin share & mass change alerts.",
         "scenario": "c2_lateral",
     },
     {
@@ -140,9 +141,9 @@ APT_CATALOG = [
         "name": "Lazarus Group (Hidden Cobra / TraderTraitor)",
         "category": "finance",
         "keywords": ["lazarus", "hidden cobra", "tradertraitor", "bluenoroff"],
-        "focus": "Bankçılıq, kripto/DeFi, IT təchizat zənciri, trojanlaşdırılmış tətbiqlər",
+        "focus": "Banking, crypto/DeFi, software supply chain & trojanized apps",
         "default_techniques": ["T1204.002", "T1059.001", "T1105", "T1041"],
-        "mitigation": "İmzasız/yeni binary-lərin nəzarəti, developer/kripto mühitlərində kənar yükləmə bloklaması.",
+        "mitigation": "Control unsigned/new binaries, restrict untrusted downloads in dev/crypto environments.",
         "scenario": "infostealer",
     },
     {
@@ -150,9 +151,9 @@ APT_CATALOG = [
         "name": "Scattered Spider (UNC3944 / Octo Tempest)",
         "category": "identity",
         "keywords": ["scattered spider", "unc3944", "octo tempest", "0ktapus"],
-        "focus": "Helpdesk/IT sosial mühəndislik, vishing, SSO/Okta/Entra ID və bulud hesabları",
+        "focus": "Helpdesk/IT social engineering, vishing, SSO/Okta/Entra ID & cloud accounts",
         "default_techniques": ["T1566.004", "T1539", "T1078.004", "T1550.004"],
-        "mitigation": "MFA reset prosedurlarında əlavə yoxlama, sessiya ləğvi və stealer/cookie ovlanması.",
+        "mitigation": "Strict verification on MFA resets, session revocation & stealer/cookie hunting.",
         "scenario": "token_replay",
     },
     {
@@ -160,9 +161,9 @@ APT_CATALOG = [
         "name": "Kimsuky (Velvet Chollima)",
         "category": "espionage",
         "keywords": ["kimsuky", "velvet chollima", "black banshee", "emerald whitetail"],
-        "focus": "Analitik mərkəzlər, akademiya, diplomatik və xarici siyasət/müdafiə sektoru",
+        "focus": "Think tanks, academia, diplomatic & foreign policy/defense targets",
         "default_techniques": ["T1566.001", "T1555.003", "T1059.001", "T1567"],
-        "mitigation": "Spear-phishing və brauzer credential/cookie oğurluğuna qarşı EDR/mail qaydaları.",
+        "mitigation": "Spear-phishing filtering & browser credential/cookie theft detection.",
         "scenario": "infostealer",
     },
     {
@@ -170,9 +171,9 @@ APT_CATALOG = [
         "name": "APT41 (Winnti / Brass Typhoon)",
         "category": "finance",
         "keywords": ["apt41", "winnti", "brass typhoon", "wicked panda"],
-        "focus": "Təchizat zənciri, səhiyyə, telekom, oyun və maliyyə/kiber-casusluq",
+        "focus": "Supply chain, healthcare, telecom, gaming & cyber-espionage/financial ops",
         "default_techniques": ["T1190", "T1195", "T1059", "T1071.001"],
-        "mitigation": "Web/app zəifliklərinin sürətli yamalanması, xidmət hesabları və çıxış trafikinin izlənməsi.",
+        "mitigation": "Rapid patching of public web apps, service account hardening & egress monitoring.",
         "scenario": "rce_web",
     },
 ]
@@ -206,6 +207,26 @@ FALLBACK_MITRE_TECHNIQUES = {
     "T1567": {"id": "T1567", "name": "Exfiltration Over Web Service", "tactic": "Exfiltration"},
 }
 
+COUNTRY_PATTERNS = {
+    "United States": r"\b(?:united states|usa|u\.s\.|america|american)\b",
+    "Israel": r"\b(?:israel|israeli)\b",
+    "Ukraine": r"\b(?:ukraine|ukrainian)\b",
+    "Russia": r"\b(?:russia|russian)\b",
+    "United Kingdom": r"\b(?:united kingdom|uk|britain|british)\b",
+    "Germany": r"\b(?:germany|german)\b",
+    "France": r"\b(?:france|french)\b",
+    "Poland": r"\b(?:poland|polish)\b",
+    "Canada": r"\b(?:canada|canadian)\b",
+    "India": r"\b(?:india|indian)\b",
+    "Japan": r"\b(?:japan|japanese)\b",
+    "South Korea": r"\b(?:south korea|korean)\b",
+    "Brazil": r"\b(?:brazil|brazilian)\b",
+    "Australia": r"\b(?:australia|australian)\b",
+    "Azerbaijan": r"\b(?:azerbaijan|baku|azal)\b",
+    "Turkey": r"\b(?:turkey|turkish|türkiye)\b",
+    "Iran": r"\b(?:iran|iranian)\b",
+}
+
 IP_RE = re.compile(r"\b(?:(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\b")
 URL_RE = re.compile(r"https?://[^\s<>\"')\]]+", re.IGNORECASE)
 HASH_RE = re.compile(r"\b(?:[a-fA-F0-9]{64}|[a-fA-F0-9]{40}|[a-fA-F0-9]{32})\b")
@@ -218,8 +239,6 @@ DARKWEB_KEYWORDS = (
     "extortion", "vishing", "database", "dump", "forum", "onion", "payload",
     "malware", "zero-day", "0-day", "credential", "threat actor", "wiper", "botnet"
 )
-
-_TRANSLATION_CACHE = {}
 
 
 def now_az_str():
@@ -238,11 +257,68 @@ def deduplicate_sources():
     return unique_web
 
 
+def tor_socks_available(host="127.0.0.1", port=9050, timeout=1.5):
+    try:
+        with socket.create_connection((host, port), timeout=timeout):
+            return True
+    except Exception:
+        return False
+
+
+def fetch_via_tor_socks5(url, host="127.0.0.1", port=9050, timeout=18):
+    parsed = urllib.parse.urlparse(url)
+    target_host = parsed.hostname
+    target_port = parsed.port or (443 if parsed.scheme == "https" else 80)
+    path_and_q = parsed.path or "/"
+    if parsed.query:
+        path_and_q += "?" + parsed.query
+
+    with socket.create_connection((host, port), timeout=timeout) as sock:
+        sock.settimeout(timeout)
+        # SOCKS5 handshake (no auth)
+        sock.sendall(b"\x05\x01\x00")
+        resp = sock.recv(2)
+        if len(resp) < 2 or resp[0] != 0x05 or resp[1] != 0x00:
+            raise RuntimeError("SOCKS5 auth handshake failed")
+
+        # SOCKS5 connect with domain name (0x03)
+        host_bytes = target_host.encode("utf-8")
+        req = b"\x05\x01\x00\x03" + bytes([len(host_bytes)]) + host_bytes + target_port.to_bytes(2, "big")
+        sock.sendall(req)
+        rep = sock.recv(10)
+        if len(rep) < 2 or rep[1] != 0x00:
+            raise RuntimeError("SOCKS5 connect to onion failed")
+
+        http_req = (
+            f"GET {path_and_q} HTTP/1.1\r\n"
+            f"Host: {target_host}\r\n"
+            "User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0\r\n"
+            "Connection: close\r\n\r\n"
+        ).encode("utf-8")
+        sock.sendall(http_req)
+
+        chunks = []
+        while True:
+            data = sock.recv(4096)
+            if not data:
+                break
+            chunks.append(data)
+        raw = b"".join(chunks).decode("utf-8", errors="ignore")
+        if "\r\n\r\n" in raw:
+            raw = raw.split("\r\n\r\n", 1)[1]
+        return raw
+
+
 def http_get_text(url, headers=None, timeout=10):
+    if ".onion" in url.lower():
+        if tor_socks_available():
+            return fetch_via_tor_socks5(url)
+        raise RuntimeError("Tor SOCKS5 (127.0.0.1:9050) not active")
+
     req = urllib.request.Request(
         url,
         headers=headers or {
-            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.6; +https://github.com)"
+            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/4.0; +https://github.com)"
         },
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -258,7 +334,7 @@ def http_post_form(url, data_dict, headers=None, timeout=10):
     req = urllib.request.Request(
         url,
         data=encoded,
-        headers=headers or {"User-Agent": "SOC-CTI-Radar/3.6"},
+        headers=headers or {"User-Agent": "SOC-CTI-Radar/4.0"},
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8", errors="ignore"))
@@ -272,48 +348,31 @@ def clean_html(text):
     return text
 
 
-def translate_to_az(text):
-    src = (text or "").strip()
-    if not src:
-        return ""
-    if src in _TRANSLATION_CACHE:
-        return _TRANSLATION_CACHE[src]
+def build_impact_summary(title, summary, category):
+    blob = f"{title} {summary}".lower()
+    if any(w in blob for w in ("ransomware", "wiper", "extortion", "lockbit", "blackcat")):
+        return "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths."
+    if any(w in blob for w in ("zero-day", "0-day", "rce", "critical", "exploit", "cve-")):
+        return "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes."
+    if any(w in blob for w in ("breach", "leak", "database", "dump", "credential", "stealer", "cookie", "token")):
+        return "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions."
+    if category == "darkweb_cti":
+        return "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure."
+    return "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
 
-    chunk = src[:450]
 
-    try:
-        q = urllib.parse.urlencode({
-            "client": "gtx",
-            "sl": "auto",
-            "tl": "az",
-            "dt": "t",
-            "q": chunk,
-        })
-        parsed = http_get_json(f"https://translate.googleapis.com/translate_a/single?{q}", timeout=7)
-        translated = "".join(seg[0] for seg in (parsed[0] or []) if seg and seg[0]).strip()
-        if translated:
-            _TRANSLATION_CACHE[src] = translated
-            return translated
-    except Exception:
-        pass
-
-    try:
-        q2 = urllib.parse.urlencode({"q": chunk[:400], "langpair": "en|az"})
-        mm = http_get_json(f"https://api.mymemory.translated.net/get?{q2}", timeout=8)
-        mm_text = html.unescape(((mm.get("responseData") or {}).get("translatedText") or "")).strip()
-        if mm_text and "MYMEMORY WARNING" not in mm_text.upper():
-            _TRANSLATION_CACHE[src] = mm_text
-            return mm_text
-    except Exception:
-        pass
-
-    _TRANSLATION_CACHE[src] = src
-    return src
+def extract_countries(text):
+    t = (text or "").lower()
+    found = []
+    for country, pat in COUNTRY_PATTERNS.items():
+        if re.search(pat, t):
+            found.append(country)
+    return found
 
 
 def classify_category(source_name, title, summary, url):
     blob = f"{source_name} {title} {summary} {url}".lower()
-    if any(k in blob for k in DARKWEB_KEYWORDS) or any(
+    if ".onion" in url.lower() or any(k in blob for k in DARKWEB_KEYWORDS) or any(
         d in url.lower() for d in (
             "leakfa", "darkforums", "patched.to", "ransomware.live",
             "dailydarkweb", "darknetlist", "blackbones", "secretline",
@@ -391,13 +450,14 @@ def fetch_rss_news():
                     or ""
                 )[:16]
                 if title:
+                    cat = classify_category(name, title, desc, link)
                     items.append({
                         "source": name,
-                        "category": classify_category(name, title, desc, link),
+                        "category": cat,
                         "title": title,
-                        "title_az": translate_to_az(title),
                         "summary": desc,
-                        "summary_az": translate_to_az(desc),
+                        "impact": build_impact_summary(title, desc, cat),
+                        "countries": extract_countries(f"{title} {desc}"),
                         "url": link,
                         "date": pub_date,
                     })
@@ -409,48 +469,38 @@ def fetch_rss_news():
 def fetch_web_sources_items(web_sources):
     items = []
     for name, url in web_sources:
-        if ".onion" in url.lower():
-            t = f"{name} — Tor/Onion mənbə qeydi"
-            s = "Onion ünvanı Tor şəbəkəsi tələb edir; birbaşa HTTP runner-də qeydə alınıb."
-            items.append({
-                "source": name,
-                "category": "darkweb_cti",
-                "title": t,
-                "title_az": t,
-                "summary": s,
-                "summary_az": s,
-                "url": url,
-                "date": now_az_str()[:10],
-            })
-            continue
-
         try:
-            raw = http_get_text(url, timeout=7)
+            raw = http_get_text(url, timeout=8 if ".onion" not in url.lower() else 18)
             title_m = re.search(r"<title[^>]*>(.*?)</title>", raw, flags=re.S | re.I)
             page_title = (clean_html(title_m.group(1)) if title_m else name)[:130] or name
             text_body = clean_html(raw)
-            snippet = text_body[:220] if text_body else f"{name} mənbəsindən məlumat toplandı."
+            snippet = text_body[:220] if text_body else f"Fetched data from {name}."
             cat = classify_category(name, page_title, snippet, url)
             items.append({
                 "source": name,
                 "category": cat,
                 "title": page_title,
-                "title_az": translate_to_az(page_title),
                 "summary": snippet,
-                "summary_az": snippet,
+                "impact": build_impact_summary(page_title, snippet, cat),
+                "countries": extract_countries(f"{page_title} {snippet}"),
                 "url": url,
                 "date": now_az_str()[:10],
             })
         except Exception as e:
-            t = f"{name} (mənbə qeydi)"
-            s = f"Mənbə qeydə alındı ({str(e)[:70]})."
+            err_msg = str(e)[:80]
+            cat = classify_category(name, name, "", url)
+            note = (
+                f"Tor SOCKS5 not active/reachable ({err_msg})."
+                if ".onion" in url.lower()
+                else f"Source reachability note ({err_msg})."
+            )
             items.append({
                 "source": name,
-                "category": classify_category(name, name, "", url),
-                "title": t,
-                "title_az": t,
-                "summary": s,
-                "summary_az": s,
+                "category": cat,
+                "title": f"{name} — {note}",
+                "summary": note,
+                "impact": build_impact_summary(name, note, cat),
+                "countries": extract_countries(name),
                 "url": url,
                 "date": now_az_str()[:10],
             })
@@ -461,8 +511,10 @@ def deduplicate_news(items):
     seen = set()
     out = []
     for it in items:
-        key = f"{(it.get('url') or '').strip().lower()}|{(it.get('title') or '').strip().lower()[:85]}"
-        if key in seen:
+        norm_title = re.sub(r"\W+", " ", (it.get("title") or "").strip().lower()).strip()[:90]
+        norm_url = (it.get("url") or "").strip().rstrip("/").lower()
+        key = f"{norm_url}|{norm_title}"
+        if key in seen or not norm_title:
             continue
         seen.add(key)
         out.append(it)
@@ -483,31 +535,89 @@ def fetch_cisa_kev():
                 "vendor": v.get("vendorProject", ""),
                 "product": v.get("product", ""),
                 "name": name,
-                "name_az": translate_to_az(name),
                 "dateAdded": v.get("dateAdded", ""),
                 "ransomware": v.get("knownRansomwareCampaignUse", ""),
                 "action": action,
-                "action_az": translate_to_az(action),
+                "impact": build_impact_summary(name, action, "global_cyber"),
             })
         return out
     except Exception:
         return []
 
 
+def extract_live_ransomware(news_items, cves):
+    # Canlı ransomware.live API və xəbərlərdən ən son aktiv qrup və ölkələri çıxarır
+    entries = []
+    seen = set()
+
+    try:
+        recent_victims = http_get_json("https://api.ransomware.live/v2/recentvictims", timeout=10)
+        if isinstance(recent_victims, list):
+            for v in recent_victims[:20]:
+                group = (v.get("group_name") or v.get("group") or "Unknown Group").strip()
+                victim = (v.get("post_title") or v.get("victim") or "Victim").strip()
+                country = (v.get("country") or "Global").strip() or "Global"
+                discovered = (v.get("discovered") or "")[:16]
+                key = f"{group.lower()}|{victim.lower()}|{country.lower()}"
+                if key in seen:
+                    continue
+                seen.add(key)
+                entries.append({
+                    "group": group,
+                    "victim": victim,
+                    "country": country,
+                    "date": discovered,
+                    "source": "Ransomware.live API",
+                })
+    except Exception:
+        pass
+
+    for n in news_items:
+        blob = f"{n.get('title', '')} {n.get('summary', '')}"
+        if "ransomware" in blob.lower() or "extortion" in blob.lower() or "wiper" in blob.lower():
+            countries = extract_countries(blob) or ["Global"]
+            for ctry in countries[:2]:
+                key = f"{n.get('source', '').lower()}|{n.get('title', '')[:60].lower()}|{ctry.lower()}"
+                if key in seen:
+                    continue
+                seen.add(key)
+                entries.append({
+                    "group": n.get("source") or "Threat Intel",
+                    "victim": n.get("title")[:110],
+                    "country": ctry,
+                    "date": n.get("date") or now_az_str()[:10],
+                    "source": n.get("source") or "CTI Feed",
+                })
+
+    for c in cves:
+        if "known" in str(c.get("ransomware") or "").lower():
+            key = f"kev|{c.get('cveID')}|global"
+            if key not in seen:
+                seen.add(key)
+                entries.append({
+                    "group": f"{c.get('vendor') or 'Vendor'} ({c.get('cveID')})",
+                    "victim": c.get("product") or c.get("name") or c.get("cveID"),
+                    "country": "Global",
+                    "date": c.get("dateAdded") or now_az_str()[:10],
+                    "source": "CISA KEV",
+                })
+
+    return entries[:25]
+
+
 def detect_active_apts(news, cves, mitre_techniques):
-    # YALNIZ toplanan real məlumatlarda (news və cves) birbaşa adı/açar sözü keçən APT-ləri qaytarır.
     corpus_entries = []
     for n in news:
         corpus_entries.append({
             "text": f"{n.get('source', '')} {n.get('title', '')} {n.get('summary', '')}".lower(),
-            "title": n.get("title_az") or n.get("title") or "",
+            "title": n.get("title") or "",
             "source": n.get("source") or "",
             "url": n.get("url") or "",
         })
     for c in cves:
         corpus_entries.append({
             "text": f"{c.get('cveID', '')} {c.get('vendor', '')} {c.get('product', '')} {c.get('name', '')} {c.get('action', '')}".lower(),
-            "title": f"{c.get('cveID', '')}: {c.get('name_az') or c.get('name') or ''}",
+            "title": f"{c.get('cveID', '')}: {c.get('name') or ''}",
             "source": "CISA KEV",
             "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
         })
@@ -557,7 +667,7 @@ def detect_active_apts(news, cves, mitre_techniques):
             "category": grp["category"],
             "level": level,
             "activity_score": activity_score,
-            "status_label": f"Mənbələrdə aşkarlandı ({mention_count})",
+            "status_label": f"Matched in sources ({mention_count})",
             "focus": grp["focus"],
             "mitigation": grp["mitigation"],
             "scenario": grp["scenario"],
@@ -603,13 +713,27 @@ def extract_and_dedup_iocs(news_items, cves):
             "level": "LOW",
             "score": 10,
             "reasons": [],
-            "verdict": "İlkin qeyd",
+            "source_results": [],
+            "verdict": "",
             "checks": {},
         })
 
+    custom_ioc = os.environ.get("CUSTOM_IOC", "").strip()
+    if custom_ioc:
+        if URL_RE.match(custom_ioc):
+            add_ioc("url", custom_ioc, "Manual Workflow Input")
+        elif IP_RE.match(custom_ioc):
+            add_ioc("ip", custom_ioc, "Manual Workflow Input")
+        elif HASH_RE.match(custom_ioc):
+            add_ioc("hash", custom_ioc, "Manual Workflow Input")
+        elif CVE_RE.match(custom_ioc):
+            add_ioc("cve", custom_ioc, "Manual Workflow Input")
+        else:
+            add_ioc("domain", custom_ioc, "Manual Workflow Input")
+
     for n in news_items:
         blob = f"{n.get('title', '')} {n.get('summary', '')}"
-        origin = f"{n.get('source', 'CTI')}: {n.get('title', '')[:65]}"
+        origin = f"[{n.get('source', 'CTI')}] {n.get('title', '')[:70]}"
         for u in URL_RE.findall(blob):
             add_ioc("url", u, origin)
         for ip in IP_RE.findall(blob):
@@ -624,43 +748,42 @@ def extract_and_dedup_iocs(news_items, cves):
 
     for c in cves:
         if c.get("cveID"):
-            add_ioc("cve", c["cveID"], f"CISA KEV: {c.get('vendor', '')} {c.get('product', '')}")
+            add_ioc("cve", c["cveID"], f"[CISA KEV] {c.get('vendor', '')} {c.get('product', '')}")
 
-    return iocs[:40]
+    return iocs[:50]
 
 
 def check_urlhaus(ioc):
     auth = os.environ.get("URLHAUS_AUTH_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/3.6"}
+    headers = {"User-Agent": "SOC-CTI-Radar/4.0"}
     if auth:
         headers["Auth-Key"] = auth
     try:
         if ioc["type"] == "url":
             res = http_post_form("https://urlhaus-api.abuse.ch/v1/url/", {"url": ioc["value"]}, headers=headers)
             if res.get("query_status") == "ok":
-                return {"hit": True, "threat": res.get("threat") or "listed_url", "score_add": 45, "summary": f"URLhaus: aktiv təhdid ({res.get('threat') or 'URL'})"}
+                return {"hit": True, "score_add": 45, "result": f"URLhaus: Malicious URL ({res.get('threat') or 'listed'})"}
         elif ioc["type"] == "domain":
             host = ioc["value"].split("/")[0]
             res = http_post_form("https://urlhaus-api.abuse.ch/v1/host/", {"host": host}, headers=headers)
             if res.get("query_status") == "ok" and (res.get("urls") or []):
                 cnt = len(res.get("urls", []))
-                return {"hit": True, "threat": f"urls:{cnt}", "score_add": 40, "summary": f"URLhaus: {cnt} zərərli URL qeydi"}
+                return {"hit": True, "score_add": 40, "result": f"URLhaus: {cnt} malicious URLs on host"}
         elif ioc["type"] == "hash":
             algo = "sha256_hash" if len(ioc["value"]) == 64 else "md5_hash"
             res = http_post_form("https://urlhaus-api.abuse.ch/v1/payload/", {algo: ioc["value"]}, headers=headers)
             if res.get("query_status") == "ok":
-                sig = res.get("signature") or "malware_payload"
-                return {"hit": True, "threat": sig, "score_add": 50, "summary": f"URLhaus: zərərli fayl ({sig})"}
+                return {"hit": True, "score_add": 50, "result": f"URLhaus: Payload match ({res.get('signature') or 'malware'})"}
     except Exception:
-        return {"hit": False, "score_add": 0, "summary": "URLhaus: cavab yoxdur"}
-    return {"hit": False, "score_add": 0, "summary": "URLhaus: təmiz"}
+        return {"score_add": 0, "result": "URLhaus: no hit / error"}
+    return {"score_add": 0, "result": "URLhaus: clean / not listed"}
 
 
 def check_virustotal(ioc):
     key = os.environ.get("VT_API_KEY", "").strip()
     if not key:
-        return {"skipped": True, "score_add": 0, "summary": "VT: API açarı yoxdur"}
-    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/3.6"}
+        return {"score_add": 0, "result": "VirusTotal: API key not configured"}
+    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/4.0"}
     try:
         if ioc["type"] == "ip":
             ep = f"https://www.virustotal.com/api/v3/ip_addresses/{urllib.parse.quote(ioc['value'])}"
@@ -669,40 +792,42 @@ def check_virustotal(ioc):
         elif ioc["type"] == "hash":
             ep = f"https://www.virustotal.com/api/v3/files/{urllib.parse.quote(ioc['value'])}"
         else:
-            return {"skipped": True, "score_add": 0, "summary": "VT: tətbiq olunmur"}
+            return {"score_add": 0, "result": "VirusTotal: N/A for CVE"}
 
         data = http_get_json(ep, headers=headers)
         stats = (((data.get("data") or {}).get("attributes") or {}).get("last_analysis_stats")) or {}
         mal = int(stats.get("malicious", 0))
         susp = int(stats.get("suspicious", 0))
-        return {"malicious": mal, "suspicious": susp, "score_add": min(60, mal * 10 + susp * 4), "summary": f"VT: {mal} malicious / {susp} suspicious"}
+        add = min(60, mal * 10 + susp * 4)
+        return {"malicious": mal, "suspicious": susp, "score_add": add, "result": f"VirusTotal: {mal} malicious, {susp} suspicious (+{add})"}
     except Exception:
-        return {"score_add": 0, "summary": "VT: cavab yoxdur"}
+        return {"score_add": 0, "result": "VirusTotal: query failed / not found"}
 
 
 def check_abuseipdb(ioc):
     if ioc["type"] != "ip":
-        return {"skipped": True, "score_add": 0, "summary": "AbuseIPDB: yalnız IP"}
+        return {"score_add": 0, "result": "AbuseIPDB: IP only"}
     key = os.environ.get("ABUSEIPDB_API_KEY", "").strip()
     if not key:
-        return {"skipped": True, "score_add": 0, "summary": "AbuseIPDB: API açarı yoxdur"}
+        return {"score_add": 0, "result": "AbuseIPDB: API key not configured"}
     try:
         q = urllib.parse.urlencode({"ipAddress": ioc["value"], "maxAgeInDays": "30"})
         data = http_get_json(
             f"https://api.abuseipdb.com/api/v2/check?{q}",
-            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/3.6"},
+            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/4.0"},
         )
         d = data.get("data") or {}
         conf = int(d.get("abuseConfidenceScore", 0))
         rep = int(d.get("totalReports", 0))
-        return {"confidence": conf, "reports": rep, "score_add": int(conf * 0.5), "summary": f"AbuseIPDB: {conf}% etibar ({rep} hesabat)"}
+        add = int(conf * 0.5)
+        return {"confidence": conf, "reports": rep, "score_add": add, "result": f"AbuseIPDB: {conf}% confidence, {rep} reports (+{add})"}
     except Exception:
-        return {"score_add": 0, "summary": "AbuseIPDB: cavab yoxdur"}
+        return {"score_add": 0, "result": "AbuseIPDB: query failed"}
 
 
 def check_otx(ioc):
     key = os.environ.get("OTX_API_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/3.6"}
+    headers = {"User-Agent": "SOC-CTI-Radar/4.0"}
     if key:
         headers["X-OTX-API-KEY"] = key
     try:
@@ -713,34 +838,30 @@ def check_otx(ioc):
         elif ioc["type"] == "hash":
             ep = f"https://otx.alienvault.com/api/v1/indicators/file/{urllib.parse.quote(ioc['value'])}/general"
         else:
-            return {"skipped": True, "score_add": 0, "summary": "OTX: tətbiq olunmur"}
+            return {"score_add": 0, "result": "OTX: N/A for CVE"}
 
         data = http_get_json(ep, headers=headers)
         pulses = int(((data.get("pulse_info") or {}).get("count")) or 0)
-        return {"pulses": pulses, "score_add": min(35, pulses * 5), "summary": f"OTX: {pulses} pulse"}
+        add = min(35, pulses * 5)
+        return {"pulses": pulses, "score_add": add, "result": f"OTX: {pulses} threat pulses (+{add})"}
     except Exception:
-        return {"score_add": 0, "summary": "OTX: cavab yoxdur"}
+        return {"score_add": 0, "result": "OTX: query failed"}
 
 
 def check_shodan(ioc):
     if ioc["type"] != "ip":
-        return {"skipped": True, "score_add": 0, "summary": "Shodan: yalnız IP"}
+        return {"score_add": 0, "result": "Shodan: IP only"}
     key = os.environ.get("SHODAN_API_KEY", "").strip()
     if not key:
-        return {"skipped": True, "score_add": 0, "summary": "Shodan: API açarı yoxdur"}
+        return {"score_add": 0, "result": "Shodan: API key not configured"}
     try:
         data = http_get_json(f"https://api.shodan.io/shodan/host/{urllib.parse.quote(ioc['value'])}?key={urllib.parse.quote(key)}")
         vulns = list((data.get("vulns") or {}).keys())
         ports = data.get("ports") or []
-        return {
-            "ports": ports[:10],
-            "vulns": vulns[:8],
-            "org": data.get("org"),
-            "score_add": min(30, len(vulns) * 8 + (5 if len(ports) > 5 else 0)),
-            "summary": f"Shodan: {len(ports)} port, {len(vulns)} CVE",
-        }
+        add = min(30, len(vulns) * 8 + (5 if len(ports) > 5 else 0))
+        return {"ports": ports[:10], "vulns": vulns[:8], "org": data.get("org"), "score_add": add, "result": f"Shodan: {len(ports)} open ports, {len(vulns)} vulns (+{add})"}
     except Exception:
-        return {"score_add": 0, "summary": "Shodan: cavab yoxdur"}
+        return {"score_add": 0, "result": "Shodan: no host data"}
 
 
 def assign_level(score, ioc):
@@ -760,7 +881,7 @@ def enrich_iocs(iocs):
     for ioc in iocs:
         score = 10
         reasons = []
-        tool_notes = []
+        source_results = []
 
         uh = check_urlhaus(ioc)
         vt = check_virustotal(ioc)
@@ -773,26 +894,29 @@ def enrich_iocs(iocs):
             if add > 0:
                 score += add
                 reasons.append(f"{label} (+{add})")
-            if not res.get("skipped") and res.get("summary"):
-                tool_notes.append(res["summary"])
+            if res.get("result"):
+                source_results.append(res["result"])
+
+        if ioc["type"] == "cve":
+            source_results.append("CISA KEV: Known exploited vulnerability (+55)")
+            score += 55
+            reasons.append("CISA KEV (+55)")
 
         level, final_score = assign_level(score, ioc)
-        if ioc["type"] == "cve":
-            verdict = "Aktiv istismar kataloqunda qeyd olunan zəiflik — dərhal yama/hunting tələb edir."
-        elif level == "CRITICAL":
-            verdict = "Kritik zərərli indikator — bloklama və dərhal SOC/SOAR müdaxiləsi tövsiyə olunur."
+        if level == "CRITICAL":
+            verdict = "CRITICAL — Confirmed malicious/high-risk activity across CTI sources. Block & investigate immediately."
         elif level == "HIGH":
-            verdict = "Yüksək riskli indikator — loglarda ovlama və sessiya/host yoxlaması aparın."
+            verdict = "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints."
         elif level == "MEDIUM":
-            verdict = "Orta riskli indikator — əlavə kontekst və perimetr/DNS izi yoxlanmalıdır."
+            verdict = "MEDIUM — Moderate/suspicious exposure. Correlate with perimeter, DNS & auth telemetry."
         else:
-            verdict = "Aşağı/ilkin risk — aktiv zərərli siqnal qeydə alınmayıb, müşahidədə saxlayın."
+            verdict = "LOW — No malicious hits in queried CTI tools. Keep under observation."
 
         ioc["level"] = level
         ioc["score"] = final_score
-        ioc["reasons"] = reasons if reasons else ["Açıq/API yoxlamada əlavə risk balı yoxdur"]
+        ioc["reasons"] = reasons if reasons else ["Base score only"]
+        ioc["source_results"] = source_results
         ioc["verdict"] = verdict
-        ioc["tool_summary"] = " • ".join(tool_notes) if tool_notes else "Avtomatik alət yoxlaması tamamlandı"
         ioc["checks"] = {
             "urlhaus": uh,
             "virustotal": vt,
@@ -807,7 +931,7 @@ def enrich_iocs(iocs):
     return enriched
 
 
-def send_deep_cti_report(updated_at, source_count, news, cves, iocs, active_apts):
+def send_deep_cti_report(updated_at, source_count, news, cves, iocs, active_apts, live_ransomware):
     token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
     chat_id = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
     webapp_url = os.environ.get("WEBAPP_URL", "").strip()
@@ -819,38 +943,39 @@ def send_deep_cti_report(updated_at, source_count, news, cves, iocs, active_apts
     high_iocs = [x for x in iocs if x["level"] in ("CRITICAL", "HIGH")][:4]
 
     lines = [
-        "🛰️ <b>DEEP CTI REPORT BOT — OPERATİV HESABAT (AZ)</b>",
-        f"🕒 Vaxt: <code>{updated_at}</code>",
-        f"📡 Mənbə: <b>{source_count}</b> | 📰 Xəbər: <b>{len(news)}</b> | 🔍 IoC: <b>{len(iocs)}</b> | 🕵️ APT: <b>{len(active_apts)}</b>",
+        "🛰️ <b>DEEP CTI REPORT BOT — LIVE OPERATIONAL REPORT</b>",
+        f"🕒 Time: <code>{updated_at}</code>",
+        f"📡 Sources: <b>{source_count}</b> | 📰 News: <b>{len(news)}</b> | 🔍 IoC: <b>{len(iocs)}</b> | 🕵️ APT: <b>{len(active_apts)}</b> | 💀 RW: <b>{len(live_ransomware)}</b>",
     ]
+
+    if live_ransomware:
+        lines.append("")
+        lines.append("💀 <b>Live Ransomware Activity (Latest):</b>")
+        for r in live_ransomware[:3]:
+            lines.append(f"• [<b>{r['country']}</b>] <b>{r['group']}</b> — {r['victim']}")
 
     if active_apts:
         lines.append("")
-        lines.append("🕵️ <b>Mənbələrdə Aşkarlanan APT-lər:</b>")
+        lines.append("🕵️ <b>Detected APT Groups:</b>")
         for a in active_apts[:4]:
             t_codes = ", ".join(t["id"] for t in (a.get("techniques") or [])[:4])
-            lines.append(f"• <b>{a['name']}</b> [{t_codes}] — {a['status_label']}")
-
-    lines.append("")
-    lines.append("⚠️ <b>CISA KEV:</b>")
-    for c in cves[:3]:
-        lines.append(f"• <b>{c['cveID']}</b> — {c['vendor']} {c['product']} ({c['dateAdded']})")
+            lines.append(f"• <b>{a['name']}</b> [{t_codes}] — Score {a['activity_score']}")
 
     lines.append("")
     lines.append("🕵️ <b>Darkweb & Leak:</b>")
     for n in darkweb_news:
-        lines.append(f"• [{n['source']}] {n.get('title_az') or n.get('title')}")
+        lines.append(f"• [{n['source']}] {n['title']}")
 
     lines.append("")
-    lines.append("🌍 <b>Dünya Kiber Xəbərləri:</b>")
+    lines.append("🌍 <b>Global Cyber News:</b>")
     for n in global_news:
-        lines.append(f"• [{n['source']}] {n.get('title_az') or n.get('title')}")
+        lines.append(f"• [{n['source']}] {n['title']}")
 
     if high_iocs:
         lines.append("")
-        lines.append("🚨 <b>Yüksək Səviyyəli IoC-lər (Avtomatik Analiz):</b>")
+        lines.append("🚨 <b>Top IoCs (Total Score):</b>")
         for it in high_iocs:
-            lines.append(f"• [<b>{it['level']}</b> | {it['score']}] <code>{it['value']}</code> — {it.get('verdict', '')[:70]}")
+            lines.append(f"• [<b>{it['level']}</b> | Score: <b>{it['score']}</b>] <code>{it['value']}</code>")
 
     payload = {
         "chat_id": chat_id,
@@ -860,7 +985,7 @@ def send_deep_cti_report(updated_at, source_count, news, cves, iocs, active_apts
     }
     if webapp_url:
         payload["reply_markup"] = json.dumps({
-            "inline_keyboard": [[{"text": "📲 SOC & CTI Operativ App-i Aç", "web_app": {"url": webapp_url}}]]
+            "inline_keyboard": [[{"text": "📲 Open SOC & CTI App", "web_app": {"url": webapp_url}}]]
         })
 
     req = urllib.request.Request(
@@ -883,14 +1008,16 @@ def main():
     news = deduplicate_news(rss_items + web_items)
     cves = fetch_cisa_kev()
     active_apts = detect_active_apts(news, cves, mitre_techniques)
+    live_ransomware = extract_live_ransomware(news, cves)
     raw_iocs = extract_and_dedup_iocs(news, cves)
     iocs = enrich_iocs(raw_iocs)
 
     sources = (
         [{"name": n, "url": u, "type": "RSS"} for n, u in RSS_SOURCES]
-        + [{"name": n, "url": u, "type": "CTI/Web"} for n, u in unique_web]
+        + [{"name": n, "url": u, "type": "Tor/Onion" if ".onion" in u.lower() else "CTI/Web"} for n, u in unique_web]
         + [
             {"name": "CISA KEV", "url": CISA_KEV_URL, "type": "KEV"},
+            {"name": "Ransomware.live API", "url": "https://api.ransomware.live/v2/recentvictims", "type": "Ransomware"},
             {"name": "MITRE ATT&CK STIX", "url": "https://attack.mitre.org/", "type": "ATT&CK"},
             {"name": "Shodan API", "url": "https://www.shodan.io", "type": "CTI Check"},
             {"name": "URLhaus API", "url": "https://urlhaus.abuse.ch", "type": "CTI Check"},
@@ -907,11 +1034,12 @@ def main():
         "cves": cves,
         "iocs": iocs,
         "active_apts": active_apts,
+        "live_ransomware": live_ransomware,
     }
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(out_obj, f, ensure_ascii=False, indent=2)
 
-    send_deep_cti_report(updated_at, len(sources), news, cves, iocs, active_apts)
+    send_deep_cti_report(updated_at, len(sources), news, cves, iocs, active_apts, live_ransomware)
 
 
 if __name__ == "__main__":
