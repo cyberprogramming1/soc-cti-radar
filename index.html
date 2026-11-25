@@ -2,7 +2,7 @@
 <html lang="az">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>SOC & CTI Operativ Konsolu</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
@@ -16,11 +16,17 @@
       --danger: #ef4444;
       --ok: #10b981;
     }
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      min-height: var(--tg-viewport-stable-height, 100vh);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--text);
+      box-sizing: border-box;
+    }
+    body {
       padding: 14px;
     }
     .header {
@@ -136,10 +142,20 @@
   <div id="content"></div>
 
   <script>
-    if (window.Telegram && window.Telegram.WebApp) {
-      window.Telegram.WebApp.ready();
-      window.Telegram.WebApp.expand();
+    const tg = window.Telegram && window.Telegram.WebApp;
+    function activateFullScreen() {
+      if (!tg) return;
+      tg.ready();
+      tg.expand();
+      if (typeof tg.requestFullscreen === "function") {
+        try {
+          tg.requestFullscreen();
+        } catch (e) {}
+      }
     }
+    activateFullScreen();
+    setTimeout(activateFullScreen, 200);
+    setTimeout(activateFullScreen, 700);
 
     let state = {
       tab: 'news',
@@ -230,7 +246,7 @@
             <div style="font-size:13px;color:var(--muted);margin-bottom:8px;">${n.summary || ''}</div>
             <a href="${n.url}" target="_blank" rel="noopener">Mənbəyə keçid →</a>
           </div>
-        `).join('') : '<div class="card">Hələ <code>data.json</code> yaradılmayıb. 3-cü faylı əlavə edib Workflow-u işə saldıqda məlumatlar buraya düşəcək.</div>';
+        `).join('') : '<div class="card">Hələ <code>data.json</code> yüklənməyib. GitHub Actions-ı işə salın.</div>';
       } else if (state.tab === 'cve') {
         const cves = state.data.cves || [];
         el.innerHTML = cves.length ? cves.map(c => `
