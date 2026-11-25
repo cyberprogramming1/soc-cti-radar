@@ -139,7 +139,7 @@ APT_CATALOG = [
         "id": "lazarus",
         "name": "Lazarus Group (Hidden Cobra / TraderTraitor)",
         "category": "finance",
-        "keywords": ["lazarus", "hidden cobra", "tradertraitor", "blueNoroff", "bluenoroff"],
+        "keywords": ["lazarus", "hidden cobra", "tradertraitor", "bluenoroff"],
         "focus": "Bankçılıq, kripto/DeFi, IT təchizat zənciri, trojanlaşdırılmış tətbiqlər",
         "default_techniques": ["T1204.002", "T1059.001", "T1105", "T1041"],
         "mitigation": "İmzasız/yeni binary-lərin nəzarəti, developer/kripto mühitlərində kənar yükləmə bloklaması.",
@@ -149,7 +149,7 @@ APT_CATALOG = [
         "id": "scattered_spider",
         "name": "Scattered Spider (UNC3944 / Octo Tempest)",
         "category": "identity",
-        "keywords": ["scattered spider", "unc3944", "octo tempest", "0ktapus"],
+        "keywords": ["scattered spider", "unc3944", "octo tempest", "0ktapus", "vishing"],
         "focus": "Helpdesk/IT sosial mühəndislik, vishing, SSO/Okta/Entra ID və bulud hesabları",
         "default_techniques": ["T1566.004", "T1539", "T1078.004", "T1550.004"],
         "mitigation": "MFA reset prosedurlarında əlavə yoxlama, sessiya ləğvi və stealer/cookie ovlanması.",
@@ -215,7 +215,8 @@ DOMAIN_RE = re.compile(r"\b(?:[a-zA-Z0-9-]+\.)+(?:ru|su|cn|tk|xyz|top|cc|pw|io|c
 
 DARKWEB_KEYWORDS = (
     "leak", "breach", "ransomware", "darkweb", "dark web", "stealer",
-    "extortion", "vishing", "database", "dump", "forum", "onion", "payload", "malware"
+    "extortion", "vishing", "database", "dump", "forum", "onion", "payload",
+    "malware", "zero-day", "0-day", "credential", "threat actor", "wiper", "botnet"
 )
 
 _TRANSLATION_CACHE = {}
@@ -237,27 +238,27 @@ def deduplicate_sources():
     return unique_web
 
 
-def http_get_text(url, headers=None, timeout=12):
+def http_get_text(url, headers=None, timeout=10):
     req = urllib.request.Request(
         url,
         headers=headers or {
-            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.2; +https://github.com)"
+            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.4; +https://github.com)"
         },
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read().decode("utf-8", errors="ignore")
 
 
-def http_get_json(url, headers=None, timeout=15):
+def http_get_json(url, headers=None, timeout=12):
     return json.loads(http_get_text(url, headers=headers, timeout=timeout))
 
 
-def http_post_form(url, data_dict, headers=None, timeout=12):
+def http_post_form(url, data_dict, headers=None, timeout=10):
     encoded = urllib.parse.urlencode(data_dict).encode("utf-8")
     req = urllib.request.Request(
         url,
         data=encoded,
-        headers=headers or {"User-Agent": "SOC-CTI-Radar/3.2"},
+        headers=headers or {"User-Agent": "SOC-CTI-Radar/3.4"},
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8", errors="ignore"))
@@ -271,15 +272,6 @@ def clean_html(text):
     return text
 
 
-def _fetch_json_url(url, timeout=10):
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.3)"},
-    )
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        return json.loads(resp.read().decode("utf-8", errors="ignore"))
-
-
 def translate_to_az(text):
     src = (text or "").strip()
     if not src:
@@ -287,9 +279,9 @@ def translate_to_az(text):
     if src in _TRANSLATION_CACHE:
         return _TRANSLATION_CACHE[src]
 
-    chunk = src[:500]
+    chunk = src[:450]
 
-    # 1) Google Translate GTX endpoint
+    # 1) Google Translate GTX
     try:
         q = urllib.parse.urlencode({
             "client": "gtx",
@@ -298,20 +290,20 @@ def translate_to_az(text):
             "dt": "t",
             "q": chunk,
         })
-        parsed = _fetch_json_url(f"https://translate.googleapis.com/translate_a/single?{q}", timeout=8)
+        parsed = http_get_json(f"https://translate.googleapis.com/translate_a/single?{q}", timeout=7)
         translated = "".join(seg[0] for seg in (parsed[0] or []) if seg and seg[0]).strip()
-        if translated and translated.lower() != chunk.lower():
+        if translated:
             _TRANSLATION_CACHE[src] = translated
             return translated
     except Exception:
         pass
 
-    # 2) MyMemory fallback API
+    # 2) MyMemory ehtiyat API
     try:
-        q2 = urllib.parse.urlencode({"q": chunk[:450], "langpair": "en|az"})
-        mm = _fetch_json_url(f"https://api.mymemory.translated.net/get?{q2}", timeout=9)
+        q2 = urllib.parse.urlencode({"q": chunk[:400], "langpair": "en|az"})
+        mm = http_get_json(f"https://api.mymemory.translated.net/get?{q2}", timeout=8)
         mm_text = html.unescape(((mm.get("responseData") or {}).get("translatedText") or "")).strip()
-        if mm_text and "MYMEMORY WARNING" not in mm_text.upper() and mm_text.lower() != chunk.lower():
+        if mm_text and "MYMEMORY WARNING" not in mm_text.upper():
             _TRANSLATION_CACHE[src] = mm_text
             return mm_text
     except Exception:
@@ -320,10 +312,15 @@ def translate_to_az(text):
     _TRANSLATION_CACHE[src] = src
     return src
 
+
 def classify_category(source_name, title, summary, url):
     blob = f"{source_name} {title} {summary} {url}".lower()
     if any(k in blob for k in DARKWEB_KEYWORDS) or any(
-        d in url.lower() for d in ("leakfa", "darkforums", "patched.to", "ransomware.live", "dailydarkweb", "darknetlist", "blackbones", "secretline", "bf.st", "tria.ge", "mwdb.cert.pl")
+        d in url.lower() for d in (
+            "leakfa", "darkforums", "patched.to", "ransomware.live",
+            "dailydarkweb", "darknetlist", "blackbones", "secretline",
+            "bf.st", "tria.ge", "mwdb.cert.pl", "kalir.io", "leakfarsi", "dread", "tenebris"
+        )
     ):
         return "darkweb_cti"
     return "global_cyber"
@@ -332,7 +329,7 @@ def classify_category(source_name, title, summary, url):
 def load_mitre_techniques():
     techniques = dict(FALLBACK_MITRE_TECHNIQUES)
     try:
-        stix = http_get_json(MITRE_ENTERPRISE_STIX_URL, timeout=20)
+        stix = http_get_json(MITRE_ENTERPRISE_STIX_URL, timeout=14)
         for obj in stix.get("objects") or []:
             if obj.get("type") != "attack-pattern" or obj.get("revoked") or obj.get("x_mitre_deprecated"):
                 continue
@@ -367,12 +364,12 @@ def fetch_rss_news():
     items = []
     for name, url in RSS_SOURCES:
         try:
-            xml_data = http_get_text(url)
+            xml_data = http_get_text(url, timeout=9)
             root = ET.fromstring(xml_data)
             entries = root.findall(".//item")
             if not entries:
                 entries = root.findall(".//{http://www.w3.org/2005/Atom}entry")
-            for elem in entries[:5]:
+            for elem in entries[:4]:
                 title_el = elem.find("title")
                 if title_el is None:
                     title_el = elem.find("{http://www.w3.org/2005/Atom}title")
@@ -389,7 +386,7 @@ def fetch_rss_news():
                     elem.findtext("description")
                     or elem.findtext("{http://www.w3.org/2005/Atom}summary")
                     or ""
-                )[:260]
+                )[:240]
                 pub_date = (
                     elem.findtext("pubDate")
                     or elem.findtext("{http://www.w3.org/2005/Atom}updated")
@@ -430,24 +427,25 @@ def fetch_web_sources_items(web_sources):
             continue
 
         try:
-            raw = http_get_text(url, timeout=10)
+            raw = http_get_text(url, timeout=7)
             title_m = re.search(r"<title[^>]*>(.*?)</title>", raw, flags=re.S | re.I)
-            page_title = (clean_html(title_m.group(1)) if title_m else name)[:140] or name
+            page_title = (clean_html(title_m.group(1)) if title_m else name)[:130] or name
             text_body = clean_html(raw)
-            snippet = text_body[:240] if text_body else f"{name} mənbəsindən məlumat toplandı."
+            snippet = text_body[:220] if text_body else f"{name} mənbəsindən məlumat toplandı."
+            cat = classify_category(name, page_title, snippet, url)
             items.append({
                 "source": name,
-                "category": classify_category(name, page_title, snippet, url),
+                "category": cat,
                 "title": page_title,
                 "title_az": translate_to_az(page_title),
                 "summary": snippet,
-                "summary_az": translate_to_az(snippet),
+                "summary_az": snippet,
                 "url": url,
                 "date": now_az_str()[:10],
             })
         except Exception as e:
-            t = f"{name} (canlı sorğu məhdud/bloklu)"
-            s = f"Mənbə qeydə alındı ({str(e)[:80]})."
+            t = f"{name} (mənbə qeydi)"
+            s = f"Mənbə qeydə alındı ({str(e)[:70]})."
             items.append({
                 "source": name,
                 "category": classify_category(name, name, "", url),
@@ -465,7 +463,7 @@ def deduplicate_news(items):
     seen = set()
     out = []
     for it in items:
-        key = f"{(it.get('url') or '').strip().lower()}|{(it.get('title') or '').strip().lower()[:90]}"
+        key = f"{(it.get('url') or '').strip().lower()}|{(it.get('title') or '').strip().lower()[:85]}"
         if key in seen:
             continue
         seen.add(key)
@@ -475,7 +473,7 @@ def deduplicate_news(items):
 
 def fetch_cisa_kev():
     try:
-        data = http_get_json(CISA_KEV_URL)
+        data = http_get_json(CISA_KEV_URL, timeout=12)
         vulns = data.get("vulnerabilities") or []
         vulns_sorted = sorted(vulns, key=lambda x: x.get("dateAdded", ""), reverse=True)
         out = []
@@ -532,7 +530,6 @@ def detect_active_apts(news, cves, mitre_techniques):
                     if tid in mitre_techniques:
                         found_techs.add(tid)
 
-        # Kontekstual aktivlik uyğunluğu (ransomware, vishing/identity, infra/exploit)
         context_hits = 0
         for entry in corpus_entries:
             txt = entry["text"]
@@ -547,17 +544,22 @@ def detect_active_apts(news, cves, mitre_techniques):
 
         mention_count = len(matched_mentions)
         is_explicitly_seen = mention_count > 0
-        activity_score = min(99, 55 + mention_count * 12 + min(24, context_hits * 2))
-        level = "CRITICAL" if (is_explicitly_seen or grp["level"] == "CRITICAL") else "HIGH"
+        activity_score = min(99, 58 + mention_count * 12 + min(22, context_hits * 2))
+        level = "CRITICAL" if is_explicitly_seen else "HIGH"
 
         tech_details = []
         for tid in sorted(found_techs):
-            tinfo = mitre_techniques.get(tid) or {"id": tid, "name": tid, "tactic": "ATT&CK", "url": f"https://attack.mitre.org/techniques/{tid.replace('.', '/')}/"}
+            tinfo = mitre_techniques.get(tid) or {
+                "id": tid,
+                "name": tid,
+                "tactic": "Enterprise ATT&CK",
+                "url": f"https://attack.mitre.org/techniques/{tid.replace('.', '/')}/",
+            }
             tech_details.append({
                 "id": tid,
                 "name": tinfo.get("name", tid),
-                "tactic": tinfo.get("tactic", "ATT&CK"),
-                "url": tinfo.get("url", ""),
+                "tactic": tinfo.get("tactic", "Enterprise ATT&CK"),
+                "url": tinfo.get("url", f"https://attack.mitre.org/techniques/{tid.replace('.', '/')}/"),
             })
 
         active_list.append({
@@ -639,7 +641,7 @@ def extract_and_dedup_iocs(news_items, cves):
 
 def check_urlhaus(ioc):
     auth = os.environ.get("URLHAUS_AUTH_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/3.2"}
+    headers = {"User-Agent": "SOC-CTI-Radar/3.4"}
     if auth:
         headers["Auth-Key"] = auth
     try:
@@ -666,7 +668,7 @@ def check_virustotal(ioc):
     key = os.environ.get("VT_API_KEY", "").strip()
     if not key:
         return {"skipped": True, "score_add": 0}
-    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/3.2"}
+    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/3.4"}
     try:
         if ioc["type"] == "ip":
             ep = f"https://www.virustotal.com/api/v3/ip_addresses/{urllib.parse.quote(ioc['value'])}"
@@ -696,7 +698,7 @@ def check_abuseipdb(ioc):
         q = urllib.parse.urlencode({"ipAddress": ioc["value"], "maxAgeInDays": "30"})
         data = http_get_json(
             f"https://api.abuseipdb.com/api/v2/check?{q}",
-            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/3.2"},
+            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/3.4"},
         )
         d = data.get("data") or {}
         conf = int(d.get("abuseConfidenceScore", 0))
@@ -707,7 +709,7 @@ def check_abuseipdb(ioc):
 
 def check_otx(ioc):
     key = os.environ.get("OTX_API_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/3.2"}
+    headers = {"User-Agent": "SOC-CTI-Radar/3.4"}
     if key:
         headers["X-OTX-API-KEY"] = key
     try:
