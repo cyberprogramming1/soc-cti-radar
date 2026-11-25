@@ -242,7 +242,7 @@ def http_get_text(url, headers=None, timeout=10):
     req = urllib.request.Request(
         url,
         headers=headers or {
-            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.4; +https://github.com)"
+            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.5; +https://github.com)"
         },
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -258,7 +258,7 @@ def http_post_form(url, data_dict, headers=None, timeout=10):
     req = urllib.request.Request(
         url,
         data=encoded,
-        headers=headers or {"User-Agent": "SOC-CTI-Radar/3.4"},
+        headers=headers or {"User-Agent": "SOC-CTI-Radar/3.5"},
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8", errors="ignore"))
@@ -281,7 +281,6 @@ def translate_to_az(text):
 
     chunk = src[:450]
 
-    # 1) Google Translate GTX
     try:
         q = urllib.parse.urlencode({
             "client": "gtx",
@@ -298,7 +297,6 @@ def translate_to_az(text):
     except Exception:
         pass
 
-    # 2) MyMemory ehtiyat API
     try:
         q2 = urllib.parse.urlencode({"q": chunk[:400], "langpair": "en|az"})
         mm = http_get_json(f"https://api.mymemory.translated.net/get?{q2}", timeout=8)
@@ -614,6 +612,7 @@ def extract_and_dedup_iocs(news_items, cves):
             "level": "LOW",
             "score": 10,
             "reasons": [],
+            "verdict": "İlkin qeyd",
             "checks": {},
         })
 
@@ -641,34 +640,36 @@ def extract_and_dedup_iocs(news_items, cves):
 
 def check_urlhaus(ioc):
     auth = os.environ.get("URLHAUS_AUTH_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/3.4"}
+    headers = {"User-Agent": "SOC-CTI-Radar/3.5"}
     if auth:
         headers["Auth-Key"] = auth
     try:
         if ioc["type"] == "url":
             res = http_post_form("https://urlhaus-api.abuse.ch/v1/url/", {"url": ioc["value"]}, headers=headers)
             if res.get("query_status") == "ok":
-                return {"hit": True, "threat": res.get("threat") or "listed_url", "score_add": 45}
+                return {"hit": True, "threat": res.get("threat") or "listed_url", "score_add": 45, "summary": f"URLhaus: aktiv təhdid ({res.get('threat') or 'URL'})"}
         elif ioc["type"] == "domain":
             host = ioc["value"].split("/")[0]
             res = http_post_form("https://urlhaus-api.abuse.ch/v1/host/", {"host": host}, headers=headers)
             if res.get("query_status") == "ok" and (res.get("urls") or []):
-                return {"hit": True, "threat": f"urls:{len(res.get('urls', []))}", "score_add": 40}
+                cnt = len(res.get("urls", []))
+                return {"hit": True, "threat": f"urls:{cnt}", "score_add": 40, "summary": f"URLhaus: {cnt} zərərli URL qeydi"}
         elif ioc["type"] == "hash":
             algo = "sha256_hash" if len(ioc["value"]) == 64 else "md5_hash"
             res = http_post_form("https://urlhaus-api.abuse.ch/v1/payload/", {algo: ioc["value"]}, headers=headers)
             if res.get("query_status") == "ok":
-                return {"hit": True, "threat": res.get("signature") or "malware_payload", "score_add": 50}
+                sig = res.get("signature") or "malware_payload"
+                return {"hit": True, "threat": sig, "score_add": 50, "summary": f"URLhaus: zərərli fayl ({sig})"}
     except Exception as e:
-        return {"hit": False, "error": str(e)[:80], "score_add": 0}
-    return {"hit": False, "score_add": 0}
+        return {"hit": False, "error": str(e)[:80], "score_add": 0, "summary": "URLhaus: sorğu xətası"}
+    return {"hit": False, "score_add": 0, "summary": "URLhaus: təmiz"}
 
 
 def check_virustotal(ioc):
     key = os.environ.get("VT_API_KEY", "").strip()
     if not key:
-        return {"skipped": True, "score_add": 0}
-    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/3.4"}
+        return {"skipped": True, "score_add": 0, "summary": "VT: API açarı yoxdur"}
+    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/3.5"}
     try:
         if ioc["type"] == "ip":
             ep = f"https://www.virustotal.com/api/v3/ip_addresses/{urllib.parse.quote(ioc['value'])}"
@@ -677,39 +678,40 @@ def check_virustotal(ioc):
         elif ioc["type"] == "hash":
             ep = f"https://www.virustotal.com/api/v3/files/{urllib.parse.quote(ioc['value'])}"
         else:
-            return {"skipped": True, "score_add": 0}
+            return {"skipped": True, "score_add": 0, "summary": "VT: tətbiq olunmur"}
 
         data = http_get_json(ep, headers=headers)
         stats = (((data.get("data") or {}).get("attributes") or {}).get("last_analysis_stats")) or {}
         mal = int(stats.get("malicious", 0))
         susp = int(stats.get("suspicious", 0))
-        return {"malicious": mal, "suspicious": susp, "score_add": min(60, mal * 10 + susp * 4)}
+        return {"malicious": mal, "suspicious": susp, "score_add": min(60, mal * 10 + susp * 4), "summary": f"VT: {mal} malicious / {susp} suspicious"}
     except Exception as e:
-        return {"error": str(e)[:80], "score_add": 0}
+        return {"error": str(e)[:80], "score_add": 0, "summary": "VT: sorğu xətası"}
 
 
 def check_abuseipdb(ioc):
     if ioc["type"] != "ip":
-        return {"skipped": True, "score_add": 0}
+        return {"skipped": True, "score_add": 0, "summary": "AbuseIPDB: yalnız IP"}
     key = os.environ.get("ABUSEIPDB_API_KEY", "").strip()
     if not key:
-        return {"skipped": True, "score_add": 0}
+        return {"skipped": True, "score_add": 0, "summary": "AbuseIPDB: API açarı yoxdur"}
     try:
         q = urllib.parse.urlencode({"ipAddress": ioc["value"], "maxAgeInDays": "30"})
         data = http_get_json(
             f"https://api.abuseipdb.com/api/v2/check?{q}",
-            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/3.4"},
+            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/3.5"},
         )
         d = data.get("data") or {}
         conf = int(d.get("abuseConfidenceScore", 0))
-        return {"confidence": conf, "reports": d.get("totalReports", 0), "score_add": int(conf * 0.5)}
+        rep = int(d.get("totalReports", 0))
+        return {"confidence": conf, "reports": rep, "score_add": int(conf * 0.5), "summary": f"AbuseIPDB: {conf}% etibar ({rep} hesabat)"}
     except Exception as e:
-        return {"error": str(e)[:80], "score_add": 0}
+        return {"error": str(e)[:80], "score_add": 0, "summary": "AbuseIPDB: sorğu xətası"}
 
 
 def check_otx(ioc):
     key = os.environ.get("OTX_API_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/3.4"}
+    headers = {"User-Agent": "SOC-CTI-Radar/3.5"}
     if key:
         headers["X-OTX-API-KEY"] = key
     try:
@@ -720,28 +722,34 @@ def check_otx(ioc):
         elif ioc["type"] == "hash":
             ep = f"https://otx.alienvault.com/api/v1/indicators/file/{urllib.parse.quote(ioc['value'])}/general"
         else:
-            return {"skipped": True, "score_add": 0}
+            return {"skipped": True, "score_add": 0, "summary": "OTX: tətbiq olunmur"}
 
         data = http_get_json(ep, headers=headers)
         pulses = int(((data.get("pulse_info") or {}).get("count")) or 0)
-        return {"pulses": pulses, "score_add": min(35, pulses * 5)}
+        return {"pulses": pulses, "score_add": min(35, pulses * 5), "summary": f"OTX: {pulses} pulse"}
     except Exception as e:
-        return {"error": str(e)[:80], "score_add": 0}
+        return {"error": str(e)[:80], "score_add": 0, "summary": "OTX: sorğu xətası"}
 
 
 def check_shodan(ioc):
     if ioc["type"] != "ip":
-        return {"skipped": True, "score_add": 0}
+        return {"skipped": True, "score_add": 0, "summary": "Shodan: yalnız IP"}
     key = os.environ.get("SHODAN_API_KEY", "").strip()
     if not key:
-        return {"skipped": True, "score_add": 0}
+        return {"skipped": True, "score_add": 0, "summary": "Shodan: API açarı yoxdur"}
     try:
         data = http_get_json(f"https://api.shodan.io/shodan/host/{urllib.parse.quote(ioc['value'])}?key={urllib.parse.quote(key)}")
         vulns = list((data.get("vulns") or {}).keys())
         ports = data.get("ports") or []
-        return {"ports": ports[:10], "vulns": vulns[:8], "org": data.get("org"), "score_add": min(30, len(vulns) * 8 + (5 if len(ports) > 5 else 0))}
+        return {
+            "ports": ports[:10],
+            "vulns": vulns[:8],
+            "org": data.get("org"),
+            "score_add": min(30, len(vulns) * 8 + (5 if len(ports) > 5 else 0)),
+            "summary": f"Shodan: {len(ports)} port, {len(vulns)} CVE",
+        }
     except Exception as e:
-        return {"error": str(e)[:80], "score_add": 0}
+        return {"error": str(e)[:80], "score_add": 0, "summary": "Shodan: sorğu xətası"}
 
 
 def assign_level(score, ioc):
@@ -761,6 +769,8 @@ def enrich_iocs(iocs):
     for ioc in iocs:
         score = 10
         reasons = []
+        tool_notes = []
+
         uh = check_urlhaus(ioc)
         vt = check_virustotal(ioc)
         ab = check_abuseipdb(ioc)
@@ -772,11 +782,26 @@ def enrich_iocs(iocs):
             if add > 0:
                 score += add
                 reasons.append(f"{label} (+{add})")
+            if not res.get("skipped") and res.get("summary"):
+                tool_notes.append(res["summary"])
 
         level, final_score = assign_level(score, ioc)
+        if ioc["type"] == "cve":
+            verdict = "Aktiv istismar kataloqunda qeyd olunan zəiflik — dərhal yama/hunting tələb edir."
+        elif level == "CRITICAL":
+            verdict = "Kritik zərərli indikator — bloklama və dərhal SOC/SOAR müdaxiləsi tövsiyə olunur."
+        elif level == "HIGH":
+            verdict = "Yüksək riskli indikator — loglarda ovlama və sessiya/host yoxlaması aparın."
+        elif level == "MEDIUM":
+            verdict = "Orta riskli indikator — əlavə kontekst və perimetr/DNS izi yoxlanmalıdır."
+        else:
+            verdict = "Aşağı/ilkin risk — aktiv zərərli siqnal qeydə alınmayıb, müşahidədə saxlayın."
+
         ioc["level"] = level
         ioc["score"] = final_score
-        ioc["reasons"] = reasons if reasons else ["İlkin/standart yoxlama"]
+        ioc["reasons"] = reasons if reasons else ["Açıq/API yoxlamada əlavə risk balı yoxdur"]
+        ioc["verdict"] = verdict
+        ioc["tool_summary"] = " • ".join(tool_notes) if tool_notes else "Avtomatik alət yoxlaması tamamlandı"
         ioc["checks"] = {
             "urlhaus": uh,
             "virustotal": vt,
@@ -831,9 +856,9 @@ def send_deep_cti_report(updated_at, source_count, news, cves, iocs, active_apts
 
     if high_iocs:
         lines.append("")
-        lines.append("🚨 <b>Yüksək Səviyyəli IoC-lər:</b>")
+        lines.append("🚨 <b>Yüksək Səviyyəli IoC-lər (Avtomatik Analiz):</b>")
         for it in high_iocs:
-            lines.append(f"• [<b>{it['level']}</b> | {it['score']}] <code>{it['value']}</code>")
+            lines.append(f"• [<b>{it['level']}</b> | {it['score']}] <code>{it['value']}</code> — {it.get('verdict', '')[:70]}")
 
     payload = {
         "chat_id": chat_id,
