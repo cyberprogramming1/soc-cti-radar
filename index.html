@@ -14,7 +14,6 @@
       --accent: #3b82f6;
       --text: #f8fafc;
       --subtext: #cbd5e1;
-      --muted: #94a3b8;
     }
     * { box-sizing: border-box; }
     html, body {
@@ -156,7 +155,7 @@
   <div class="header">
     <div class="header-top">
       <h1>🛡️ DEEP CTI & SOC Konsolu</h1>
-      <span class="pill">AUTO IOC STATUS • MITRE ATT&CK</span>
+      <span class="pill">LIVE CTI • MITRE ATT&CK</span>
     </div>
     <div class="sub" id="updatedAt">Yenilənmə vaxtı yüklənir... • Avto-cədvəl: 12:00 + hər 3 saat (+04)</div>
   </div>
@@ -186,43 +185,6 @@
     setTimeout(goFullScreen, 200);
     setTimeout(goFullScreen, 700);
 
-    const FALLBACK_APTS = [
-      {
-        id: "apt28",
-        name: "APT28 (Fancy Bear / Forest Blizzard)",
-        category: "espionage",
-        level: "CRITICAL",
-        activity_score: 88,
-        status_label: "Aktiv sektor radarı",
-        focus: "Dövlət, müdafiə, enerji, mail və sərhəd/VPN sistemləri",
-        mitigation: "Edge/mail/VPN yamaları, phishing-resistant MFA, anomal auth/ASN monitorinqi.",
-        scenario: "token_replay",
-        techniques: [
-          { id: "T1190", name: "Exploit Public-Facing Application", url: "https://attack.mitre.org/techniques/T1190/" },
-          { id: "T1566.001", name: "Spearphishing Attachment", url: "https://attack.mitre.org/techniques/T1566/001/" },
-          { id: "T1071.001", name: "Web Protocols", url: "https://attack.mitre.org/techniques/T1071/001/" }
-        ],
-        mentions: []
-      },
-      {
-        id: "scattered_spider",
-        name: "Scattered Spider (UNC3944 / Octo Tempest)",
-        category: "identity",
-        level: "CRITICAL",
-        activity_score: 86,
-        status_label: "Aktiv sektor radarı",
-        focus: "Helpdesk/IT sosial mühəndislik, vishing, SSO/Okta/Entra ID və bulud hesabları",
-        mitigation: "MFA reset prosedurlarında əlavə yoxlama, sessiya ləğvi və stealer/cookie ovlanması.",
-        scenario: "token_replay",
-        techniques: [
-          { id: "T1566.004", name: "Spearphishing Voice", url: "https://attack.mitre.org/techniques/T1566/004/" },
-          { id: "T1539", name: "Steal Web Session Cookie", url: "https://attack.mitre.org/techniques/T1539/" },
-          { id: "T1078.004", name: "Cloud Accounts", url: "https://attack.mitre.org/techniques/T1078/004/" }
-        ],
-        mentions: []
-      }
-    ];
-
     const state = {
       tab: "news",
       newsCategory: "all",
@@ -238,7 +200,7 @@
       aptSearch: "",
       copied: "",
       soarPlaybook: "",
-      data: { updated_at: "Yüklənir...", sources: [], news: [], cves: [], iocs: [], active_apts: FALLBACK_APTS }
+      data: { updated_at: "Yüklənir...", sources: [], news: [], cves: [], iocs: [], active_apts: [] }
     };
 
     const SCENARIO_META = {
@@ -485,7 +447,7 @@
         view.innerHTML = `
           <div class="card">
             <div class="card-title">Avtomatik IoC Status & Nəticə</div>
-            <div class="muted" style="margin-bottom:8px;">İndikator daxil edin və ya aşağıdakı siyahıdan seçin — sistem alət nəticəsinə görə yalnız status və yekun qərarı göstərir.</div>
+            <div class="muted" style="margin-bottom:8px;">İndikator daxil edin və ya aşağıdakı siyahıdan seçin — yalnız yekun status və nəticə göstərilir.</div>
             <input value="${state.iocValue}" oninput="state.iocValue=this.value;render()" placeholder="IP, domen, URL, hash və ya CVE daxil edin..." />
             ${manualRes ? `
               <div class="status-box">
@@ -528,7 +490,7 @@
       }
 
       else if (state.tab === "apt") {
-        const apts = (state.data.active_apts && state.data.active_apts.length) ? state.data.active_apts : FALLBACK_APTS;
+        const apts = state.data.active_apts || [];
         const q = (state.aptSearch || "").trim().toLowerCase();
         const list = apts.filter(a => {
           const catOk = state.aptCategory === "all" || a.category === state.aptCategory;
@@ -539,9 +501,9 @@
 
         view.innerHTML = `
           <div class="card">
-            <div class="card-title">🕵️ Mənbələrdən Aşkarlanan Aktiv APT Qrupları & MITRE ATT&CK</div>
+            <div class="card-title">🕵️ Mənbələrdə Aşkarlanan Real APT Qrupları & MITRE ATT&CK</div>
             <div class="muted" style="margin-bottom:8px;">
-              Texnikalar <a href="https://attack.mitre.org/" target="_blank" rel="noopener">MITRE ATT&CK</a> bazası üzrə izlənir, aktivlik isə toplanan xəbər, CISA KEV və darkweb/CTI mənbələrindən analiz olunur.
+              Yalnız o an toplanan xəbərlərdə və CISA KEV məlumatlarında birbaşa qeyd olunan APT qrupları göstərilir.
             </div>
             <input value="${state.aptSearch}" oninput="state.aptSearch=this.value;render()" placeholder="APT, MITRE texnikası (T1190, T1539...), hədəf axtar..." />
             <div class="row-scroll">
@@ -559,7 +521,7 @@
             return `
               <div class="card">
                 <span class="badge ${levelBadgeClass(a.level)}">${a.level} • Score ${a.activity_score}</span>
-                <span class="badge ok">${a.status_label || "Aktiv"}</span>
+                <span class="badge ok">${a.status_label}</span>
                 <div class="card-title">${a.name}</div>
                 <div class="muted" style="margin-bottom:4px;"><b>Hədəflər:</b> ${a.focus}</div>
                 <div class="muted" style="margin-bottom:6px;"><b>Mitiqasiya:</b> ${a.mitigation}</div>
@@ -569,14 +531,14 @@
                 </div>
                 ${mentions.length ? `
                   <div class="orig-box" style="margin-bottom:8px;">
-                    <b>Mənbə izləri:</b><br/>
+                    <b>Mənbədə tapılan qeydlər:</b><br/>
                     ${mentions.map(m => `• [${m.source}] ${m.title}`).join("<br/>")}
                   </div>
                 ` : ""}
                 <button class="small" onclick="state.scenario='${a.scenario || "token_replay"}';state.targetScope='${scopeVal}';switchTab('hunting')">🎯 Bu APT üzrə Hunting</button>
               </div>
             `;
-          }).join("") : `<div class="card muted">Axtarışa uyğun APT qrupu tapılmadı.</div>`}
+          }).join("") : `<div class="card muted">Bu toplama dövründə mənbələrdə birbaşa adı çəkilən APT qrupu aşkarlanmadı.</div>`}
         `;
       }
 
@@ -596,16 +558,17 @@
       .then(r => r.json())
       .then(d => {
         const iocList = d.iocs || [];
+        const aptList = d.active_apts || [];
         state.data = {
           ...state.data,
           ...d,
-          active_apts: (d.active_apts && d.active_apts.length) ? d.active_apts : FALLBACK_APTS
+          active_apts: aptList
         };
         if (!state.iocValue && iocList.length) {
           state.iocValue = iocList[0].value;
         }
         document.getElementById("updatedAt").innerText =
-          `Son yenilənmə: ${d.updated_at} • Mənbə: ${(d.sources || []).length} • Aktiv APT: ${(state.data.active_apts || []).length} • IoC: ${iocList.length}`;
+          `Son yenilənmə: ${d.updated_at} • Mənbə: ${(d.sources || []).length} • Tapılan APT: ${aptList.length} • IoC: ${iocList.length}`;
         render();
       })
       .catch(() => render());
