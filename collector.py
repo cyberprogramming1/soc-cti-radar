@@ -29,6 +29,7 @@ RSS_SOURCES = [
     ("OSINT Team", "https://www.osintteam.com/feed/"),
     ("Intel471 Blog", "https://www.intel471.com/blog/feed"),
     ("DailyDarkWeb", "https://dailydarkweb.net/feed/"),
+    ("Kalir Pulse Feed", "https://pulse.kalir.io/en/feed.xml"),
 ]
 
 RAW_WEB_SOURCES = [
@@ -75,6 +76,96 @@ RAW_WEB_SOURCES = [
     ("Onion - Dread #2 (Tor)", "https://dreadytognbh7m5nlmqsogzzlxjy75iuxkulewbhxcorupbqahact2yd.onion/"),
     ("FlakkaOnline", "https://flakkaonline.com/"),
     ("Blackbones.cc", "https://blackbones.cc/"),
+
+    # Forums & Leak / Ransomware Onion Sites
+    ("Onion - Darknet Forums (Tor)", "https://darknet77vonbqeatfsnawm5jtnoci5z22mxay6cizmoucgmz52mwyad.onion/forums/"),
+    ("Onion - Hunters Ransomware (Tor)", "https://hunters55rdxciehoqzwv7vgyv6nt37tbwax2reroyzxhou7my5ejyid.onion/"),
+    ("Onion - LockBit (Tor)", "http://lockbit3753ekiocyo5epmpy6klmejchjtzddoekjlnt6mu3qh4de2id.onion/"),
+    ("Onion - DWL Tor (Tor)", "http://dwltorbltw3tdjskxn23j2mwz2f4q25j4ninl5bdvttiy4xb6cqzikid.onion/"),
+    ("Onion - OmegaLock (Tor)", "http://omegalock5zxwbhswbisc42o2q2i54vdulyvtqqbudqousisjgc7j7yd.onion/"),
+
+    # Hackread Breach / Hacking / Leaks
+    ("Hackread - Anonymous", "https://hackread.com/category/data-breaches/hacking-news/anonymous/"),
+    ("Hackread - Leaks Affairs", "https://hackread.com/category/data-breaches/hacking-news/leaks-affairs/"),
+
+    # News & Publications (Tor Onion Mirrors)
+    ("Onion - Reuters (Tor)", "http://smb7p276iht3i2fj.onion/"),
+    ("Onion - Forbes (Tor)", "http://t5pv5o4t6jyjilp6.onion/"),
+    ("Onion - Financial Times (Tor)", "http://xdm7flvwt3uvsrrd.onion/"),
+    ("Onion - The Guardian (Tor)", "https://www.guardian2zotagl6tmjucg3lrhxdk4dw3lhbqnkvvkywawy3oqfoprid.onion/"),
+    ("Onion - Tor News (Tor)", "http://a4ygisnerpgtc5ayerl22pll6cls3oyj54qgpm7qrmb66xrxts6y3lyd.onion/index.html"),
+    ("Onion - BBC News (Tor)", "https://www.bbcnewsv2vjtpsuy.onion/"),
+    ("Onion - New York Times (Tor)", "https://www.nytimes3xbfgragh.onion/"),
+    ("Onion - ProPublica (Tor)", "http://p53lf57qovyuvwsc6xnrppyply3vtqm7l6pcobkmyqsiofyeznfu5uqd.onion/"),
+    ("Onion - Deutsche Welle (Tor)", "http://dwnewsvdyyiamwnp.onion/"),
+    ("Onion - Radio Free Asia (Tor)", "https://rfa62zl6z6owmtlf.onion/"),
+    ("Onion - Bellingcat (Tor)", "http://bellcatmbguthn3age23lrbseln2lryzv3mt7whis7ktjw4qrestbzad.onion/"),
+    ("Onion - RFE/RL (Tor)", "https://www.rferlo2zxgv23tct66v45s5mecftol5vod3hf4rqbipfp46fqu2q56ad.onion/"),
+    ("Onion - Yahoo News (Tor)", "https://yahoonewsnqkxo423g7vuwr2mvkwmc5t4df5x44dfdfvmyzqgcyt3had.onion/"),
+    ("Onion - Al Jazeera (Tor)", "http://jkta32w5gvk6pmqdfwj67psojot3l2iwoqbdvrvywi5bkudfeandq7id.onion"),
+    ("Onion - Bloomberg News (Tor)", "http://ogdwaroarq4p6rnfn2hl4crvldyruyc2g24435qtxmd3twhevg7dsqid.onion"),
+    ("Onion - CBC (Tor)", "http://gppg43zz5d2yfuom3yfmxnnokn3zj4mekt55onlng3zs653ty4fio6qd.onion"),
+    ("Onion - CNN (Tor)", "http://qmifwf762qftydprw2adbg7hs2mkunac5xrz3cb5busaflji3rja5lid.onion"),
+    ("Onion - Forbidden Stories (Tor)", "http://fg25fqpu2dnxp24xs3jlcley4hp2inshpzek44q3czkhq3zffoqk26id.onion"),
+    ("Onion - HuffPost (Tor)", "http://ppw2pmtagxykinex6uubypsommtrcg6ytdh6bcr6agq2wxnrweao4cad.onion"),
+    ("Onion - Globe and Mail (Tor)", "http://a4zum5ydurvljrohxqp2rjjal5kro4ge2q2qizuonf2jubkhcr627gad.onion"),
+    ("Onion - Washington Post (Tor)", "http://vfnmxpa6fo4jdpyq3yneqhglluweax2uclvxkytfpmpkp5rsl75ir5qd.onion"),
+    ("Onion - Whistleblower Aid (Tor)", "http://kogbxf4ysay2qzozmg7ar45ijqmj2vxrwqa4upzqq2i7sqj7wv7wcdqd.onion"),
+
+    # Ransomware & Leak Sites
+    ("Ransomwiki", "https://darkfeed.io/ransomwiki/"),
+    ("Onion - Corporate Leaks (Tor)", "http://hxt254aygrsziejn.onion.ws/"),
+    ("Conti News Clearnet", "https://conti.news"),
+    ("Onion - Conti (Tor)", "http://htcltkjqoitnez5slo7fvhiou5lbno5bwczu7il2hmfpkowwdpj3q2yd.onion"),
+    ("Onion - Conti News (Tor)", "http://continewsnv5otx5kaoje7krkto2qbu3gtqef22mnr7eaxw3y6ncz3ad.onion.ly/"),
+    ("Onion - Hive Leaks (Tor)", "http://hiveleakdbtnp76ulyhi52eag6c6tyc3xw7ez7iqy6wc34gd2nekazyd.onion.ly/"),
+    ("Onion - LockBit 2.0 (Tor)", "http://lockbitapt6vx57t3eeqjofwgcglmutr3a35nygvokja5uuccip4ykyd.onion.ly/"),
+    ("Onion - Cuba Ransomware (Tor)", "http://cuba4ikm4jakjgmkezytyawtdgr2xymvy6nvzgw5cglswg3si76icnqd.onion.ly/"),
+    ("Onion - REvil (Tor)", "http://dnpscnbaix6nkwvystl3yxglz7nteicqrou3t75tpcc5532cztc46qyd.onion.ly/"),
+    ("Onion - Vice Society (Tor)", "http://vsociethok6sbprvevl4dlwbqrzyhxcxaqpvcqt5belwvsuxaxsutyad.onion.ly/"),
+    ("Onion - AvosLocker (Tor)", "http://avosqxh72b5ia23dl5fgwcpndkctuzqvh2iefk5imp3pi5gfhel5klad.onion.ly/"),
+    ("Onion - BlackMatter (Tor)", "http://blackmax7su6mbwtcyo3xwtpfxpm356jjqrs34y4crcytpw7mifuedyd.onion.ly/"),
+    ("Onion - BABUK (Tor)", "http://nq4zyac4ukl4tykmidbzgdlvaboqeqsemkp4t35bzvjeve6zm2lqcjid.onion.ly/"),
+    ("Onion - DoppelPaymer (Tor)", "http://hpoo4dosa3x4ognfxpqcrjwnsigvslm7kv6hvmhh2yqczaxy3j6qnwad.onion"),
+    ("Maze News", "https://mazenews.top"),
+    ("Onion - AKO Ransomware (Tor)", "http://37rckgo66iydpvgpwve7b2el5q2zhjw4tv4lmyewufnpx4lhkekxkoqd.onion"),
+    ("Onion - Nefilim (Tor)", "http://hxt254aygrsziejn.onion/"),
+    ("Onion - RagnarLocker (Tor)", "http://p6o7m73ujalhgkiv.onion/"),
+    ("Onion - Clop (Tor)", "http://ekbgzchl6x2ias37.onion/"),
+    ("Onion - Netwalker (Tor)", "http://rnfdsgm6wb6j6su5txkekw4u4y47kp2eatvu7d6xhyn5cs4lt4pdrqqd.onion/blog"),
+    ("Sekhmet Leaks", "https://sekhmetleaks.top/"),
+    ("Onion - Pysa (Tor)", "http://wqmfzni2nvbbpk25.onion/partners.html"),
+    ("Onion - Suncrypt (Tor)", "http://nbzzb6sa6xuura2z.onion/"),
+    ("DarkSide Clearnet", "https://darksidedxcftmqa.onion"),
+
+    # Onion Search Engines
+    ("Onion - not Evil (Tor)", "http://hss3uro2hsxfogfq.onion"),
+    ("Onion - Visitor (Tor)", "http://visitorfi5kl7q7i.onion"),
+    ("Onion - Dark Search Engine (Tor)", "http://7pwy57iklvt6lyhe.onion"),
+    ("Onion - Dark Web Links (Tor)", "http://bznjtqphs2lp4xdd.onion"),
+    ("Onion - SearX (Tor)", "http://searchb5a7tmimez.onion"),
+    ("Onion - Candle (Tor)", "http://gjobqjj7wyczbqie.onion"),
+    ("Onion - TorSearch (Tor)", "http://kbhpodhnfxl3clb4.onion"),
+    ("Onion - Caronte (Tor)", "http://carontevaha5x626.onion"),
+
+    # Underground Forums, Intel & Pastebins
+    ("Onion - House Of Lions Forums (Tor)", "http://lionhouse6yaacev.onion"),
+    ("Onion - Acropolis Forum (Tor)", "http://acropolhwczbgbkh.onion"),
+    ("Onion - The Stock Insiders (Tor)", "http://b34xhb2kjf3nbuyk.onion"),
+    ("Onion - Hidden Answers (Tor)", "http://answerstedhctbek.onion"),
+    ("Onion - The Intel Exchange (Tor)", "http://rrcc5uuudhh4oz3c.onion"),
+    ("Onion - Flashlight Forum (Tor)", "http://kxojy6ygju4h6lwn.onion"),
+    ("Onion - Anonymous BBS (Tor)", "http://qm3monarchzifkwa.onion"),
+    ("Onion - InserTor Pastebin (Tor)", "http://54ogum7gwxhtgiya.onion/insertor/"),
+    ("Onion - Simple Pastebin (Tor)", "http://stu32b4sndw3cptm.onion"),
+    ("DeepWebLinks", "https://deepweblinks.net/"),
+
+    # Curated Real-World Onion Sites (CTI / OSINT / Security / Investigative Media)
+    ("Onion - BBC News Global (Tor)", "https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/"),
+    ("Onion - BBC Azeri (Tor)", "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/azeri"),
+    ("Onion - VOA News (Tor)", "https://www.voanews5aitmne6gs2btokcacixclgfl43cv27sirgbauyyjylwpdtqd.onion/"),
+    ("Onion - Riseup Security (Tor)", "http://vww6ybal4bd7szmgncyruucpgfkqahzddi37ktceo3ah7ngmcopnpyyd.onion/en/security/network-security/tor#riseups-tor-onion-services"),
+    ("Onion - Alec Muffett Blog (Tor)", "https://amuffettdexn6r5s4lt45b6mlrgmsmo56szaaighyjurp4ccuj63zkad.onion/blog"),
 ]
 
 CISA_KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
@@ -218,12 +309,15 @@ URL_RE = re.compile(r"https?://[^\s<>\"')\]]+", re.IGNORECASE)
 HASH_RE = re.compile(r"\b(?:[a-fA-F0-9]{64}|[a-fA-F0-9]{40}|[a-fA-F0-9]{32})\b")
 CVE_RE = re.compile(r"\bCVE-\d{4}-\d{4,7}\b", re.IGNORECASE)
 TECH_RE = re.compile(r"\bT\d{4}(?:\.\d{3})?\b")
-DOMAIN_RE = re.compile(r"\b(?:[a-zA-Z0-9-]+\.)+(?:ru|su|cn|tk|xyz|top|cc|pw|io|com|net|org|info|live|dev)\b", re.IGNORECASE)
+DOMAIN_RE = re.compile(r"\b(?:[a-zA-Z0-9-]+\.)+(?:ru|su|cn|tk|xyz|top|cc|pw|io|com|net|org|info|live|dev|onion)\b", re.IGNORECASE)
 
 DARKWEB_KEYWORDS = (
     "leak", "breach", "ransomware", "darkweb", "dark web", "stealer",
     "extortion", "vishing", "database", "dump", "forum", "onion", "payload",
-    "malware", "zero-day", "0-day", "credential", "threat actor", "wiper", "botnet"
+    "malware", "zero-day", "0-day", "credential", "threat actor", "wiper",
+    "botnet", "ransomwiki", "lockbit", "conti", "revil", "hive", "cuba",
+    "blackmatter", "babuk", "dopple", "maze", "nefilim", "ragnar", "clop",
+    "netwalker", "sekhmet", "pysa", "suncrypt", "darkside", "hunters", "omegalock"
 )
 
 
@@ -302,7 +396,7 @@ def http_get_text(url, headers=None, timeout=10):
     req = urllib.request.Request(
         url,
         headers=headers or {
-            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/4.2; +https://github.com)"
+            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/4.4; +https://github.com)"
         },
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -330,7 +424,7 @@ def http_post_form(url, data_dict, headers=None, timeout=10):
     req = urllib.request.Request(
         url,
         data=encoded,
-        headers=headers or {"User-Agent": "SOC-CTI-Radar/4.2"},
+        headers=headers or {"User-Agent": "SOC-CTI-Radar/4.4"},
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8", errors="ignore"))
@@ -372,7 +466,9 @@ def classify_category(source_name, title, summary, url):
         d in url.lower() for d in (
             "leakfa", "darkforums", "patched.to", "ransomware.live",
             "dailydarkweb", "darknetlist", "blackbones", "secretline",
-            "bf.st", "tria.ge", "mwdb.cert.pl", "kalir.io", "leakfarsi", "dread", "tenebris"
+            "bf.st", "tria.ge", "mwdb.cert.pl", "kalir.io", "leakfarsi",
+            "dread", "tenebris", "hackread", "darkfeed.io", "mazenews",
+            "sekhmetleaks", "deepweblinks", "/forums/"
         )
     ):
         return "darkweb_cti"
@@ -462,8 +558,58 @@ def fetch_rss_news():
     return items
 
 
-def fetch_web_sources_items(web_sources):
-    items = []
+def infer_mitre_from_context(text, mitre_techniques):
+    t = (text or "").lower()
+    inferred = set()
+
+    for tid in TECH_RE.findall((text or "").upper()):
+        if tid in mitre_techniques:
+            inferred.add(tid)
+
+    if any(k in t for k in ("ransomware", "encrypt", "wiper", "extortion", "lockbit", "spacebears", "silentransom", "hunters", "omegalock", "conti", "revil", "hive", "blackmatter", "babuk", "clop")):
+        inferred.update(["T1486", "T1021", "T1041", "T1059.001"])
+    if any(k in t for k in ("phish", "spearphish", "vishing", "malicious file", "attachment")):
+        inferred.update(["T1566", "T1204.002"])
+    if any(k in t for k in ("token", "cookie", "session", "credential", "stealer", "mfa", "sso")):
+        inferred.update(["T1539", "T1550.004", "T1555.003"])
+    if any(k in t for k in ("exploit", "rce", "cve-", "vpn", "edge", "web", "public-facing")):
+        inferred.update(["T1190", "T1059"])
+    if any(k in t for k in ("exfil", "leak", "dump", "cloud", "api")):
+        inferred.update(["T1567", "T1078.004"])
+
+    if not inferred:
+        inferred.update(["T1486", "T1021", "T1071.001"])
+
+    return inferred
+
+
+def infer_scenario_from_techs(tech_set):
+    if "T1190" in tech_set:
+        return "rce_web"
+    if "T1539" in tech_set or "T1550.004" in tech_set:
+        return "token_replay"
+    if "T1555.003" in tech_set:
+        return "infostealer"
+    if "T1567" in tech_set:
+        return "api_leak"
+    return "c2_lateral"
+
+
+def parse_specialized_web_sources(web_sources, mitre_techniques):
+    news_items = []
+    extra_ransomware = []
+    extra_cves = []
+    extra_actor_names = []
+
+    rw_markers = (
+        "/ransomware", "announcement-database-index", "ransomwiki",
+        "corporate leaks", "lockbit", "hunters55", "omegalock",
+        "conti", "hiveleak", "cuba4ik", "dnpscnb", "vsociet",
+        "avosqxh", "blackmax", "nq4zyac", "hpoo4dos", "mazenews",
+        "37rckgo", "p6o7m73", "ekbgzch", "rnfdsgm", "sekhmetleaks",
+        "wqmfzni", "nbzzb6s", "darksidedxcftmqa"
+    )
+
     for name, url in web_sources:
         try:
             raw = http_get_text(url, timeout=8 if ".onion" not in url.lower() else 18)
@@ -472,7 +618,8 @@ def fetch_web_sources_items(web_sources):
             text_body = clean_html(raw)
             snippet = text_body[:220] if text_body else f"Fetched data from {name}."
             cat = classify_category(name, page_title, snippet, url)
-            items.append({
+
+            news_items.append({
                 "source": name,
                 "category": cat,
                 "title": page_title,
@@ -482,6 +629,50 @@ def fetch_web_sources_items(web_sources):
                 "url": url,
                 "date": now_az_str()[:10],
             })
+
+            u_low = url.lower()
+            blob_text = f"{name} {page_title} {text_body[:2500]}"
+
+            if any(m in u_low for m in rw_markers):
+                countries = extract_countries(blob_text) or ["Global"]
+                actor_matches = re.findall(
+                    r"\b(?:APT-?\d{1,3}|UNC\d{3,5}|FIN\d{1,2}|Hunters(?:\s*International)?|OmegaLock|LockBit(?:\s*\d(?:\.\d)?)?|Conti|Hive|Cuba|REvil|Vice\s*Society|AvosLocker|BlackMatter|Babuk|DoppelPaymer|Maze|AKO|Nefilim|Ragnar(?:\s*Locker)?|Clop|Netwalker|Sekhmet|Pysa|Suncrypt|DarkSide|BlackCat|ALPHV|RansomHub|Play|Akira|Qilin|Medusa|DragonForce)\b",
+                    blob_text,
+                    flags=re.IGNORECASE,
+                )
+                grp_label = actor_matches[0] if actor_matches else name
+                extra_ransomware.append({
+                    "group": grp_label,
+                    "victim": page_title[:110],
+                    "country": countries[0],
+                    "date": now_az_str()[:10],
+                    "source": name,
+                })
+
+            if "/cves" in u_low:
+                found_cves = []
+                for cve_id in CVE_RE.findall(blob_text):
+                    c_norm = cve_id.upper()
+                    if c_norm not in found_cves:
+                        found_cves.append(c_norm)
+                for c_norm in found_cves[:8]:
+                    extra_cves.append({
+                        "cveID": c_norm,
+                        "vendor": name,
+                        "product": page_title[:80],
+                        "name": f"Reported via {name}: {page_title[:95]}",
+                        "dateAdded": now_az_str()[:10],
+                        "ransomware": "Monitor / Reported",
+                        "action": "Verify affected systems, check exploitation signals and apply security patches.",
+                        "impact": build_impact_summary(c_norm, page_title, "global_cyber"),
+                    })
+
+            if "/actors" in u_low:
+                for m in re.findall(r"\b(?:APT-?\d{1,3}|UNC\d{3,5}|FIN\d{1,2}|[A-Z][a-zA-Z0-9_-]{2,}(?:\s+(?:Bear|Panda|Spider|Typhoon|Cobra|Chollima|Group|Team|Syndicate)){1,2})\b", blob_text):
+                    clean_m = re.sub(r"\s+", " ", m).strip()
+                    if clean_m and len(clean_m) <= 45:
+                        extra_actor_names.append((clean_m, name, page_title, url))
+
         except Exception as e:
             err_msg = str(e)[:80]
             cat = classify_category(name, name, "", url)
@@ -490,7 +681,7 @@ def fetch_web_sources_items(web_sources):
                 if ".onion" in url.lower()
                 else f"Source reachability note ({err_msg})."
             )
-            items.append({
+            news_items.append({
                 "source": name,
                 "category": cat,
                 "title": f"{name} — {note}",
@@ -500,7 +691,8 @@ def fetch_web_sources_items(web_sources):
                 "url": url,
                 "date": now_az_str()[:10],
             })
-    return items
+
+    return news_items, extra_ransomware, extra_cves, extra_actor_names
 
 
 def deduplicate_news(items):
@@ -597,44 +789,7 @@ def extract_live_ransomware(news_items, cves):
                     "source": "CISA KEV",
                 })
 
-    return entries[:30]
-
-
-def infer_mitre_from_context(text, mitre_techniques):
-    t = (text or "").lower()
-    inferred = set()
-
-    for tid in TECH_RE.findall((text or "").upper()):
-        if tid in mitre_techniques:
-            inferred.add(tid)
-
-    if any(k in t for k in ("ransomware", "encrypt", "wiper", "extortion", "lockbit", "spacebears", "silentransom")):
-        inferred.update(["T1486", "T1021", "T1041", "T1059.001"])
-    if any(k in t for k in ("phish", "spearphish", "vishing", "malicious file", "attachment")):
-        inferred.update(["T1566", "T1204.002"])
-    if any(k in t for k in ("token", "cookie", "session", "credential", "stealer", "mfa", "sso")):
-        inferred.update(["T1539", "T1550.004", "T1555.003"])
-    if any(k in t for k in ("exploit", "rce", "cve-", "vpn", "edge", "web", "public-facing")):
-        inferred.update(["T1190", "T1059"])
-    if any(k in t for k in ("exfil", "leak", "dump", "cloud", "api")):
-        inferred.update(["T1567", "T1078.004"])
-
-    if not inferred:
-        inferred.update(["T1486", "T1021", "T1071.001"])
-
-    return inferred
-
-
-def infer_scenario_from_techs(tech_set):
-    if "T1190" in tech_set:
-        return "rce_web"
-    if "T1539" in tech_set or "T1550.004" in tech_set:
-        return "token_replay"
-    if "T1555.003" in tech_set:
-        return "infostealer"
-    if "T1567" in tech_set:
-        return "api_leak"
-    return "c2_lateral"
+    return entries[:45]
 
 
 def detect_active_apts(news, cves, mitre_techniques, live_ransomware=None):
@@ -707,7 +862,6 @@ def detect_active_apts(news, cves, mitre_techniques, live_ransomware=None):
                 "mentions": matched_mentions[:6],
             }
 
-    # ransomware.live-dan görünən HƏR bir qrup / APT adını birbaşa çək və APT/Group profili yarat
     for r in live_ransomware:
         if r.get("source") != "Ransomware.live API":
             continue
@@ -790,7 +944,9 @@ def extract_and_dedup_iocs(news_items, cves):
         "medium.com", "x.com", "t.me", "ransomware.live", "tweetfeed.live",
         "leakfa.com", "darkforums.as", "patched.to", "darknetlist.info",
         "blackbones.net", "blackbones.cc", "secretline.top", "bf.st",
-        "pulse.kalir.io", "tria.ge", "mwdb.cert.pl", "flakkaonline.com", "attack.mitre.org",
+        "pulse.kalir.io", "tria.ge", "mwdb.cert.pl", "flakkaonline.com",
+        "attack.mitre.org", "hackread.com", "darkfeed.io", "mazenews.top",
+        "sekhmetleaks.top", "deepweblinks.net", "conti.news",
     }
 
     def add_ioc(ioc_type, raw_val, origin):
@@ -854,7 +1010,7 @@ def extract_and_dedup_iocs(news_items, cves):
 
 def check_urlhaus(ioc):
     auth = os.environ.get("URLHAUS_AUTH_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/4.2"}
+    headers = {"User-Agent": "SOC-CTI-Radar/4.4"}
     if auth:
         headers["Auth-Key"] = auth
     try:
@@ -882,7 +1038,7 @@ def check_virustotal(ioc):
     key = os.environ.get("VT_API_KEY", "").strip()
     if not key:
         return {"score_add": 0, "result": "VirusTotal: API key not configured"}
-    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/4.2"}
+    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/4.4"}
     try:
         if ioc["type"] == "ip":
             ep = f"https://www.virustotal.com/api/v3/ip_addresses/{urllib.parse.quote(ioc['value'])}"
@@ -913,7 +1069,7 @@ def check_abuseipdb(ioc):
         q = urllib.parse.urlencode({"ipAddress": ioc["value"], "maxAgeInDays": "30"})
         data = http_get_json_retry(
             f"https://api.abuseipdb.com/api/v2/check?{q}",
-            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/4.2"},
+            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/4.4"},
             timeout=12,
             retries=1,
         )
@@ -928,7 +1084,7 @@ def check_abuseipdb(ioc):
 
 def check_otx(ioc):
     key = os.environ.get("OTX_API_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/4.2"}
+    headers = {"User-Agent": "SOC-CTI-Radar/4.4"}
     if key:
         headers["X-OTX-API-KEY"] = key
     try:
@@ -1109,11 +1265,64 @@ def main():
     unique_web = deduplicate_sources()
     mitre_techniques = load_mitre_techniques()
     rss_items = fetch_rss_news()
-    web_items = fetch_web_sources_items(unique_web)
+    web_items, extra_ransomware, extra_cves, extra_actor_names = parse_specialized_web_sources(unique_web, mitre_techniques)
     news = deduplicate_news(rss_items + web_items)
-    cves = fetch_cisa_kev()
+
+    kev_cves = fetch_cisa_kev()
+    seen_cve_ids = {c.get("cveID") for c in kev_cves if c.get("cveID")}
+    cves = list(kev_cves)
+    for ec in extra_cves:
+        if ec.get("cveID") and ec["cveID"] not in seen_cve_ids:
+            seen_cve_ids.add(ec["cveID"])
+            cves.append(ec)
+
     live_ransomware = extract_live_ransomware(news, cves)
+    seen_rw = {
+        f"{(r.get('group') or '').lower()}|{(r.get('victim') or '').lower()}|{(r.get('country') or '').lower()}"
+        for r in live_ransomware
+    }
+    for er in extra_ransomware:
+        rk = f"{(er.get('group') or '').lower()}|{(er.get('victim') or '').lower()}|{(er.get('country') or '').lower()}"
+        if rk not in seen_rw:
+            seen_rw.add(rk)
+            live_ransomware.append(er)
+    live_ransomware = live_ransomware[:45]
+
     active_apts = detect_active_apts(news, cves, mitre_techniques, live_ransomware)
+    existing_apt_names = {a.get("name", "").lower() for a in active_apts}
+    for actor_name, src_name, p_title, src_url in extra_actor_names:
+        if actor_name.lower() in existing_apt_names:
+            continue
+        existing_apt_names.add(actor_name.lower())
+        tech_set = infer_mitre_from_context(f"{actor_name} {p_title}", mitre_techniques)
+        tech_details = []
+        for tid in sorted(tech_set):
+            tinfo = mitre_techniques.get(tid) or {
+                "id": tid,
+                "name": tid,
+                "tactic": "Enterprise ATT&CK",
+                "url": f"https://attack.mitre.org/techniques/{tid.replace('.', '/')}/",
+            }
+            tech_details.append({
+                "id": tid,
+                "name": tinfo.get("name", tid),
+                "tactic": tinfo.get("tactic", "Enterprise ATT&CK"),
+                "url": tinfo.get("url", f"https://attack.mitre.org/techniques/{tid.replace('.', '/')}/"),
+            })
+        active_apts.append({
+            "id": "kalir_" + re.sub(r"[^a-z0-9]+", "_", actor_name.lower()).strip("_"),
+            "name": f"{actor_name} (Threat Actor)",
+            "category": "espionage",
+            "level": "HIGH",
+            "activity_score": 75,
+            "status_label": f"{src_name} (1)",
+            "focus": f"Actor intel from {src_name}: {p_title[:90]}",
+            "mitigation": "Hunt related infrastructure, anomalous authentication & lateral movement across monitored assets.",
+            "scenario": infer_scenario_from_techs(tech_set),
+            "techniques": tech_details,
+            "mentions": [{"source": src_name, "title": p_title[:130], "url": src_url}],
+        })
+
     raw_iocs = extract_and_dedup_iocs(news, cves)
     iocs = enrich_iocs(raw_iocs)
 
