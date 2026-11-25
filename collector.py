@@ -149,7 +149,7 @@ APT_CATALOG = [
         "id": "scattered_spider",
         "name": "Scattered Spider (UNC3944 / Octo Tempest)",
         "category": "identity",
-        "keywords": ["scattered spider", "unc3944", "octo tempest", "0ktapus", "vishing"],
+        "keywords": ["scattered spider", "unc3944", "octo tempest", "0ktapus"],
         "focus": "Helpdesk/IT sosial mühəndislik, vishing, SSO/Okta/Entra ID və bulud hesabları",
         "default_techniques": ["T1566.004", "T1539", "T1078.004", "T1550.004"],
         "mitigation": "MFA reset prosedurlarında əlavə yoxlama, sessiya ləğvi və stealer/cookie ovlanması.",
@@ -242,7 +242,7 @@ def http_get_text(url, headers=None, timeout=10):
     req = urllib.request.Request(
         url,
         headers=headers or {
-            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.5; +https://github.com)"
+            "User-Agent": "Mozilla/5.0 (compatible; SOC-CTI-Radar/3.6; +https://github.com)"
         },
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -258,7 +258,7 @@ def http_post_form(url, data_dict, headers=None, timeout=10):
     req = urllib.request.Request(
         url,
         data=encoded,
-        headers=headers or {"User-Agent": "SOC-CTI-Radar/3.5"},
+        headers=headers or {"User-Agent": "SOC-CTI-Radar/3.6"},
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8", errors="ignore"))
@@ -495,6 +495,7 @@ def fetch_cisa_kev():
 
 
 def detect_active_apts(news, cves, mitre_techniques):
+    # YALNIZ toplanan real məlumatlarda (news və cves) birbaşa adı/açar sözü keçən APT-ləri qaytarır.
     corpus_entries = []
     for n in news:
         corpus_entries.append({
@@ -521,29 +522,19 @@ def detect_active_apts(news, cves, mitre_techniques):
             if any(kw in txt for kw in grp["keywords"]):
                 matched_mentions.append({
                     "source": entry["source"],
-                    "title": entry["title"][:120],
+                    "title": entry["title"][:130],
                     "url": entry["url"],
                 })
                 for tid in TECH_RE.findall(txt.upper()):
                     if tid in mitre_techniques:
                         found_techs.add(tid)
 
-        context_hits = 0
-        for entry in corpus_entries:
-            txt = entry["text"]
-            if grp["category"] == "identity" and any(w in txt for w in ("vishing", "session", "mfa", "token", "okta", "entra")):
-                context_hits += 1
-            elif grp["category"] == "infra" and any(w in txt for w in ("infrastructure", "router", "firewall", "vpn", "scada", "critical")):
-                context_hits += 1
-            elif grp["category"] == "finance" and any(w in txt for w in ("ransomware", "extortion", "stealer", "bank", "crypto")):
-                context_hits += 1
-            elif grp["category"] == "espionage" and any(w in txt for w in ("zero-day", "0-day", "cve-", "breach", "espionage")):
-                context_hits += 1
+        if not matched_mentions:
+            continue
 
         mention_count = len(matched_mentions)
-        is_explicitly_seen = mention_count > 0
-        activity_score = min(99, 58 + mention_count * 12 + min(22, context_hits * 2))
-        level = "CRITICAL" if is_explicitly_seen else "HIGH"
+        activity_score = min(99, 75 + mention_count * 8)
+        level = "CRITICAL" if mention_count >= 2 else "HIGH"
 
         tech_details = []
         for tid in sorted(found_techs):
@@ -566,12 +557,12 @@ def detect_active_apts(news, cves, mitre_techniques):
             "category": grp["category"],
             "level": level,
             "activity_score": activity_score,
-            "status_label": f"Mənbələrdə aşkarlandı ({mention_count})" if is_explicitly_seen else "Aktiv sektor radarı",
+            "status_label": f"Mənbələrdə aşkarlandı ({mention_count})",
             "focus": grp["focus"],
             "mitigation": grp["mitigation"],
             "scenario": grp["scenario"],
             "techniques": tech_details,
-            "mentions": matched_mentions[:4],
+            "mentions": matched_mentions[:5],
         })
 
     active_list.sort(key=lambda x: (-x["activity_score"], x["name"]))
@@ -640,7 +631,7 @@ def extract_and_dedup_iocs(news_items, cves):
 
 def check_urlhaus(ioc):
     auth = os.environ.get("URLHAUS_AUTH_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/3.5"}
+    headers = {"User-Agent": "SOC-CTI-Radar/3.6"}
     if auth:
         headers["Auth-Key"] = auth
     try:
@@ -660,8 +651,8 @@ def check_urlhaus(ioc):
             if res.get("query_status") == "ok":
                 sig = res.get("signature") or "malware_payload"
                 return {"hit": True, "threat": sig, "score_add": 50, "summary": f"URLhaus: zərərli fayl ({sig})"}
-    except Exception as e:
-        return {"hit": False, "error": str(e)[:80], "score_add": 0, "summary": "URLhaus: sorğu xətası"}
+    except Exception:
+        return {"hit": False, "score_add": 0, "summary": "URLhaus: cavab yoxdur"}
     return {"hit": False, "score_add": 0, "summary": "URLhaus: təmiz"}
 
 
@@ -669,7 +660,7 @@ def check_virustotal(ioc):
     key = os.environ.get("VT_API_KEY", "").strip()
     if not key:
         return {"skipped": True, "score_add": 0, "summary": "VT: API açarı yoxdur"}
-    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/3.5"}
+    headers = {"x-apikey": key, "User-Agent": "SOC-CTI-Radar/3.6"}
     try:
         if ioc["type"] == "ip":
             ep = f"https://www.virustotal.com/api/v3/ip_addresses/{urllib.parse.quote(ioc['value'])}"
@@ -685,8 +676,8 @@ def check_virustotal(ioc):
         mal = int(stats.get("malicious", 0))
         susp = int(stats.get("suspicious", 0))
         return {"malicious": mal, "suspicious": susp, "score_add": min(60, mal * 10 + susp * 4), "summary": f"VT: {mal} malicious / {susp} suspicious"}
-    except Exception as e:
-        return {"error": str(e)[:80], "score_add": 0, "summary": "VT: sorğu xətası"}
+    except Exception:
+        return {"score_add": 0, "summary": "VT: cavab yoxdur"}
 
 
 def check_abuseipdb(ioc):
@@ -699,19 +690,19 @@ def check_abuseipdb(ioc):
         q = urllib.parse.urlencode({"ipAddress": ioc["value"], "maxAgeInDays": "30"})
         data = http_get_json(
             f"https://api.abuseipdb.com/api/v2/check?{q}",
-            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/3.5"},
+            headers={"Key": key, "Accept": "application/json", "User-Agent": "SOC-CTI-Radar/3.6"},
         )
         d = data.get("data") or {}
         conf = int(d.get("abuseConfidenceScore", 0))
         rep = int(d.get("totalReports", 0))
         return {"confidence": conf, "reports": rep, "score_add": int(conf * 0.5), "summary": f"AbuseIPDB: {conf}% etibar ({rep} hesabat)"}
-    except Exception as e:
-        return {"error": str(e)[:80], "score_add": 0, "summary": "AbuseIPDB: sorğu xətası"}
+    except Exception:
+        return {"score_add": 0, "summary": "AbuseIPDB: cavab yoxdur"}
 
 
 def check_otx(ioc):
     key = os.environ.get("OTX_API_KEY", "").strip()
-    headers = {"User-Agent": "SOC-CTI-Radar/3.5"}
+    headers = {"User-Agent": "SOC-CTI-Radar/3.6"}
     if key:
         headers["X-OTX-API-KEY"] = key
     try:
@@ -727,8 +718,8 @@ def check_otx(ioc):
         data = http_get_json(ep, headers=headers)
         pulses = int(((data.get("pulse_info") or {}).get("count")) or 0)
         return {"pulses": pulses, "score_add": min(35, pulses * 5), "summary": f"OTX: {pulses} pulse"}
-    except Exception as e:
-        return {"error": str(e)[:80], "score_add": 0, "summary": "OTX: sorğu xətası"}
+    except Exception:
+        return {"score_add": 0, "summary": "OTX: cavab yoxdur"}
 
 
 def check_shodan(ioc):
@@ -748,8 +739,8 @@ def check_shodan(ioc):
             "score_add": min(30, len(vulns) * 8 + (5 if len(ports) > 5 else 0)),
             "summary": f"Shodan: {len(ports)} port, {len(vulns)} CVE",
         }
-    except Exception as e:
-        return {"error": str(e)[:80], "score_add": 0, "summary": "Shodan: sorğu xətası"}
+    except Exception:
+        return {"score_add": 0, "summary": "Shodan: cavab yoxdur"}
 
 
 def assign_level(score, ioc):
@@ -826,18 +817,19 @@ def send_deep_cti_report(updated_at, source_count, news, cves, iocs, active_apts
     darkweb_news = [n for n in news if n.get("category") == "darkweb_cti"][:3]
     global_news = [n for n in news if n.get("category") != "darkweb_cti"][:3]
     high_iocs = [x for x in iocs if x["level"] in ("CRITICAL", "HIGH")][:4]
-    top_apts = active_apts[:4]
 
     lines = [
         "🛰️ <b>DEEP CTI REPORT BOT — OPERATİV HESABAT (AZ)</b>",
         f"🕒 Vaxt: <code>{updated_at}</code>",
         f"📡 Mənbə: <b>{source_count}</b> | 📰 Xəbər: <b>{len(news)}</b> | 🔍 IoC: <b>{len(iocs)}</b> | 🕵️ APT: <b>{len(active_apts)}</b>",
-        "",
-        "🕵️ <b>Aktiv APT Radar (MITRE ATT&CK):</b>",
     ]
-    for a in top_apts:
-        t_codes = ", ".join(t["id"] for t in (a.get("techniques") or [])[:4])
-        lines.append(f"• <b>{a['name']}</b> [{t_codes}] — {a['status_label']}")
+
+    if active_apts:
+        lines.append("")
+        lines.append("🕵️ <b>Mənbələrdə Aşkarlanan APT-lər:</b>")
+        for a in active_apts[:4]:
+            t_codes = ", ".join(t["id"] for t in (a.get("techniques") or [])[:4])
+            lines.append(f"• <b>{a['name']}</b> [{t_codes}] — {a['status_label']}")
 
     lines.append("")
     lines.append("⚠️ <b>CISA KEV:</b>")
