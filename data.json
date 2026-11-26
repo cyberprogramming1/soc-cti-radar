@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 00:46 (+04)",
+  "updated_at": "2026-11-26 07:16 (+04)",
   "sources": [
     {
       "name": "The Hacker News RSS",
@@ -770,6 +770,26 @@
     },
     {
       "source": "BleepingComputer",
+      "category": "darkweb_cti",
+      "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
+      "summary": "Threat actors are chaining exploits for the PHP2Shell and Fragnesia vulnerabilities to target Palo Alto Networks devices with management interfaces exposed to the internet. [...]",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "BleepingComputer",
+      "category": "darkweb_cti",
+      "title": "1Password customer data stolen after employee GitHub account breach",
+      "summary": "1Password has disclosed a data breach after a an employee's corporate GitHub account was hacked and used to deploy malicious code to the company's backend services to steal customer data. [...]",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+      "date": "Wed, 25 Nov 2026"
+    },
+    {
+      "source": "BleepingComputer",
       "category": "global_cyber",
       "title": "Italy and Switzerland warn of autonomous AI-driven cyberattacks",
       "summary": "Swiss and Italian cybersecurity agencies are warning about automated cyberattacks powered by AI agents targeting organizations in the critical infrastructure sector. [...]",
@@ -786,26 +806,6 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
-      "date": "Wed, 25 Nov 2026"
-    },
-    {
-      "source": "BleepingComputer",
-      "category": "global_cyber",
-      "title": "More Pentests Without More Pentesters: Where AI Safely Helps",
-      "summary": "Penetration testers spend a significant portion of their engagements on documentation, reporting, and other tasks outside of testing. PentestPad explains how AI can reduce this workload, help teams handle more engagements, and keep sensitiv",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://www.bleepingcomputer.com/news/security/more-pentests-without-more-pentesters-where-ai-safely-helps/",
-      "date": "Wed, 25 Nov 2026"
-    },
-    {
-      "source": "BleepingComputer",
-      "category": "global_cyber",
-      "title": "InfraTrust warns of exploited supply chain flaws in network appliances",
-      "summary": "Eclypsium's November InfraTrust report warns that most infrastructure security advisories addressing exploited vulnerabilities over the past month involve flaws in third-party software bundled into products rather than code developed by the",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/",
       "date": "Wed, 25 Nov 2026"
     },
     {
@@ -896,6 +896,26 @@
     {
       "source": "CISA Advisories",
       "category": "global_cyber",
+      "title": "CISA Adds 10 Known Exploited Vulnerabilities to Catalog",
+      "summary": "CISA has added 10 new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2023-25914 Danfoss AK-SM 800A Series Path Traversal Vulnerability CVE-2023-25915 Danfoss AK-SM 800A S",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/25/cisa-adds-10-known-exploited-vulnerabilities-catalog",
+      "date": "Wed, 25 Nov 26 1"
+    },
+    {
+      "source": "CISA Advisories",
+      "category": "global_cyber",
+      "title": "AutomationDirect C-More EA9 Programming Software",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow attackers to corrupt application memory and cause instability or a crash, potentially leading to arbitrary code execution, if a user is convinced to open a maliciou",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01",
+      "date": "Tue, 24 Nov 26 1"
+    },
+    {
+      "source": "CISA Advisories",
+      "category": "global_cyber",
       "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
       "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-131914 Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability CVE-2026-132165 Drupal",
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
@@ -906,31 +926,11 @@
     {
       "source": "CISA Advisories",
       "category": "global_cyber",
-      "title": "Danfoss AK-SM 8xxA Series",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to execute arbitrary code with webserver privileges. The following versions of Danfoss AK-SM 8xxA Series are affected: AK-SM8xxA CVSS Vendor Equipment v",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-03",
-      "date": "Tue, 24 Nov 26 1"
-    },
-    {
-      "source": "CISA Advisories",
-      "category": "global_cyber",
       "title": "Schneider Electric EcoStruxure Power Build Rapsody software",
       "summary": "View CSAF Summary Schneider Electric is aware of a vulnerability in its EcoStruxure™ Power Build Rapsody product. The EcoStruxure™ Power Build Rapsody is used to enter or import the single line diagram, to get the extensive bill of material",
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02",
-      "date": "Tue, 24 Nov 26 1"
-    },
-    {
-      "source": "CISA Advisories",
-      "category": "global_cyber",
-      "title": "AutomationDirect C-More EA9 Programming Software",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow attackers to corrupt application memory and cause instability or a crash, potentially leading to arbitrary code execution, if a user is convinced to open a maliciou",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01",
       "date": "Tue, 24 Nov 26 1"
     },
     {
@@ -1160,6 +1160,16 @@
     },
     {
       "source": "Intel471 Blog",
+      "category": "darkweb_cti",
+      "title": "ARTEX",
+      "summary": "ARTEX is an open-source, AI-driven offensive framework originally observed in July 2026 that has been increasingly weaponized by financially motivated and espionage-oriented threat actors.",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.intel471.com/blog/emerging-threat-artex",
+      "date": "Mon, 16 Nov 2026"
+    },
+    {
+      "source": "Intel471 Blog",
       "category": "global_cyber",
       "title": "What to ask before you buy an AI agent for threat intelligence",
       "summary": "Before investing in an AI-enabled intelligence solution, know what powers it. Explore three critical layers to evaluate, from the quality and reliability of the underlying intelligence to how AI agents process information and translate insi",
@@ -1167,16 +1177,6 @@
       "countries": [],
       "url": "https://www.intel471.com/blog/what-to-ask-before-you-buy-an-ai-agent-for-threat-intelligence",
       "date": "Thu, 12 Nov 2026"
-    },
-    {
-      "source": "Intel471 Blog",
-      "category": "global_cyber",
-      "title": "Hand AI the Legwork, You Keep the Judgment",
-      "summary": "CTI teams can use AI agents to streamline intelligence workflows, reduce manual research and deliver faster insights. With the right guardrails, agents can provide source-backed assessments, flag intelligence gaps and show their reasoning, ",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://www.intel471.com/blog/hand-ai-the-legwork-you-keep-the-judgment",
-      "date": "Wed, 04 Nov 2026"
     },
     {
       "source": "DailyDarkWeb",
@@ -1262,7 +1262,7 @@
       "source": "Kalir Pulse Brief",
       "category": "darkweb_cti",
       "title": "Kalir Brief — underground intelligence feed · Pulse | Pulse",
-      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 39 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 105.0 + 110 LEAK VOL 1.7 B 0 KEV PULSE 9 -10 Home Wire Ransomware CVEs Acto",
+      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 42 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 112.0 -3 LEAK VOL 1.7 B 0 KEV PULSE 9 + 50 Home Wire Ransomware CVEs Actors",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/brief",
@@ -1272,7 +1272,7 @@
       "source": "Kalir Pulse Actor",
       "category": "darkweb_cti",
       "title": "Actor Files — underground actors · Pulse | Pulse",
-      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 39 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 105.0 + 110 LEAK VOL 1.7 B 0 KEV PULSE 9 -10 Home Wire Ransomware CVEs Actors Brief ES",
+      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 42 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 112.0 -3 LEAK VOL 1.7 B 0 KEV PULSE 9 + 50 Home Wire Ransomware CVEs Actors Brief ES P",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/actors",
@@ -1282,7 +1282,7 @@
       "source": "Kalir Pulse CVE",
       "category": "darkweb_cti",
       "title": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
-      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 39 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 105.0 + 110 LEAK VOL 1.7 B 0 KEV PULSE 9 -10 Home Wire Ransomware CVEs ",
+      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 42 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 112.0 -3 LEAK VOL 1.7 B 0 KEV PULSE 9 + 50 Home Wire Ransomware CVEs Ac",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/cves",
@@ -1292,7 +1292,7 @@
       "source": "Kalir Pulse Ransomware",
       "category": "darkweb_cti",
       "title": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse",
-      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 39 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 105.0 + 110 LEAK VOL 1.7 B 0 KEV PULSE 9 -10 Home Wire Ransomware CVEs A",
+      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 42 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 112.0 -3 LEAK VOL 1.7 B 0 KEV PULSE 9 + 50 Home Wire Ransomware CVEs Act",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/ransomware",
@@ -1302,7 +1302,7 @@
       "source": "Kalir Pulse Wire",
       "category": "darkweb_cti",
       "title": "The Wire — live underground feed · Pulse | Pulse",
-      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 39 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 105.0 + 110 LEAK VOL 1.7 B 0 KEV PULSE 9 -10 Home Wire Ransomware CVEs Actors Brief ES",
+      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 42 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 112.0 -3 LEAK VOL 1.7 B 0 KEV PULSE 9 + 50 Home Wire Ransomware CVEs Actors Brief ES P",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/wire",
@@ -1312,7 +1312,7 @@
       "source": "Kalir Pulse",
       "category": "darkweb_cti",
       "title": "Pulse — Underground Intel",
-      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 39 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 105.0 + 110 LEAK VOL 1.7 B 0 KEV PULSE 9 -10 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom aurora ",
+      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 42 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 112.0 -3 LEAK VOL 1.7 B 0 KEV PULSE 9 + 50 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom n0n recla",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/",
@@ -1332,7 +1332,7 @@
       "source": "SecretLine",
       "category": "darkweb_cti",
       "title": "Login - secretline.top",
-      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 7 + 8 = Login Don't have an account? Create account secretline.top | © 2026",
+      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 9 + 8 = Login Don't have an account? Create account secretline.top | © 2026",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://secretline.top/",
@@ -1351,9 +1351,9 @@
     {
       "source": "DarkForums",
       "category": "darkweb_cti",
-      "title": "DarkForums — Source reachability note (HTTP Error 502: Bad Gateway).",
-      "summary": "Source reachability note (HTTP Error 502: Bad Gateway).",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "title": "DarkForums",
+      "summary": "DarkForums Member List --> Databases Upgrades Search Hidden Service Escrow Escrow --> Features Gambling Games Roulette Rock Paper Scissors Features Buy Awards Usertitle Color Credits Stealing Style your thread Extras Cre",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
       "countries": [],
       "url": "https://darkforums.as/",
       "date": "2026-11-26"
@@ -1565,9 +1565,9 @@
     {
       "source": "Reza Abasi LinkedIn",
       "category": "global_cyber",
-      "title": "Reza Abasi LinkedIn — Source reachability note (HTTP Error 999: <none>).",
-      "summary": "Source reachability note (HTTP Error 999: <none>).",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "title": "Reza abasi - Finland | Professional Profile | LinkedIn",
+      "summary": "Reza abasi - Finland | Professional Profile | LinkedIn Skip to main content LinkedIn Top Content People Learning Jobs Games Sign in Join now Sign in to view Reza’s full profile Reza can introduce you to 6 people at Cyber",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://www.linkedin.com/in/reza-abasi/",
       "date": "2026-11-26"
@@ -1586,7 +1586,7 @@
       "source": "DarknetList",
       "category": "darkweb_cti",
       "title": "Darknet Markets List - DarkWeb Directory",
-      "summary": "Darknet Markets List - DarkWeb Directory Skip to content November 25, 2026 Darknet Markets List – DarkWeb Directory Best Darknet Markets List: The best drugs from the top rated vendors in the dark web! Only trusted Marke",
+      "summary": "Darknet Markets List - DarkWeb Directory Skip to content November 26, 2026 Darknet Markets List – DarkWeb Directory Best Darknet Markets List: The best drugs from the top rated vendors in the dark web! Only trusted Marke",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://darknetlist.info/",
@@ -1687,8 +1687,8 @@
     {
       "source": "Onion - DWL Tor (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - DWL Tor (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
-      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "title": "Onion - DWL Tor (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://dwltorbltw3tdjskxn23j2mwz2f4q25j4ninl5bdvttiy4xb6cqzikid.onion/",
@@ -1798,7 +1798,7 @@
       "source": "Onion - ProPublica (Tor)",
       "category": "darkweb_cti",
       "title": "ProPublica — Investigative Journalism and News in the Public Interest",
-      "summary": "8427 ProPublica — Investigative Journalism and News in the Public Interest Arrow Right Caret Close Skip to content de34 Investigative Journalism in the Public Interest Donate ProPublica Menu Search ProPublica Menu Menu S",
+      "summary": "8427 ProPublica — Investigative Journalism and News in the Public Interest Arrow Right Caret Close Skip to content f0b9 Investigative Journalism in the Public Interest Donate ProPublica Menu Search ProPublica Menu Menu S",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://p53lf57qovyuvwsc6xnrppyply3vtqm7l6pcobkmyqsiofyeznfu5uqd.onion/",
@@ -1839,8 +1839,8 @@
     {
       "source": "Onion - RFE/RL (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - RFE/RL (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "400 The plain HTTP request was sent to HTTPS port",
+      "summary": "1cb 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.rferlo2zxgv23tct66v45s5mecftol5vod3hf4rqbipfp46fqu2q56ad.onion/",
@@ -1859,8 +1859,8 @@
     {
       "source": "Onion - Al Jazeera (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Al Jazeera (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
-      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "title": "Onion - Al Jazeera (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://jkta32w5gvk6pmqdfwj67psojot3l2iwoqbdvrvywi5bkudfeandq7id.onion",
@@ -1901,8 +1901,8 @@
     {
       "source": "Onion - Forbidden Stories (Tor)",
       "category": "darkweb_cti",
-      "title": "Welcome | Forbidden Stories | SecureDrop",
-      "summary": "Welcome | Forbidden Stories | SecureDrop Your Tor Browser's Security Level is too low. Use the button in your browser’s toolbar to change it. How to change your security level Click the in the toolbar above Click Setting",
+      "title": "Onion - Forbidden Stories (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://fg25fqpu2dnxp24xs3jlcley4hp2inshpzek44q3czkhq3zffoqk26id.onion",
@@ -1981,8 +1981,8 @@
     {
       "source": "Onion - Conti (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
-      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://htcltkjqoitnez5slo7fvhiou5lbno5bwczu7il2hmfpkowwdpj3q2yd.onion",
@@ -1991,8 +1991,8 @@
     {
       "source": "Onion - Conti News (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Conti News (Tor)",
-      "summary": "Fetched data from Onion - Conti News (Tor).",
+      "title": "Onion - Conti News (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://continewsnv5otx5kaoje7krkto2qbu3gtqef22mnr7eaxw3y6ncz3ad.onion.ly/",
@@ -2081,8 +2081,8 @@
     {
       "source": "Onion - DoppelPaymer (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - DoppelPaymer (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Onion - DoppelPaymer (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://hpoo4dosa3x4ognfxpqcrjwnsigvslm7kv6hvmhh2yqczaxy3j6qnwad.onion",
@@ -2371,8 +2371,8 @@
     {
       "source": "Onion - BBC News Global (Tor)",
       "category": "darkweb_cti",
-      "title": "400 The plain HTTP request was sent to HTTPS port",
-      "summary": "fc 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
+      "title": "Onion - BBC News Global (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/",
@@ -2571,26 +2571,6 @@
       "ransomware": "Unknown",
       "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
-    },
-    {
-      "cveID": "CVE-2026-81419",
-      "vendor": "Kalir Pulse CVE",
-      "product": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
-      "name": "Reported via Kalir Pulse CVE: CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
-      "dateAdded": "2026-11-26",
-      "ransomware": "Monitor / Reported",
-      "action": "Verify affected systems, check exploitation signals and apply security patches.",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes."
-    },
-    {
-      "cveID": "CVE-2026-81418",
-      "vendor": "Kalir Pulse CVE",
-      "product": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
-      "name": "Reported via Kalir Pulse CVE: CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
-      "dateAdded": "2026-11-26",
-      "ransomware": "Monitor / Reported",
-      "action": "Verify affected systems, check exploitation signals and apply security patches.",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes."
     }
   ],
   "iocs": [
@@ -2683,6 +2663,88 @@
       "type": "cve",
       "value": "CVE-2026-129243",
       "origin": "[The Hacker News RSS] Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthentic",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2023-25914",
+      "origin": "[CISA Advisories] CISA Adds 10 Known Exploited Vulnerabilities to Catalog",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2023-25915",
+      "origin": "[CISA Advisories] CISA Adds 10 Known Exploited Vulnerabilities to Catalog",
       "level": "HIGH",
       "score": 65,
       "reasons": [
@@ -2887,88 +2949,6 @@
     {
       "type": "cve",
       "value": "CVE-2025-41450",
-      "origin": "[CISA KEV] Danfoss AK-SM 800A Series",
-      "level": "HIGH",
-      "score": 65,
-      "reasons": [
-        "CISA KEV (+55)"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: N/A for CVE",
-        "AbuseIPDB: IP only",
-        "OTX: N/A for CVE",
-        "Shodan: IP only",
-        "CISA KEV: Known exploited vulnerability (+55)"
-      ],
-      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "score_add": 0,
-          "result": "VirusTotal: N/A for CVE"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "score_add": 0,
-          "result": "OTX: N/A for CVE"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2023-25914",
-      "origin": "[CISA KEV] Danfoss AK-SM 800A Series",
-      "level": "HIGH",
-      "score": 65,
-      "reasons": [
-        "CISA KEV (+55)"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: N/A for CVE",
-        "AbuseIPDB: IP only",
-        "OTX: N/A for CVE",
-        "Shodan: IP only",
-        "CISA KEV: Known exploited vulnerability (+55)"
-      ],
-      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "score_add": 0,
-          "result": "VirusTotal: N/A for CVE"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "score_add": 0,
-          "result": "OTX: N/A for CVE"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2023-25915",
       "origin": "[CISA KEV] Danfoss AK-SM 800A Series",
       "level": "HIGH",
       "score": 65,
@@ -3298,88 +3278,6 @@
       "type": "cve",
       "value": "CVE-2026-134624",
       "origin": "[CISA KEV] N-able MailAssure",
-      "level": "HIGH",
-      "score": 65,
-      "reasons": [
-        "CISA KEV (+55)"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: N/A for CVE",
-        "AbuseIPDB: IP only",
-        "OTX: N/A for CVE",
-        "Shodan: IP only",
-        "CISA KEV: Known exploited vulnerability (+55)"
-      ],
-      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "score_add": 0,
-          "result": "VirusTotal: N/A for CVE"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "score_add": 0,
-          "result": "OTX: N/A for CVE"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2026-81419",
-      "origin": "[CISA KEV] Kalir Pulse CVE CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
-      "level": "HIGH",
-      "score": 65,
-      "reasons": [
-        "CISA KEV (+55)"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: N/A for CVE",
-        "AbuseIPDB: IP only",
-        "OTX: N/A for CVE",
-        "Shodan: IP only",
-        "CISA KEV: Known exploited vulnerability (+55)"
-      ],
-      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "score_add": 0,
-          "result": "VirusTotal: N/A for CVE"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "score_add": 0,
-          "result": "OTX: N/A for CVE"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2026-81418",
-      "origin": "[CISA KEV] Kalir Pulse CVE CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
       "level": "HIGH",
       "score": 65,
       "reasons": [
@@ -4382,151 +4280,38 @@
       "level": "CRITICAL",
       "activity_score": 98,
       "status_label": "Ransomware.live (7)",
-      "focus": "Live ransomware & extortion activity (latest: DE)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
       "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
       "scenario": "c2_lateral",
       "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] Signet Pacific Insurance Services (2026-11-25T22:36)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[CA] ClearPath Wealth Management (2026-11-25T22:25)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[CA] Atlantis Financial (2026-11-25T22:24)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[DE] Company #286 (2026-11-25T17:23)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[DE] Company #285 (2026-11-25T17:22)",
+          "url": "https://www.ransomware.live/"
+        },
         {
           "source": "Ransomware.live API",
           "title": "[DE] Company #284 (2026-11-25T16:23)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[US] Company #283 (2026-11-25T13:56)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[IT] Company #282 (2026-11-25T13:55)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[DE] Company #281 (2026-11-25T13:54)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[US] Company #280 (2026-11-25T13:54)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[NO] Company #279 (2026-11-25T13:53)",
-          "url": "https://www.ransomware.live/"
-        }
-      ],
-      "techniques": [
-        {
-          "id": "T1021",
-          "name": "Remote Services",
-          "tactic": "Lateral Movement",
-          "url": "https://attack.mitre.org/techniques/T1021/"
-        },
-        {
-          "id": "T1041",
-          "name": "Exfiltration Over C2 Channel",
-          "tactic": "Exfiltration",
-          "url": "https://attack.mitre.org/techniques/T1041/"
-        },
-        {
-          "id": "T1059.001",
-          "name": "PowerShell",
-          "tactic": "Execution",
-          "url": "https://attack.mitre.org/techniques/T1059/001/"
-        },
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact",
-          "tactic": "Impact",
-          "url": "https://attack.mitre.org/techniques/T1486/"
-        }
-      ]
-    },
-    {
-      "id": "rw_spacebears",
-      "name": "spacebears (APT / Ransomware Group)",
-      "category": "finance",
-      "level": "CRITICAL",
-      "activity_score": 96,
-      "status_label": "Ransomware.live (4)",
-      "focus": "Live ransomware & extortion activity (latest: MK)",
-      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
-      "scenario": "c2_lateral",
-      "mentions": [
-        {
-          "source": "Ransomware.live API",
-          "title": "[MK] Alsanet (2026-11-25T04:44)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[PL] BIURO RACHUNKOWE RACHEXPERT SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2026-11-25T02:44)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[AU] Camsons Pty Ltd (2026-11-25T02:44)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[MX] ADN Energía S. de R.L. de C.V. (also referred to as ADN Energía or ADN Energia) (2026-11-25T02:43)",
-          "url": "https://www.ransomware.live/"
-        }
-      ],
-      "techniques": [
-        {
-          "id": "T1021",
-          "name": "Remote Services",
-          "tactic": "Lateral Movement",
-          "url": "https://attack.mitre.org/techniques/T1021/"
-        },
-        {
-          "id": "T1041",
-          "name": "Exfiltration Over C2 Channel",
-          "tactic": "Exfiltration",
-          "url": "https://attack.mitre.org/techniques/T1041/"
-        },
-        {
-          "id": "T1059.001",
-          "name": "PowerShell",
-          "tactic": "Execution",
-          "url": "https://attack.mitre.org/techniques/T1059/001/"
-        },
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact",
-          "tactic": "Impact",
-          "url": "https://attack.mitre.org/techniques/T1486/"
-        }
-      ]
-    },
-    {
-      "id": "rw_silentvault",
-      "name": "SilentVault (APT / Ransomware Group)",
-      "category": "finance",
-      "level": "CRITICAL",
-      "activity_score": 90,
-      "status_label": "Ransomware.live (3)",
-      "focus": "Live ransomware & extortion activity (latest: Global)",
-      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
-      "scenario": "c2_lateral",
-      "mentions": [
-        {
-          "source": "Ransomware.live API",
-          "title": "[Global] Y***c (2026-11-25T15:00)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[Global] B***p (2026-11-25T14:59)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[Global] A***. (2026-11-25T14:59)",
           "url": "https://www.ransomware.live/"
         }
       ],
@@ -4561,13 +4346,18 @@
       "id": "rw_dark_project",
       "name": "Dark Project (APT / Ransomware Group)",
       "category": "finance",
-      "level": "HIGH",
-      "activity_score": 76,
-      "status_label": "Ransomware.live (1)",
-      "focus": "Live ransomware & extortion activity (latest: JP)",
+      "level": "CRITICAL",
+      "activity_score": 84,
+      "status_label": "Ransomware.live (2)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
       "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
       "scenario": "c2_lateral",
       "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] Pumptech (2026-11-25T22:21)",
+          "url": "https://www.ransomware.live/"
+        },
         {
           "source": "Ransomware.live API",
           "title": "[JP] Minichi Inc (2026-11-25T14:51)",
@@ -4602,19 +4392,300 @@
       ]
     },
     {
-      "id": "rw_aurora",
-      "name": "aurora (APT / Ransomware Group)",
+      "id": "rw_silentransomgroup",
+      "name": "SilentRansomGroup (APT / Ransomware Group)",
       "category": "finance",
-      "level": "HIGH",
-      "activity_score": 76,
-      "status_label": "Ransomware.live (1)",
-      "focus": "Live ransomware & extortion activity (latest: GB)",
+      "level": "CRITICAL",
+      "activity_score": 84,
+      "status_label": "Ransomware.live (2)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
       "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
       "scenario": "c2_lateral",
       "mentions": [
         {
           "source": "Ransomware.live API",
-          "title": "[GB] Plumbs Limited (2026-11-25T15:40)",
+          "title": "[US] Norris McLaughlin (2026-11-25T20:33)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] Honigman LLP (2026-11-25T17:33)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_braincipher",
+      "name": "BrainCipher (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: Global)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] pacific-orient.com (2026-11-25T22:21)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_pixelleaks",
+      "name": "PixelLeaks (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: PS)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "api_leak",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[PS] Reflex Electromechanical & Trade Co. Ltd. (Nablus pumps and elevators engineering house) (2026-11-25T22:46)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1078.004",
+          "name": "Cloud Accounts",
+          "tactic": "Stealth, Persistence, Privilege Escalation, Initial Access",
+          "url": "https://attack.mitre.org/techniques/T1078/004/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        },
+        {
+          "id": "T1567",
+          "name": "Exfiltration Over Web Service",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1567/"
+        }
+      ]
+    },
+    {
+      "id": "rw_anubis",
+      "name": "anubis (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] HydroCision (2026-11-25T18:31)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_interlock",
+      "name": "interlock (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] New Plymouth School District (2026-11-25T20:45)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_medusalocker",
+      "name": "medusalocker (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: IT)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[IT] Tessilopera (2026-11-25T23:03)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_rhysida",
+      "name": "rhysida (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: Global)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] York Engineering (2026-11-25T19:54)",
           "url": "https://www.ransomware.live/"
         }
       ],
@@ -4685,6 +4756,104 @@
     }
   ],
   "live_ransomware": [
+    {
+      "group": "medusalocker",
+      "victim": "Tessilopera",
+      "country": "IT",
+      "date": "2026-11-25T23:03",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "PixelLeaks",
+      "victim": "Reflex Electromechanical & Trade Co. Ltd. (Nablus pumps and elevators engineering house)",
+      "country": "PS",
+      "date": "2026-11-25T22:46",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "N0n",
+      "victim": "Signet Pacific Insurance Services",
+      "country": "US",
+      "date": "2026-11-25T22:36",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "N0n",
+      "victim": "ClearPath Wealth Management",
+      "country": "CA",
+      "date": "2026-11-25T22:25",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "N0n",
+      "victim": "Atlantis Financial",
+      "country": "CA",
+      "date": "2026-11-25T22:24",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "BrainCipher",
+      "victim": "pacific-orient.com",
+      "country": "Global",
+      "date": "2026-11-25T22:21",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "Dark Project",
+      "victim": "Pumptech",
+      "country": "US",
+      "date": "2026-11-25T22:21",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "interlock",
+      "victim": "New Plymouth School District",
+      "country": "US",
+      "date": "2026-11-25T20:45",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SilentRansomGroup",
+      "victim": "Norris McLaughlin",
+      "country": "US",
+      "date": "2026-11-25T20:33",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "rhysida",
+      "victim": "York Engineering",
+      "country": "Global",
+      "date": "2026-11-25T19:54",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "anubis",
+      "victim": "HydroCision",
+      "country": "US",
+      "date": "2026-11-25T18:31",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SilentRansomGroup",
+      "victim": "Honigman LLP",
+      "country": "US",
+      "date": "2026-11-25T17:33",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "N0n",
+      "victim": "Company #286",
+      "country": "DE",
+      "date": "2026-11-25T17:23",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "N0n",
+      "victim": "Company #285",
+      "country": "DE",
+      "date": "2026-11-25T17:22",
+      "source": "Ransomware.live API"
+    },
     {
       "group": "N0n",
       "victim": "Company #284",
@@ -4760,104 +4929,6 @@
       "victim": "Company #275",
       "country": "BJ",
       "date": "2026-11-25T09:59",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "N0n",
-      "victim": "Company #274",
-      "country": "Global",
-      "date": "2026-11-25T09:58",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "N0n",
-      "victim": "Company #273",
-      "country": "US",
-      "date": "2026-11-25T09:56",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "N0n",
-      "victim": "Company #272",
-      "country": "US",
-      "date": "2026-11-25T09:55",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "N0n",
-      "victim": "Company #271",
-      "country": "CA",
-      "date": "2026-11-25T09:54",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "N0n",
-      "victim": "Company #270",
-      "country": "US",
-      "date": "2026-11-25T09:52",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "N0n",
-      "victim": "Company #269",
-      "country": "ID",
-      "date": "2026-11-25T08:52",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "spacebears",
-      "victim": "Alsanet",
-      "country": "MK",
-      "date": "2026-11-25T04:44",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "spacebears",
-      "victim": "BIURO RACHUNKOWE RACHEXPERT SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
-      "country": "PL",
-      "date": "2026-11-25T02:44",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "spacebears",
-      "victim": "Camsons Pty Ltd",
-      "country": "AU",
-      "date": "2026-11-25T02:44",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "spacebears",
-      "victim": "ADN Energía S. de R.L. de C.V. (also referred to as ADN Energía or ADN Energia)",
-      "country": "MX",
-      "date": "2026-11-25T02:43",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "aurora",
-      "victim": "Plumbs Limited",
-      "country": "GB",
-      "date": "2026-11-25T15:40",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "SilentVault",
-      "victim": "Y***c",
-      "country": "Global",
-      "date": "2026-11-25T15:00",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "SilentVault",
-      "victim": "B***p",
-      "country": "Global",
-      "date": "2026-11-25T14:59",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "SilentVault",
-      "victim": "A***.",
-      "country": "Global",
-      "date": "2026-11-25T14:59",
       "source": "Ransomware.live API"
     },
     {
