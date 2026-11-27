@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 15:32 (+04)",
+  "updated_at": "2026-11-27 21:47 (+04)",
   "sources": [
     {
       "name": "The Hacker News RSS",
@@ -731,6 +731,26 @@
     {
       "source": "The Hacker News RSS",
       "category": "global_cyber",
+      "title": "Suspected Vietnam-Linked Hackers Target Southeast Asia in South China Sea Espionage Campaign",
+      "summary": "A Vietnam-sponsored hacking group has been attributed to attacks targeting Southeast Asian military, government, and legislative organizations with an aim to gather intelligence on South China Sea defense and military agreements. The previo",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://thehackernews.com/2026/11/suspected-vietnam-linked-hackers-target.html",
+      "date": "Fri, 27 Nov 2026"
+    },
+    {
+      "source": "The Hacker News RSS",
+      "category": "darkweb_cti",
+      "title": "Microsoft Store App Found Delivering Vinci RAT Capable of Remote System Control",
+      "summary": "Cybersecurity researchers have disclosed details of a cyber attack in which a threat actor leveraged a Microsoft Store application to deliver a remote access trojan (RAT) called Vinci RAT. The intrusion, according to eSentire, begins with a",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
+      "url": "https://thehackernews.com/2026/11/microsoft-store-app-found-delivering.html",
+      "date": "Fri, 27 Nov 2026"
+    },
+    {
+      "source": "The Hacker News RSS",
+      "category": "global_cyber",
       "title": "How to Keep Your Security Picture Current When Attackers Move at AI Speed",
       "summary": "Most security metrics are not built to be used. They are built to be shown. Somewhere between the quarterly review and the next status update, a set of numbers gets assembled that looks reassuring in a room and tells almost no one what is a",
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
@@ -749,63 +769,45 @@
       "date": "Fri, 27 Nov 2026"
     },
     {
-      "source": "The Hacker News RSS",
-      "category": "darkweb_cti",
-      "title": "Switzerland Confirms AI-Assisted Cyberattacks Breached Critical Infrastructure Operators",
-      "summary": "Attackers using AI agents have broken into computer systems at Swiss organizations in four of five confirmed attacks, the first such cases in the country, the country's cybersecurity agency said yesterday. Three of the attacks targeted crit",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html",
-      "date": "Fri, 27 Nov 2026"
-    },
-    {
-      "source": "The Hacker News RSS",
-      "category": "darkweb_cti",
-      "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
-      "summary": "Details have emerged about a new zero-day vulnerability in Cacti, an open-source network monitoring tool, that could be exploited to achieve remote code execution. The proof-of-concept (PoC) exploit, which has yet to be assigned a CVE ident",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
-      "date": "Fri, 27 Nov 2026"
-    },
-    {
       "source": "BleepingComputer",
-      "category": "global_cyber",
-      "title": "Microsoft removes WSUS server role in Windows Server 2028",
-      "summary": "Microsoft will remove the WSUS server role from Windows Server 2028, the next major release of its server operating system. [...]",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "category": "darkweb_cti",
+      "title": "Unpatched Cacti zero-day with public PoC gives remote code execution",
+      "summary": "A zero-day vulnerability in the Cacti network monitoring platform has been publicly disclosed, along with a proof-of-concept exploit that lets unauthenticated attackers execute commands on vulnerable servers. [...]",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-removes-wsus-server-role-in-windows-server-2028/",
+      "url": "https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/",
       "date": "Fri, 27 Nov 2026"
     },
     {
       "source": "BleepingComputer",
       "category": "darkweb_cti",
-      "title": "Drupal warns of new site takeover flaw exploited in attacks",
-      "summary": "The Drupal security team says attackers are exploiting a second critical vulnerability that lets them breach and hijack unpatched websites. [...]",
+      "title": "US Air Force cloud platform reportedly hacked in latest federal breach",
+      "summary": "Hackers have reportedly breached the US Air Force's Cloud One computing platform, adding to a recent wave of cyberattacks affecting US government agencies, including the FBI, CIA, and Treasury Department. [...]",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [
+        "United States"
+      ],
+      "url": "https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/",
+      "date": "Fri, 27 Nov 2026"
+    },
+    {
+      "source": "BleepingComputer",
+      "category": "global_cyber",
+      "title": "Your Firewall Isn't Enough: The Hidden Risk of Unmanaged VMs",
+      "summary": "Forgotten virtual machines, unpatched servers, and excessive access permissions can create security blind spots across IT infrastructure. ISPsystem explains how centralized infrastructure management, access controls, and resource lifecycle ",
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
-      "url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/",
+      "url": "https://www.bleepingcomputer.com/news/security/your-firewall-isnt-enough-the-hidden-risk-of-unmanaged-vms/",
       "date": "Fri, 27 Nov 2026"
     },
     {
       "source": "BleepingComputer",
-      "category": "global_cyber",
-      "title": "SAP confirms security incident after suspicious GitHub activity",
-      "summary": "SAP has confirmed to BleepingComputer that it took urgent action to protect its customers after detecting suspicious activity in its IT environment. [...]",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "category": "darkweb_cti",
+      "title": "Malwarebytes Antivirus: Get 50% off during Black Friday 2026",
+      "summary": "Malwarebytes' 2026 Black Friday and Cyber Monday sale is now live, offering 50% off security subscriptions for individuals, families, and small businesses, including its antivirus software, VPN, identity theft protection, and personal data ",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
-      "url": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/",
-      "date": "Fri, 27 Nov 2026"
-    },
-    {
-      "source": "BleepingComputer",
-      "category": "global_cyber",
-      "title": "Microsoft pushes emergency hotpatch to fix Windows Server crashes",
-      "summary": "Microsoft has released an emergency hotpatch update to address Windows Server 2025 crashes triggered after installing this month's security hotpatch update (KB5131077). [...]",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://www.bleepingcomputer.com/news/microsoft/new-out-of-band-oob-emergency-hotpatch-fixes-windows-server-2025-crashes/",
+      "url": "https://www.bleepingcomputer.com/news/security/malwarebytes-antivirus-get-50-percent-off-during-black-friday-2026/",
       "date": "Fri, 27 Nov 2026"
     },
     {
@@ -850,6 +852,28 @@
     },
     {
       "source": "Dark Reading",
+      "category": "global_cyber",
+      "title": "Matters.AI Lands India’s Largest Cybersecurity Pre-Series A Round to Fight AI Data Risks",
+      "summary": "The security startup consolidates four legacy security tools into an autonomous platform that uses context-aware AI to trace sensitive data lineage, analyze user intent, and automatically remediate threats across enterprise environments.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [
+        "India"
+      ],
+      "url": "https://www.darkreading.com/cyber-risk/matters-india-cybersecurity-pre-series-ai-data-risks",
+      "date": "Fri, 27 Nov 2026"
+    },
+    {
+      "source": "Dark Reading",
+      "category": "global_cyber",
+      "title": "'God Mode' Flaws Could Wreak Border-Control Havoc",
+      "summary": "Attackers could have disrupted traveler entry into Nigeria, Ethiopia, Zambia, Sri Lanka, Fiji, and Ghana via several vulnerabilities in their online visa and immigration systems.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.darkreading.com/vulnerabilities-threats/god-mode-flaws-wreak-border-control-havoc",
+      "date": "Fri, 27 Nov 2026"
+    },
+    {
+      "source": "Dark Reading",
       "category": "darkweb_cti",
       "title": "Cyprus Becomes Espionage Target for Iranian Hackers",
       "summary": "A previously undocumented Iranian threat group called \"Volant Manticore\" is targeting Cypriot organizations as part of an intelligence-gathering effort for Tehran.",
@@ -868,26 +892,6 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.darkreading.com/threat-intelligence/attackers-net-developers-poisoned-job-assessments",
-      "date": "Wed, 25 Nov 2026"
-    },
-    {
-      "source": "Dark Reading",
-      "category": "global_cyber",
-      "title": "It's a Bot World. We're Just Living in It",
-      "summary": "Bot detection has become a losing game. Security teams need to limit privileged access for humans and their machine counterparts equally.",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://www.darkreading.com/cyber-risk/bot-world-just-living",
-      "date": "Wed, 25 Nov 2026"
-    },
-    {
-      "source": "Dark Reading",
-      "category": "global_cyber",
-      "title": "Cyber Insurers See New Divide: AI Defense 'Haves' & 'Have Nots'",
-      "summary": "Dark Reading Confidential Episode 23: Cyber insurers share their view of the AI-driven threat landscape and how mounting challenges are putting pressure on both sides of the policy, leaving the current model unsustainable.",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://www.darkreading.com/cybersecurity-operations/cyber-insurers-see-new-ai-divide",
       "date": "Wed, 25 Nov 2026"
     },
     {
@@ -1259,7 +1263,7 @@
       "source": "Kalir Pulse Brief",
       "category": "darkweb_cti",
       "title": "Kalir Brief — underground intelligence feed · Pulse | Pulse",
-      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 30 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 80.0 -24 LEAK VOL 1.1 M -100 KEV PULSE 15 + 67 Home Wire Ransomware CVEs Ac",
+      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Act",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/brief",
@@ -1269,7 +1273,7 @@
       "source": "Kalir Pulse Actor",
       "category": "darkweb_cti",
       "title": "Actor Files — underground actors · Pulse | Pulse",
-      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 30 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 80.0 -24 LEAK VOL 1.1 M -100 KEV PULSE 15 + 67 Home Wire Ransomware CVEs Actors Brief ",
+      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief E",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/actors",
@@ -1279,7 +1283,7 @@
       "source": "Kalir Pulse CVE",
       "category": "darkweb_cti",
       "title": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
-      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 30 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 80.0 -24 LEAK VOL 1.1 M -100 KEV PULSE 15 + 67 Home Wire Ransomware CVE",
+      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/cves",
@@ -1289,7 +1293,7 @@
       "source": "Kalir Pulse Ransomware",
       "category": "darkweb_cti",
       "title": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse",
-      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 30 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 80.0 -24 LEAK VOL 1.1 M -100 KEV PULSE 15 + 67 Home Wire Ransomware CVEs",
+      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs ",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/ransomware",
@@ -1299,7 +1303,7 @@
       "source": "Kalir Pulse Wire",
       "category": "darkweb_cti",
       "title": "The Wire — live underground feed · Pulse | Pulse",
-      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 30 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 80.0 -24 LEAK VOL 1.1 M -100 KEV PULSE 15 + 67 Home Wire Ransomware CVEs Actors Brief ",
+      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief E",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/wire",
@@ -1309,7 +1313,7 @@
       "source": "Kalir Pulse",
       "category": "darkweb_cti",
       "title": "Pulse — Underground Intel",
-      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 30 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 80.0 -24 LEAK VOL 1.1 M -100 KEV PULSE 15 + 67 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom puppe",
+      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom rhysid",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/",
@@ -1329,7 +1333,7 @@
       "source": "SecretLine",
       "category": "darkweb_cti",
       "title": "Login - secretline.top",
-      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 6 + 5 = Login Don't have an account? Create account secretline.top | © 2026 Excellent offer 150$ LifeTime Discount",
+      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 7 + 8 = Login Don't have an account? Create account secretline.top | © 2026 Excellent offer 150$ LifeTime Discount",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://secretline.top/",
@@ -1388,9 +1392,9 @@
     {
       "source": "Triage Sandbox",
       "category": "darkweb_cti",
-      "title": "acreed | b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776 | Triage™",
-      "summary": "acreed | b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776 | Triage™ Login Reports Overview overview 10 Static static 10 2026-03-05...at.exe windows10-2004-x64 7 2026-03-05...at.exe windows11-21h2-x64 7 Do",
-      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "title": "Triage Sandbox — Source reachability note (HTTP Error 502: Bad Gateway).",
+      "summary": "Source reachability note (HTTP Error 502: Bad Gateway).",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://tria.ge/260305-d6x8rsc15x",
       "date": "2026-11-27"
@@ -1602,8 +1606,8 @@
     {
       "source": "Onion - Tenebris (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Tenebris (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Frontpage - Tenebris",
+      "summary": "1e30 Frontpage - Tenebris | frontpage all tenebris | points Search Login Register Login or Register Translate Machine-generated translations may contain errors. ? × New here? Here's the short version. Pick a language bel",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://tenebrispoyfrcup4k24lciwrh4gc5735hmld4dweq7his7zh423opqd.onion/",
@@ -1612,8 +1616,8 @@
     {
       "source": "Onion - Dread #1 (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Dread #1 (Tor)",
-      "summary": "Fetched data from Onion - Dread #1 (Tor).",
+      "title": "Onion - Dread #1 (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/",
@@ -1622,8 +1626,8 @@
     {
       "source": "Onion - Dread #2 (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Dread #2 (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Onion - Dread #2 (Tor)",
+      "summary": "Fetched data from Onion - Dread #2 (Tor).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://dreadytognbh7m5nlmqsogzzlxjy75iuxkulewbhxcorupbqahact2yd.onion/",
@@ -1652,8 +1656,8 @@
     {
       "source": "Onion - Darknet Forums (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Darknet Forums (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
-      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "title": "Onion - Darknet Forums (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://darknet77vonbqeatfsnawm5jtnoci5z22mxay6cizmoucgmz52mwyad.onion/forums/",
@@ -1673,7 +1677,7 @@
       "source": "Onion - LockBit (Tor)",
       "category": "darkweb_cti",
       "title": "LockBit BLOG",
-      "summary": "1e38 LockBit BLOG 2000 Twitter How To Buy Bitcoin Contact us Press about us Affiliate Rules Mirrors new blog domain lockbit 5.0 0 D 0 H 0 M 0 S published New secure blog domain, with a multi-layered protection system aga",
+      "summary": "1e38 LockBit BLOG Twitter How To Buy Bitcoin Contact us Press about us Affiliate Rules Mirrors new blog domain lockbit 5.0 0 D 0 H 0 M 0 S published New secure blog domain, with a multi-layered protection system against ",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [
         "United States"
@@ -1754,8 +1758,8 @@
     {
       "source": "Onion - The Guardian (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - The Guardian (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "400 The plain HTTP request was sent to HTTPS port",
+      "summary": "fc 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.guardian2zotagl6tmjucg3lrhxdk4dw3lhbqnkvvkywawy3oqfoprid.onion/",
@@ -1764,8 +1768,8 @@
     {
       "source": "Onion - Tor News (Tor)",
       "category": "darkweb_cti",
-      "title": "Tor Newsletter Archive | The Tor Project",
-      "summary": "Tor Newsletter Archive | The Tor Project Tor Logo Donate Now About Support Community Blog Donate Download Tor Browser Get updates and opportunities from across the organization and community. 👉 Click here to sign up for ",
+      "title": "Onion - Tor News (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://a4ygisnerpgtc5ayerl22pll6cls3oyj54qgpm7qrmb66xrxts6y3lyd.onion/index.html",
@@ -1866,8 +1870,8 @@
     {
       "source": "Onion - Bloomberg News (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Bloomberg News (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Welcome | Bloomberg | SecureDrop",
+      "summary": "Welcome | Bloomberg | SecureDrop Your Tor Browser's Security Level is too low. Use the button in your browser’s toolbar to change it. How to change your security level Click the in the toolbar above Click Settings to ope",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://ogdwaroarq4p6rnfn2hl4crvldyruyc2g24435qtxmd3twhevg7dsqid.onion",
@@ -1978,8 +1982,8 @@
     {
       "source": "Onion - Conti (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
-      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://htcltkjqoitnez5slo7fvhiou5lbno5bwczu7il2hmfpkowwdpj3q2yd.onion",
@@ -2398,10 +2402,12 @@
     {
       "source": "Onion - Riseup Security (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Riseup Security (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Tor - riseup.net",
+      "summary": "Tor - riseup.net Skip to Main Content Riseup Home Home Donate! Red Accounts Account Support Email Black Accounts VPN Other Services Lists Pad Share Groups Home Email Lists VPN Security About Us Human Security Device Secu",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
-      "countries": [],
+      "countries": [
+        "United States"
+      ],
       "url": "http://vww6ybal4bd7szmgncyruucpgfkqahzddi37ktceo3ah7ngmcopnpyyd.onion/en/security/network-security/tor#riseups-tor-onion-services",
       "date": "2026-11-27"
     },
@@ -2569,50 +2575,6 @@
     }
   ],
   "iocs": [
-    {
-      "type": "hash",
-      "value": "b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776",
-      "origin": "[Triage Sandbox] acreed | b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61",
-      "level": "CRITICAL",
-      "score": 90,
-      "reasons": [
-        "VirusTotal (+60)",
-        "OTX (+20)"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: 52 malicious, 0 suspicious (+60)",
-        "AbuseIPDB: IP only",
-        "OTX: 4 threat pulses (+20)",
-        "Shodan: IP only"
-      ],
-      "verdict": "CRITICAL — Confirmed malicious/high-risk activity across CTI sources. Block & investigate immediately.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "malicious": 52,
-          "suspicious": 0,
-          "score_add": 60,
-          "result": "VirusTotal: 52 malicious, 0 suspicious (+60)"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "pulses": 4,
-          "score_add": 20,
-          "result": "OTX: 4 threat pulses (+20)"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
     {
       "type": "cve",
       "value": "CVE-2023-25914",
@@ -3264,6 +3226,49 @@
           "pulses": 36,
           "score_add": 35,
           "result": "OTX: 36 threat pulses (+35)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "domain",
+      "value": "riseup.net",
+      "origin": "[Onion - Riseup Security (Tor)] Tor - riseup.net",
+      "level": "MEDIUM",
+      "score": 30,
+      "reasons": [
+        "OTX (+20)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 0 malicious, 0 suspicious (+0)",
+        "AbuseIPDB: IP only",
+        "OTX: 4 threat pulses (+20)",
+        "Shodan: IP only"
+      ],
+      "verdict": "MEDIUM — Moderate/suspicious exposure. Correlate with perimeter, DNS & auth telemetry.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 0,
+          "suspicious": 0,
+          "score_add": 0,
+          "result": "VirusTotal: 0 malicious, 0 suspicious (+0)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 4,
+          "score_add": 20,
+          "result": "OTX: 4 threat pulses (+20)"
         },
         "shodan": {
           "score_add": 0,
@@ -4149,7 +4154,7 @@
       "category": "finance",
       "level": "CRITICAL",
       "activity_score": 98,
-      "status_label": "Ransomware.live (6)",
+      "status_label": "Ransomware.live (5)",
       "focus": "Live ransomware & extortion activity (latest: US)",
       "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
       "scenario": "c2_lateral",
@@ -4177,11 +4182,6 @@
         {
           "source": "Ransomware.live API",
           "title": "[US] Mattel (2026-11-26T15:23)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[CA] Restaurant Brands International, Inc. (2026-11-26T01:52)",
           "url": "https://www.ransomware.live/"
         }
       ],
@@ -4293,12 +4293,17 @@
       "name": "rhysida (APT / Ransomware Group)",
       "category": "finance",
       "level": "CRITICAL",
-      "activity_score": 96,
-      "status_label": "Ransomware.live (4)",
-      "focus": "Live ransomware & extortion activity (latest: GP)",
+      "activity_score": 98,
+      "status_label": "Ransomware.live (5)",
+      "focus": "Live ransomware & extortion activity (latest: IN)",
       "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
       "scenario": "c2_lateral",
       "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[IN] VC ERP Consulting Pvt. Ltd. (2026-11-27T11:32)",
+          "url": "https://www.ransomware.live/"
+        },
         {
           "source": "Ransomware.live API",
           "title": "[GP] Groupe Antilles-Glaces (2026-11-26T12:22)",
@@ -4317,50 +4322,6 @@
         {
           "source": "Ransomware.live API",
           "title": "[Global] Grua, Freeman, Tupper & Young, PLC (2026-11-26T09:38)",
-          "url": "https://www.ransomware.live/"
-        }
-      ],
-      "techniques": [
-        {
-          "id": "T1021",
-          "name": "Remote Services",
-          "tactic": "Lateral Movement",
-          "url": "https://attack.mitre.org/techniques/T1021/"
-        },
-        {
-          "id": "T1041",
-          "name": "Exfiltration Over C2 Channel",
-          "tactic": "Exfiltration",
-          "url": "https://attack.mitre.org/techniques/T1041/"
-        },
-        {
-          "id": "T1059.001",
-          "name": "PowerShell",
-          "tactic": "Execution",
-          "url": "https://attack.mitre.org/techniques/T1059/001/"
-        },
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact",
-          "tactic": "Impact",
-          "url": "https://attack.mitre.org/techniques/T1486/"
-        }
-      ]
-    },
-    {
-      "id": "rw_hyflock",
-      "name": "HYFLOCK (APT / Ransomware Group)",
-      "category": "finance",
-      "level": "HIGH",
-      "activity_score": 76,
-      "status_label": "Ransomware.live (1)",
-      "focus": "Live ransomware & extortion activity (latest: ID)",
-      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
-      "scenario": "c2_lateral",
-      "mentions": [
-        {
-          "source": "Ransomware.live API",
-          "title": "[ID] Indonesia's national passport database (2026-11-26T08:53)",
           "url": "https://www.ransomware.live/"
         }
       ],
@@ -4549,6 +4510,50 @@
         {
           "source": "Ransomware.live API",
           "title": "[NL] Wolters Kluwer (2026-11-27T01:02)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_iah6477",
+      "name": "iah6477 (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] pregis (2026-11-27T08:43)",
           "url": "https://www.ransomware.live/"
         }
       ],
@@ -4802,6 +4807,20 @@
   ],
   "live_ransomware": [
     {
+      "group": "rhysida",
+      "victim": "VC ERP Consulting Pvt. Ltd.",
+      "country": "IN",
+      "date": "2026-11-27T11:32",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "iah6477",
+      "victim": "pregis",
+      "country": "US",
+      "date": "2026-11-27T08:43",
+      "source": "Ransomware.live API"
+    },
+    {
       "group": "spacebears",
       "victim": "SternKlinik (medi-z Bremen GmbH)",
       "country": "DE",
@@ -4960,20 +4979,6 @@
       "victim": "Grua, Freeman, Tupper & Young, PLC",
       "country": "Global",
       "date": "2026-11-26T09:38",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "HYFLOCK",
-      "victim": "Indonesia's national passport database",
-      "country": "ID",
-      "date": "2026-11-26T08:53",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "Inception",
-      "victim": "Restaurant Brands International, Inc.",
-      "country": "CA",
-      "date": "2026-11-26T01:52",
       "source": "Ransomware.live API"
     },
     {
