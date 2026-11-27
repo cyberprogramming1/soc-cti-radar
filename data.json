@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 21:47 (+04)",
+  "updated_at": "2026-11-28 00:25 (+04)",
   "sources": [
     {
       "name": "The Hacker News RSS",
@@ -770,6 +770,26 @@
     },
     {
       "source": "BleepingComputer",
+      "category": "global_cyber",
+      "title": "pCloud confirms password manager hack after suspicious login alerts",
+      "summary": "The pCloud Pass password manager suffered a cyberattack, with users reporting that unknown devices had connected to their accounts even with two-factor authentication (2FA) enabled. [...]",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
+      "date": "Fri, 27 Nov 2026"
+    },
+    {
+      "source": "BleepingComputer",
+      "category": "darkweb_cti",
+      "title": "New Boston Scientific data breach exposes personal, medical info",
+      "summary": "Medical technology company Boston Scientific is sending data breach notices to individuals affected by a cyberattack on the firm. [...]",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "countries": [],
+      "url": "https://www.bleepingcomputer.com/news/security/new-boston-scientific-data-breach-exposes-personal-medical-info/",
+      "date": "Fri, 27 Nov 2026"
+    },
+    {
+      "source": "BleepingComputer",
       "category": "darkweb_cti",
       "title": "Unpatched Cacti zero-day with public PoC gives remote code execution",
       "summary": "A zero-day vulnerability in the Cacti network monitoring platform has been publicly disclosed, along with a proof-of-concept exploit that lets unauthenticated attackers execute commands on vulnerable servers. [...]",
@@ -788,26 +808,6 @@
         "United States"
       ],
       "url": "https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/",
-      "date": "Fri, 27 Nov 2026"
-    },
-    {
-      "source": "BleepingComputer",
-      "category": "global_cyber",
-      "title": "Your Firewall Isn't Enough: The Hidden Risk of Unmanaged VMs",
-      "summary": "Forgotten virtual machines, unpatched servers, and excessive access permissions can create security blind spots across IT infrastructure. ISPsystem explains how centralized infrastructure management, access controls, and resource lifecycle ",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [],
-      "url": "https://www.bleepingcomputer.com/news/security/your-firewall-isnt-enough-the-hidden-risk-of-unmanaged-vms/",
-      "date": "Fri, 27 Nov 2026"
-    },
-    {
-      "source": "BleepingComputer",
-      "category": "darkweb_cti",
-      "title": "Malwarebytes Antivirus: Get 50% off during Black Friday 2026",
-      "summary": "Malwarebytes' 2026 Black Friday and Cyber Monday sale is now live, offering 50% off security subscriptions for individuals, families, and small businesses, including its antivirus software, VPN, identity theft protection, and personal data ",
-      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
-      "countries": [],
-      "url": "https://www.bleepingcomputer.com/news/security/malwarebytes-antivirus-get-50-percent-off-during-black-friday-2026/",
       "date": "Fri, 27 Nov 2026"
     },
     {
@@ -897,6 +897,16 @@
     {
       "source": "CISA Advisories",
       "category": "global_cyber",
+      "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+      "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-120705 OSGeo GeoServer XML Injection Vulnerability CVE-2026-129243 OSGeo GeoServer Incorrect ",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [],
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+      "date": "Fri, 27 Nov 26 1"
+    },
+    {
+      "source": "CISA Advisories",
+      "category": "global_cyber",
       "title": "CISA Adds 10 Known Exploited Vulnerabilities to Catalog",
       "summary": "CISA has added 10 new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2023-25914 Danfoss AK-SM 800A Series Path Traversal Vulnerability CVE-2023-25915 Danfoss AK-SM 800A S",
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
@@ -922,16 +932,6 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-      "date": "Tue, 24 Nov 26 1"
-    },
-    {
-      "source": "CISA Advisories",
-      "category": "global_cyber",
-      "title": "Schneider Electric EcoStruxure Power Build Rapsody software",
-      "summary": "View CSAF Summary Schneider Electric is aware of a vulnerability in its EcoStruxure™ Power Build Rapsody product. The EcoStruxure™ Power Build Rapsody is used to enter or import the single line diagram, to get the extensive bill of material",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
-      "countries": [],
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02",
       "date": "Tue, 24 Nov 26 1"
     },
     {
@@ -1227,7 +1227,7 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://attack.mitre.org/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "The Hacker News",
@@ -1237,7 +1237,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://thehackernews.com/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "LeakFA Leaks",
@@ -1247,7 +1247,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://leakfa.com/leaks",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "BF.st DB Index",
@@ -1257,67 +1257,67 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://bf.st/Announcement-Database-Index",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Kalir Pulse Brief",
       "category": "darkweb_cti",
       "title": "Kalir Brief — underground intelligence feed · Pulse | Pulse",
-      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Act",
+      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Act",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/brief",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Kalir Pulse Actor",
       "category": "darkweb_cti",
       "title": "Actor Files — underground actors · Pulse | Pulse",
-      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief E",
+      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief E",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/actors",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Kalir Pulse CVE",
       "category": "darkweb_cti",
       "title": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
-      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs",
+      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/cves",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Kalir Pulse Ransomware",
       "category": "darkweb_cti",
       "title": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse",
-      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs ",
+      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs ",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/ransomware",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Kalir Pulse Wire",
       "category": "darkweb_cti",
       "title": "The Wire — live underground feed · Pulse | Pulse",
-      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief E",
+      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief E",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/wire",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Kalir Pulse",
       "category": "darkweb_cti",
       "title": "Pulse — Underground Intel",
-      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 17 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 46.0 -19 LEAK VOL 1.1 M -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom rhysid",
+      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom iah647",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "X LeakFarsi",
@@ -1327,27 +1327,27 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://x.com/leakfarsi",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "SecretLine",
       "category": "darkweb_cti",
       "title": "Login - secretline.top",
-      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 7 + 8 = Login Don't have an account? Create account secretline.top | © 2026 Excellent offer 150$ LifeTime Discount",
+      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 2 + 2 = Login Don't have an account? Create account secretline.top | © 2026 Excellent offer 150$ LifeTime Discount",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://secretline.top/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - OP7YIEK (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - OP7YIEK (Tor)",
-      "summary": "4b5 Error! This whistleblowing site is built with GlobaLeaks that is a modern secure application that requires JavaScript. While it is a common belief that JavaScript and security don't always work well together, we reco",
-      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "title": "Onion - OP7YIEK (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://op7yiekgumt7po6mjgii4uewrwjydx5vhpa6y5gv7glftmw5srbwnaid.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "DarkForums",
@@ -1357,7 +1357,7 @@
       "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
       "countries": [],
       "url": "https://darkforums.as/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Patched.to Leaks",
@@ -1367,7 +1367,7 @@
       "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
       "countries": [],
       "url": "https://patched.to/Forum-other-leaks",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "TweetFeed",
@@ -1377,7 +1377,7 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://tweetfeed.live/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Ransomware.live",
@@ -1387,17 +1387,17 @@
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://www.ransomware.live/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Triage Sandbox",
       "category": "darkweb_cti",
-      "title": "Triage Sandbox — Source reachability note (HTTP Error 502: Bad Gateway).",
-      "summary": "Source reachability note (HTTP Error 502: Bad Gateway).",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "title": "acreed | b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776 | Triage™",
+      "summary": "acreed | b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776 | Triage™ Login Reports Overview overview 10 Static static 10 2026-03-05...at.exe windows10-2004-x64 7 2026-03-05...at.exe windows11-21h2-x64 7 Do",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://tria.ge/260305-d6x8rsc15x",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "JaffaCakes Analysis",
@@ -1407,7 +1407,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://jaffacakes118.dev/analysis/b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "CERT.pl MWDB",
@@ -1419,7 +1419,7 @@
         "Poland"
       ],
       "url": "https://mwdb.cert.pl/file/dd7fca91c67710c4872e1c8fa62acbaedd94cd8bc673c4e3c9d5aa60e9902518",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "DailyDarkWeb",
@@ -1431,7 +1431,7 @@
         "United States"
       ],
       "url": "https://dailydarkweb.net/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Securelist",
@@ -1441,7 +1441,7 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://securelist.com/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Cyber Intelligence House",
@@ -1451,7 +1451,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "http://www.cyberintelligencehouse.com",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "VEEXH Medium",
@@ -1461,7 +1461,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://medium.com/@VEEXH",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "OH SHINT Blog (LinkedIn)",
@@ -1471,7 +1471,7 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://lnkd.in/d9UvBrT5",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "OSINT Combine (LinkedIn)",
@@ -1481,7 +1481,7 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://lnkd.in/ducHTp2X",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Bellingcat (LinkedIn)",
@@ -1491,7 +1491,7 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://lnkd.in/dMTN2dNh",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Skopenow Blog (LinkedIn)",
@@ -1501,7 +1501,7 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://lnkd.in/dfE3dc3q",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "ShadowDragon Blog (LinkedIn)",
@@ -1511,7 +1511,7 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://lnkd.in/dajF3QcN",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Maltego Blog (LinkedIn)",
@@ -1521,7 +1521,7 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://lnkd.in/dzV4bmn8",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Social Links Blog (LinkedIn)",
@@ -1531,7 +1531,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://lnkd.in/dkhvmhRX",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Blackdot Solutions (LinkedIn)",
@@ -1541,7 +1541,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://lnkd.in/d8MYqXZB",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Offensive OSINT (LinkedIn)",
@@ -1551,7 +1551,7 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://lnkd.in/dF3Fkbyc",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "OSINT Industries (LinkedIn)",
@@ -1561,17 +1561,17 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://lnkd.in/eCrSKUmK",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Reza Abasi LinkedIn",
       "category": "global_cyber",
-      "title": "Reza Abasi LinkedIn — Source reachability note (HTTP Error 999: <none>).",
-      "summary": "Source reachability note (HTTP Error 999: <none>).",
+      "title": "Reza Abasi LinkedIn — Source reachability note (HTTP Error 429: Too Many Requests).",
+      "summary": "Source reachability note (HTTP Error 429: Too Many Requests).",
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://www.linkedin.com/in/reza-abasi/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Blackbones.net",
@@ -1581,7 +1581,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://blackbones.net/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "DarknetList",
@@ -1591,27 +1591,27 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://darknetlist.info/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Dead-Frog",
       "category": "global_cyber",
-      "title": "Dead-Frog: Live Comedy Near You",
-      "summary": "Dead-Frog: Live Comedy Near You blog comedians Funniest Favorite Greatest Living Best Comedians Ever Best Joke Writers Best Joke Tellers All Comedians Timeline live comedy comedy clubs who’s funnier Sign Up Log-In Find C",
+      "title": "One moment, please...",
+      "summary": "One moment, please... Loader Please wait while your request is being verified...",
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://www.dead-frog.com/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Tenebris (Tor)",
       "category": "darkweb_cti",
-      "title": "Frontpage - Tenebris",
-      "summary": "1e30 Frontpage - Tenebris | frontpage all tenebris | points Search Login Register Login or Register Translate Machine-generated translations may contain errors. ? × New here? Here's the short version. Pick a language bel",
+      "title": "Onion - Tenebris (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://tenebrispoyfrcup4k24lciwrh4gc5735hmld4dweq7his7zh423opqd.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Dread #1 (Tor)",
@@ -1621,17 +1621,17 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Dread #2 (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Dread #2 (Tor)",
-      "summary": "Fetched data from Onion - Dread #2 (Tor).",
+      "title": "Onion - Dread #2 (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://dreadytognbh7m5nlmqsogzzlxjy75iuxkulewbhxcorupbqahact2yd.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "FlakkaOnline",
@@ -1641,7 +1641,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://flakkaonline.com/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Blackbones.cc",
@@ -1651,7 +1651,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://blackbones.cc/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Darknet Forums (Tor)",
@@ -1661,7 +1661,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://darknet77vonbqeatfsnawm5jtnoci5z22mxay6cizmoucgmz52mwyad.onion/forums/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Hunters Ransomware (Tor)",
@@ -1671,7 +1671,7 @@
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://hunters55rdxciehoqzwv7vgyv6nt37tbwax2reroyzxhou7my5ejyid.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - LockBit (Tor)",
@@ -1683,7 +1683,7 @@
         "United States"
       ],
       "url": "http://lockbit3753ekiocyo5epmpy6klmejchjtzddoekjlnt6mu3qh4de2id.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - DWL Tor (Tor)",
@@ -1693,7 +1693,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://dwltorbltw3tdjskxn23j2mwz2f4q25j4ninl5bdvttiy4xb6cqzikid.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - OmegaLock (Tor)",
@@ -1703,27 +1703,27 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://omegalock5zxwbhswbisc42o2q2i54vdulyvtqqbudqousisjgc7j7yd.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Hackread - Anonymous",
       "category": "darkweb_cti",
-      "title": "Anonymous - Hackread - Cybersecurity News, Data Breaches, AI and More",
-      "summary": "Anonymous - Hackread - Cybersecurity News, Data Breaches, AI and More Hacking News Leaks WikiLeaks Anonymous Technology Android Apple Google Microsoft Samsung 3D How To Artificial Intelligence Machine Learning Cyber Crim",
-      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "title": "One moment, please...",
+      "summary": "One moment, please... Loader Please wait while your request is being verified...",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://hackread.com/category/data-breaches/hacking-news/anonymous/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Hackread - Leaks Affairs",
       "category": "darkweb_cti",
-      "title": "Leaks - Hackread - Cybersecurity News, Data Breaches, AI and More",
-      "summary": "Leaks - Hackread - Cybersecurity News, Data Breaches, AI and More Hacking News Leaks WikiLeaks Anonymous Technology Android Apple Google Microsoft Samsung 3D How To Artificial Intelligence Machine Learning Cyber Crime Ph",
-      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "title": "One moment, please...",
+      "summary": "One moment, please... Loader Please wait while your request is being verified...",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://hackread.com/category/data-breaches/hacking-news/leaks-affairs/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Reuters (Tor)",
@@ -1733,7 +1733,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://smb7p276iht3i2fj.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Forbes (Tor)",
@@ -1743,7 +1743,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://t5pv5o4t6jyjilp6.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Financial Times (Tor)",
@@ -1753,27 +1753,27 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://xdm7flvwt3uvsrrd.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - The Guardian (Tor)",
       "category": "darkweb_cti",
-      "title": "400 The plain HTTP request was sent to HTTPS port",
-      "summary": "fc 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
+      "title": "Onion - The Guardian (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.guardian2zotagl6tmjucg3lrhxdk4dw3lhbqnkvvkywawy3oqfoprid.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Tor News (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Tor News (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Tor Newsletter Archive | The Tor Project",
+      "summary": "Tor Newsletter Archive | The Tor Project Tor Logo Donate Now About Support Community Blog Donate Download Tor Browser Get updates and opportunities from across the organization and community. 👉 Click here to sign up for ",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://a4ygisnerpgtc5ayerl22pll6cls3oyj54qgpm7qrmb66xrxts6y3lyd.onion/index.html",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - BBC News (Tor)",
@@ -1783,7 +1783,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.bbcnewsv2vjtpsuy.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - New York Times (Tor)",
@@ -1793,7 +1793,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.nytimes3xbfgragh.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - ProPublica (Tor)",
@@ -1803,7 +1803,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://p53lf57qovyuvwsc6xnrppyply3vtqm7l6pcobkmyqsiofyeznfu5uqd.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Deutsche Welle (Tor)",
@@ -1813,7 +1813,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://dwnewsvdyyiamwnp.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Radio Free Asia (Tor)",
@@ -1823,19 +1823,17 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://rfa62zl6z6owmtlf.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Bellingcat (Tor)",
       "category": "darkweb_cti",
-      "title": "bellingcat - the home of online investigations",
-      "summary": "bellingcat - the home of online investigations bellingcat - the home of online investigations Investigations Resources Ukraine Workshops EN Русский Français Español Deutsch Українська Donate Search for: Investigations Re",
-      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
-      "countries": [
-        "Ukraine"
-      ],
+      "title": "Onion - Bellingcat (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "countries": [],
       "url": "http://bellcatmbguthn3age23lrbseln2lryzv3mt7whis7ktjw4qrestbzad.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - RFE/RL (Tor)",
@@ -1845,17 +1843,17 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.rferlo2zxgv23tct66v45s5mecftol5vod3hf4rqbipfp46fqu2q56ad.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Yahoo News (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Yahoo News (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
-      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "title": "Onion - Yahoo News (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://yahoonewsnqkxo423g7vuwr2mvkwmc5t4df5x44dfdfvmyzqgcyt3had.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Al Jazeera (Tor)",
@@ -1865,7 +1863,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://jkta32w5gvk6pmqdfwj67psojot3l2iwoqbdvrvywi5bkudfeandq7id.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Bloomberg News (Tor)",
@@ -1875,7 +1873,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://ogdwaroarq4p6rnfn2hl4crvldyruyc2g24435qtxmd3twhevg7dsqid.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - CBC (Tor)",
@@ -1887,7 +1885,7 @@
         "Canada"
       ],
       "url": "http://gppg43zz5d2yfuom3yfmxnnokn3zj4mekt55onlng3zs653ty4fio6qd.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - CNN (Tor)",
@@ -1897,7 +1895,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://qmifwf762qftydprw2adbg7hs2mkunac5xrz3cb5busaflji3rja5lid.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Forbidden Stories (Tor)",
@@ -1907,7 +1905,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://fg25fqpu2dnxp24xs3jlcley4hp2inshpzek44q3czkhq3zffoqk26id.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - HuffPost (Tor)",
@@ -1917,7 +1915,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://ppw2pmtagxykinex6uubypsommtrcg6ytdh6bcr6agq2wxnrweao4cad.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Globe and Mail (Tor)",
@@ -1927,7 +1925,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "http://a4zum5ydurvljrohxqp2rjjal5kro4ge2q2qizuonf2jubkhcr627gad.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Washington Post (Tor)",
@@ -1937,7 +1935,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://vfnmxpa6fo4jdpyq3yneqhglluweax2uclvxkytfpmpkp5rsl75ir5qd.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Whistleblower Aid (Tor)",
@@ -1947,7 +1945,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://kogbxf4ysay2qzozmg7ar45ijqmj2vxrwqa4upzqq2i7sqj7wv7wcdqd.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Ransomwiki",
@@ -1957,7 +1955,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://darkfeed.io/ransomwiki/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Corporate Leaks (Tor)",
@@ -1967,7 +1965,7 @@
       "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
       "countries": [],
       "url": "http://hxt254aygrsziejn.onion.ws/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Conti News Clearnet",
@@ -1977,17 +1975,17 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://conti.news",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Conti (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://htcltkjqoitnez5slo7fvhiou5lbno5bwczu7il2hmfpkowwdpj3q2yd.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Conti News (Tor)",
@@ -1997,7 +1995,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://continewsnv5otx5kaoje7krkto2qbu3gtqef22mnr7eaxw3y6ncz3ad.onion.ly/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Hive Leaks (Tor)",
@@ -2007,7 +2005,7 @@
       "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
       "countries": [],
       "url": "http://hiveleakdbtnp76ulyhi52eag6c6tyc3xw7ez7iqy6wc34gd2nekazyd.onion.ly/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - LockBit 2.0 (Tor)",
@@ -2017,7 +2015,7 @@
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "http://lockbitapt6vx57t3eeqjofwgcglmutr3a35nygvokja5uuccip4ykyd.onion.ly/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Cuba Ransomware (Tor)",
@@ -2027,7 +2025,7 @@
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "http://cuba4ikm4jakjgmkezytyawtdgr2xymvy6nvzgw5cglswg3si76icnqd.onion.ly/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - REvil (Tor)",
@@ -2037,7 +2035,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://dnpscnbaix6nkwvystl3yxglz7nteicqrou3t75tpcc5532cztc46qyd.onion.ly/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Vice Society (Tor)",
@@ -2047,7 +2045,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://vsociethok6sbprvevl4dlwbqrzyhxcxaqpvcqt5belwvsuxaxsutyad.onion.ly/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - AvosLocker (Tor)",
@@ -2057,7 +2055,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://avosqxh72b5ia23dl5fgwcpndkctuzqvh2iefk5imp3pi5gfhel5klad.onion.ly/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - BlackMatter (Tor)",
@@ -2067,7 +2065,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://blackmax7su6mbwtcyo3xwtpfxpm356jjqrs34y4crcytpw7mifuedyd.onion.ly/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - BABUK (Tor)",
@@ -2077,7 +2075,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://nq4zyac4ukl4tykmidbzgdlvaboqeqsemkp4t35bzvjeve6zm2lqcjid.onion.ly/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - DoppelPaymer (Tor)",
@@ -2087,7 +2085,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://hpoo4dosa3x4ognfxpqcrjwnsigvslm7kv6hvmhh2yqczaxy3j6qnwad.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Maze News",
@@ -2097,7 +2095,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://mazenews.top",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - AKO Ransomware (Tor)",
@@ -2107,7 +2105,7 @@
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "http://37rckgo66iydpvgpwve7b2el5q2zhjw4tv4lmyewufnpx4lhkekxkoqd.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Nefilim (Tor)",
@@ -2117,7 +2115,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://hxt254aygrsziejn.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - RagnarLocker (Tor)",
@@ -2127,7 +2125,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://p6o7m73ujalhgkiv.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Clop (Tor)",
@@ -2137,7 +2135,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://ekbgzchl6x2ias37.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Netwalker (Tor)",
@@ -2147,7 +2145,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://rnfdsgm6wb6j6su5txkekw4u4y47kp2eatvu7d6xhyn5cs4lt4pdrqqd.onion/blog",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Sekhmet Leaks",
@@ -2157,7 +2155,7 @@
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://sekhmetleaks.top/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Pysa (Tor)",
@@ -2167,7 +2165,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://wqmfzni2nvbbpk25.onion/partners.html",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Suncrypt (Tor)",
@@ -2177,7 +2175,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://nbzzb6sa6xuura2z.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "DarkSide Clearnet",
@@ -2187,7 +2185,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://darksidedxcftmqa.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - not Evil (Tor)",
@@ -2197,7 +2195,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://hss3uro2hsxfogfq.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Visitor (Tor)",
@@ -2207,7 +2205,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://visitorfi5kl7q7i.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Dark Search Engine (Tor)",
@@ -2217,7 +2215,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://7pwy57iklvt6lyhe.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Dark Web Links (Tor)",
@@ -2227,7 +2225,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://bznjtqphs2lp4xdd.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - SearX (Tor)",
@@ -2237,7 +2235,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://searchb5a7tmimez.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Candle (Tor)",
@@ -2247,7 +2245,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://gjobqjj7wyczbqie.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - TorSearch (Tor)",
@@ -2257,7 +2255,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://kbhpodhnfxl3clb4.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Caronte (Tor)",
@@ -2267,7 +2265,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://carontevaha5x626.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - House Of Lions Forums (Tor)",
@@ -2277,7 +2275,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://lionhouse6yaacev.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Acropolis Forum (Tor)",
@@ -2287,7 +2285,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://acropolhwczbgbkh.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - The Stock Insiders (Tor)",
@@ -2297,7 +2295,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://b34xhb2kjf3nbuyk.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Hidden Answers (Tor)",
@@ -2307,7 +2305,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://answerstedhctbek.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - The Intel Exchange (Tor)",
@@ -2317,7 +2315,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://rrcc5uuudhh4oz3c.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Flashlight Forum (Tor)",
@@ -2327,7 +2325,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://kxojy6ygju4h6lwn.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Anonymous BBS (Tor)",
@@ -2337,7 +2335,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://qm3monarchzifkwa.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - InserTor Pastebin (Tor)",
@@ -2347,7 +2345,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://54ogum7gwxhtgiya.onion/insertor/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Simple Pastebin (Tor)",
@@ -2357,7 +2355,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://stu32b4sndw3cptm.onion",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "DeepWebLinks",
@@ -2367,7 +2365,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://deepweblinks.net/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - BBC News Global (Tor)",
@@ -2377,7 +2375,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - BBC Azeri (Tor)",
@@ -2387,7 +2385,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/azeri",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - VOA News (Tor)",
@@ -2397,7 +2395,7 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.voanews5aitmne6gs2btokcacixclgfl43cv27sirgbauyyjylwpdtqd.onion/",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Riseup Security (Tor)",
@@ -2409,7 +2407,7 @@
         "United States"
       ],
       "url": "http://vww6ybal4bd7szmgncyruucpgfkqahzddi37ktceo3ah7ngmcopnpyyd.onion/en/security/network-security/tor#riseups-tor-onion-services",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     },
     {
       "source": "Onion - Alec Muffett Blog (Tor)",
@@ -2419,10 +2417,40 @@
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://amuffettdexn6r5s4lt45b6mlrgmsmo56szaaighyjurp4ccuj63zkad.onion/blog",
-      "date": "2026-11-27"
+      "date": "2026-11-28"
     }
   ],
   "cves": [
+    {
+      "cveID": "CVE-2026-120705",
+      "vendor": "OSGeo",
+      "product": "GeoServer",
+      "name": "OSGeo GeoServer XML Injection Vulnerability",
+      "dateAdded": "2026-11-27",
+      "ransomware": "Unknown",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
+    },
+    {
+      "cveID": "CVE-2026-129243",
+      "vendor": "OSGeo",
+      "product": "GeoServer",
+      "name": "OSGeo GeoServer Incorrect Authorization Vulnerability",
+      "dateAdded": "2026-11-27",
+      "ransomware": "Unknown",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
+    },
+    {
+      "cveID": "CVE-2026-136716",
+      "vendor": "Drupal",
+      "product": "Core",
+      "name": "Drupal Core Improper Check for Unusual or Exceptional Conditions Vulnerability",
+      "dateAdded": "2026-11-27",
+      "ransomware": "Unknown",
+      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
+    },
     {
       "cveID": "CVE-2026-103406",
       "vendor": "Hewlett Packard Enterprise (HPE)",
@@ -2542,39 +2570,135 @@
       "ransomware": "Unknown",
       "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
-    },
-    {
-      "cveID": "CVE-2026-132165",
-      "vendor": "Drupal",
-      "product": "Core",
-      "name": "Drupal Core Remote Code Execution Vulnerability",
-      "dateAdded": "2026-11-24",
-      "ransomware": "Unknown",
-      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
-    },
-    {
-      "cveID": "CVE-2026-133968",
-      "vendor": "Project MONAI",
-      "product": "MONAI Label",
-      "name": "Project MONAI MONAI Label Path Traversal Vulnerability",
-      "dateAdded": "2026-11-23",
-      "ransomware": "Unknown",
-      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
-    },
-    {
-      "cveID": "CVE-2026-134624",
-      "vendor": "N-able",
-      "product": "MailAssure",
-      "name": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
-      "dateAdded": "2026-11-23",
-      "ransomware": "Unknown",
-      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules."
     }
   ],
   "iocs": [
+    {
+      "type": "hash",
+      "value": "b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61776",
+      "origin": "[Triage Sandbox] acreed | b8d179cca6fe61ae175cc8c2f4377d1c249c24a73dc616358267f02d23d61",
+      "level": "CRITICAL",
+      "score": 90,
+      "reasons": [
+        "VirusTotal (+60)",
+        "OTX (+20)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: 52 malicious, 0 suspicious (+60)",
+        "AbuseIPDB: IP only",
+        "OTX: 4 threat pulses (+20)",
+        "Shodan: IP only"
+      ],
+      "verdict": "CRITICAL — Confirmed malicious/high-risk activity across CTI sources. Block & investigate immediately.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "malicious": 52,
+          "suspicious": 0,
+          "score_add": 60,
+          "result": "VirusTotal: 52 malicious, 0 suspicious (+60)"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "pulses": 4,
+          "score_add": 20,
+          "result": "OTX: 4 threat pulses (+20)"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-120705",
+      "origin": "[CISA Advisories] CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-129243",
+      "origin": "[CISA Advisories] CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
     {
       "type": "cve",
       "value": "CVE-2023-25914",
@@ -2702,6 +2826,47 @@
       "type": "cve",
       "value": "CVE-2026-132165",
       "origin": "[CISA Advisories] CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+      "level": "HIGH",
+      "score": 65,
+      "reasons": [
+        "CISA KEV (+55)"
+      ],
+      "source_results": [
+        "URLhaus: clean / not listed",
+        "VirusTotal: N/A for CVE",
+        "AbuseIPDB: IP only",
+        "OTX: N/A for CVE",
+        "Shodan: IP only",
+        "CISA KEV: Known exploited vulnerability (+55)"
+      ],
+      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
+      "checks": {
+        "urlhaus": {
+          "score_add": 0,
+          "result": "URLhaus: clean / not listed"
+        },
+        "virustotal": {
+          "score_add": 0,
+          "result": "VirusTotal: N/A for CVE"
+        },
+        "abuseipdb": {
+          "score_add": 0,
+          "result": "AbuseIPDB: IP only"
+        },
+        "otx": {
+          "score_add": 0,
+          "result": "OTX: N/A for CVE"
+        },
+        "shodan": {
+          "score_add": 0,
+          "result": "Shodan: IP only"
+        }
+      }
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-136716",
+      "origin": "[CISA KEV] Drupal Core",
       "level": "HIGH",
       "score": 65,
       "reasons": [
@@ -3071,88 +3236,6 @@
       "type": "cve",
       "value": "CVE-2026-132224",
       "origin": "[CISA KEV] Optimizely Web Experimentation",
-      "level": "HIGH",
-      "score": 65,
-      "reasons": [
-        "CISA KEV (+55)"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: N/A for CVE",
-        "AbuseIPDB: IP only",
-        "OTX: N/A for CVE",
-        "Shodan: IP only",
-        "CISA KEV: Known exploited vulnerability (+55)"
-      ],
-      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "score_add": 0,
-          "result": "VirusTotal: N/A for CVE"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "score_add": 0,
-          "result": "OTX: N/A for CVE"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2026-133968",
-      "origin": "[CISA KEV] Project MONAI MONAI Label",
-      "level": "HIGH",
-      "score": 65,
-      "reasons": [
-        "CISA KEV (+55)"
-      ],
-      "source_results": [
-        "URLhaus: clean / not listed",
-        "VirusTotal: N/A for CVE",
-        "AbuseIPDB: IP only",
-        "OTX: N/A for CVE",
-        "Shodan: IP only",
-        "CISA KEV: Known exploited vulnerability (+55)"
-      ],
-      "verdict": "HIGH — Elevated threat/exploitation signal. Hunt across logs, sessions & endpoints.",
-      "checks": {
-        "urlhaus": {
-          "score_add": 0,
-          "result": "URLhaus: clean / not listed"
-        },
-        "virustotal": {
-          "score_add": 0,
-          "result": "VirusTotal: N/A for CVE"
-        },
-        "abuseipdb": {
-          "score_add": 0,
-          "result": "AbuseIPDB: IP only"
-        },
-        "otx": {
-          "score_add": 0,
-          "result": "OTX: N/A for CVE"
-        },
-        "shodan": {
-          "score_add": 0,
-          "result": "Shodan: IP only"
-        }
-      }
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2026-134624",
-      "origin": "[CISA KEV] N-able MailAssure",
       "level": "HIGH",
       "score": 65,
       "reasons": [
@@ -4149,70 +4232,6 @@
   ],
   "active_apts": [
     {
-      "id": "rw_inception",
-      "name": "Inception (APT / Ransomware Group)",
-      "category": "finance",
-      "level": "CRITICAL",
-      "activity_score": 98,
-      "status_label": "Ransomware.live (5)",
-      "focus": "Live ransomware & extortion activity (latest: US)",
-      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
-      "scenario": "c2_lateral",
-      "mentions": [
-        {
-          "source": "Ransomware.live API",
-          "title": "[US] GoDaddy (2026-11-26T18:22)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[US] Paramount (2026-11-26T15:24)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[US] Verisk (2026-11-26T15:23)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[US] McDonald's (2026-11-26T15:23)",
-          "url": "https://www.ransomware.live/"
-        },
-        {
-          "source": "Ransomware.live API",
-          "title": "[US] Mattel (2026-11-26T15:23)",
-          "url": "https://www.ransomware.live/"
-        }
-      ],
-      "techniques": [
-        {
-          "id": "T1021",
-          "name": "Remote Services",
-          "tactic": "Lateral Movement",
-          "url": "https://attack.mitre.org/techniques/T1021/"
-        },
-        {
-          "id": "T1041",
-          "name": "Exfiltration Over C2 Channel",
-          "tactic": "Exfiltration",
-          "url": "https://attack.mitre.org/techniques/T1041/"
-        },
-        {
-          "id": "T1059.001",
-          "name": "PowerShell",
-          "tactic": "Execution",
-          "url": "https://attack.mitre.org/techniques/T1059/001/"
-        },
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact",
-          "tactic": "Impact",
-          "url": "https://attack.mitre.org/techniques/T1486/"
-        }
-      ]
-    },
-    {
       "id": "rw_pixelleaks",
       "name": "PixelLeaks (APT / Ransomware Group)",
       "category": "finance",
@@ -4289,39 +4308,186 @@
       ]
     },
     {
-      "id": "rw_rhysida",
-      "name": "rhysida (APT / Ransomware Group)",
+      "id": "rw_iah6477",
+      "name": "iah6477 (APT / Ransomware Group)",
       "category": "finance",
       "level": "CRITICAL",
       "activity_score": 98,
-      "status_label": "Ransomware.live (5)",
-      "focus": "Live ransomware & extortion activity (latest: IN)",
+      "status_label": "Ransomware.live (6)",
+      "focus": "Live ransomware & extortion activity (latest: CA)",
       "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
       "scenario": "c2_lateral",
       "mentions": [
         {
           "source": "Ransomware.live API",
-          "title": "[IN] VC ERP Consulting Pvt. Ltd. (2026-11-27T11:32)",
+          "title": "[CA] rogers-group (2026-11-27T15:09)",
           "url": "https://www.ransomware.live/"
         },
         {
           "source": "Ransomware.live API",
-          "title": "[GP] Groupe Antilles-Glaces (2026-11-26T12:22)",
+          "title": "[US] blackstone-consulting (2026-11-27T15:08)",
           "url": "https://www.ransomware.live/"
         },
         {
           "source": "Ransomware.live API",
-          "title": "[US] Jackson District Library (2026-11-26T12:21)",
+          "title": "[Global] supplyone (2026-11-27T15:08)",
           "url": "https://www.ransomware.live/"
         },
         {
           "source": "Ransomware.live API",
-          "title": "[Global] Koch Law Firm (2026-11-26T09:39)",
+          "title": "[US] avispl (2026-11-27T14:13)",
           "url": "https://www.ransomware.live/"
         },
         {
           "source": "Ransomware.live API",
-          "title": "[Global] Grua, Freeman, Tupper & Young, PLC (2026-11-26T09:38)",
+          "title": "[Global] resers (2026-11-27T14:12)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] pregis (2026-11-27T08:43)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_inception",
+      "name": "Inception (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "CRITICAL",
+      "activity_score": 84,
+      "status_label": "Ransomware.live (2)",
+      "focus": "Live ransomware & extortion activity (latest: US)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] GoDaddy (2026-11-26T18:22)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] Paramount (2026-11-26T15:24)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_soulgroup",
+      "name": "SoulGroup (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "CRITICAL",
+      "activity_score": 84,
+      "status_label": "Ransomware.live (2)",
+      "focus": "Live ransomware & extortion activity (latest: CO)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[CO] Ferrometalco (FMC) (2026-11-27T14:58)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[US] US CNC Machine Company (2026-11-27T14:58)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_barracuda",
+      "name": "Barracuda (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: Global)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[Global] RHRS Law Firm (2026-11-27T13:50)",
           "url": "https://www.ransomware.live/"
         }
       ],
@@ -4541,19 +4707,19 @@
       ]
     },
     {
-      "id": "rw_iah6477",
-      "name": "iah6477 (APT / Ransomware Group)",
+      "id": "rw_incransom",
+      "name": "incransom (APT / Ransomware Group)",
       "category": "finance",
       "level": "HIGH",
       "activity_score": 76,
       "status_label": "Ransomware.live (1)",
-      "focus": "Live ransomware & extortion activity (latest: US)",
+      "focus": "Live ransomware & extortion activity (latest: GB)",
       "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
       "scenario": "c2_lateral",
       "mentions": [
         {
           "source": "Ransomware.live API",
-          "title": "[US] pregis (2026-11-27T08:43)",
+          "title": "[GB] Brit Ltd / Brit Insurance (britinsurance.com) (2026-11-27T16:10)",
           "url": "https://www.ransomware.live/"
         }
       ],
@@ -4629,94 +4795,6 @@
       ]
     },
     {
-      "id": "rw_metaencryptor",
-      "name": "metaencryptor (APT / Ransomware Group)",
-      "category": "finance",
-      "level": "HIGH",
-      "activity_score": 76,
-      "status_label": "Ransomware.live (1)",
-      "focus": "Live ransomware & extortion activity (latest: US)",
-      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
-      "scenario": "c2_lateral",
-      "mentions": [
-        {
-          "source": "Ransomware.live API",
-          "title": "[US] Exceptional Healthcare Inc. (2026-11-26T14:47)",
-          "url": "https://www.ransomware.live/"
-        }
-      ],
-      "techniques": [
-        {
-          "id": "T1021",
-          "name": "Remote Services",
-          "tactic": "Lateral Movement",
-          "url": "https://attack.mitre.org/techniques/T1021/"
-        },
-        {
-          "id": "T1041",
-          "name": "Exfiltration Over C2 Channel",
-          "tactic": "Exfiltration",
-          "url": "https://attack.mitre.org/techniques/T1041/"
-        },
-        {
-          "id": "T1059.001",
-          "name": "PowerShell",
-          "tactic": "Execution",
-          "url": "https://attack.mitre.org/techniques/T1059/001/"
-        },
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact",
-          "tactic": "Impact",
-          "url": "https://attack.mitre.org/techniques/T1486/"
-        }
-      ]
-    },
-    {
-      "id": "rw_netrunner",
-      "name": "netrunner (APT / Ransomware Group)",
-      "category": "finance",
-      "level": "HIGH",
-      "activity_score": 76,
-      "status_label": "Ransomware.live (1)",
-      "focus": "Live ransomware & extortion activity (latest: Global)",
-      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
-      "scenario": "c2_lateral",
-      "mentions": [
-        {
-          "source": "Ransomware.live API",
-          "title": "[Global] A**** S*** (2026-11-26T10:17)",
-          "url": "https://www.ransomware.live/"
-        }
-      ],
-      "techniques": [
-        {
-          "id": "T1021",
-          "name": "Remote Services",
-          "tactic": "Lateral Movement",
-          "url": "https://attack.mitre.org/techniques/T1021/"
-        },
-        {
-          "id": "T1041",
-          "name": "Exfiltration Over C2 Channel",
-          "tactic": "Exfiltration",
-          "url": "https://attack.mitre.org/techniques/T1041/"
-        },
-        {
-          "id": "T1059.001",
-          "name": "PowerShell",
-          "tactic": "Execution",
-          "url": "https://attack.mitre.org/techniques/T1059/001/"
-        },
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact",
-          "tactic": "Impact",
-          "url": "https://attack.mitre.org/techniques/T1486/"
-        }
-      ]
-    },
-    {
       "id": "rw_qilin",
       "name": "qilin (APT / Ransomware Group)",
       "category": "finance",
@@ -4730,6 +4808,50 @@
         {
           "source": "Ransomware.live API",
           "title": "[BE] Thomas More University (2026-11-27T06:44)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
+      "id": "rw_rhysida",
+      "name": "rhysida (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "HIGH",
+      "activity_score": 76,
+      "status_label": "Ransomware.live (1)",
+      "focus": "Live ransomware & extortion activity (latest: IN)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[IN] VC ERP Consulting Pvt. Ltd. (2026-11-27T11:32)",
           "url": "https://www.ransomware.live/"
         }
       ],
@@ -4806,6 +4928,69 @@
     }
   ],
   "live_ransomware": [
+    {
+      "group": "incransom",
+      "victim": "Brit Ltd / Brit Insurance (britinsurance.com)",
+      "country": "GB",
+      "date": "2026-11-27T16:10",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "iah6477",
+      "victim": "rogers-group",
+      "country": "CA",
+      "date": "2026-11-27T15:09",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "iah6477",
+      "victim": "blackstone-consulting",
+      "country": "US",
+      "date": "2026-11-27T15:08",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "iah6477",
+      "victim": "supplyone",
+      "country": "Global",
+      "date": "2026-11-27T15:08",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SoulGroup",
+      "victim": "Ferrometalco (FMC)",
+      "country": "CO",
+      "date": "2026-11-27T14:58",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "SoulGroup",
+      "victim": "US CNC Machine Company",
+      "country": "US",
+      "date": "2026-11-27T14:58",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "iah6477",
+      "victim": "avispl",
+      "country": "US",
+      "date": "2026-11-27T14:13",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "iah6477",
+      "victim": "resers",
+      "country": "Global",
+      "date": "2026-11-27T14:12",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "Barracuda",
+      "victim": "RHRS Law Firm",
+      "country": "Global",
+      "date": "2026-11-27T13:50",
+      "source": "Ransomware.live API"
+    },
     {
       "group": "rhysida",
       "victim": "VC ERP Consulting Pvt. Ltd.",
@@ -4919,69 +5104,6 @@
       "source": "Ransomware.live API"
     },
     {
-      "group": "Inception",
-      "victim": "Verisk",
-      "country": "US",
-      "date": "2026-11-26T15:23",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "Inception",
-      "victim": "McDonald's",
-      "country": "US",
-      "date": "2026-11-26T15:23",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "Inception",
-      "victim": "Mattel",
-      "country": "US",
-      "date": "2026-11-26T15:23",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "metaencryptor",
-      "victim": "Exceptional Healthcare Inc.",
-      "country": "US",
-      "date": "2026-11-26T14:47",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "rhysida",
-      "victim": "Groupe Antilles-Glaces",
-      "country": "GP",
-      "date": "2026-11-26T12:22",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "rhysida",
-      "victim": "Jackson District Library",
-      "country": "US",
-      "date": "2026-11-26T12:21",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "netrunner",
-      "victim": "A**** S***",
-      "country": "Global",
-      "date": "2026-11-26T10:17",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "rhysida",
-      "victim": "Koch Law Firm",
-      "country": "Global",
-      "date": "2026-11-26T09:39",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "rhysida",
-      "victim": "Grua, Freeman, Tupper & Young, PLC",
-      "country": "Global",
-      "date": "2026-11-26T09:38",
-      "source": "Ransomware.live API"
-    },
-    {
       "group": "SecurityWeek",
       "victim": "In Other News: Tanker Cyberattacks, EU Quantum Act, New VirusTotal Capabilities",
       "country": "Global",
@@ -5020,103 +5142,103 @@
       "group": "Kalir Pulse Brief",
       "victim": "Kalir Brief — underground intelligence feed · Pulse | Pulse",
       "country": "Global",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "Kalir Pulse Brief"
     },
     {
       "group": "Kalir Pulse Actor",
       "victim": "Actor Files — underground actors · Pulse | Pulse",
       "country": "Global",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "Kalir Pulse Actor"
     },
     {
       "group": "Kalir Pulse CVE",
       "victim": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
       "country": "Global",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "Kalir Pulse CVE"
     },
     {
       "group": "Kalir Pulse Ransomware",
       "victim": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse",
       "country": "Global",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "Kalir Pulse Ransomware"
     },
     {
       "group": "Kalir Pulse Wire",
       "victim": "The Wire — live underground feed · Pulse | Pulse",
       "country": "Global",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "Kalir Pulse Wire"
     },
     {
       "group": "Kalir Pulse",
       "victim": "Pulse — Underground Intel",
       "country": "Global",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "Kalir Pulse"
     },
     {
       "group": "Ransomware.live",
       "victim": "Ransomware.live 👀 Live ransomware activity",
       "country": "Global",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "Ransomware.live"
     },
     {
       "group": "DailyDarkWeb",
       "victim": "Daily Dark Web",
       "country": "United States",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "DailyDarkWeb"
     },
     {
       "group": "Onion - Hunters Ransomware (Tor)",
       "victim": "Onion - Hunters Ransomware (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
       "country": "Global",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "Onion - Hunters Ransomware (Tor)"
     },
     {
       "group": "Onion - Cuba Ransomware (Tor)",
       "victim": "Onion - Cuba Ransomware (Tor)",
       "country": "Global",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "Onion - Cuba Ransomware (Tor)"
     },
     {
       "group": "Onion - AKO Ransomware (Tor)",
       "victim": "Onion - AKO Ransomware (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
       "country": "Global",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "source": "Onion - AKO Ransomware (Tor)"
+    },
+    {
+      "group": "OSGeo (CVE-2026-120705)",
+      "victim": "GeoServer",
+      "country": "Global",
+      "date": "2026-11-27",
+      "source": "CISA KEV"
+    },
+    {
+      "group": "OSGeo (CVE-2026-129243)",
+      "victim": "GeoServer",
+      "country": "Global",
+      "date": "2026-11-27",
+      "source": "CISA KEV"
+    },
+    {
+      "group": "Drupal (CVE-2026-136716)",
+      "victim": "Core",
+      "country": "Global",
+      "date": "2026-11-27",
+      "source": "CISA KEV"
     },
     {
       "group": "Hewlett Packard Enterprise (HPE) (CVE-2026-103406)",
       "victim": "Juniper Session Smart Conductor and Session Smart Router",
-      "country": "Global",
-      "date": "2026-11-25",
-      "source": "CISA KEV"
-    },
-    {
-      "group": "Vates (CVE-2026-133469)",
-      "victim": "Xen Orchestra",
-      "country": "Global",
-      "date": "2026-11-25",
-      "source": "CISA KEV"
-    },
-    {
-      "group": "Danfoss (CVE-2025-41450)",
-      "victim": "AK-SM 800A Series",
-      "country": "Global",
-      "date": "2026-11-25",
-      "source": "CISA KEV"
-    },
-    {
-      "group": "Danfoss (CVE-2023-25914)",
-      "victim": "AK-SM 800A Series",
       "country": "Global",
       "date": "2026-11-25",
       "source": "CISA KEV"
