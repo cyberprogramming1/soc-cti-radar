@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-28 00:25 (+04)",
+  "updated_at": "2026-11-28 06:59 (+04)",
   "sources": [
     {
       "name": "The Hacker News RSS",
@@ -1263,7 +1263,7 @@
       "source": "Kalir Pulse Brief",
       "category": "darkweb_cti",
       "title": "Kalir Brief — underground intelligence feed · Pulse | Pulse",
-      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Act",
+      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/brief",
@@ -1273,7 +1273,7 @@
       "source": "Kalir Pulse Actor",
       "category": "darkweb_cti",
       "title": "Actor Files — underground actors · Pulse | Pulse",
-      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief E",
+      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors Brief ES P",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/actors",
@@ -1283,7 +1283,7 @@
       "source": "Kalir Pulse CVE",
       "category": "darkweb_cti",
       "title": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
-      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs",
+      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Ac",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/cves",
@@ -1293,7 +1293,7 @@
       "source": "Kalir Pulse Ransomware",
       "category": "darkweb_cti",
       "title": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse",
-      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs ",
+      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Act",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/ransomware",
@@ -1303,7 +1303,7 @@
       "source": "Kalir Pulse Wire",
       "category": "darkweb_cti",
       "title": "The Wire — live underground feed · Pulse | Pulse",
-      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief E",
+      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors Brief ES P",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/wire",
@@ -1313,7 +1313,7 @@
       "source": "Kalir Pulse",
       "category": "darkweb_cti",
       "title": "Pulse — Underground Intel",
-      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 24 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 64.0 -18 LEAK VOL 400 k -100 KEV PULSE 15 -21 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom iah647",
+      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom incransom",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/",
@@ -1333,7 +1333,7 @@
       "source": "SecretLine",
       "category": "darkweb_cti",
       "title": "Login - secretline.top",
-      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 2 + 2 = Login Don't have an account? Create account secretline.top | © 2026 Excellent offer 150$ LifeTime Discount",
+      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 7 + 3 = Login Don't have an account? Create account secretline.top | © 2026 Excellent offer 150$ LifeTime Discount",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://secretline.top/",
@@ -1342,9 +1342,9 @@
     {
       "source": "Onion - OP7YIEK (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - OP7YIEK (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
-      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "title": "Onion - OP7YIEK (Tor)",
+      "summary": "4b5 Error! This whistleblowing site is built with GlobaLeaks that is a modern secure application that requires JavaScript. While it is a common belief that JavaScript and security don't always work well together, we reco",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
       "countries": [],
       "url": "http://op7yiekgumt7po6mjgii4uewrwjydx5vhpa6y5gv7glftmw5srbwnaid.onion/",
       "date": "2026-11-28"
@@ -1566,8 +1566,8 @@
     {
       "source": "Reza Abasi LinkedIn",
       "category": "global_cyber",
-      "title": "Reza Abasi LinkedIn — Source reachability note (HTTP Error 429: Too Many Requests).",
-      "summary": "Source reachability note (HTTP Error 429: Too Many Requests).",
+      "title": "Reza Abasi LinkedIn — Source reachability note (HTTP Error 999: <none>).",
+      "summary": "Source reachability note (HTTP Error 999: <none>).",
       "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
       "countries": [],
       "url": "https://www.linkedin.com/in/reza-abasi/",
@@ -1587,7 +1587,7 @@
       "source": "DarknetList",
       "category": "darkweb_cti",
       "title": "Darknet Markets List - DarkWeb Directory",
-      "summary": "Darknet Markets List - DarkWeb Directory Skip to content November 27, 2026 Darknet Markets List – DarkWeb Directory Best Darknet Markets List: The best drugs from the top rated vendors in the dark web! Only trusted Marke",
+      "summary": "Darknet Markets List - DarkWeb Directory Skip to content November 28, 2026 Darknet Markets List – DarkWeb Directory Best Darknet Markets List: The best drugs from the top rated vendors in the dark web! Only trusted Marke",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://darknetlist.info/",
@@ -1596,8 +1596,8 @@
     {
       "source": "Dead-Frog",
       "category": "global_cyber",
-      "title": "One moment, please...",
-      "summary": "One moment, please... Loader Please wait while your request is being verified...",
+      "title": "Dead-Frog: Live Comedy Near You",
+      "summary": "Dead-Frog: Live Comedy Near You blog comedians Funniest Favorite Greatest Living Best Comedians Ever Best Joke Writers Best Joke Tellers All Comedians Timeline live comedy comedy clubs who’s funnier Sign Up Log-In Find C",
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://www.dead-frog.com/",
@@ -1606,8 +1606,8 @@
     {
       "source": "Onion - Tenebris (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Tenebris (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Frontpage - Tenebris",
+      "summary": "1e30 Frontpage - Tenebris | frontpage all tenebris | points Search Login Register Login or Register Translate Machine-generated translations may contain errors. ? × New here? Here's the short version. Pick a language bel",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://tenebrispoyfrcup4k24lciwrh4gc5735hmld4dweq7his7zh423opqd.onion/",
@@ -1616,8 +1616,8 @@
     {
       "source": "Onion - Dread #1 (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Dread #1 (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "400 The plain HTTP request was sent to HTTPS port",
+      "summary": "400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port nginx",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/",
@@ -1626,8 +1626,8 @@
     {
       "source": "Onion - Dread #2 (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Dread #2 (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Onion - Dread #2 (Tor)",
+      "summary": "Fetched data from Onion - Dread #2 (Tor).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://dreadytognbh7m5nlmqsogzzlxjy75iuxkulewbhxcorupbqahact2yd.onion/",
@@ -1656,8 +1656,8 @@
     {
       "source": "Onion - Darknet Forums (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Darknet Forums (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Onion - Darknet Forums (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://darknet77vonbqeatfsnawm5jtnoci5z22mxay6cizmoucgmz52mwyad.onion/forums/",
@@ -1698,8 +1698,8 @@
     {
       "source": "Onion - OmegaLock (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - OmegaLock (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
-      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "title": "Onion - OmegaLock (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://omegalock5zxwbhswbisc42o2q2i54vdulyvtqqbudqousisjgc7j7yd.onion/",
@@ -1708,9 +1708,9 @@
     {
       "source": "Hackread - Anonymous",
       "category": "darkweb_cti",
-      "title": "One moment, please...",
-      "summary": "One moment, please... Loader Please wait while your request is being verified...",
-      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "title": "Anonymous - Hackread - Cybersecurity News, Data Breaches, AI and More",
+      "summary": "Anonymous - Hackread - Cybersecurity News, Data Breaches, AI and More Hacking News Leaks WikiLeaks Anonymous Technology Android Apple Google Microsoft Samsung 3D How To Artificial Intelligence Machine Learning Cyber Crim",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
       "countries": [],
       "url": "https://hackread.com/category/data-breaches/hacking-news/anonymous/",
       "date": "2026-11-28"
@@ -1718,9 +1718,9 @@
     {
       "source": "Hackread - Leaks Affairs",
       "category": "darkweb_cti",
-      "title": "One moment, please...",
-      "summary": "One moment, please... Loader Please wait while your request is being verified...",
-      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
+      "title": "Leaks - Hackread - Cybersecurity News, Data Breaches, AI and More",
+      "summary": "Leaks - Hackread - Cybersecurity News, Data Breaches, AI and More Hacking News Leaks WikiLeaks Anonymous Technology Android Apple Google Microsoft Samsung 3D How To Artificial Intelligence Machine Learning Cyber Crime Ph",
+      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
       "countries": [],
       "url": "https://hackread.com/category/data-breaches/hacking-news/leaks-affairs/",
       "date": "2026-11-28"
@@ -1758,8 +1758,8 @@
     {
       "source": "Onion - The Guardian (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - The Guardian (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "400 The plain HTTP request was sent to HTTPS port",
+      "summary": "fc 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.guardian2zotagl6tmjucg3lrhxdk4dw3lhbqnkvvkywawy3oqfoprid.onion/",
@@ -1828,10 +1828,12 @@
     {
       "source": "Onion - Bellingcat (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Bellingcat (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
-      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
-      "countries": [],
+      "title": "bellingcat - the home of online investigations",
+      "summary": "bellingcat - the home of online investigations bellingcat - the home of online investigations Investigations Resources Ukraine Workshops EN Русский Français Español Deutsch Українська Donate Search for: Investigations Re",
+      "impact": "High exposure risk: active exploitation/vulnerability signal — verify affected assets, apply patches & hunt suspicious child processes.",
+      "countries": [
+        "Ukraine"
+      ],
       "url": "http://bellcatmbguthn3age23lrbseln2lryzv3mt7whis7ktjw4qrestbzad.onion/",
       "date": "2026-11-28"
     },
@@ -1980,8 +1982,8 @@
     {
       "source": "Onion - Conti (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
-      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://htcltkjqoitnez5slo7fvhiou5lbno5bwczu7il2hmfpkowwdpj3q2yd.onion",
@@ -4377,24 +4379,29 @@
       ]
     },
     {
-      "id": "rw_inception",
-      "name": "Inception (APT / Ransomware Group)",
+      "id": "rw_incransom",
+      "name": "incransom (APT / Ransomware Group)",
       "category": "finance",
       "level": "CRITICAL",
-      "activity_score": 84,
-      "status_label": "Ransomware.live (2)",
+      "activity_score": 90,
+      "status_label": "Ransomware.live (3)",
       "focus": "Live ransomware & extortion activity (latest: US)",
       "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
       "scenario": "c2_lateral",
       "mentions": [
         {
           "source": "Ransomware.live API",
-          "title": "[US] GoDaddy (2026-11-26T18:22)",
+          "title": "[US] Samlut and Company, P.A. (2026-11-27T23:00)",
           "url": "https://www.ransomware.live/"
         },
         {
           "source": "Ransomware.live API",
-          "title": "[US] Paramount (2026-11-26T15:24)",
+          "title": "[IT] Cinelandia S.p.A (2026-11-27T21:46)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[GB] Brit Ltd / Brit Insurance (britinsurance.com) (2026-11-27T16:10)",
           "url": "https://www.ransomware.live/"
         }
       ],
@@ -4707,50 +4714,6 @@
       ]
     },
     {
-      "id": "rw_incransom",
-      "name": "incransom (APT / Ransomware Group)",
-      "category": "finance",
-      "level": "HIGH",
-      "activity_score": 76,
-      "status_label": "Ransomware.live (1)",
-      "focus": "Live ransomware & extortion activity (latest: GB)",
-      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
-      "scenario": "c2_lateral",
-      "mentions": [
-        {
-          "source": "Ransomware.live API",
-          "title": "[GB] Brit Ltd / Brit Insurance (britinsurance.com) (2026-11-27T16:10)",
-          "url": "https://www.ransomware.live/"
-        }
-      ],
-      "techniques": [
-        {
-          "id": "T1021",
-          "name": "Remote Services",
-          "tactic": "Lateral Movement",
-          "url": "https://attack.mitre.org/techniques/T1021/"
-        },
-        {
-          "id": "T1041",
-          "name": "Exfiltration Over C2 Channel",
-          "tactic": "Exfiltration",
-          "url": "https://attack.mitre.org/techniques/T1041/"
-        },
-        {
-          "id": "T1059.001",
-          "name": "PowerShell",
-          "tactic": "Execution",
-          "url": "https://attack.mitre.org/techniques/T1059/001/"
-        },
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact",
-          "tactic": "Impact",
-          "url": "https://attack.mitre.org/techniques/T1486/"
-        }
-      ]
-    },
-    {
       "id": "rw_medusalocker",
       "name": "medusalocker (APT / Ransomware Group)",
       "category": "finance",
@@ -4930,6 +4893,20 @@
   "live_ransomware": [
     {
       "group": "incransom",
+      "victim": "Samlut and Company, P.A.",
+      "country": "US",
+      "date": "2026-11-27T23:00",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "incransom",
+      "victim": "Cinelandia S.p.A",
+      "country": "IT",
+      "date": "2026-11-27T21:46",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "incransom",
       "victim": "Brit Ltd / Brit Insurance (britinsurance.com)",
       "country": "GB",
       "date": "2026-11-27T16:10",
@@ -5087,20 +5064,6 @@
       "victim": "FYE",
       "country": "US",
       "date": "2026-11-26T21:22",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "Inception",
-      "victim": "GoDaddy",
-      "country": "US",
-      "date": "2026-11-26T18:22",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "Inception",
-      "victim": "Paramount",
-      "country": "US",
-      "date": "2026-11-26T15:24",
       "source": "Ransomware.live API"
     },
     {
