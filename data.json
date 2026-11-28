@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-28 06:59 (+04)",
+  "updated_at": "2026-11-28 15:24 (+04)",
   "sources": [
     {
       "name": "The Hacker News RSS",
@@ -731,6 +731,16 @@
     {
       "source": "The Hacker News RSS",
       "category": "global_cyber",
+      "title": "pCloud Password Manager Hit by Cyber Attack Involving Email Address Exposure and Login Attempts",
+      "summary": "Cross-platform password manager pCloud Pass has confirmed it was targeted by a cyber attack after users reported seeing unknown devices being connected to their accounts. \"A cyber attack targeting pCloud Pass occurred, which was promptly co",
+      "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
+      "countries": [],
+      "url": "https://thehackernews.com/2026/11/pcloud-password-manager-hit-by-cyber.html",
+      "date": "Sat, 28 Nov 2026"
+    },
+    {
+      "source": "The Hacker News RSS",
+      "category": "global_cyber",
       "title": "Suspected Vietnam-Linked Hackers Target Southeast Asia in South China Sea Espionage Campaign",
       "summary": "A Vietnam-sponsored hacking group has been attributed to attacks targeting Southeast Asian military, government, and legislative organizations with an aim to gather intelligence on South China Sea defense and military agreements. The previo",
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
@@ -756,16 +766,6 @@
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://thehackernews.com/2026/11/how-to-keep-your-security-picture.html",
-      "date": "Fri, 27 Nov 2026"
-    },
-    {
-      "source": "The Hacker News RSS",
-      "category": "darkweb_cti",
-      "title": "Hackers Trojanize Official Q-Dir and DesktopOK Downloads to Deliver Remote Access Malware",
-      "summary": "Cybersecurity researchers have disclosed details of a software supply chain attack that has tampered with Q-Dir and DesktopOK installation files distributed via the official SoftwareOK website. \"Evidence indicates that malicious files were ",
-      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
-      "countries": [],
-      "url": "https://thehackernews.com/2026/11/hackers-trojanize-official-q-dir-and.html",
       "date": "Fri, 27 Nov 2026"
     },
     {
@@ -1263,7 +1263,7 @@
       "source": "Kalir Pulse Brief",
       "category": "darkweb_cti",
       "title": "Kalir Brief — underground intelligence feed · Pulse | Pulse",
-      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors",
+      "summary": "Kalir Brief — underground intelligence feed · Pulse | Pulse PULSE Underground Intel LIVE 13 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 35.0 -56 LEAK VOL 400 k -64 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/brief",
@@ -1273,7 +1273,7 @@
       "source": "Kalir Pulse Actor",
       "category": "darkweb_cti",
       "title": "Actor Files — underground actors · Pulse | Pulse",
-      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors Brief ES P",
+      "summary": "Actor Files — underground actors · Pulse | Pulse PULSE Underground Intel LIVE 13 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 35.0 -56 LEAK VOL 400 k -64 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors Brief ES P",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/actors",
@@ -1283,7 +1283,7 @@
       "source": "Kalir Pulse CVE",
       "category": "darkweb_cti",
       "title": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse",
-      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Ac",
+      "summary": "CVE Watch — today's exploitable vulnerabilities · Pulse | Pulse PULSE Underground Intel LIVE 13 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 35.0 -56 LEAK VOL 400 k -64 KEV PULSE 15 0 Home Wire Ransomware CVEs Ac",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/cves",
@@ -1293,7 +1293,7 @@
       "source": "Kalir Pulse Ransomware",
       "category": "darkweb_cti",
       "title": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse",
-      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Act",
+      "summary": "Ransomware Wing — victims, groups and patterns · Pulse | Pulse PULSE Underground Intel LIVE 13 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 35.0 -56 LEAK VOL 400 k -64 KEV PULSE 15 0 Home Wire Ransomware CVEs Act",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/ransomware",
@@ -1303,7 +1303,7 @@
       "source": "Kalir Pulse Wire",
       "category": "darkweb_cti",
       "title": "The Wire — live underground feed · Pulse | Pulse",
-      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors Brief ES P",
+      "summary": "The Wire — live underground feed · Pulse | Pulse PULSE Underground Intel LIVE 13 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 35.0 -56 LEAK VOL 400 k -64 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors Brief ES P",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/wire",
@@ -1313,7 +1313,7 @@
       "source": "Kalir Pulse",
       "category": "darkweb_cti",
       "title": "Pulse — Underground Intel",
-      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 16 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 43.0 -25 LEAK VOL 400 k -98 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom incransom",
+      "summary": "Pulse — Underground Intel PULSE Underground Intel LIVE 13 signals / 24h Search CTRL K Search CTRL K RANSOM IDX 35.0 -56 LEAK VOL 400 k -64 KEV PULSE 15 0 Home Wire Ransomware CVEs Actors Brief ES PT FEED ransom qilin rec",
       "impact": "High operational & business impact: potential encryption/downtime or data extortion — check backups, EDR isolation & lateral paths.",
       "countries": [],
       "url": "https://pulse.kalir.io/en/",
@@ -1333,7 +1333,7 @@
       "source": "SecretLine",
       "category": "darkweb_cti",
       "title": "Login - secretline.top",
-      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 7 + 3 = Login Don't have an account? Create account secretline.top | © 2026 Excellent offer 150$ LifeTime Discount",
+      "summary": "Login - secretline.top SYNCING... >_ secretline.top Files Login Username Password Captcha 2 + 5 = Login Don't have an account? Create account secretline.top | © 2026 Excellent offer 150$ LifeTime Discount",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://secretline.top/",
@@ -1596,8 +1596,8 @@
     {
       "source": "Dead-Frog",
       "category": "global_cyber",
-      "title": "Dead-Frog: Live Comedy Near You",
-      "summary": "Dead-Frog: Live Comedy Near You blog comedians Funniest Favorite Greatest Living Best Comedians Ever Best Joke Writers Best Joke Tellers All Comedians Timeline live comedy comedy clubs who’s funnier Sign Up Log-In Find C",
+      "title": "One moment, please...",
+      "summary": "One moment, please... Loader Please wait while your request is being verified...",
       "impact": "General cyber threat intel: review relevance to perimeter, cloud/identity controls and active detection rules.",
       "countries": [],
       "url": "https://www.dead-frog.com/",
@@ -1626,8 +1626,8 @@
     {
       "source": "Onion - Dread #2 (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Dread #2 (Tor)",
-      "summary": "Fetched data from Onion - Dread #2 (Tor).",
+      "title": "Onion - Dread #2 (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://dreadytognbh7m5nlmqsogzzlxjy75iuxkulewbhxcorupbqahact2yd.onion/",
@@ -1708,9 +1708,9 @@
     {
       "source": "Hackread - Anonymous",
       "category": "darkweb_cti",
-      "title": "Anonymous - Hackread - Cybersecurity News, Data Breaches, AI and More",
-      "summary": "Anonymous - Hackread - Cybersecurity News, Data Breaches, AI and More Hacking News Leaks WikiLeaks Anonymous Technology Android Apple Google Microsoft Samsung 3D How To Artificial Intelligence Machine Learning Cyber Crim",
-      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "title": "One moment, please...",
+      "summary": "One moment, please... Loader Please wait while your request is being verified...",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://hackread.com/category/data-breaches/hacking-news/anonymous/",
       "date": "2026-11-28"
@@ -1718,9 +1718,9 @@
     {
       "source": "Hackread - Leaks Affairs",
       "category": "darkweb_cti",
-      "title": "Leaks - Hackread - Cybersecurity News, Data Breaches, AI and More",
-      "summary": "Leaks - Hackread - Cybersecurity News, Data Breaches, AI and More Hacking News Leaks WikiLeaks Anonymous Technology Android Apple Google Microsoft Samsung 3D How To Artificial Intelligence Machine Learning Cyber Crime Ph",
-      "impact": "Identity & data exposure impact: leaked credentials/tokens/data — audit exposed accounts, reset secrets & revoke active sessions.",
+      "title": "One moment, please...",
+      "summary": "One moment, please... Loader Please wait while your request is being verified...",
+      "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://hackread.com/category/data-breaches/hacking-news/leaks-affairs/",
       "date": "2026-11-28"
@@ -1758,8 +1758,8 @@
     {
       "source": "Onion - The Guardian (Tor)",
       "category": "darkweb_cti",
-      "title": "400 The plain HTTP request was sent to HTTPS port",
-      "summary": "fc 400 The plain HTTP request was sent to HTTPS port 400 Bad Request The plain HTTP request was sent to HTTPS port openresty 0",
+      "title": "Onion - The Guardian (Tor) — Tor SOCKS5 not active/reachable (timed out).",
+      "summary": "Tor SOCKS5 not active/reachable (timed out).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "https://www.guardian2zotagl6tmjucg3lrhxdk4dw3lhbqnkvvkywawy3oqfoprid.onion/",
@@ -1982,8 +1982,8 @@
     {
       "source": "Onion - Conti (Tor)",
       "category": "darkweb_cti",
-      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (timed out).",
-      "summary": "Tor SOCKS5 not active/reachable (timed out).",
+      "title": "Onion - Conti (Tor) — Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
+      "summary": "Tor SOCKS5 not active/reachable (SOCKS5 connect to onion failed).",
       "impact": "Threat actor / underground intel signal: monitor for targeted extortion, leak mentions or related infrastructure.",
       "countries": [],
       "url": "http://htcltkjqoitnez5slo7fvhiou5lbno5bwczu7il2hmfpkowwdpj3q2yd.onion",
@@ -4482,6 +4482,55 @@
       ]
     },
     {
+      "id": "rw_qilin",
+      "name": "qilin (APT / Ransomware Group)",
+      "category": "finance",
+      "level": "CRITICAL",
+      "activity_score": 84,
+      "status_label": "Ransomware.live (2)",
+      "focus": "Live ransomware & extortion activity (latest: BE)",
+      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
+      "scenario": "c2_lateral",
+      "mentions": [
+        {
+          "source": "Ransomware.live API",
+          "title": "[BE] Thomas More University of Applied Sciences (2026-11-28T03:44)",
+          "url": "https://www.ransomware.live/"
+        },
+        {
+          "source": "Ransomware.live API",
+          "title": "[BE] Thomas More University (2026-11-27T06:44)",
+          "url": "https://www.ransomware.live/"
+        }
+      ],
+      "techniques": [
+        {
+          "id": "T1021",
+          "name": "Remote Services",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/"
+        },
+        {
+          "id": "T1041",
+          "name": "Exfiltration Over C2 Channel",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactic": "Impact",
+          "url": "https://attack.mitre.org/techniques/T1486/"
+        }
+      ]
+    },
+    {
       "id": "rw_barracuda",
       "name": "Barracuda (APT / Ransomware Group)",
       "category": "finance",
@@ -4572,50 +4621,6 @@
           "name": "Exploit Public-Facing Application",
           "tactic": "Initial Access",
           "url": "https://attack.mitre.org/techniques/T1190/"
-        },
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact",
-          "tactic": "Impact",
-          "url": "https://attack.mitre.org/techniques/T1486/"
-        }
-      ]
-    },
-    {
-      "id": "rw_anubis",
-      "name": "anubis (APT / Ransomware Group)",
-      "category": "finance",
-      "level": "HIGH",
-      "activity_score": 76,
-      "status_label": "Ransomware.live (1)",
-      "focus": "Live ransomware & extortion activity (latest: US)",
-      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
-      "scenario": "c2_lateral",
-      "mentions": [
-        {
-          "source": "Ransomware.live API",
-          "title": "[US] FYE (2026-11-26T21:22)",
-          "url": "https://www.ransomware.live/"
-        }
-      ],
-      "techniques": [
-        {
-          "id": "T1021",
-          "name": "Remote Services",
-          "tactic": "Lateral Movement",
-          "url": "https://attack.mitre.org/techniques/T1021/"
-        },
-        {
-          "id": "T1041",
-          "name": "Exfiltration Over C2 Channel",
-          "tactic": "Exfiltration",
-          "url": "https://attack.mitre.org/techniques/T1041/"
-        },
-        {
-          "id": "T1059.001",
-          "name": "PowerShell",
-          "tactic": "Execution",
-          "url": "https://attack.mitre.org/techniques/T1059/001/"
         },
         {
           "id": "T1486",
@@ -4727,50 +4732,6 @@
         {
           "source": "Ransomware.live API",
           "title": "[Global] babaiai (2026-11-26T22:54)",
-          "url": "https://www.ransomware.live/"
-        }
-      ],
-      "techniques": [
-        {
-          "id": "T1021",
-          "name": "Remote Services",
-          "tactic": "Lateral Movement",
-          "url": "https://attack.mitre.org/techniques/T1021/"
-        },
-        {
-          "id": "T1041",
-          "name": "Exfiltration Over C2 Channel",
-          "tactic": "Exfiltration",
-          "url": "https://attack.mitre.org/techniques/T1041/"
-        },
-        {
-          "id": "T1059.001",
-          "name": "PowerShell",
-          "tactic": "Execution",
-          "url": "https://attack.mitre.org/techniques/T1059/001/"
-        },
-        {
-          "id": "T1486",
-          "name": "Data Encrypted for Impact",
-          "tactic": "Impact",
-          "url": "https://attack.mitre.org/techniques/T1486/"
-        }
-      ]
-    },
-    {
-      "id": "rw_qilin",
-      "name": "qilin (APT / Ransomware Group)",
-      "category": "finance",
-      "level": "HIGH",
-      "activity_score": 76,
-      "status_label": "Ransomware.live (1)",
-      "focus": "Live ransomware & extortion activity (latest: BE)",
-      "mitigation": "Verify offline/immutable backups, hunt lateral movement (SMB/RDP/WinRM) & monitor outbound data transfer.",
-      "scenario": "c2_lateral",
-      "mentions": [
-        {
-          "source": "Ransomware.live API",
-          "title": "[BE] Thomas More University (2026-11-27T06:44)",
           "url": "https://www.ransomware.live/"
         }
       ],
@@ -5005,6 +4966,13 @@
     },
     {
       "group": "qilin",
+      "victim": "Thomas More University of Applied Sciences",
+      "country": "BE",
+      "date": "2026-11-28T03:44",
+      "source": "Ransomware.live API"
+    },
+    {
+      "group": "qilin",
       "victim": "Thomas More University",
       "country": "BE",
       "date": "2026-11-27T06:44",
@@ -5057,13 +5025,6 @@
       "victim": "Eversource",
       "country": "US",
       "date": "2026-11-26T23:33",
-      "source": "Ransomware.live API"
-    },
-    {
-      "group": "anubis",
-      "victim": "FYE",
-      "country": "US",
-      "date": "2026-11-26T21:22",
       "source": "Ransomware.live API"
     },
     {
